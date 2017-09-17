@@ -1,0 +1,112 @@
+body{
+	padding: 0;
+	margin: 0;
+}
+.container{padding: 5%;}
+.switch-item{display: inline-block; margin-right: 40px;}
+
+.instagram .switch{
+	height: 25px;
+	width: 50px;
+	background-color: rgb(206, 209, 196);
+	border-radius: 10px;
+	cursor: pointer;
+	outline: none;
+	transition: background-color .3s ease-in-out;
+	-moz-transition: background-color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out;
+}
+
+.instagram .switch .indicator{
+	height: 15px;
+	width: 15px;
+	background-color: #fff;
+	border-radius: 50%;
+	position: relative;
+	top: 20%;
+	left: 5px;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+	transition: left .3s ease-in-out;
+	-moz-transition: left .3s ease-in-out;
+	-o-transition: left .3s ease-in-out;
+	-webkit-transition: left .3s ease-in-out;
+}
+
+.instagram .switch.active{background-color: rgb(35, 119, 188);}
+.instagram .switch.active .indicator{
+	position: relative;
+	top: 20%;
+	left: 30px;
+}
+
+.iPhone .switch{
+	height: 25px;
+	width: 42px;
+	background-color: rgb(206, 209, 196);
+	border-radius: 15px;
+	cursor: pointer;
+	outline: none;
+	transition: background-color .3s ease-in-out;
+	-moz-transition: background-color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out;
+}
+
+.iPhone .switch .indicator {
+    height: 22px;
+    width: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 4%;
+    left: 1px;
+    /*box-shadow: 0 2px 3px rgba(0,0,0,0.5);*/
+    transition: left .3s ease-in-out;
+    -moz-transition: left .3s ease-in-out;
+    -o-transition: left .3s ease-in-out;
+    -webkit-transition: left .3s ease-in-out;
+}
+
+.iPhone .switch.active{background-color: rgb(32, 216, 60);}
+.iPhone .switch.active .indicator{
+	position: relative;
+    top: 4%;
+    left: 19px;
+}
+
+.Android .switch{
+	height: 15px;
+	width: 40px;
+	background-color: rgb(174, 178, 175);
+	border-radius: 10px;
+	cursor: pointer;
+	outline: none;
+	transition: background-color .3s ease-in-out;
+	-moz-transition: background-color .3s ease-in-out;
+	-o-transition: background-color .3s ease-in-out;
+	-webkit-transition: background-color .3s ease-in-out;
+}
+
+.Android .switch .indicator {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(94, 104, 95);
+    border-radius: 50%;
+    position: relative;
+    top: -18%;
+    left: -1px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.5);
+    transition: left .3s ease-in-out;
+    -moz-transition: left .3s ease-in-out;
+    -o-transition: left .3s ease-in-out;
+    -webkit-transition: left .3s ease-in-out;
+}
+
+.Android .switch.active{background-color: rgb(164, 232, 214);}
+.Android .switch.active .indicator{
+	background-color: rgb(0, 118, 127);
+	position: relative;
+	top: -18%;
+	left: 20px;
+}
