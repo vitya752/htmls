@@ -41,6 +41,16 @@
 	  float: left;
 	  width: 50%;
 	}
+	.callback_form,
+	#hidden_form{
+ 		min-width: 300px;
+	}
+	.callback_form input,
+	#hidden_form input,
+	.callback_form select,
+	#hidden_form select{
+		width: 100%;
+	}
 }
 
 /* Small Devices, Tablets */
@@ -68,6 +78,9 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	header{
+	  min-height: 900px;
+	}
 	header .top_line .tab{
 		font-size: 12px;
 	}
@@ -100,6 +113,9 @@
 	  float: none;
 	  width: 100%;
 	}
+  	.list-pros li:nth-child(2n){
+  		margin-left: 0;
+  	}
 }
 
 /* Custom, iPhone Retina */

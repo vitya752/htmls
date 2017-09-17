@@ -217,7 +217,7 @@ section .more_pros ul li p span{font-weight: bolder;}
 #hidden_form{
   border: 5px solid #67bc5c;
   border-radius: 5px;
-  width: 340px;
+  min-width: 340px;
   background-color: #f7f7f7;
   padding: 0 20px;
   margin: 0 auto;
