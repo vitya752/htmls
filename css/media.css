@@ -1,0 +1,136 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	header{
+		min-height: 740px;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	header{
+		background: url("../img/top_bg-1024.jpg") top center;
+		background-size: cover;
+	}
+	header .logo,
+	header .top_line .wrapper,
+	header .top_line .tabs{
+		float: none;
+		text-align: center;
+	}
+	header .logo{
+		font-size: 50px;
+	}
+	header .top_line .wrapper{
+		margin-top: 20px;
+	}
+	header .top_line .tab{
+		font-size: 20px;
+	}
+	h1,h2{
+		text-align: center;
+	}	
+	header .content .tab_content,
+	header .content .tab.active{
+  		background-color: rgba(255,255,255,.55);
+  	}
+  	section .pros .tiz_descr,
+  	.list-pros li{
+	  float: left;
+	  width: 50%;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	header{
+  		min-height: 740px;
+  	}
+  	header .content .tab_content{
+  		padding: 15px 10px 55px 20px;
+  	}
+  	h1{
+  		font-size: 40px;
+  	}
+  	h2{
+  		font-size: 27px;
+  	}
+  	.list-pros li:nth-child(2n){
+  		margin-left: 60px;
+  	}
+  	.list-pros li{
+	  float: left;
+	  width: 40%;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	header .top_line .tab{
+		font-size: 12px;
+	}
+  	header .content .tab_content{
+  		padding: 10px 5px 50px 15px;
+  	}
+  	.top_contacts .tab{
+		padding: 6px 20px;
+  	}
+	header .content .tab{
+	    padding: 22px 6px 22px 4px;
+		background-color: rgba(255,255,255,.15);
+		font-weight: bold;
+		font-size: 11px;
+	}
+	header .content .tab_content{
+	  min-height: 235px;
+	  width: 100%;
+	  position: relative;
+	  color: black;
+	  bottom: -20px;
+	  background-color: rgba(255,255,255,.55);
+	  padding: 12px 12px 50px 15px;
+	  font-size: 12px;
+	  border: 1px solid #fff;
+	  border-top: none;
+	}
+  	section .pros .tiz_descr,
+  	.list-pros li{
+	  float: none;
+	  width: 100%;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
