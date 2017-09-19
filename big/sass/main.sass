@@ -1,0 +1,520 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	padding: 0
+	margin: 0
+    font-family: RalewayRegular,sans-serif;
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+h1
+	font-family: 'PFCentroSlabProMedium'
+	font-size: 3em
+	color: #fff
+	margin: 0;
+	padding: 0;
+h2
+	font-family: 'PFCentroSlabProMedium'
+	font-size: 1.875em
+	color: $dark-blue
+	margin: 0;
+	padding: 0;
+h3
+	font-family: 'PFCentroSlabProMedium'
+	font-size: 1.375em
+	color: $main-color
+	margin: 0;
+	padding: 0;
+h4
+	font-family: 'RalewayBold'
+	font-size: 1em
+	color: #fff
+	margin: 0;
+	padding: 0;
+
+header
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center;
+	min-height: 785px;
+	position: relative;
+	&:before
+		content: ""
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-color: #394b5f;
+		opacity: 0.85;
+
+.top-line
+	min-height: 160px;
+	padding-top: 48px;
+	background-image: url(../img/top_gradient.png);
+	.logo 
+		float: left
+		img
+			height: 48px;
+	ul
+		list-style-type: none;
+		li
+			float: left
+			margin-right: 16px
+			line-height: 21px;
+		a
+			font-family: 'RalewayRegular';
+			font-size: .9375em;
+			color: #fff
+			transition: all 0.3s ease;
+			&:hover,&.active
+				text-decoration: underline;
+				color: $main-color;
+	.phone-number
+		font-family: RobotoBold,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+		font-size: 1.15em;
+		color: #fff
+		line-height: 50px;
+		font-weight: bold;
+
+.header-content
+	margin-top: 65px;
+	.header-h
+		margin-top: 110px;
+	h1
+		border-bottom: 9px solid $main-color;
+		display: inline-block;
+		padding-bottom: 2px;
+		line-height: 40px;
+	ul.privilege
+		color: #fff;
+		font-family: 'RalewaySemiBold';
+		font-size: 1.125em;
+		padding: 0;
+		margin: 0;
+		margin-top: 40px;
+		li
+			line-height: 30px;
+			display: block;
+			background: url(../img/triangle.png) no-repeat -10px 6px;
+			text-indent: 20px;
+		a
+			color: #fff;
+form
+	font-family: 'PFCentroSlabProMedium'
+	background-color: #2e3d4d;
+	min-width: 290px;
+	padding: 20px 30px 35px 30px;
+	opacity: 0.95;
+	border-bottom: 4px solid #1b242c;
+	h2
+		font-size: 1.75em;
+		color: #fff;
+		font-weight: normal;
+	p
+		margin: 0;
+		padding: 0;
+		font-size: 0.8125em;
+		color: #97a4b2;
+		margin: 10px 0;
+	label
+		color: #778390
+		font-family: RalewayRegular,sans-serif;
+	input
+		width: 100%;
+		height: 40px;
+		background-color: #34465a;
+		border: 0;
+		border-top: 3px solid #1f2a36;
+		opacity: 1;
+		-webkit-transition: all 0.6s ease;
+		-o-transition: all 0.6s ease;
+		transition: all 0.6s ease;
+		margin-bottom: 20px;
+		padding: 0 10px;
+		color: #fff;
+		&:focus
+			border-top: 5px solid $main-color;
+.button
+	color: #000;
+	text-align: center;
+	padding: 7px 30px;
+	font-family: 'PFCentroSlabProBold';
+	font-weight: bold;
+	font-size: 1.25em;
+	border: 0;
+	width: 175px;
+	display: block;
+	margin: 0 auto;
+	background-color: $main-color;
+	border-bottom: 4px solid #b97200;
+	outline: none;
+	&:hover
+		background-color: #ffa91f;
+		color: #000;
+		text-decoration: none;
+	&:active
+		background-color: #b28100;
+		color: #000;
+		text-decoration: none;
+
+.button-down
+	height: 40px;
+	width: 40px;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 40px;
+	margin-bottom: 55px;
+	opacity: 0.7;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	&:hover
+		opacity: 1;
+
+.section-1
+	text-align: center;
+	position: relative;
+	background-color: #f9f9f9;
+	&::before
+		height: 6px;
+		width: 100%;
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 0;
+		background: url(../img/bah_1.png) repeat-x;
+	p
+		font-size: 1em;
+		font-family: 'RalewayRegular';
+		mark
+			font-family: 'RalewayBold';
+			font-weight: bold;
+		a
+			font-weight: bold;
+			font-family: 'RalewayBold';
+			text-decoration: underline;
+			color: $main-color;
+			&:hover
+				text-decoration: none;
+	.section1-head
+		padding: 0 120px;
+		margin-top: 100px;
+		h2
+			font-weight: lighter;
+	.grade-content
+		margin-top: 40px;
+		min-height: 550px;
+		position: relative;
+		background: url(../img/s1_gray_bg.png) no-repeat bottom;
+		text-align: center;
+		.bg-triangle
+			height: 60px;
+			position: absolute;
+			bottom: 0;
+			background: url(../img/s1_triangle.svg);
+			z-index: 2;
+			width: 100%;
+			background-position: top;
+			background-size: 100% 100%;
+			text-align: center;
+			.triangle-logo
+				width: 116px;
+				margin-top: 30px;
+			.scales
+				width: 160px;
+				position: absolute;
+				left: 50%;
+				top: -130px;
+				transform: translate(-50%,0);
+				z-index: -1;
+	.info-item
+		text-align: left;
+		max-width: 265px;
+		border-bottom: 1px solid #dadde0;
+		margin: 50px 0;
+		margin-left: 45px;
+		z-index: 1;
+		vertical-align: bottom;
+		a
+			font-family: 'PFCentroSlabProMedium';
+			font-size: 1.5em;
+			color: $main-color;
+			text-decoration: underline;
+			text-transform: none;
+			line-height: 5px;
+			&:hover
+				text-decoration: none;
+		p
+			font-family: RalewayRegular,sans-serif;
+			font-size: 1.0625em;
+			line-height: 19px;
+
+	.info-item-wrap:nth-child(2)
+		.info-item
+			margin: 0;
+			margin-left: 45px;
+
+.hr
+	height: 4px;
+	width: 165px;
+	background-color: $main-color;
+	margin: 20px auto;
+
+.section-1-bottom
+	min-height: 250px;
+	background-color: #394b5f;
+	.info-item
+		color: #c1c6cc;
+		margin-top: 20px;
+		z-index: 4;
+	.info-item-wrap:nth-child(2)
+		.info-item
+			margin-top: 65px;
+			margin-bottom: 60px;
+
+.section-button
+	background: #2c3949;
+	min-height: 170px;
+	a
+		vertical-align: middle;
+		width: 230px;
+		margin-top: 60px;
+
+
+.section-2
+	background-color: #f9f9f9;
+	position: relative;
+	min-height: 300px;
+	padding: 75px 0;
+	padding-bottom: 0;
+	text-align: center;
+	p
+		font-family: 'RalewayRegular',sans-serif;
+		font-size: 0.9375em;
+		strong
+			font-family: 'RalewayBold';
+	&::before
+		height: 6px;
+		width: 100%;
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 0;
+		background: url(../img/bah_1.png) repeat-x;
+.s2-head
+	padding: 0 120px;
+	p
+		margin: 0;
+		padding: 0;
+.s2-content
+	padding: 50px 0;
+	line-height: 15px;
+	h3
+		font-size: 1.5em;
+		line-height: 25px;
+		text-transform: uppercase;
+		color: #394b5f;
+		a
+			color: $main-color;
+			text-decoration: underline;
+			&:hover
+				text-decoration: none;
+.row1
+	margin-top: 75px;
+	margin-bottom: 65px;
+
+.s2-item-wrap
+	cursor: pointer;
+	height: 180px;
+	.s2-item
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	img
+		width: 80px;
+		height: 105px;
+		border-bottom: 1px solid $main-color;
+		padding-bottom: 35px;
+	.s2-item-text
+		cursor: pointer;
+		font-size: 0.875em;
+		color: #111111;
+		text-decoration: underline;
+		font-weight: bold;
+		padding: 0;
+		margin: 0;
+		top: 0;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+	&:hover
+		.s2-item
+			margin-top: -10px;
+		.s2-item-text
+			text-decoration: none;
+			color: $main-color;
+
+.s2-bottom
+	background-color: #e5e5e5;
+	text-align: center;
+	padding: 50px 0 50px 0;
+	.button
+		width: 300px;
+
+.section-3
+	min-height: 300px;
+	text-align: center;
+	padding-top: 90px;
+	background: #2c3949;
+	position: relative;
+	&::before
+		height: 6px;
+		width: 100%;
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 0;
+		background: url(../img/bah_2.png) repeat-x;
+.s3-head
+	padding: 0 120px;
+	h2
+		color: #f9f9f9;
+	p
+		color: #e5e5e5;
+		font-size: 0.9375em;
+		font-family: 'RalewayRegular',sans-serif;
+
+.s3-content
+	min-height: 700px;
+	background: #2c3949 url(../img/s3_sun_bg.png) no-repeat top;
+	position: relative;
+	.info-item
+		text-align: left;
+		max-width: 250px;
+		border-bottom: 1px solid #dadde0;
+		margin: 120px 0 50px 0;
+		margin-left: 50px;
+		z-index: 1;
+		vertical-align: bottom;
+		color: #fff;
+		a
+			font-family: 'PFCentroSlabProMedium';
+			font-size: 1.5em;
+			color: $main-color;
+			text-decoration: underline;
+			text-transform: none;
+			line-height: 5px;
+			&:hover
+				text-decoration: none;
+		p
+			font-family: RalewayRegular,sans-serif;
+			font-size: 1.0625em;
+			line-height: 19px;
+	.row:nth-child(1)
+		.info-item-wrap:nth-child(1)
+			.info-item
+				margin-left: 60px;
+		.info-item-wrap:nth-child(2)
+			.info-item
+				margin: 30px 0;
+				margin-left: 45px;
+	.row:nth-child(2)
+		.info-item-wrap:nth-child(1)
+			.info-item
+					margin: 40px 0;
+					margin-left: 0px;
+		.info-item-wrap:nth-child(2)
+			.info-item
+				margin: 30px 0;
+				margin-left: 90px;
+	.row:nth-child(3)
+		.info-item-wrap:nth-child(1)
+			.info-item
+					margin: 70px 0;
+					margin-left: 60px;
+		.info-item-wrap:nth-child(2)
+			.info-item
+					margin: 160px 0;
+					margin-left: 50px;
+		.info-item-wrap:nth-child(3)
+			.info-item
+					margin: 70px 0;
+					margin-left: 50px;
+.s3-icon
+	background: $main-color url(../img/icons/section_3/folder.svg) no-repeat center;
+	-webkit-background-size: 60%;
+	background-size: 60%;
+	border-radius: 50%;
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	top: 36%;
+	left: 46%;
+.s3-button
+	padding: 60px 0;
+	background-color: #394b5f;
+	.button
+		width: 365px;
+
+.section-4
+	position: relative;
+	&::before
+		height: 6px;
+		width: 100%;
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 0;
+		background: url(../img/bah_1.png) repeat-x;
+		
+
+@import "media" // Всегда в конце
+
+
