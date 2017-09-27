@@ -49,7 +49,7 @@ $(document).ready(function() {
 		offset: '35%'
 	});
 
-	$(".section1-head h2, .section1-head p, .s2-head h2, .s2-head p").animated("fadeIn");
+	$(".s1-head h2, .s1-head p, .s2-head h2, .s2-head p").animated("fadeIn");
 	$(".s3-head h2, s3-head p, s4-head h2, s4-head p").animated("fadeIn");
 	$(".info-item-wrap").animated("zoomIn");
 	// $(".slider .slide").animated("fadeIn");
@@ -57,8 +57,8 @@ $(document).ready(function() {
 	// $(".homesect.section_8 .p").animated("fadeIn");
 
 	$('.carousel').slick({
-		prevArrow: '<img src="img/Shape.png" class= "prev">',
-		nextArrow: '<img src="img/Shape180.png" class = "next">'
+		prevArrow: '<div style="width: 16px; height: 29; background: url("../img/slider_arrows.png";)" class= "prev">',
+		nextArrow: '<div style="width: 16px; height: 29; background: url("../img/slider_arrows.png";)" class = "next">'
 	});
 
 	$(".popup").magnificPopup({type:'image'});
