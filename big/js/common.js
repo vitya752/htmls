@@ -1,5 +1,20 @@
 $(document).ready(function() {
 
+	// $(".main-footer .toggle-mnu").click(function() {
+	// 	$("html, body").animate({ scrollTop: $(document).height() }, "slow");
+	// 	return false;
+	// });
+
+	$(".button-up").click(function() {
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+		return false;
+	});
+
+	$(".button-down a").click(function() {
+		$("html, body").animate({ scrollTop: $("header").height()+100 }, "slow");
+		return false;
+	});
+
 	$(".section-2").waypoint(function() {
 		$(".s2-item-wrap").each(function(index) {
 			var ths = $(this);
