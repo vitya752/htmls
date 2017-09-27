@@ -57,8 +57,8 @@ $(document).ready(function() {
 	// $(".homesect.section_8 .p").animated("fadeIn");
 
 	$('.carousel').slick({
-		prevArrow: '<div style="width: 16px; height: 29; background: url("../img/slider_arrows.png";)" class= "prev">',
-		nextArrow: '<div style="width: 16px; height: 29; background: url("../img/slider_arrows.png";)" class = "next">'
+		prevArrow: '<img src="img/prev.png" class = "prev">',
+		nextArrow: '<img src="img/next.png" class = "next">'
 	});
 
 	$(".popup").magnificPopup({type:'image'});
