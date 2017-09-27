@@ -47,6 +47,11 @@ body
 	padding: 0
 	margin: 0
     font-family: RalewayRegular,sans-serif;
+ p
+ 	font-family: RalewayRegular,sans-serif;
+ 	font-size: 0.9375em;
+ strong
+	font-family: 'RalewayBold';
 
 .img-responsive
 	display: block
@@ -79,6 +84,7 @@ h4
 	padding: 0;
 
 header
+	background-image: url(../img/header_bg.jpg)
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-position: center;
@@ -195,6 +201,9 @@ form
 	background-color: $main-color;
 	border-bottom: 4px solid #b97200;
 	outline: none;
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 	&:hover
 		background-color: #ffa91f;
 		color: #000;
@@ -232,7 +241,6 @@ form
 		background: url(../img/bah_1.png) repeat-x;
 	p
 		font-size: 1em;
-		font-family: 'RalewayRegular';
 		mark
 			font-family: 'RalewayBold';
 			font-weight: bold;
@@ -243,7 +251,7 @@ form
 			color: $main-color;
 			&:hover
 				text-decoration: none;
-	.section1-head
+	.s1-head
 		padding: 0 120px;
 		margin-top: 100px;
 		h2
@@ -292,7 +300,6 @@ form
 			&:hover
 				text-decoration: none;
 		p
-			font-family: RalewayRegular,sans-serif;
 			font-size: 1.0625em;
 			line-height: 19px;
 
@@ -307,7 +314,7 @@ form
 	background-color: $main-color;
 	margin: 20px auto;
 
-.section-1-bottom
+.s1-bottom
 	min-height: 250px;
 	background-color: #394b5f;
 	.info-item
@@ -319,7 +326,7 @@ form
 			margin-top: 65px;
 			margin-bottom: 60px;
 
-.section-button
+.s1-button
 	background: #2c3949;
 	min-height: 170px;
 	a
@@ -335,11 +342,6 @@ form
 	padding: 75px 0;
 	padding-bottom: 0;
 	text-align: center;
-	p
-		font-family: 'RalewayRegular',sans-serif;
-		font-size: 0.9375em;
-		strong
-			font-family: 'RalewayBold';
 	&::before
 		height: 6px;
 		width: 100%;
@@ -373,6 +375,13 @@ form
 .s2-item-wrap
 	cursor: pointer;
 	height: 180px;
+	opacity: 0
+	-webkit-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	&.on
+		opacity: 1
+		transform: translateY(0)
 	.s2-item
 		-webkit-transition: all 0.5s ease;
 		-o-transition: all 0.5s ease;
@@ -401,7 +410,7 @@ form
 			text-decoration: none;
 			color: $main-color;
 
-.s2-bottom
+.s2-button
 	background-color: #e5e5e5;
 	text-align: center;
 	padding: 50px 0 50px 0;
@@ -428,8 +437,6 @@ form
 		color: #f9f9f9;
 	p
 		color: #e5e5e5;
-		font-size: 0.9375em;
-		font-family: 'RalewayRegular',sans-serif;
 
 .s3-content
 	min-height: 700px;
@@ -454,9 +461,8 @@ form
 			&:hover
 				text-decoration: none;
 		p
-			font-family: RalewayRegular,sans-serif;
-			font-size: 1.0625em;
-			line-height: 19px;
+			font-size: 0.9em;
+			line-height: 17px;
 	.row:nth-child(1)
 		.info-item-wrap:nth-child(1)
 			.info-item
@@ -471,9 +477,21 @@ form
 					margin: 40px 0;
 					margin-left: 0px;
 		.info-item-wrap:nth-child(2)
+			.image-icon
+				text-align: center;
+				height: 130px;
+				width: 130px;
+				border-radius: 50%;
+				background-color: $main-color;
+				margin: 55px 0 0px 115px;
+				img
+					height: 65%;
+					margin-top: 20px;
+
+		.info-item-wrap:nth-child(3)
 			.info-item
 				margin: 30px 0;
-				margin-left: 90px;
+				margin-left: 120px;
 	.row:nth-child(3)
 		.info-item-wrap:nth-child(1)
 			.info-item
@@ -487,16 +505,7 @@ form
 			.info-item
 					margin: 70px 0;
 					margin-left: 50px;
-.s3-icon
-	background: $main-color url(../img/icons/section_3/folder.svg) no-repeat center;
-	-webkit-background-size: 60%;
-	background-size: 60%;
-	border-radius: 50%;
-	width: 130px;
-	height: 130px;
-	position: absolute;
-	top: 36%;
-	left: 46%;
+
 .s3-button
 	padding: 60px 0;
 	background-color: #394b5f;
@@ -504,6 +513,21 @@ form
 		width: 365px;
 
 .section-4
+	padding: 80px 0 0 0;
+	background-color: #e5e5e5;
+	text-align: center;
+	.s4-head
+		padding: 0 120px;
+	h2
+		color: #2c3949;
+		text-transform: uppercase;
+	p
+		color: #333333;
+	h3
+		color: #394b5f;
+		text-transform: uppercase;
+		font-size: 1.5em;
+		margin: 50px 0;
 	position: relative;
 	&::before
 		height: 6px;
@@ -513,8 +537,256 @@ form
 		top: -6px;
 		left: 0;
 		background: url(../img/bah_1.png) repeat-x;
-		
+
+.s4-content
+	.item
+		display: inline-block;
+		background-color: $dark-blue;
+		width: 260px;
+		height: 375px;
+		text-align: center;
+		margin: 0 12px 30px;
+		vertical-align: top;
+		padding: 50px 30px;
+		margin-bottom: 60px;
+		border-bottom: 3px solid #000;
+		-webkit-transition: all 0.7s ease;
+		-o-transition: all 0.7s ease;
+		transition: all 0.7s ease;
+		p
+			color: #97a4b2;
+			line-height: 1.3125em;
+		span
+			color: $main-color;
+		&:hover
+			.image-block
+				-webkit-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+			border-bottom: 4px solid $main-color;
+		.image-block
+			border-radius: 50%;
+			background-color: $main-color;
+			width: 120px;
+			margin: 0 auto;
+			height: 120px;
+			line-height: 120px;
+			margin-bottom: 35px;
+			-webkit-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			img
+				width: 75px;
+.s4-button
+	padding: 50px 0;
+	background-color: #d6d6d6;
+	.button
+		width: 250px;
+
+.section_5
+	background-color: $dark-blue;
+	padding: 90px 0 0 0;
+	position: relative;
+	text-align: center;
+	color: #f9f9f9;
+	h2
+		color: #f9f9f9;
+	&::before
+		height: 6px;
+		width: 100%;
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 0;
+		background: url(../img/bah_2.png) repeat-x;
+.s5-content
+	padding: 30px 0 75px 0;
+	.triangle-item
+		display: inline-block;
+		margin-left: -45px;
+		height: 125px;
+		width: 295px;
+		position: relative;
+		font-family: 'PFCentroSlabProMedium';
+		font-size: 1.125em;
+		-webkit-transition: all 0.5s ease;
+		-o-transition: all 0.5s ease;
+		transition: all 0.5s ease;
+		&:nth-child(1)
+			margin-left: 0;
+		&:hover
+			transform: scale(1.08)
+			z-index: 3
+			path
+				fill-opacity: 0!important
+				stroke-opacity: 1!important
+				-webkit-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;
+				transition: all 0.5s ease;
+			.triangle-item
+				-webkit-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+		path
+			-webkit-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		svg
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 0
+	.triangle-content
+		z-index: 2;
+		text-align: left;
+		margin-top: 43px;
+		margin-left: 25px;
+		padding-left: 40px;
+		position: absolute;
+		line-height: 20px;
+		span
+			font-family: 'PFCentroSlabProBold';
+			font-size: 1.375em;
+			position: absolute;
+			margin-left: -20px;
+			margin-top: -2px;
+	img
+		height: 40px;
+		width: 40px;
+		float: left;
+		margin-right: 25px;
+
+.s5-button
+	padding: 50px 0;
+	background-color: #394b5f;
+	.button
+		width: 245px;
+
+.section-6
+	position: relative;
+	padding: 90px 0 70px 0;
+	background-color: #f9f9f9;
+	text-align: center;
+	.s6-head
+		padding: 0 20px;
+	.item
+		display: inline-block;
+		background-color: #e5e5e5;
+		width: 260px;
+		height: 345px;
+		text-align: center;
+		margin: 0 12px 30px;
+		vertical-align: top;
+		padding: 50px 30px;
+		margin-top: 60px;
+		border-bottom: 3px solid #b5b5b5;
+		-webkit-transition: all 0.7s ease;
+		-o-transition: all 0.7s ease;
+		transition: all 0.7s ease;
+		h4,span
+			color: #333333;
+		p
+			color: #6e7b8b;
+		span
+			font-family: RobotoBold,"Helvetica Neue",Helvetica,Roboto,Arial,sans-serif;
+		&:hover
+			.image-block
+				-webkit-transform: scale(1.1);
+				-ms-transform: scale(1.1);
+				-o-transform: scale(1.1);
+				transform: scale(1.1);
+			border-bottom: 4px solid $main-color;
+		.image-block
+			border-radius: 50%;
+			width: 120px;
+			margin: 0 auto;
+			height: 120px;
+			border: 5px solid #d6d6d6;
+			margin-bottom: 35px;
+			-webkit-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			img
+				width: 100%;
+				border-radius: 50%;
+	&::before
+		height: 6px;
+		width: 100%;
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 0;
+		background: url(../img/bah_3.png) repeat-x;	
+
+.section-7
+	position: relative;
+	padding: 50px 0;
+	background-color: #e5e5e5;
+	text-align: center;
+	&::before
+		height: 6px;
+		width: 100%;
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 0;
+		background: url(../img/bah_3.png) repeat-x;
+.s7-content
+	.slick-slide:focus
+		outline: none
+	.carousel
+		margin: 30px 0;
+	.c-img
+		text-align: center;
+		img
+			display: inline-block;
+			width: 115px;
+			border-radius: 50%;
+			border: 5px solid $main-color;
+	h4
+		font-size: 1.125em;
+		color: #333333;
+	p
+		color: #333333;
+		span
+			color: #6e7b8b;
+			font-size: 0.8125em;
+
+.section-8
+	padding: 70px 0;
+	text-align: left;
+	position: relative;
+	&::before
+		height: 6px;
+		width: 100%;
+		content: '';
+		position: absolute;
+		top: -6px;
+		left: 0;
+		background: url(../img/bah_1.png) repeat-x;
+	h2
+		text-transform: uppercase;
+	.hr
+		margin: 20px 0;
+	img
+		width: 70px;
+	p
+		font-size: 0.8125em;
+		margin-bottom: 35px;
+	form
+		color: #5e6267;
+		border-bottom: 4px solid #828282;
+		h2
+			text-transform: none;
+			color: #2c3949;
+		background-color: #dddddd;
+		input
+			background-color: #c0c0c0;
+			color: #000;
+	.item-wrap
+		text-align: center;
+
 
 @import "media" // Всегда в конце
-
-

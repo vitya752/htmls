@@ -285,7 +285,7 @@ section .more_pros ul li p span{font-weight: bolder;}
 .s_rewview{
   min-height: 700px;
   background: url("../img/middle_bg.jpg") repeat-x top center;
-  background-attachment: fixed;
+/*  background-attachment: fixed;*/
   -webkit-background-size: cover;
   background-size: cover;
   padding: 65px 0;
