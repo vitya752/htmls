@@ -5,6 +5,13 @@ $(document).ready(function() {
 	// 	return false;
 	// });
 
+	$(".menu__icon").click(function() {
+		$(".menu ul").slideToggle();
+		if ($(this).hasClass("on")) $(this).removeClass("on");
+		else $(this).addClass("on");
+		return false;
+	});
+
 	$(".button-up").click(function() {
 		$("html, body").animate({ scrollTop: 0 }, "slow");
 		return false;

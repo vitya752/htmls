@@ -4,12 +4,39 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	.menu ul
+	.top-line ul
+		text-align: left;
 		display: none;
+		position: absolute;
+		width: 320px;
+		background-color: #253548;
+		opacity: 0.975;
+		z-index: 2;
+		top: 35px;
+		right: 55px;
+		padding: 0;
+		li
+			display: block;
+			padding: 15px 30px;
+			width: 100%;
+			text-transform: uppercase;
+			&:hover
+				background-color: #282a44;
+				a
+					color: $main-color;
+					text-decoration: none;
+				.active
+					text-decoration: none;
+		a
+			font-size: 1.2em;
+	.menu__icon
+		display: inline-block;
+		margin-left: 20px;
+		line-height: 20px;
 	.top-line
 		.phone-number
 			float: right;
-			font-size: 0.95em;
+			font-size: 1em;
 	.s3-content
 		.row:nth-child(2)
 			.info-item-wrap:nth-child(2)
@@ -130,5 +157,6 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px)
-	/**/
+	.top-line ul
+		display: block !important;
 
