@@ -1,0 +1,41 @@
+body {
+  color: #222;
+  letter-spacing: 1px; }
+
+a {
+  color: #FF6347; }
+
+p {
+  color: #888; }
+
+.main_c {
+  color: #FF6347; }
+
+.c_text {
+  color: #222; }
+
+.color_bg {
+  background-color: #FF6347; }
+
+.color_border {
+  border-color: #FF6347; }
+
+.s_light {
+  background-color: #888; }
+
+.s_dark {
+  background-color: #222; }
+
+header p {
+  color: #888; }
+
+.top-mnu ul li:hover a {
+  color: #FF6347; }
+
+.hr {
+  background-color: #222; }
+
+.about_me a {
+  color: #222; }
+
+/*# sourceMappingURL=tomato.css.map */

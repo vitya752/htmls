@@ -1,0 +1,48 @@
+/*
+Error: Invalid CSS after "url(../img/bg.jpg)": expected expression (e.g. 1px, bold), was ";"
+        on line 23 of D:\wordpress\__clean_html_original\css\sass\main.sass
+
+18: 
+19: .hidden
+20: 	display: none
+21: 
+22: header
+23: 	background: url(../img/bg.jpg);
+
+Backtrace:
+D:\wordpress\__clean_html_original\css\sass\main.sass:23
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/scss/parser.rb:1207:in `expected'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/script/lexer.rb:229:in `expected!'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/script/parser.rb:744:in `assert_done'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/script/parser.rb:76:in `parse'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/script/parser.rb:240:in `parse'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/script.rb:27:in `parse'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:1151:in `parse_script'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:721:in `parse_property'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:692:in `parse_property_or_rule'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:658:in `parse_line'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:536:in `build_tree'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:555:in `block in append_children'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:554:in `each'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:554:in `append_children'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:545:in `block in build_tree'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:538:in `each'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:538:in `build_tree'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:555:in `block in append_children'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:554:in `each'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:554:in `append_children'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:409:in `_to_tree'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+D:/Program Files/Koala/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+D:/Program Files/Koala/bin/sass:18:in `load'
+D:/Program Files/Koala/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"url(../img/bg.jpg)\": expected expression (e.g. 1px, bold), was \";\"\A         on line 23 of D:\wordpress\__clean_html_original\css\sass\main.sass\A \A 18: \A 19: .hidden\A 20: 	display: none\A 21: \A 22: header\A 23: 	background: url(../img/bg.jpg);"; }
