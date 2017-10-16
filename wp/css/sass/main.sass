@@ -29,10 +29,17 @@ section
 		padding: 0
 	h2
 		font-size: 2.2em
+	.s_description
+		p
+			font-size: 1.2em
+			font-weight: bold
+			text-transform: uppercase
+	h3
+		font-size: 1.4em
 
 .hr
 	width: 180px
-	height: 2px
+	height: 1px
 	margin: 20px auto
 
 .loader
@@ -120,6 +127,7 @@ $h: 3px
 
 header
 	padding-top: 20px
+	position: relative
 	.logo
 		width: 60px
 		height: 60px
@@ -138,11 +146,21 @@ header
 		outline: none
 		span
 			display: block
-	.top-text
-		text-align: center
-		vertical-align: middle
-		transform: translateY(50%)
+	.top_wrapper
+		display: table
+		width: 100%
 		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		.top_descr
+			display: table-row
+			.top_centered
+				display: table-cell
+				text-align: center
+				vertical-align: middle
+		.top_text
+			display: inline-block
 		h1
 			display: inline-block
 			color: #fff
@@ -201,4 +219,70 @@ header
 	a
 		font-size: 2em
 		letter-spacing: 20px
+	p
+		span
+			font-weight: bold
+			font-size: 1.4em
 
+
+.summary
+	.ta_right
+		text-align: right
+		border-right: 2px solid #a8a8a8
+	.resume_icon
+		display: inline-block
+	.ta_left
+		text-align: left
+	.resume_icon
+		width: 100px
+		height: 100px
+		img
+			width: 100%
+	.durability
+		display: inline-block
+		padding: 4px 6px
+	.item
+		padding: 20px 0
+	.fa
+		font-size: 2.2em
+
+.portfolio
+	ul,
+	li
+		list-style-type: none
+		margin: 0
+		padding: 0
+	ul
+		margin-bottom: 50px
+	li
+		display: inline-block
+		text-transform: uppercase
+		padding: 5px 10px
+		cursor: pointer
+		font-size: 12px
+		&:nth-child(3)
+			border: 0
+	.portfolio_item
+		display: none
+		padding: 0
+		height: 220px
+		&:hover
+			.content_img
+				opacity: 1
+	img
+		width: 100%
+	.content_img
+		opacity: 0
+		position: absolute
+		left: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		padding-top: 45px
+		background-color: rgba(0,0,0,.85)
+		border-bottom: 1px solid #000
+		-webkit-transition: all 0.5s ease-in-out
+		-o-transition: all 0.5s ease-in-out
+		transition: all 0.5s ease-in-out
+		button
+			background-color: transparent

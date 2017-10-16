@@ -8,6 +8,9 @@ a {
 p {
   color: #888; }
 
+.s_description p {
+  color: #222; }
+
 .main_c {
   color: #FF6347; }
 
@@ -21,10 +24,15 @@ p {
   border-color: #FF6347; }
 
 .s_light {
-  background-color: #888; }
+  background-color: #dddddd; }
 
 .s_dark {
-  background-color: #222; }
+  background-color: #222;
+  color: #FAFAFA; }
+  .s_dark .s_description p {
+    color: #FAFAFA; }
+  .s_dark .hr {
+    background-color: #FAFAFA; }
 
 header p {
   color: #888; }
@@ -37,5 +45,16 @@ header p {
 
 .about_me a {
   color: #222; }
+
+.summary .durability {
+  background-color: #FF6347; }
+
+.portfolio li {
+  letter-spacing: 2px;
+  border-right: 1px solid #888; }
+  .portfolio li.active {
+    border-bottom: 2px solid #FF6347; }
+.portfolio .content_img button {
+  border: 1px solid #FF6347; }
 
 /*# sourceMappingURL=tomato.css.map */

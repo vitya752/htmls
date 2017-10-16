@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
-	$(window).load(function() { 
-		$(".loader-inner").fadeOut(); 
-		$(".loader").delay(400).fadeOut("slow"); 
-	});
+	$("#grid").mixItUp();
 
 	function heightDetect() {
 		$("header").css("height", $(window).height());
@@ -27,4 +24,10 @@ $(document).ready(function() {
 		};
 	});
 	
+});
+
+
+$(window).load(function() { 
+			$(".loader-inner").fadeOut(); 
+			$(".loader").delay(400).fadeOut("slow"); 
 });

@@ -17,7 +17,9 @@ a
 
 p
 	color: $text_color
-
+.s_description
+	p
+		color: $main_color
 .main_c
 	color: $color
 .c_text
@@ -27,24 +29,40 @@ p
 .color_border
 	border-color: $color
 .s_light
-	background-color: $text_color
+	background-color: #dddddd
+
 .s_dark
 	background-color: $main_color
-
+	color: $bg_light
+	.s_description
+		p
+			color: $bg_light
+	.hr
+		background-color: $bg_light
 header
 	p
 		color: $text_color
-
 .top-mnu
 	ul
 		li
 			&:hover
 				a
 					color: $color
-
 .hr
 	background-color: $main_color
 
 .about_me
 	a
 		color: $main_color
+.summary
+	.durability
+		background-color: $color
+.portfolio
+	li
+		+kerning(2)
+		border-right: 1px solid $text_color
+		&.active
+			border-bottom: 2px solid $color
+	.content_img
+		button
+			border: 1px solid $color

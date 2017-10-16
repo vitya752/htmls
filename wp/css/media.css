@@ -12,12 +12,16 @@
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-
+	.summary .ta_right,
+	.summary .ta_left{
+		border: 0;
+		text-align: center;
+	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	header .top-text h1{
+	header .top_text h1{
 		font-size: 2.2em;
 		margin: 0 10px;
 	}
