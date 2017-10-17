@@ -57,4 +57,11 @@ header p {
 .portfolio .content_img button {
   border: 1px solid #FF6347; }
 
+.contacts input,
+.contacts textarea {
+  background-color: #aaaaaa; }
+.contacts button {
+  background-color: #FF6347;
+  color: #fff; }
+
 /*# sourceMappingURL=tomato.css.map */

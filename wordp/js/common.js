@@ -10,6 +10,14 @@ $(document).ready(function() {
 		heightDetect();
 	});
 
+	$(".s_head h2").animated("fadeInDown", "fadeOutUp");
+	$(".s_head p").animated("fadeInUp", "fadeOutDown");
+	$(".about_me .anim1").animated("fadeInLeft", "fadeOutLeft");
+	$(".about_me .anim2").animated("fadeInUp", "fadeOutDown");
+	$(".about_me .anim3").animated("fadeInRight", "fadeOutRight");
+	$(".summary .ta_right .item").animated("fadeInLeft", "fadeOutRight");
+	$(".summary .ta_left .item").animated("fadeInRight", "fadeOutRight");
+
 	$(".btn-menu, .menu_item").click(function() {
 		if ($(".top-mnu").is(":visible")) {
 			$(".sandwich").removeClass("active");

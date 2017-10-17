@@ -231,8 +231,9 @@ header {
   padding: 4px 6px; }
 .summary .item {
   padding: 20px 0; }
-.summary .fa {
-  font-size: 2.2em; }
+
+.fa {
+  font-size: 1.6em; }
 
 .portfolio ul,
 .portfolio li {
@@ -275,5 +276,51 @@ header {
   transition: all 0.5s ease-in-out; }
   .portfolio .content_img button {
     background-color: transparent; }
+
+.contacts .s_content {
+  text-align: left; }
+.contacts .s_content_item {
+  padding: 10px 30px; }
+  .contacts .s_content_item p {
+    font-size: 16px;
+    text-align: left; }
+.contacts img {
+  height: 50px;
+  width: 50px;
+  padding-bottom: 5px; }
+.contacts label {
+  font-size: 16px; }
+.contacts h3 {
+  font-weight: bold; }
+.contacts .btn_sbmt {
+  text-align: right;
+  margin-top: 20px; }
+.contacts input,
+.contacts textarea {
+  width: 100%;
+  border: 1px solid #000;
+  outline: none;
+  padding: 5px; }
+.contacts input {
+  height: 40px;
+  margin-bottom: 15px; }
+.contacts button {
+  outline: none;
+  border: 0;
+  font-size: 16px;
+  padding: 20px 30px; }
+
+footer {
+  padding: 60px 0;
+  font-size: 20px;
+  font-weight: bold; }
+  footer .soc-netw {
+    padding: 0;
+    margin: 0;
+    text-align: right; }
+    footer .soc-netw .fa {
+      font-size: 30px;
+      margin-right: 10px;
+      color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
