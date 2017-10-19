@@ -54,7 +54,7 @@ header p {
   border-right: 1px solid #888; }
   .portfolio li.active {
     border-bottom: 2px solid #FF6347; }
-.portfolio .content_img button {
+.portfolio .content_img a {
   border: 1px solid #FF6347; }
 
 .contacts input,
