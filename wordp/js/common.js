@@ -43,6 +43,8 @@ $(document).ready(function() {
 		$(this).find(".podrt_descr").attr("id", "work_" + i);
 	});
 	
+	$(".top-mnu a").mPageScroll2id();
+
 });
 
 

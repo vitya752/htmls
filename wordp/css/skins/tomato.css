@@ -59,7 +59,7 @@ header p {
 
 .contacts input,
 .contacts textarea {
-  background-color: #aaaaaa; }
+  background-color: transparent; }
 .contacts button {
   background-color: #FF6347;
   color: #fff; }
