@@ -27,9 +27,9 @@ section {
     margin: 0;
     padding: 0; }
   section h2 {
-    font-size: 2.2em; }
+    font-size: 2em; }
   section .s_description p {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bold;
     text-transform: uppercase; }
   section h3 {
@@ -208,11 +208,11 @@ header {
   border-radius: 50%;
   margin: 0 auto; }
 .about_me a {
-  font-size: 2em;
+  font-size: 1.6em;
   letter-spacing: 20px; }
 .about_me p span {
   font-weight: bold;
-  font-size: 1.4em; }
+  font-size: 1em; }
 
 .summary .ta_right {
   text-align: right;
@@ -251,8 +251,6 @@ header {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
-  .portfolio li:nth-child(3) {
-    border: 0; }
 .portfolio .portfolio_item {
   display: none;
   padding: 0;
@@ -308,14 +306,14 @@ header {
 .contacts .s_content_item {
   padding: 10px 30px; }
   .contacts .s_content_item p {
-    font-size: 16px;
+    font-size: 12px;
     text-align: left; }
 .contacts img {
   height: 50px;
   width: 50px;
   padding-bottom: 5px; }
 .contacts label {
-  font-size: 16px; }
+  font-size: 12px; }
 .contacts h3 {
   font-weight: bold; }
 .contacts .btn_sbmt {
@@ -333,20 +331,19 @@ header {
 .contacts button {
   outline: none;
   border: 0;
-  font-size: 16px;
+  font-size: 14px;
   padding: 20px 30px; }
 
 footer {
   padding: 60px 0;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold; }
   footer .soc-netw {
     padding: 0;
     margin: 0;
     text-align: right; }
     footer .soc-netw .fa {
-      font-size: 30px;
-      margin-right: 10px;
-      color: #fff; }
+      font-size: 20px;
+      margin-right: 10px; }
 
 /*# sourceMappingURL=main.css.map */
