@@ -1,21 +1,16 @@
 body {
-  color: #222;
-  letter-spacing: 1px; }
+  color: #222; }
 
 a {
   color: #FF6347; }
 
-p {
+p,
+body .main_footer,
+.s_about li {
   color: #888; }
 
-.s_description p {
-  color: #222; }
-
-.main_c {
+.color_element {
   color: #FF6347; }
-
-.c_text {
-  color: #222; }
 
 .color_bg {
   background-color: #FF6347; }
@@ -23,48 +18,85 @@ p {
 .color_border {
   border-color: #FF6347; }
 
-.s_light {
-  background-color: #dddddd; }
+.bg_light {
+  background-color: #FAFAFA; }
 
-.s_dark {
+.bg_dark {
   background-color: #222;
-  color: #FAFAFA; }
-  .s_dark .s_description p {
-    color: #FAFAFA; }
-  .s_dark .hr {
-    background-color: #FAFAFA; }
+  color: #fff; }
+  .bg_dark .s_descr::after {
+    background-color: #fff; }
+  .bg_dark a {
+    color: #fff; }
 
-header p {
+.top_mnu a:hover {
+  color: #FF6347; }
+.top_mnu a {
+  letter-spacing: 4px; }
+
+.top_text p {
+  color: #FAFAFA;
+  letter-spacing: 5px; }
+
+.personal_header {
+  letter-spacing: 2px; }
+
+.s_descr {
+  letter-spacing: 4px; }
+  .s_descr::after {
+    background-color: #222; }
+
+section h3 {
+  letter-spacing: 3px;
   color: #888; }
 
-.top-mnu ul li:hover a {
+.s_about p:nth-child(even) {
   color: #FF6347; }
 
-.hr {
-  background-color: #222; }
+.resume_container h3 {
+  color: #222;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 600; }
 
-.about_me a {
-  color: #222; }
-
-.summary .durability {
-  background-color: #FF6347; }
-
-.portfolio li {
-  letter-spacing: 2px;
-  border-right: 1px solid #888; }
-  .portfolio li.active {
-    border-bottom: 2px solid #FF6347; }
-.portfolio .content_img a {
-  border: 1px solid #FF6347; }
-
-.contacts input,
-.contacts textarea {
-  background-color: transparent; }
-.contacts button {
+.resume_item .year {
   background-color: #FF6347;
   color: #fff; }
+.resume_item .resume_description {
+  letter-spacing: 1px; }
 
-.fa {
+.s_portfolio li {
+  color: #888;
+  letter-spacing: 2px; }
+.s_portfolio li.active {
+  color: #fff;
+  border-bottom: 1px solid #FF6347; }
+
+.portfolio_item .port_item_cont a {
+  border-color: #FF6347;
   color: #FF6347; }
 
-/*# sourceMappingURL=tomato.css.map */
+.main_footer a {
+  color: #FF6347; }
+
+.contacts_icon {
+  color: #FF6347; }
+
+.text-danger {
+  color: #FF6347; }
+
+form input:focus,
+form textarea:focus {
+  border: 1px solid #FF6347; }
+form input,
+form textarea {
+  letter-spacing: 2px; }
+form button {
+  background-color: #FF6347;
+  letter-spacing: 2px; }
+form .form-group {
+  letter-spacing: 2px;
+  color: #888; }
+
+.popup_content {
+  letter-spacing: 1px; }

@@ -7,33 +7,41 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+	.personal_last_block {
+		margin-top: 35px;
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	.summary .ta_right,
-	.summary .ta_left{
-		border: 0;
-		text-align: center;
+	.resume_container .left,
+	.section_content .resume_container h3,
+	.resume_container .resume_icon {
+		text-align: left;
+		margin-bottom: 10px;
 	}
-	footer{
-		text-align: center;
-	}
-	footer .soc-netw{
-		text-align: center;
-		margin-top: 20px;
+	.resume_container .left h3 {
+		margin-top: 0;
 	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-	header .top_text h1{
-		font-size: 2.2em;
-		margin: 0 10px;
+	.top_wrapper .top_text h1 {
+		font-size: 2em;
+		padding-left: 10px;
+		padding-right: 10px;
 	}
-	.about_me .info-item{
-		text-align: center;
+	.main_footer {
+		text-align: left;
+	}
+	.main_footer .social_wrap {
+		float: left;
+		margin-top: 20px;
+		width: 100%;
+	}
+	.main_footer .social_wrap ul {
+		padding-left: 0;
 	}
 }
 
@@ -65,7 +73,7 @@
 
 }
 
- /* Large Devices, Wide Screens */
+/* Large Devices, Wide Screens */
 @media only screen and (min-width : 1200px) {
 
 }
