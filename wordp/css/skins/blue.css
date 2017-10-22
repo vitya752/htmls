@@ -1,102 +1,70 @@
 body {
-  color: #222; }
+  color: #222;
+  letter-spacing: 1px; }
 
 a {
-  color: #2EA2CC; }
+  color: #00d5ff; }
 
-p,
-body .main_footer,
-.s_about li {
+p {
   color: #888; }
 
-.color_element {
-  color: #2EA2CC; }
+.s_description p {
+  color: #222; }
+
+.main_c {
+  color: #00d5ff; }
+
+.c_text {
+  color: #222; }
 
 .color_bg {
-  background-color: #2EA2CC; }
+  background-color: #00d5ff; }
 
 .color_border {
-  border-color: #2EA2CC; }
+  border-color: #00d5ff; }
 
-.bg_light {
-  background-color: #FAFAFA; }
+.s_light {
+  background-color: #dddddd; }
 
-.bg_dark {
+.s_dark {
   background-color: #222;
-  color: #fff; }
-  .bg_dark .s_descr::after {
-    background-color: #fff; }
-  .bg_dark a {
-    color: #fff; }
+  color: #FAFAFA; }
+  .s_dark .s_description p {
+    color: #FAFAFA; }
+  .s_dark .hr {
+    background-color: #FAFAFA; }
 
-.top_mnu a:hover {
-  color: #2EA2CC; }
-.top_mnu a {
-  letter-spacing: 4px; }
-
-.top_text p {
-  color: #FAFAFA;
-  letter-spacing: 5px; }
-
-.personal_header {
-  letter-spacing: 2px; }
-
-.s_descr {
-  letter-spacing: 4px; }
-  .s_descr::after {
-    background-color: #222; }
-
-section h3 {
-  letter-spacing: 3px;
+header p {
   color: #888; }
 
-.s_about p:nth-child(even) {
-  color: #2EA2CC; }
+.top-mnu ul li:hover a {
+  color: #00d5ff; }
 
-.resume_container h3 {
-  color: #222;
-  letter-spacing: 1px;
-  font-size: 16px;
-  font-weight: 600; }
+.hr {
+  background-color: #222; }
 
-.resume_item .year {
-  background-color: #2EA2CC;
-  color: #fff; }
-.resume_item .resume_description {
-  letter-spacing: 1px; }
+.about_me a {
+  color: #222; }
 
-.s_portfolio li {
-  color: #888;
-  letter-spacing: 2px; }
-.s_portfolio li.active {
-  color: #fff;
-  border-bottom: 1px solid #2EA2CC; }
+.summary .durability {
+  background-color: #00d5ff; }
 
-.portfolio_item .port_item_cont a {
-  border-color: #2EA2CC;
-  color: #2EA2CC; }
-
-.main_footer a {
-  color: #2EA2CC; }
-
-.contacts_icon {
-  color: #2EA2CC; }
-
-.text-danger {
-  color: #2EA2CC; }
-
-form input:focus,
-form textarea:focus {
-  border: 1px solid #2EA2CC; }
-form input,
-form textarea {
-  letter-spacing: 2px; }
-form button {
-  background-color: #2EA2CC;
-  letter-spacing: 2px; }
-form .form-group {
+.portfolio li {
   letter-spacing: 2px;
-  color: #888; }
+  border-right: 1px solid #888; }
+  .portfolio li.active {
+    border-bottom: 2px solid #00d5ff; }
+.portfolio .content_img a {
+  border: 1px solid #00d5ff; }
 
-.popup_content {
-  letter-spacing: 1px; }
+.contacts input,
+.contacts textarea {
+  background-color: transparent; }
+.contacts button {
+  background-color: #00d5ff;
+  color: #fff; }
+
+.fa {
+  color: #00d5ff; }
+
+/*# sourceMappingURL=blue.css.map */
