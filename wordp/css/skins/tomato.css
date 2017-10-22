@@ -1,0 +1,70 @@
+body {
+  color: #222;
+  letter-spacing: 1px; }
+
+a {
+  color: #FF6347; }
+
+p {
+  color: #888; }
+
+.s_description p {
+  color: #222; }
+
+.main_c {
+  color: #FF6347; }
+
+.c_text {
+  color: #222; }
+
+.color_bg {
+  background-color: #FF6347; }
+
+.color_border {
+  border-color: #FF6347; }
+
+.s_light {
+  background-color: #dddddd; }
+
+.s_dark {
+  background-color: #222;
+  color: #FAFAFA; }
+  .s_dark .s_description p {
+    color: #FAFAFA; }
+  .s_dark .hr {
+    background-color: #FAFAFA; }
+
+header p {
+  color: #888; }
+
+.top-mnu ul li:hover a {
+  color: #FF6347; }
+
+.hr {
+  background-color: #222; }
+
+.about_me a {
+  color: #222; }
+
+.summary .durability {
+  background-color: #FF6347; }
+
+.portfolio li {
+  letter-spacing: 2px;
+  border-right: 1px solid #888; }
+  .portfolio li.active {
+    border-bottom: 2px solid #FF6347; }
+.portfolio .content_img a {
+  border: 1px solid #FF6347; }
+
+.contacts input,
+.contacts textarea {
+  background-color: transparent; }
+.contacts button {
+  background-color: #FF6347;
+  color: #fff; }
+
+.fa {
+  color: #FF6347; }
+
+/*# sourceMappingURL=tomato.css.map */

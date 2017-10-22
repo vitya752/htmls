@@ -1,0 +1,70 @@
+body {
+  color: #222;
+  letter-spacing: 1px; }
+
+a {
+  color: #1eff00; }
+
+p {
+  color: #888; }
+
+.s_description p {
+  color: #222; }
+
+.main_c {
+  color: #1eff00; }
+
+.c_text {
+  color: #222; }
+
+.color_bg {
+  background-color: #1eff00; }
+
+.color_border {
+  border-color: #1eff00; }
+
+.s_light {
+  background-color: #dddddd; }
+
+.s_dark {
+  background-color: #222;
+  color: #FAFAFA; }
+  .s_dark .s_description p {
+    color: #FAFAFA; }
+  .s_dark .hr {
+    background-color: #FAFAFA; }
+
+header p {
+  color: #888; }
+
+.top-mnu ul li:hover a {
+  color: #1eff00; }
+
+.hr {
+  background-color: #222; }
+
+.about_me a {
+  color: #222; }
+
+.summary .durability {
+  background-color: #1eff00; }
+
+.portfolio li {
+  letter-spacing: 2px;
+  border-right: 1px solid #888; }
+  .portfolio li.active {
+    border-bottom: 2px solid #1eff00; }
+.portfolio .content_img a {
+  border: 1px solid #1eff00; }
+
+.contacts input,
+.contacts textarea {
+  background-color: transparent; }
+.contacts button {
+  background-color: #1eff00;
+  color: #fff; }
+
+.fa {
+  color: #1eff00; }
+
+/*# sourceMappingURL=green.css.map */
