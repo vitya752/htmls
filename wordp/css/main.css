@@ -5,7 +5,9 @@ body {
   min-width: 320px;
   position: relative;
   line-height: 1.42857;
-  -webkit-font-smoothing: antialised; }
+  -webkit-font-smoothing: antialised;
+  box-sizing: border-box;
+  }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
