@@ -6,8 +6,7 @@ body {
   position: relative;
   line-height: 1.42857;
   -webkit-font-smoothing: antialised;
-  box-sizing: border-box;
-  }
+  overflow-x: hidden; }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -204,9 +203,12 @@ header {
     text-align: center; }
 .about_me .my-photo {
   width: 225px;
-  margin: 0 auto; }
+  height: 230px;
+  margin: 0 auto;
+  overflow: hidden; }
 .about_me img {
   width: 100%;
+  height: 100%;
   border-radius: 50%;
   margin: 0 auto; }
 .about_me a {
@@ -218,11 +220,12 @@ header {
 
 .summary .ta_right {
   text-align: right;
-  border-right: 2px solid #a8a8a8; }
+  border-right: 1px solid #a8a8a8; }
 .summary .resume_icon {
   display: inline-block; }
 .summary .ta_left {
-  text-align: left; }
+  text-align: left;
+  border-left: 1px solid #a8a8a8; }
 .summary .resume_icon {
   width: 100px;
   height: 100px; }
@@ -235,7 +238,8 @@ header {
   padding: 20px 0; }
 
 .fa {
-  font-size: 1.6em; }
+  font-size: 1.6em;
+  float: left; }
 
 .portfolio ul,
 .portfolio li {
@@ -327,6 +331,8 @@ header {
   border: 1px solid #000;
   outline: none;
   padding: 5px; }
+.contacts textarea {
+  resize: none; }
 .contacts input {
   height: 40px;
   margin-bottom: 15px; }
@@ -341,12 +347,15 @@ footer {
   padding: 60px 0;
   font-size: 16px;
   font-weight: bold; }
+  footer .copyright {
+    text-transform: uppercase; }
   footer .soc-netw {
     padding: 0;
     margin: 0;
     text-align: right; }
     footer .soc-netw .fa {
       font-size: 20px;
-      margin-right: 10px; }
+      margin-right: 10px;
+      float: right; }
 
 /*# sourceMappingURL=main.css.map */
