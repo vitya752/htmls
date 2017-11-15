@@ -24,6 +24,10 @@
 		text-align: center;
 		margin-top: 20px;
 	}
+	footer .soc-netw .fa,
+	.fa{
+		float: none;
+	}
 }
 
 /* Extra Small Devices, Phones */
