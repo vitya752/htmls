@@ -1,13 +1,11 @@
 $(document).ready(function() {
 
-	$(".gallery").css("min-height", $(document).height()*1.1);
-
 	$(".btn_mnu").click(function() {
 		$(this).toggleClass("active");
 		$("aside").toggleClass("active");
 	});
 
-	$("body").niceScroll({
+	$("body, body aside").niceScroll({
 		horizrailenabled : false
 	});
 

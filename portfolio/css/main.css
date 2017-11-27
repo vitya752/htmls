@@ -199,9 +199,12 @@ aside li:nth-child(3) a::before {
   height: 100%;
   padding: 5px 5px 55px 55px;
   background-color: #0e0e0e;
+  overflow-x: hidden;
 }
 
-.content .gallery{
+.content .gallery,
+.content.contacts,
+.content.about_me{
   left: 0;
   transition: all .5s ease;
   transition-delay: .125s;
@@ -219,7 +222,9 @@ aside li:nth-child(3) a::before {
   transition: all 30s ease;
 }
 
-aside.active + .content .gallery{
+aside.active + .content .gallery,
+aside.active + .content.contacts,
+aside.active + .content.about_me{
   left: 250px;
 }
 
@@ -313,7 +318,6 @@ button.mfp-arrow {
 .mfp-fade.mfp-wrap.mfp-removing .mfp-arrow {
   display: none!important;
 }
-
 .loader {
   background: none repeat scroll 0 0 #ffffff;
   bottom: 0;
@@ -338,4 +342,121 @@ button.mfp-arrow {
   left: 50%;
   top: 50%;
   position: absolute;
+}
+
+
+.content.contacts,
+.content.about_me{
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.s_description{
+  margin-bottom: 40px;
+}
+
+.s_description img{
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+}
+
+.s_description p{
+  letter-spacing: 2px;
+}
+
+.s_content {
+  text-align: left; 
+}
+
+.s_content_item {
+  padding: 10px 30px;
+}
+
+.s_content_item h3{
+  text-indent: 9px;
+}
+
+.s_content_item h3:before{
+  display: inline-block;
+  font-family: "linea-basic-10";
+  font-size: 25px;
+  line-height: 0;
+  margin-left: -58px;
+  margin-right: 13px;
+  margin-top: -4px;
+  vertical-align: middle;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.s_content_item:nth-child(1) h3:before{
+  content: "Z"
+}
+
+.s_content_item:nth-child(2) h3:before{
+  content: "1"
+}
+
+.s_content_item:nth-child(3) h3:before{
+  content: "{"
+}
+
+.s_content_item p {
+  font-size: 12px;
+  text-align: left; 
+}
+
+label {
+  font-size: 12px; 
+}
+
+.btn_sbmt {
+  text-align: right;
+  margin-top: 20px; 
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 1px solid #000;
+  outline: none;
+  padding: 5px; 
+}
+
+textarea {
+  resize: none; 
+}
+
+input {
+  display: block;
+  height: 40px;
+  margin-bottom: 15px; 
+}
+
+button[type="submit"] {
+  background-color: tomato;
+  outline: none;
+  border: 0;
+  font-size: 14px;
+  padding: 10px 15px;
+  float: right; 
+}
+
+.content.about_me{
+  padding-top: 50px;
+}
+
+.about_me .s_description h1{
+  font-size: 28px;
+}
+
+.about_me .s_description p{
+  font-size: 12px;
+}
+
+.about_me .s_content p{
+  font-size: 16px;
+  padding: 0 40px;
 }
