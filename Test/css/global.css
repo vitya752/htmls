@@ -1194,6 +1194,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f17a74', end
   padding-bottom: 15px; 
 }
 
+.parrent_centr{
+  text-align: center;
+}
+
 .centrum_tovar{
   margin: 0 auto;
+  display: inline-block;
 }
