@@ -134,6 +134,7 @@ body {
   -moz-border-radius: 8px;
   border-radius: 8px;
   background: url(../img/background/form-bg.png) no-repeat;
+  position: relative;
 }
 .transform-right {
 width: 66px;
@@ -293,9 +294,8 @@ z-index: 1;
 .no {
   padding: 20px 0 0 15px;
   display: inline-block;
-  width: 500px;
+  width: 485px;
   vertical-align: top;
-  float: left;
 }
 .no p{
   vertical-align: top;
@@ -309,7 +309,7 @@ z-index: 1;
   padding-right: 25px;
 }
 .yes {
-  padding: 20px 0 0 15px;
+  padding: 20px 0 0 30px;
   display: inline-block;
   vertical-align: top;
 }
