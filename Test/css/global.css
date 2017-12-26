@@ -295,6 +295,7 @@ z-index: 1;
   padding: 20px 0 0 15px;
   display: inline-block;
   width: 490px;
+  vertical-align: top;
 }
 .no p{
   vertical-align: top;
@@ -310,6 +311,7 @@ z-index: 1;
 .yes {
   padding: 20px 0 0 15px;
   display: inline-block;
+  vertical-align: top;
 }
 .yes p{
   vertical-align: top;
