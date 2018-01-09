@@ -5,6 +5,9 @@ $(document).ready(function() {
 	// 	return false;
 	// });
 
+
+	$(".menu a").mPageScroll2id();
+
 	$(".menu__icon").click(function() {
 		$(".menu ul").slideToggle();
 		if ($(this).hasClass("on")) $(this).removeClass("on");
