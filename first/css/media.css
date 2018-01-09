@@ -2,26 +2,90 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
-
+	#button_gumb{
+		display: inline-block;
+	}
+	.garanty{
+		display: inline-block;
+	}
+	.top__menu{
+		position: relative;
+	}
+	.top__menu ul{
+		position: absolute;
+		width: 100%;
+		background-color: #000;
+		z-index: 200;
+		display: none;
+	}
+	.top__menu ul li{
+		float: none;
+		display: block;
+		text-align: center;
+	}
+	.top__menu li.active a, .top__menu li:hover a{
+		color: #d12f22;
+	}
+	.top__menu li:nth-child(1) a{background: none}
+	.top__menu li:nth-child(2) a{background: none}
+	.top__menu li:nth-child(3) a{background: none}
+	.top__menu li:nth-child(4) a{background: none}
+	.top__menu li:nth-child(5) a{background: none}
+	.top__menu li:nth-child(6) a{background: none}
 }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
-
+	.top-line strong{
+		font-size: 20px;
+	}
+	.top-line a{
+		font-size: 14px;
+	}
+	.top-line .ta__right{
+		text-align: left;
+		padding-left: 10px;
+	}
+	.top-line .logo{
+		right: -260px;
+		margin-top: -80px;
+	}
+	.mc_item_wrap{
+		margin-left: 0px;
+	}
+	.button_second {
+		margin: 20px 0 35px 0;
+	}
+	.button{
+		margin-right: 0;
+	}
 }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
-	.top_adr{
-		text-align: right;
-		padding-bottom: 10px;
-		background-position: 470px top;
+	.top-line .logo{
+		right: -200px;
+		margin-top: -80px;
 	}
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+	.top-line .logo {
+		right: -60px;
+		margin-top: -65px;
+	}
+	.top-line .logo img{
+		width: 200px;
+	}
+	.button{
+		font-size: 15px;
+		padding: 0px 15px;
+	}
+	.st__button{
+		padding: 6px 10px;
+		padding-left: 60px;
+	}
 }
 
 /* Custom, iPhone Retina */

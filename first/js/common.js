@@ -17,6 +17,29 @@ $(document).ready(function() {
 		}
 	});
 
+	$('#button_gumb').click(function(){
+		if($(".top__menu ul").is(":visible")) {
+			$(".top__menu ul").fadeOut(600);
+			$(this).removeClass('active');
+		}else{
+			$(this).addClass('active');
+			$(".top__menu ul").fadeIn(600);
+		}
+	});
+
+
+		// if ($(".top-mnu").is(":visible")) {
+		// 	$(".sandwich").removeClass("active");
+		// 	$(".top-text").css("opacity", "1");
+		// 	$(".top-mnu").fadeOut(600);
+		// 	$(".top-mnu li a").removeClass("fadeInUp animated");
+		// } else {
+		// 	$(".top-text").css("opacity", ".1");
+		// 	$(".sandwich").addClass("active");
+		// 	$(".top-mnu").fadeIn(600);
+		// 	$(".top-mnu li a").addClass("fadeInUp animated");
+		// };
+
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
 		ga("send", "event", "goal", "goal");
