@@ -75,11 +75,11 @@
 		width: auto;
 	}
 	.top-line .logo {
-		right: -60px;
-		margin-top: -65px;
+		right: -40px;
+		margin-top: -50px;
 	}
 	.top-line .logo img{
-		width: 200px;
+		width: 170px;
 	}
 	.button{
 		font-size: 15px;
