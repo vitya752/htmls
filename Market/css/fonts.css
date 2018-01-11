@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "ArialRegular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Arial/ArialRegular/ArialRegular.eot");
+  src: url("../fonts/Arial/ArialRegular/ArialRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/Arial/ArialRegular/ArialRegular.woff") format("woff"), url("../fonts/Arial/ArialRegular/ArialRegular.ttf") format("truetype"); }
+@font-face {
+  font-family: "MyriadProBold";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.eot");
+  src: url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.woff") format("woff"), url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.ttf") format("truetype"); }
+@font-face {
+  font-family: "OpenSansBold";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/OpenSans/OpenSansBold/OpenSansBold.eot");
+  src: url("../fonts/OpenSans/OpenSansBold/OpenSansBold.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansBold/OpenSansBold.woff") format("woff"), url("../fonts/OpenSans/OpenSansBold/OpenSansBold.ttf") format("truetype"); }
+@font-face {
+  font-family: "OpenSansLight";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/OpenSans/OpenSansLight/OpenSansLight.eot");
+  src: url("../fonts/OpenSans/OpenSansLight/OpenSansLight.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansLight/OpenSansLight.woff") format("woff"), url("../fonts/OpenSans/OpenSansLight/OpenSansLight.ttf") format("truetype"); }
+@font-face {
+  font-family: "OpenSansRegular";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot");
+  src: url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.ttf") format("truetype"); }
+
+/*# sourceMappingURL=fonts.css.map */
