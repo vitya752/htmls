@@ -52,6 +52,16 @@ h1 {
   margin: 0;
   line-height: 65px; }
 
+h2 {
+  font-family: OpenSansLight;
+  font-size: 48px;
+  padding: 0;
+  margin: 0; }
+
+h3 {
+  font-family: OpenSansLight;
+  font-size: 36px; }
+
 .account_menu {
   padding: 10px 15px;
   background-color: #f9f9f9;
@@ -87,7 +97,7 @@ h1 {
     text-align: right; }
 
 .slideshow {
-  max-height: 650px;
+  max-height: 100%;
   overflow-y: hidden;
   overflow-x: hidden; }
   .slideshow img {
@@ -101,16 +111,18 @@ h1 {
     left: 20%;
     color: #fff;
     text-align: center; }
-  .slideshow a {
-    color: #000;
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #fff;
-    transition: all 1s ease; }
-    .slideshow a:hover {
-      text-decoration: none;
-      background-color: transparent;
-      color: #fff; }
+
+a.button {
+  color: #000;
+  display: inline-block;
+  padding: 10px 40px;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: all 1s ease; }
+  a.button:hover {
+    text-decoration: none;
+    background-color: transparent;
+    color: #fff; }
 
 .slick-arrow {
   position: absolute;
@@ -137,5 +149,91 @@ h1 {
 .next {
   right: 12%;
   transform: translateX(-12%); }
+
+.products_section {
+  background-color: #f4f4f2;
+  padding: 60px 0; }
+  .products_section .best_products {
+    margin-bottom: 60px; }
+  .products_section .bestp_item {
+    border: 10px solid #fff;
+    padding: 0; }
+    .products_section .bestp_item img {
+      width: 100%; }
+  .products_section .bestp_content {
+    width: 40%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 50px; }
+  .products_section h3 {
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 40px;
+    padding: 0 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff; }
+
+.special_products {
+  text-align: center; }
+
+.filter_div ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: OpenSansBold;
+  font-size: 0;
+  margin-bottom: 40px;
+  max-height: 50px; }
+  .filter_div ul li.filter {
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 15px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: #7c7c7c; }
+    .filter_div ul li.filter.active {
+      cursor: default;
+      border-bottom: 3px solid #80c770; }
+
+#grid_spec_products .product_item_wrap {
+  display: none; }
+
+.product_item_wrap {
+  background-color: #eaeaea;
+  width: 270px;
+  height: 325px;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: left;
+  border-radius: 5px; }
+  .product_item_wrap .product_item img {
+    width: 100%;
+    margin-bottom: 2px; }
+  .product_item_wrap .name_product {
+    line-height: 0; }
+  .product_item_wrap .price {
+    line-height: 4px;
+    color: #80c770; }
+  .product_item_wrap .in_cart img {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 10px; }
+
+.services {
+  padding: 80px 0 120px 70px;
+  background: #d6d6d5 url(../img/water.png) no-repeat left 100%; }
+  .services .servicec_content {
+    max-width: 500px; }
+  .services h2 {
+    color: #555555;
+    text-transform: uppercase;
+    line-height: 55px;
+    padding: 0; }
+    .services h2 span {
+      color: #80c770; }
 
 /*# sourceMappingURL=main.css.map */
