@@ -254,7 +254,8 @@ footer {
     font-size: 15px;
     color: #9f9f9f; }
   footer .side {
-    display: inline-block; }
+    display: inline-block;
+    margin-bottom: 20px; }
 
 .slideshow_section {
   max-height: 100%;

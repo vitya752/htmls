@@ -13,7 +13,8 @@
     display: none; }
 
   .slide_content h1 {
-    font-size: 30px; }
+    font-size: 30px;
+    line-height: 30px; }
 
   .services_section {
     background: #d6d6d5 url(../img/water.png) no-repeat right 100%; } }
@@ -22,7 +23,8 @@
   .slideshow .slide_content {
     top: 20px; }
   .slideshow h1 {
-    font-size: 30px; }
+    font-size: 18px;
+    line-height: 18px; }
 
   .main_sl_buttons {
     height: 40px;

@@ -57,6 +57,8 @@ $(function() {
 
 /*******/
 	$(".product_item_wrap h4.name_product").css("height", "").equalHeights();
+	$("footer .category li").css("height", "").equalHeights();
+
 
 /**
 *Sort the products
