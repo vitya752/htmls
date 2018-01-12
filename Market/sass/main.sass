@@ -63,6 +63,10 @@ h3
 	font-family: OpenSansLight
 	font-size: 36px
 
+h4
+	font-family: OpenSansLight
+	font-size: 16px
+
 // STANDART STYLES HEADER
 
 .account_menu
@@ -99,32 +103,58 @@ h3
 	.search_cart
 		text-align: right
 
+	.logo
+		width: 100%
+
 // STANDART STYLES HEADER END
 
-// STANDART STYLES FOOTER
 
-// STANDART STYLES FOOTER END
+//STANDART STYLES PRODUCT BLOCK
 
-
-// HOME STYLES
-
-.slideshow
-	max-height: 100%
-	overflow-y: hidden
-	overflow-x: hidden
-	img
-		width: 100%
-		//поиграться с max-
-		height: 100%
-	.slide_item
+.product_item_wrap
+	background-color: #eaeaea
+	width: 270px
+	min-height: 325px
+	margin: 0 10px
+	margin-bottom: 20px
+	padding: 10px
+	text-align: left
+	border-radius: 5px
+	outline: none
+	.product_item
 		position: relative
-	.slide_content
+		img
+			width: 100%
+			margin-bottom: 2px 
+	.new_product_item
+		position: relative
+		&::before 
+			height: 50%
+			width: 100%
+			content: ""
+			position: absolute
+			top: -15px
+			left: -15px
+			background: url(../img/nuevos.png) no-repeat
+	h4.name_product
+		line-height: 20px
+		padding: 0 14px 0 0
+		a
+			color: #3c3c3c
+	.price
+		line-height: 4px
+		color: $main-color
+	.in_cart
 		position: absolute
-		top: 10%
-		left: 20%
-		color: #fff
-		text-align: center
+		bottom: -9px 
+		right: 0
+		img
+			width: 35px
+			height: 35px
 
+//STANDART STYLES PRODUCT END
+
+// BUTTON HOVER
 a.button
 	color: #000
 	display: inline-block
@@ -136,8 +166,73 @@ a.button
 		text-decoration: none
 		background-color: transparent
 		color: #fff
+// BUTTON HOVER END
 
-.slick-arrow
+
+// STANDART STYLES FOOTER
+
+
+footer
+	padding: 70px 0
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		ul
+			margin: 15px 0
+	li
+		margin: 5px 2px
+		padding: 0
+		border-bottom: 1px solid #e8e8e8
+	a
+		color: #383838
+	.category
+		li
+			float: left
+			display: inline-block
+			width: 45%
+	.phone
+		font-size: 15px
+	.email
+		font-size: 16px
+		font-family: OpenSansBold
+	span
+		font-family: OpenSansBold
+		font-size: 15px
+		color: #9f9f9f
+	.side
+		display: inline-block
+
+
+// STANDART STYLES FOOTER END
+
+
+// HOME STYLES
+.slideshow_section
+	height: 650px
+.slideshow
+	max-height: 100%
+	overflow-y: hidden
+	overflow-x: hidden
+	img
+		width: 100%
+		//поиграться с max-
+		height: 100%
+.slideshow 
+	.slide_content
+		position: relative
+		color: #fff
+		text-align: center
+		top: -100px
+		left: 100px
+		transform: translateY(-100%)
+
+
+.buttons_newpr
+	position: relative
+	bottom: -25px
+
+.main_sl_buttons
 	position: absolute
 	top: 50%
 	background-color: #fff
@@ -146,6 +241,7 @@ a.button
 	height: 75px
 	width: 75px
 	border-radius: 50%
+	z-index: 2
 	outline: none
 	img
 		width: 100%
@@ -153,14 +249,14 @@ a.button
 		opacity: 0.4
 	&:active
 		outline: none
-
+.buttons_block
+	position: relative
+	bottom: -40%
 .prev
-	left: 12%
-	transform: translateX(12%)
-	z-index: 2
+	left: 0
 .next
-	right: 12%
-	transform: translateX(-12%)
+	right: 0
+
 
 .products_section
 	background-color: #f4f4f2
@@ -213,33 +309,8 @@ a.button
 	.product_item_wrap
 		display: none
 
-.product_item_wrap
-	background-color: #eaeaea
-	width: 270px
-	height: 325px
-	margin: 0 10px
-	margin-bottom: 20px
-	padding: 10px
-	text-align: left
-	border-radius: 5px
-	.product_item
-		img
-			width: 100%
-			margin-bottom: 2px 
-	.name_product
-		line-height: 0
-	.price
-		line-height: 4px
-		color: $main-color
-	.in_cart
-		img
-			width: 35px
-			height: 35px
-			position: absolute
-			bottom: 15px 
-			right: 10px
 
-.services
+.services_section
 	padding: 80px 0 120px 70px
 	background: rgba(214,214,213,1) url(../img/water.png) no-repeat left 100%
 	.servicec_content
@@ -251,5 +322,39 @@ a.button
 		padding: 0
 		span
 			color: $main-color
+
+.new_products_section 
+	background-color: #f4f4f2
+	padding: 140px 0 125px 0
+	h3
+		margin: 0
+		margin-bottom: 10px
+
+.buttons_newpr 
+	button 
+		border: 0
+		background-color: #e1dfdf
+		float: right
+		position: static
+		display: inline-block
+		width: 35px
+		height: 35px
+		margin: 0 10px
+.advantages
+	margin-top: 100px
+	.advantage_item
+		text-align: center
+		margin-bottom: 35px
+		.img_container
+			margin: 0 auto
+			height: 60px
+			width: 60px
+			margin-bottom: 25px
+		span
+			font-family: OpenSansBold
+			font-size: 24px
+		a
+			font-family: OpenSansBold
+			font-size: 18px
 
 // HOME STYLES END
