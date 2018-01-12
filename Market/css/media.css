@@ -37,12 +37,7 @@
       padding: 0 5px; }
 
   .slideshow .slide_content {
-    max-width: 435px;
-    top: 10px;
-    margin-left: 1%; }
-  .slideshow h1 {
-    line-height: 25px;
-    font-size: 20px; }
+    display: none; }
 
   /* */ }
 /* Custom, iPhone Retina */
