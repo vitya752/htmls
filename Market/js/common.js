@@ -58,8 +58,6 @@ $(function() {
 /*******/
 	$(".product_item_wrap h4.name_product").css("height", "").equalHeights();
 
-
-
 /**
 *Sort the products
 **/
@@ -77,5 +75,13 @@ $(function() {
 	$("img, a").on("dragstart",function(event){
 		event.preventDefault()
 	});
+
+	// function heightDetect() {
+	// 	$(".slideshow_section").css("height", $(window).height());
+	// };
+	// heightDetect();
+	// $(window).resize(function() {
+	// 	heightDetect();
+	// });
 
 });

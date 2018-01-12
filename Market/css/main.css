@@ -66,6 +66,77 @@ h4 {
   font-family: OpenSansLight;
   font-size: 16px; }
 
+#button_gumb {
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 10px 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  display: none; }
+  #button_gumb span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 50%;
+    background: #d12f22;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out; }
+    #button_gumb span:nth-child(even) {
+      left: 50%;
+      border-radius: 0 9px 9px 0; }
+    #button_gumb span:nth-child(odd) {
+      left: 0px;
+      border-radius: 9px 0 0 9px; }
+    #button_gumb span:nth-child(1), #button_gumb span:nth-child(2) {
+      top: 0px; }
+    #button_gumb span:nth-child(3), #button_gumb span:nth-child(4) {
+      top: 18px; }
+    #button_gumb span:nth-child(5), #button_gumb span:nth-child(6) {
+      top: 36px; }
+    #button_gumb span.active span:nth-child(1), #button_gumb span.active span:nth-child(6) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    #button_gumb span.active span:nth-child(2), #button_gumb span.active span:nth-child(5) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    #button_gumb span.active span:nth-child(1) {
+      left: 5px;
+      top: 7px; }
+    #button_gumb span.active span:nth-child(2) {
+      left: calc(50% - 5px);
+      top: 7px; }
+    #button_gumb span.active span:nth-child(3) {
+      left: -50%;
+      opacity: 0; }
+    #button_gumb span.active span:nth-child(4) {
+      left: 100%;
+      opacity: 0; }
+    #button_gumb span.active span:nth-child(5) {
+      left: 5px;
+      top: 29px; }
+    #button_gumb span.active span:nth-child(6) {
+      left: calc(50% - 5px);
+      top: 29px; }
+
 .account_menu {
   padding: 10px 15px;
   background-color: #f9f9f9;
@@ -73,7 +144,7 @@ h4 {
   .account_menu a {
     font-size: 12px;
     color: #656565;
-    padding: 0 10px 0 10px;
+    padding: 0 10px;
     border-left: 1px solid #656565; }
 
 .topline_menu {
@@ -186,30 +257,28 @@ footer {
     display: inline-block; }
 
 .slideshow_section {
-  height: 650px; }
+  max-height: 100%;
+  position: relative; }
 
 .slideshow {
-  max-height: 100%;
-  overflow-y: hidden;
-  overflow-x: hidden; }
+  max-height: 100%; }
+  .slideshow .slide_content {
+    position: fixed;
+    color: #fff;
+    text-align: center;
+    max-width: 530px;
+    top: 70px;
+    margin-left: 3%; }
   .slideshow img {
     width: 100%;
     height: 100%; }
-
-.slideshow .slide_content {
-  position: relative;
-  color: #fff;
-  text-align: center;
-  top: -100px;
-  left: 100px;
-  transform: translateY(-100%); }
 
 .buttons_newpr {
   position: relative;
   bottom: -25px; }
 
 .main_sl_buttons {
-  position: absolute;
+  position: relative;
   top: 50%;
   background-color: #fff;
   border: 0;
@@ -227,8 +296,13 @@ footer {
     outline: none; }
 
 .buttons_block {
-  position: relative;
-  bottom: -40%; }
+  position: absolute;
+  bottom: -40%;
+  height: 100%;
+  width: 100%; }
+
+.block_button_next {
+  text-align: right; }
 
 .prev {
   left: 0; }

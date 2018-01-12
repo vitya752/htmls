@@ -514,7 +514,7 @@ footer li:hover a{
 	text-decoration: none;
 }
 
-#button_gumb{
+/*#button_gumb{
   width: 60px;
   height: 45px;
   position: relative;
@@ -612,4 +612,4 @@ footer li:hover a{
 #button_gumb.active span:nth-child(6) {
   left: calc(50% - 5px);
   top: 29px;
-}
+}*/

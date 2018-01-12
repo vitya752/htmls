@@ -67,6 +67,82 @@ h4
 	font-family: OpenSansLight
 	font-size: 16px
 
+//
+
+#button_gumb
+	width: 60px
+	height: 45px
+	position: relative
+	margin: 10px 20px
+	-webkit-transform: rotate(0deg)
+	-moz-transform: rotate(0deg)
+	-o-transform: rotate(0deg)
+	transform: rotate(0deg)
+	-webkit-transition: .5s ease-in-out
+	-moz-transition: .5s ease-in-out
+	-o-transition: .5s ease-in-out
+	transition: .5s ease-in-out
+	cursor: pointer
+	display: none
+	span
+		display: block
+		position: absolute
+		height: 9px
+		width: 50%
+		background: #d12f22
+		opacity: 1
+		-webkit-transform: rotate(0deg)
+		-moz-transform: rotate(0deg)
+		-o-transform: rotate(0deg)
+		transform: rotate(0deg)
+		-webkit-transition: .25s ease-in-out
+		-moz-transition: .25s ease-in-out
+		-o-transition: .25s ease-in-out
+		transition: .25s ease-in-out
+		&:nth-child(even)
+			left: 50%
+			border-radius: 0 9px 9px 0
+		&:nth-child(odd)
+			left: 0px
+			border-radius: 9px 0 0 9px
+		&:nth-child(1), &:nth-child(2)
+			top: 0px
+		&:nth-child(3), &:nth-child(4)
+			top: 18px
+		&:nth-child(5), &:nth-child(6)
+			top: 36px
+		&.active span
+			&:nth-child(1), &:nth-child(6)
+				-webkit-transform: rotate(45deg)
+				-moz-transform: rotate(45deg)
+				-o-transform: rotate(45deg)
+				transform: rotate(45deg)
+			&:nth-child(2), &:nth-child(5)
+				-webkit-transform: rotate(-45deg)
+				-moz-transform: rotate(-45deg)
+				-o-transform: rotate(-45deg)
+				transform: rotate(-45deg)
+			&:nth-child(1)
+				left: 5px
+				top: 7px
+			&:nth-child(2)
+				left: calc(50% - 5px)
+				top: 7px
+			&:nth-child(3)
+				left: -50%
+				opacity: 0
+			&:nth-child(4)
+				left: 100%
+				opacity: 0
+			&:nth-child(5)
+				left: 5px
+				top: 29px
+			&:nth-child(6)
+				left: calc(50% - 5px)
+				top: 29px
+
+//
+
 // STANDART STYLES HEADER
 
 .account_menu
@@ -76,7 +152,7 @@ h4
 	a
 		font-size: 12px
 		color: #656565
-		padding: 0 10px 0 10px
+		padding: 0 10px
 		border-left: 1px solid #656565
 
 .topline_menu
@@ -209,23 +285,22 @@ footer
 
 // HOME STYLES
 .slideshow_section
-	height: 650px
+	max-height: 100%
+	position: relative
 .slideshow
 	max-height: 100%
-	overflow-y: hidden
-	overflow-x: hidden
-	img
-		width: 100%
-		//поиграться с max-
-		height: 100%
-.slideshow 
 	.slide_content
-		position: relative
+		position: fixed
 		color: #fff
 		text-align: center
-		top: -100px
-		left: 100px
-		transform: translateY(-100%)
+		max-width: 530px
+		top: 70px
+		margin-left: 3%
+	img
+		width: 100%
+		height: 100%
+		//поиграться с max-
+// .slideshow 
 
 
 .buttons_newpr
@@ -233,7 +308,7 @@ footer
 	bottom: -25px
 
 .main_sl_buttons
-	position: absolute
+	position: relative
 	top: 50%
 	background-color: #fff
 	border: 0
@@ -250,8 +325,12 @@ footer
 	&:active
 		outline: none
 .buttons_block
-	position: relative
+	position: absolute
 	bottom: -40%
+	height: 100%
+	width: 100%
+.block_button_next
+	text-align: right
 .prev
 	left: 0
 .next
