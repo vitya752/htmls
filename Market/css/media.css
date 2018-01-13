@@ -11,6 +11,13 @@
 @media only screen and (max-width: 992px) {
   .topline_menu ul {
     display: none; }
+  .topline_menu li {
+    width: 100%;
+    transition: all 0.5s ease; }
+    .topline_menu li:hover {
+      background-color: #eceaea; }
+  .topline_menu #button_gumb {
+    display: inline-block; }
 
   .slide_content h1 {
     font-size: 30px;
@@ -20,6 +27,13 @@
     background: #d6d6d5 url(../img/water.png) no-repeat right 100%; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
+  .logo_wrap {
+    margin-bottom: 10px; }
+
+  .topline_menu ul {
+    width: 755px;
+    margin-left: -280px; }
+
   .slideshow .slide_content {
     top: 20px; }
   .slideshow h1 {
@@ -78,9 +92,18 @@
   .product_item_wrap {
     width: 218px; }
 
+  .logo_wrap {
+    margin-bottom: 20px; }
+
+  .topline_menu ul {
+    width: 460px; }
+
   /* */ }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
+  .topline_menu ul {
+    width: 300px; }
+
   .main_sl_buttons {
     height: 35px;
     width: 35px; }
@@ -100,7 +123,10 @@
 @media only screen and (min-width: 768px) {
   /* */ }
 /* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 993px) {
+  .topline_menu ul {
+    display: block !important; }
+
   /* */ }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {

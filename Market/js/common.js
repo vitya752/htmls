@@ -59,6 +59,16 @@ $(function() {
 	$(".product_item_wrap h4.name_product").css("height", "").equalHeights();
 	$("footer .category li").css("height", "").equalHeights();
 
+	$('#button_gumb').click(function(){
+		if($(".topline_menu ul").is(":visible")) {
+			$(".topline_menu ul").fadeOut(600);
+			$(this).removeClass('active');
+		}else{
+			$(this).addClass('active');
+			$(".topline_menu ul").fadeIn(600);
+		}
+	});
+
 
 /**
 *Sort the products
@@ -78,12 +88,5 @@ $(function() {
 		event.preventDefault()
 	});
 
-	// function heightDetect() {
-	// 	$(".slideshow_section").css("height", $(window).height());
-	// };
-	// heightDetect();
-	// $(window).resize(function() {
-	// 	heightDetect();
-	// });
 
 });

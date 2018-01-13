@@ -67,10 +67,10 @@ h4 {
   font-size: 16px; }
 
 #button_gumb {
-  width: 60px;
+  width: 40px;
   height: 45px;
   position: relative;
-  margin: 10px 20px;
+  margin: 2px 20px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -86,7 +86,7 @@ h4 {
     position: absolute;
     height: 9px;
     width: 50%;
-    background: #d12f22;
+    background: #80c770;
     opacity: 1;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -103,39 +103,39 @@ h4 {
       left: 0px;
       border-radius: 9px 0 0 9px; }
     #button_gumb span:nth-child(1), #button_gumb span:nth-child(2) {
-      top: 0px; }
+      top: 5px; }
     #button_gumb span:nth-child(3), #button_gumb span:nth-child(4) {
       top: 18px; }
     #button_gumb span:nth-child(5), #button_gumb span:nth-child(6) {
-      top: 36px; }
-    #button_gumb span.active span:nth-child(1), #button_gumb span.active span:nth-child(6) {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg); }
-    #button_gumb span.active span:nth-child(2), #button_gumb span.active span:nth-child(5) {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
-      transform: rotate(-45deg); }
-    #button_gumb span.active span:nth-child(1) {
-      left: 5px;
-      top: 7px; }
-    #button_gumb span.active span:nth-child(2) {
-      left: calc(50% - 5px);
-      top: 7px; }
-    #button_gumb span.active span:nth-child(3) {
-      left: -50%;
-      opacity: 0; }
-    #button_gumb span.active span:nth-child(4) {
-      left: 100%;
-      opacity: 0; }
-    #button_gumb span.active span:nth-child(5) {
-      left: 5px;
-      top: 29px; }
-    #button_gumb span.active span:nth-child(6) {
-      left: calc(50% - 5px);
-      top: 29px; }
+      top: 31px; }
+  #button_gumb.active span:nth-child(1), #button_gumb.active span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  #button_gumb.active span:nth-child(2), #button_gumb.active span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  #button_gumb.active span:nth-child(1) {
+    left: 5px;
+    top: 12px; }
+  #button_gumb.active span:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 12px; }
+  #button_gumb.active span:nth-child(3) {
+    left: -50%;
+    opacity: 0; }
+  #button_gumb.active span:nth-child(4) {
+    left: 100%;
+    opacity: 0; }
+  #button_gumb.active span:nth-child(5) {
+    left: 5px;
+    top: 22px; }
+  #button_gumb.active span:nth-child(6) {
+    left: calc(50% - 5px);
+    top: 22px; }
 
 .account_menu {
   padding: 10px 15px;
