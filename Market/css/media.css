@@ -50,6 +50,9 @@
   .buttons_newpr {
     bottom: -30px; }
 
+  .main_login_block {
+    height: 900px; }
+
   /* */ }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
@@ -68,16 +71,16 @@
     font-size: 20px;
     line-height: 20px; }
 
-  h3 {
+  .new_products_section h3 {
     font-size: 20px;
     line-height: 20px; }
 
   .services_section {
-    padding: 80px 0 20px 20px;
+    padding: 80px 0 20px 10px;
     background: #d6d6d5 url(../img/water.png) no-repeat center 100%; }
     .services_section h2 {
-      font-size: 35px;
-      line-height: 35px; }
+      font-size: 30px;
+      line-height: 30px; }
 
   h2 {
     font-size: 35px;
@@ -98,6 +101,11 @@
   .topline_menu ul {
     width: 460px;
     margin-left: 0; }
+
+  .form_block h3 {
+    margin: 0 25px; }
+  .form_block form {
+    padding: 15px 25px; }
 
   /* */ }
 /* Custom, iPhone Retina */

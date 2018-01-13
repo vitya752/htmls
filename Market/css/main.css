@@ -363,7 +363,7 @@ footer {
 .services_section {
   padding: 80px 0 120px 70px;
   background: #d6d6d5 url(../img/water.png) no-repeat left 100%; }
-  .services_section .servicec_content {
+  .services_section .services_content {
     max-width: 500px; }
   .services_section h2 {
     color: #555555;
@@ -406,5 +406,69 @@ footer {
     .advantages .advantage_item a {
       font-family: OpenSansBold;
       font-size: 18px; }
+
+.main_login_block {
+  height: 1180px;
+  text-align: center;
+  background: url(../img/login_bg.png) no-repeat center;
+  background-size: cover; }
+  .main_login_block:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+
+.form_block {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -0.35em;
+  font-family: OpenSansLight;
+  text-align: center;
+  background-color: #fff;
+  height: 420px;
+  border-top: 5px solid #80c770;
+  border-radius: 5px; }
+  .form_block h3 {
+    font-family: OpenSansLight;
+    border-bottom: 1px solid #e8e8e8;
+    margin: 0;
+    display: block;
+    padding: 5px 0;
+    margin: 0 45px; }
+  .form_block form {
+    padding: 15px 45px; }
+  .form_block label, .form_block input {
+    display: block; }
+  .form_block label {
+    margin-top: 20px; }
+  .form_block input {
+    width: 250px;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid #e3e3e3;
+    outline: none;
+    padding: 0 4px; }
+  .form_block span {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+    font-family: OpenSansBold; }
+  .form_block input.button {
+    margin: 20px auto;
+    width: 100px;
+    height: 40px;
+    background-color: #80c770;
+    color: #fff; }
+  .form_block .forgot_pass {
+    color: #000; }
+  .form_block .reg_block {
+    padding: 15px 0;
+    text-align: center;
+    background-color: #fbfbfb;
+    border-top: 2px solid #f4f4f4; }
+    .form_block .reg_block a {
+      background-color: #000;
+      color: #fff; }
 
 /*# sourceMappingURL=main.css.map */
