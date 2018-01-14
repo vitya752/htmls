@@ -694,7 +694,8 @@ footer {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    line-height: 16px; }
+    line-height: 16px;
+    text-decoration: line-through; }
   .price_status .presence {
     margin: 0;
     padding: 0;
