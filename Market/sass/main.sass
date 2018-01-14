@@ -210,9 +210,20 @@ h4
 			width: 100%
 			content: ""
 			position: absolute
-			top: -15px
-			left: -15px
+			top: -10px
+			left: -10px
 			background: url(../img/nuevos.png) no-repeat
+	.sentence_product_item
+		position: relative
+		&:before 
+			height: 50%
+			width: 100%
+			content: ""
+			position: absolute
+			top: -10px
+			left: -10px
+			z-index: 2
+			background: url(../img/sentence.png) no-repeat
 	h4.name_product
 		line-height: 20px
 		padding: 0 14px 0 0
@@ -251,6 +262,7 @@ a.button
 
 footer
 	padding: 70px 0
+	background-color: #f9f9f9
 	ul
 		padding: 0
 		margin: 0
@@ -424,9 +436,9 @@ footer
 		text-align: center
 		margin-bottom: 35px
 		.img_container
-			margin: 0 auto
-			height: 60px
 			width: 60px
+			height: 60px
+			margin: 0 auto
 			margin-bottom: 25px
 		span
 			font-family: OpenSansBold
@@ -446,26 +458,26 @@ footer
 	background-size: cover
 	&:before
 		content: ''
-		display: inline-block
 		height: 100%
+		display: inline-block
 		vertical-align: middle
 .form_block
-	display: inline-block
-	vertical-align: middle
-	margin-left: -0.35em
-	font-family: OpenSansLight
-	text-align: center
-	background-color: #fff
 	height: 420px
-	border-top: 5px solid $main-color
 	border-radius: 5px
+	text-align: center
+	margin-left: -0.35em
+	display: inline-block
+	background-color: #fff
+	vertical-align: middle
+	font-family: OpenSansLight
+	border-top: 5px solid $main-color
 	h3
-		font-family: OpenSansLight
-		border-bottom: 1px solid #e8e8e8
 		margin: 0
 		display: block
 		padding: 5px 0
 		margin: 0 45px
+		font-family: OpenSansLight
+		border-bottom: 1px solid #e8e8e8
 	form
 		padding: 15px 45px
 	label,input
@@ -475,22 +487,22 @@ footer
 	input
 		width: 250px
 		height: 30px
-		border-radius: 3px
-		border: 1px solid #e3e3e3
 		outline: none
 		padding: 0 4px
+		border-radius: 3px
+		border: 1px solid #e3e3e3
 	span
-		font-size: 12px
 		margin: 0
 		padding: 0
+		font-size: 12px
 		margin-bottom: 5px
 		font-family: OpenSansBold
 	input.button
-		margin: 20px auto
+		color: #fff
 		width: 100px
 		height: 40px
+		margin: 20px auto
 		background-color: $main-color
-		color: #fff
 	.forgot_pass
 		color: #000
 	.reg_block
@@ -499,8 +511,361 @@ footer
 		background-color: #fbfbfb
 		border-top: 2px solid #f4f4f4
 		a
-			background-color: #000
 			color: #fff
-
+			background-color: #000
 
 // LOGIN END
+
+// PRODUCT PAGE
+
+.header_nav
+	padding: 5px 0
+	background-color: #f4f4f2
+.breadcrumb
+	margin: 0
+	font-size: 0
+	display: block
+	padding: 10px 0
+	list-style-type: none
+	border-bottom: 1px solid #eaeae9
+	li
+		font-size: 12px
+		display: inline-block
+		a
+			color: #000
+			padding: 0 5px
+		&:after
+			content: "\f105"
+			font-family: FontAwesome
+		&:last-child
+			a
+				color: #808080
+			&:after
+				content: ""
+.header_category 
+	h3
+		margin: 10px 0
+		text-transform: uppercase
+.buttons_nav
+	margin: 29px 0
+	text-align: right
+	a.nav_button_pr
+		color: #000
+		padding: 5px 0px
+		background-color: #FFF
+		transition: all .5s ease
+		border: 1px solid #e0e0e0
+		&:hover
+			text-decoration: none
+			background-color: #f8f8f8
+	.prev
+		span
+			padding: 0 10px
+			border-left: 1px solid #e6e6e6
+		.icon:after
+			padding: 0 5px
+			content: "\f104"
+			font-family: FontAwesome
+	.next
+		span
+			padding: 0 10px
+			border-right: 1px solid #e6e6e6
+		.icon:after
+			padding: 0 5px
+			content: "\f105"
+			font-family: FontAwesome
+
+.product_descr_block
+	padding: 20px 0 0 0 
+	background-color: #fafafa
+	.img_block
+		width: 450px
+		height: 450px
+		overflow: hidden
+		border-radius: 5px
+		margin-bottom: 5px
+		vertical-align: middle
+		border: 10px solid #eaeaea
+		img
+			width: 100%
+			display: inline-block
+	.sentence
+		position: relative
+		&:before 
+			height: 50%
+			width: 100%
+			content: ""
+			position: absolute
+			z-index: 2
+			background: url(../img/sentence.png) no-repeat
+	.new
+		position: relative
+		&:before 
+			height: 50%
+			width: 100%
+			content: ""
+			position: absolute
+			z-index: 2
+			background: url(../img/nuevos.png) no-repeat
+	.product_img_slider
+		width: 450px
+		height: 140px
+		overflow: hidden
+		padding: 5px 50px
+		border-radius: 3px
+		background-color: #fff
+		border: 3px solid #eaeaea
+		.buttons
+			position: absolute
+		.img_items
+			text-align: center
+			.img_item
+				width: 120px
+				height: 120px
+				cursor: pointer
+				display: inline-block
+				background-color: #fff
+				outline: none
+			img
+				width: 100%
+		.product_sl_button 
+			position: absolute
+			background-color: transparent
+			border: 0
+			z-index: 1
+			top: 35px
+			width: 65px
+			outline: none
+		.prev
+			left: -65px
+		.next
+			right: -65px
+	h4
+		font-family: MyriadProRegular
+		font-size: 30pt
+		margin: 0
+		padding-bottom: 15px
+		border-bottom: 1px solid #ececec
+		line-height: 30px
+
+//Star rating
+#reviewStars-input
+	input:checked ~ label
+		background: url('../img/sprite.png') no-repeat
+		background-size: 100% 
+	label
+		background: url('../img/sprite.png') no-repeat
+		background-size: 100% 
+		&:hover
+			background: url('../img/sprite.png') no-repeat
+			background-size: 100% 
+			~ label
+				background: url('../img/sprite.png') no-repeat
+				background-size: 100% 
+	overflow: hidden
+	*zoom: 1
+	position: relative
+	top: 3px
+	display: inline-block
+	input
+		top: 0
+		z-index: 0
+		opacity: 0
+		width: 15px
+		height: 15px
+		position: absolute
+		filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0)
+		&:checked ~ label
+			width: 15px
+			height: 15px
+			background-position: 0 -14px
+	label
+		background-position: 0 0
+		height: 15px
+		width: 15px
+		float: right
+		cursor: pointer
+		margin-right: 10px
+		position: relative
+		z-index: 1
+		&:hover
+			background-position: 0 -14px
+			height: 15px
+			width: 15px
+			~ label
+				background-position: 0 -14px
+				height: 15px
+				width: 15px
+	#star-0
+		left: 0px
+	#star-1
+		left: 26px
+	#star-2
+		left: 52px
+	#star-3
+		left: 77px
+	#star-4
+		left: 102px
+//Star rating end
+
+.review_assessment
+	padding: 15px 0
+	a
+		color: #1b1a19
+		font-size: 12px
+		margin: 0 10px
+	span
+		color: #c5c4c4
+
+.price_status
+	border-bottom: 1px solid #ececec
+	.price
+		color: $main-color
+		font-size: 48px
+		display: inline-block
+		margin: 0 5px
+		+ div
+			display: inline-block
+			margin: 0 5px
+	.old_price
+		margin: 0
+		padding: 0
+		font-size: 16px
+		line-height: 16px
+	.presence
+		margin: 0
+		padding: 0
+		color: #80c770
+		font-size: 12px
+		line-height: 30px
+
+.description
+	padding: 15px 0
+	font-size: 14px
+	font-family: OpenSansLight
+	border-bottom: 1px solid #ececec
+	.p_descr
+		color: #1b1a19
+		padding: 0
+		margin: 0
+
+
+.quantity
+	padding: 15px 0
+	border-bottom: 1px solid #ececec
+	label
+		color: #1b1a19
+	input
+		margin: 0 10px
+		height: 30px
+		width: 45px
+		outline: none
+		padding: 5px 10px
+		border-radius: 5px
+		border: 1px solid #ececec
+
+.button_tocart
+	padding: 15px 0
+	button	
+		border: 0
+		height: 50px
+		width: 200px
+		text-align: left
+		border-radius: 5px
+		background-color: $main-color
+	span
+		top: 3px
+		color: #fff
+		padding: 0 10px
+		font-size: 16px
+		margin-left: 10px
+		position: relative
+		font-family: OpenSansLight
+		border-left: 1px solid #96cd8a
+
+.soc_netw
+	ul
+		list-style-type: none
+		padding: 0
+	li
+		display: inline-block
+		margin: 0 2px
+	a
+		font-size: 23px
+		.facebook
+			color: #3b5998
+		.twitter
+			color: #21a1f2
+		.plus
+			color: #ff6550
+		span
+			display: inline-block
+			height: 23px
+			width: 35px
+			color: #000
+			background-color: #FFF
+			border: 1px solid #c2c2c2
+			text-align: center
+			margin-left: 12px
+			border-radius: 3px
+			font-size: 16px
+			&::before, 
+			&::after
+				content: ""
+				position: absolute
+				left: 90px
+				bottom: 27px
+				border: 7px solid transparent
+				border-right: 7px solid #c2c2c2
+			&::after
+				border-right: 7px solid #fff
+				bottom: 27px
+				left: 92px
+			&:hover
+			text-decoration: none
+
+.information
+	padding: 30px 0
+	.tabs
+		position: relative
+		top: 2px
+	.tab
+		display: inline-block
+		background-color: #f5f5f5
+		height: 40px
+		padding: 10px 20px
+		font-size: 16px
+		border: 1px solid #e1e1e1
+		z-index: 2
+		cursor: pointer
+		&:nth-child(2)
+			margin: 0 5px
+	.tab.active
+		box-shadow: 0px -1px 0px 1px rgba(0, 0, 0, 0.15)
+		border: 0
+		border-top: 3px solid $main-color
+		background-color: #FFF
+		cursor: default
+	.tab_content
+		.tab_item
+			z-index: 1
+			width: 100%
+			font-size: 15px
+			padding: 20px
+			font-size: 15px
+			font-family: OpenSansLight
+			box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15)
+			&:nth-child(2)
+				display: none
+			tr
+				margin-bottom: 10px
+			td
+				width: 300px
+
+.recommendations
+	padding: 30px 0
+	background-color: #FFF
+
+
+		
+// PRODUCT PAGE END

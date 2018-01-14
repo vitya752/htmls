@@ -3,10 +3,11 @@ $(function() {
 	$('.slideshow').slick({
 		speed: 1200,
 		touchMove: false,
-		swipeToSlide: false
+		swipeToSlide: false,
+		lazyLoad: 'ondemand'
 	});
 
-	$('.new_products_section .products_wrap').slick({
+	$('.products_slider').slick({
 		speed: 1200,
 		touchMove: false,
 		swipeToSlide: false,
@@ -38,9 +39,40 @@ $(function() {
 	    }
 	  ]
 	});
+
+	$('.img_block').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		fade: true,
+		asNavFor: '.img_items'
+	});
+
+	$('.img_items').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.img_block',
+		dots: false,
+		focusOnSelect: true,
+		arrows: true,
+		prevArrow: '<button type="button" class="product_sl_button prev"><img src="img/prev.png" alt="prev" /></button>',
+		nextArrow: '<button type="button" class="product_sl_button next"><img src="img/next.png" alt="next" /></button>',
+		responsive: [
+		{
+		  breakpoint: 480,
+		  settings: {
+		    slidesToShow: 2,
+		    slidesToScroll: 2,
+		    infinite: true,
+		    dots: true
+		  }
+		}
+		]
+	});
 /**
 *Custom buttons for the change slide.
 **/
+
 	$('.prev').on('click', function() {
 	  $('.slideshow').slick('slickPrev');
 	});
@@ -49,11 +81,19 @@ $(function() {
 	});
 
 	$('.new_products_section .prev').on('click', function() {
-	  $('.new_products_section .products_wrap').slick('slickPrev');
+	  $('.new_products_section .products_slider').slick('slickPrev');
 	});
 	$('.new_products_section .next').on('click', function() {
-	  $('.new_products_section .products_wrap').slick('slickNext');
+	  $('.new_products_section .products_slider').slick('slickNext');
 	});
+
+	$('.recommendations .prev').on('click', function() {
+	  $('.recommendations .products_slider').slick('slickPrev');
+	});
+	$('.recommendations .next').on('click', function() {
+	  $('.recommendations .products_slider').slick('slickNext');
+	});
+
 
 /*******/
 	$(".product_item_wrap h4.name_product").css("height", "").equalHeights();
@@ -88,5 +128,9 @@ $(function() {
 		event.preventDefault()
 	});
 
+	$(".information .wrapper .tab").click(function(){
+		$(".information .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
+		$(".information .wrapper .tab_item").hide().eq($(this).index()).fadeIn();
+	}).eq(0).addClass("active");
 
 });

@@ -11,6 +11,12 @@
   src: url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.eot");
   src: url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.woff") format("woff"), url("../fonts/MyriadPro/MyriadProBold/MyriadProBold.ttf") format("truetype"); }
 @font-face {
+  font-family: "MyriadProRegular";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot");
+  src: url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.woff") format("woff"), url("../fonts/MyriadPro/MyriadProRegular/MyriadProRegular.ttf") format("truetype"); }
+@font-face {
   font-family: "OpenSansBold";
   font-weight: bold;
   font-style: normal;
@@ -28,5 +34,11 @@
   font-style: normal;
   src: url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot");
   src: url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSans/OpenSansRegular/OpenSansRegular.ttf") format("truetype"); }
+@font-face {
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Font-Awesome/fontawesome-webfont.eot");
+  src: url("../fonts/Font-Awesome/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Font-Awesome/fontawesome-webfont.woff") format("woff"), url("../fonts/Font-Awesome/fontawesome-webfont.ttf") format("truetype"); }
 
 /*# sourceMappingURL=fonts.css.map */

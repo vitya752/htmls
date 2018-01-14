@@ -107,6 +107,18 @@
   .form_block form {
     padding: 15px 25px; }
 
+  .product_descr_block .img_block {
+    width: 320px;
+    height: 320px; }
+
+  .product_descr_block .product_img_slider {
+    margin-bottom: 10px;
+    width: 320px;
+    height: 120px; }
+
+  .information .tab {
+    padding: 10px 5px; }
+
   /* */ }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
@@ -119,6 +131,14 @@
 
   .slide_content {
     display: none; }
+
+  .product_descr_block .img_block {
+    width: 290px;
+    height: 290px; }
+
+  .product_descr_block .product_img_slider {
+    width: 290px;
+    height: 120px; }
 
   /* */ }
 /*==========  Mobile First  ========== */
