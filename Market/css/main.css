@@ -805,23 +805,27 @@ footer {
     border-top: 3px solid #80c770;
     background-color: #FFF;
     cursor: default; }
-  .information .tab_content .tab_item {
-    z-index: 1;
-    width: 100%;
-    font-size: 15px;
-    padding: 20px;
-    font-size: 15px;
-    font-family: OpenSansLight;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15); }
-    .information .tab_content .tab_item:nth-child(2) {
-      display: none; }
-    .information .tab_content .tab_item tr {
-      margin-bottom: 10px; }
-    .information .tab_content .tab_item td {
-      width: 300px; }
+  .information .tab_content {
+    background-color: #FFF; }
+    .information .tab_content .tab_item {
+      z-index: 1;
+      width: 100%;
+      font-size: 15px;
+      padding: 20px;
+      font-size: 15px;
+      font-family: OpenSansLight;
+      box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.15); }
+      .information .tab_content .tab_item:nth-child(2) {
+        display: none; }
+      .information .tab_content .tab_item tr {
+        margin-bottom: 10px; }
+      .information .tab_content .tab_item td {
+        width: 300px; }
 
 .recommendations {
   padding: 30px 0;
   background-color: #FFF; }
+  .recommendations .buttons_newpr {
+    bottom: -50px; }
 
 /*# sourceMappingURL=main.css.map */
