@@ -484,6 +484,9 @@ footer {
     border-top: 2px solid #f4f4f4; }
   .form_block .black_button {
     color: #fff;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 3px;
     background-color: #000; }
 
 .header_nav {

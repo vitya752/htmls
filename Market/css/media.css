@@ -6,7 +6,10 @@
     position: relative; }
   .slideshow_section .slideshow img {
     width: 100%;
-    height: 100%; } }
+    height: 100%; }
+
+  .services_section {
+    background: #d6d6d5 url(../img/water.png) no-repeat right 100%; } }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
   .topline_menu ul {
@@ -18,6 +21,9 @@
       background-color: #eceaea; }
   .topline_menu #button_gumb {
     display: inline-block; }
+
+  .services_section {
+    background: #d6d6d5 url(../img/water.png) no-repeat left 100%; }
 
   .slide_content h1 {
     font-size: 30px;
