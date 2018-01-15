@@ -61,7 +61,8 @@ h2 {
 
 h3 {
   font-family: OpenSansLight;
-  font-size: 36px; }
+  font-size: 36px;
+  text-transform: uppercase; }
 
 h4 {
   font-family: OpenSansLight;
@@ -990,37 +991,36 @@ footer {
 
 .stages_container {
   margin-bottom: 20px; }
-
-.stage {
-  width: 140px;
-  margin-right: 55px;
-  display: inline-block; }
-  .stage:last-child {
-    margin-right: 0; }
-  .stage .number {
-    padding: 0;
-    margin: 0;
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    font-size: 30px;
-    text-align: center;
-    border-radius: 50%;
-    display: inline-block;
-    background-color: #dbdbdb; }
-  .stage.active .number {
-    background-color: #80c770; }
-  .stage.passed .number {
-    background-color: #000; }
-  .stage .name {
-    padding: 0;
-    margin: 0;
-    width: 85px;
-    line-height: 16px;
+  .stages_container .stage {
+    width: 140px;
+    margin-right: 55px;
     display: inline-block; }
-  .stage span {
-    font-size: 16px;
-    font-family: OpenSansLight; }
+    .stages_container .stage:last-child {
+      margin-right: 0; }
+    .stages_container .stage .number {
+      padding: 0;
+      margin: 0;
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+      text-align: center;
+      border-radius: 50%;
+      display: inline-block;
+      background-color: #dbdbdb; }
+    .stages_container .stage.active .number {
+      background-color: #80c770; }
+    .stages_container .stage.passed .number {
+      background-color: #000; }
+    .stages_container .stage .name {
+      padding: 0;
+      margin: 0;
+      width: 85px;
+      line-height: 16px;
+      display: inline-block; }
+    .stages_container .stage span {
+      font-size: 16px;
+      font-family: OpenSansLight; }
 
 .checkout_forms .standart_block {
   text-align: left; }
@@ -1059,5 +1059,31 @@ footer {
       color: #000; }
 .checkout_forms .login .bottom_button {
   padding: 15px 0; }
+  .checkout_forms .login .bottom_button .green_button {
+    display: inline-block; }
+  .checkout_forms .login .bottom_button .addition {
+    font-size: 12px;
+    display: inline-block;
+    line-height: 10px;
+    position: relative;
+    top: 8px; }
+    .checkout_forms .login .bottom_button .addition a {
+      color: #000; }
+.checkout_forms .login .sentence_block {
+  margin: 15px 0; }
+  .checkout_forms .login .sentence_block .sentence {
+    font-size: 12px !important; }
+.checkout_forms .progress {
+  padding: 20px 65px; }
+  .checkout_forms .progress li a {
+    color: #000;
+    font-size: 12px;
+    margin-left: 5px;
+    font-family: OpenSansBold; }
+  .checkout_forms .progress li > ul {
+    list-style-type: none;
+    padding: 0; }
+    .checkout_forms .progress li > ul li {
+      color: #969696; }
 
 /*# sourceMappingURL=main.css.map */

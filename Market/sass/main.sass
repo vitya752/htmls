@@ -62,6 +62,7 @@ h2
 h3
 	font-family: OpenSansLight
 	font-size: 36px
+	text-transform: uppercase
 
 h4
 	font-family: OpenSansLight
@@ -1036,39 +1037,38 @@ footer
 
 .stages_container
 	margin-bottom: 20px
-
-.stage
-	width: 140px
-	margin-right: 55px
-	display: inline-block
-	&:last-child
-		margin-right: 0
-	.number
-		padding: 0
-		margin: 0
-		color: #fff
-		width: 50px
-		height: 50px
-		font-size: 30px
-		text-align: center
-		border-radius: 50%
+	.stage
+		width: 140px
+		margin-right: 55px
 		display: inline-block
-		background-color: #dbdbdb
-	&.active
+		&:last-child
+			margin-right: 0
 		.number
-			background-color: $main-color
-	&.passed
-		.number
-			background-color: #000
-	.name
-		padding: 0
-		margin: 0
-		width: 85px
-		line-height: 16px
-		display: inline-block
-	span
-		font-size: 16px
-		font-family: OpenSansLight
+			padding: 0
+			margin: 0
+			color: #fff
+			width: 50px
+			height: 50px
+			font-size: 30px
+			text-align: center
+			border-radius: 50%
+			display: inline-block
+			background-color: #dbdbdb
+		&.active
+			.number
+				background-color: $main-color
+		&.passed
+			.number
+				background-color: #000
+		.name
+			padding: 0
+			margin: 0
+			width: 85px
+			line-height: 16px
+			display: inline-block
+		span
+			font-size: 16px
+			font-family: OpenSansLight
 
 .checkout_forms
 	.standart_block
@@ -1109,4 +1109,32 @@ footer
 	.login
 		.bottom_button
 			padding: 15px 0
+			.green_button
+				display: inline-block
+			.addition
+				font-size: 12px
+				display: inline-block
+				line-height: 10px
+				position: relative
+				top: 8px
+				a
+					color: #000
+
+		.sentence_block
+			margin: 15px 0
+			.sentence
+				font-size: 12px !important
+	.progress
+		padding: 20px 65px
+		li
+			a
+				color: #000
+				font-size: 12px
+				margin-left: 5px
+				font-family: OpenSansBold
+			>ul
+				list-style-type: none
+				padding: 0
+				li
+					color: #969696	
 // CHECKOUT PAGE END
