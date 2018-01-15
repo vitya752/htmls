@@ -1,5 +1,9 @@
 $(function() {
 
+/**
+* SLIDER
+**/
+
 	$('.slideshow').slick({
 		speed: 1200,
 		touchMove: false,
@@ -69,6 +73,7 @@ $(function() {
 		}
 		]
 	});
+
 /**
 *Custom buttons for the change slide.
 **/
@@ -99,6 +104,10 @@ $(function() {
 	$(".product_item_wrap h4.name_product").css("height", "").equalHeights();
 	$("footer .category li").css("height", "").equalHeights();
 
+/**
+* ADAPRIVE ICON MENU
+**/
+
 	$('#button_gumb').click(function(){
 		if($(".topline_menu ul").is(":visible")) {
 			$(".topline_menu ul").fadeOut(600);
@@ -128,11 +137,19 @@ $(function() {
 		event.preventDefault()
 	});
 
+/**
+* TABS
+**/ 
+
 	$(".information .wrapper .tab").click(function(){
 		$(".information .wrapper .tab").removeClass("active").eq($(this).index()).addClass("active");
 		$(".information .wrapper .tab_item").hide().eq($(this).index()).fadeIn();
 	}).eq(0).addClass("active");
 
+
+/**
+* RANGE OF PRICES
+**/
 	$( "#slider-range" ).slider({
       range: true,
       min: 0,

@@ -1303,4 +1303,7 @@ footer {
   .content-products .product_item_wrap {
     width: 230px; }
 
+.slick-arrow {
+  display: none; }
+
 /*# sourceMappingURL=main.css.map */
