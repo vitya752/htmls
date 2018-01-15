@@ -184,7 +184,8 @@ h4 {
   padding: 10px;
   text-align: left;
   border-radius: 5px;
-  outline: none; }
+  outline: none;
+  display: inline-block; }
   .product_item_wrap .product_item {
     position: relative; }
     .product_item_wrap .product_item img {
@@ -1276,10 +1277,11 @@ footer {
     text-decoration: line-through;
     color: #888888; }
   .content-products .quantity_posts {
-    text-align: left; }
+    text-align: left;
+    margin: 20px 0; }
   .content-products .pagination {
     text-align: right;
-    margin: 20px; }
+    margin: 20px 0; }
     .content-products .pagination ul {
       margin: 0;
       padding: 0;
