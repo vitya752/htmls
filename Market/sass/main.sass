@@ -956,20 +956,19 @@ footer
 			text-decoration: none
 			box-shadow: inset -10px -10px 40px -20px rgba(0, 0, 0, 1)
 
-.cart_forms
-	.standart_block
-		height: auto
-		width: 100%
-		border-radius: 5px
-		text-align: center
-		margin-left: -0.35em
-		margin-bottom: 20px
-		display: inline-block
-		background-color: #fff
-		vertical-align: middle
-		font-family: OpenSansLight
-		border: 1px solid #f6f6f6
-		border-top: 5px solid $main-color
+.standart_block
+	height: auto
+	width: 100%
+	border-radius: 5px
+	text-align: center
+	margin-left: -0.35em
+	margin-bottom: 20px
+	display: inline-block
+	background-color: #fff
+	vertical-align: middle
+	font-family: OpenSansLight
+	border: 1px solid #f6f6f6
+	border-top: 5px solid $main-color
 	h3
 		margin: 0
 		display: block
@@ -979,6 +978,7 @@ footer
 		border-bottom: 1px solid #e8e8e8
 		font-size: 18px
 		font-family: OpenSansLight
+		text-transform: uppercase
 		&>span
 			font-size: 18px
 	form
@@ -1030,5 +1030,83 @@ footer
 			margin: 5px auto
 			background-color: $main-color
 
-
 // CART PAGE END
+
+// CHECKOUT PAGE 
+
+.stages_container
+	margin-bottom: 20px
+
+.stage
+	width: 140px
+	margin-right: 55px
+	display: inline-block
+	&:last-child
+		margin-right: 0
+	.number
+		padding: 0
+		margin: 0
+		color: #fff
+		width: 50px
+		height: 50px
+		font-size: 30px
+		text-align: center
+		border-radius: 50%
+		display: inline-block
+		background-color: #dbdbdb
+	&.active
+		.number
+			background-color: $main-color
+	&.passed
+		.number
+			background-color: #000
+	.name
+		padding: 0
+		margin: 0
+		width: 85px
+		line-height: 16px
+		display: inline-block
+	span
+		font-size: 16px
+		font-family: OpenSansLight
+
+.checkout_forms
+	.standart_block
+		text-align: left
+	input[type="radio"]
+		width: auto
+		height: auto
+		display: inline-block
+		& + span
+			margin: 0 5px
+			font-family: MyriadProRegular
+	span
+		display: inline-block
+	p
+		font-family: OpenSansBold !important
+	.bottom_button
+		padding: 0 42px
+		text-align: left
+		.black_button,
+		.green_button
+			text-align: center
+			margin: 0
+	.sentence_block
+		padding: 0 42px
+		font-family: OpenSansBold
+		.sentence
+			font-size: 14px !important
+			color: $main-color
+		p
+			margin: 0
+	ul
+		margin: 0
+		li
+			color: $main-color
+			margin: 0
+			span
+				color: #000
+	.login
+		.bottom_button
+			padding: 15px 0
+// CHECKOUT PAGE END

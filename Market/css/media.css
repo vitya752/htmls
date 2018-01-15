@@ -24,7 +24,11 @@
     line-height: 30px; }
 
   .services_section {
-    background: #d6d6d5 url(../img/water.png) no-repeat right 100%; } }
+    background: #d6d6d5 url(../img/water.png) no-repeat right 100%; }
+
+  .stage {
+    margin-right: 15px;
+    margin-bottom: 10px; } }
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
   .logo_wrap {
@@ -157,6 +161,9 @@
 
   .recommendations .buttons_newpr {
     bottom: -114px; }
+
+  .stage {
+    margin-right: 15px; }
 
   /* */ }
 /*==========  Mobile First  ========== */

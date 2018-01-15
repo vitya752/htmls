@@ -913,7 +913,7 @@ footer {
       text-decoration: none;
       box-shadow: inset -10px -10px 40px -20px black; }
 
-.cart_forms .standart_block {
+.standart_block {
   height: auto;
   width: 100%;
   border-radius: 5px;
@@ -926,65 +926,138 @@ footer {
   font-family: OpenSansLight;
   border: 1px solid #f6f6f6;
   border-top: 5px solid #80c770; }
-.cart_forms h3 {
-  margin: 0;
-  display: block;
-  padding: 5px 0;
-  margin: 0 45px;
-  font-family: OpenSansLight;
-  border-bottom: 1px solid #e8e8e8;
-  font-size: 18px;
-  font-family: OpenSansLight; }
-  .cart_forms h3 > span {
-    font-size: 18px; }
-.cart_forms form {
-  padding: 0px 45px 15px 45px; }
-.cart_forms label, .cart_forms input {
-  display: block; }
-.cart_forms label {
-  margin-top: 5px; }
-.cart_forms input {
-  width: 100%;
-  height: 30px;
-  outline: none;
-  padding: 0 4px;
-  border-radius: 3px;
-  border: 1px solid #e3e3e3; }
-.cart_forms span {
-  margin: 0;
-  padding: 0;
-  font-size: 12px;
-  margin-bottom: 5px;
-  font-family: OpenSansBold; }
-.cart_forms .green_button {
-  color: #fff;
-  width: 100px;
-  height: 40px;
-  margin: 20px auto;
-  background-color: #80c770; }
-.cart_forms p {
-  font-family: OpenSansLight;
-  font-size: 12px; }
-.cart_forms .necessarily {
-  color: red; }
-.cart_forms .bottom_button {
-  padding: 10px 0;
-  margin-bottom: 10px; }
-  .cart_forms .bottom_button .black_button,
-  .cart_forms .bottom_button .green_button {
-    margin: 0 auto;
-    padding: 10px 0;
+  .standart_block h3 {
+    margin: 0;
     display: block;
-    width: 110px;
+    padding: 5px 0;
+    margin: 0 45px;
+    font-family: OpenSansLight;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 18px;
+    font-family: OpenSansLight;
+    text-transform: uppercase; }
+    .standart_block h3 > span {
+      font-size: 18px; }
+  .standart_block form {
+    padding: 0px 45px 15px 45px; }
+  .standart_block label, .standart_block input {
+    display: block; }
+  .standart_block label {
+    margin-top: 5px; }
+  .standart_block input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    padding: 0 4px;
+    border-radius: 3px;
+    border: 1px solid #e3e3e3; }
+  .standart_block span {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-family: OpenSansBold; }
+  .standart_block .green_button {
     color: #fff;
-    border-radius: 5px; }
-    .cart_forms .bottom_button .black_button:hover,
-    .cart_forms .bottom_button .green_button:hover {
-      text-decoration: none; }
-  .cart_forms .bottom_button .black_button {
-    background-color: #000; }
-  .cart_forms .bottom_button .green_button {
-    margin: 5px auto;
+    width: 100px;
+    height: 40px;
+    margin: 20px auto;
     background-color: #80c770; }
+  .standart_block p {
+    font-family: OpenSansLight;
+    font-size: 12px; }
+  .standart_block .necessarily {
+    color: red; }
+  .standart_block .bottom_button {
+    padding: 10px 0;
+    margin-bottom: 10px; }
+    .standart_block .bottom_button .black_button,
+    .standart_block .bottom_button .green_button {
+      margin: 0 auto;
+      padding: 10px 0;
+      display: block;
+      width: 110px;
+      color: #fff;
+      border-radius: 5px; }
+      .standart_block .bottom_button .black_button:hover,
+      .standart_block .bottom_button .green_button:hover {
+        text-decoration: none; }
+    .standart_block .bottom_button .black_button {
+      background-color: #000; }
+    .standart_block .bottom_button .green_button {
+      margin: 5px auto;
+      background-color: #80c770; }
+
+.stages_container {
+  margin-bottom: 20px; }
+
+.stage {
+  width: 140px;
+  margin-right: 55px;
+  display: inline-block; }
+  .stage:last-child {
+    margin-right: 0; }
+  .stage .number {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #dbdbdb; }
+  .stage.active .number {
+    background-color: #80c770; }
+  .stage.passed .number {
+    background-color: #000; }
+  .stage .name {
+    padding: 0;
+    margin: 0;
+    width: 85px;
+    line-height: 16px;
+    display: inline-block; }
+  .stage span {
+    font-size: 16px;
+    font-family: OpenSansLight; }
+
+.checkout_forms .standart_block {
+  text-align: left; }
+.checkout_forms input[type="radio"] {
+  width: auto;
+  height: auto;
+  display: inline-block; }
+  .checkout_forms input[type="radio"] + span {
+    margin: 0 5px;
+    font-family: MyriadProRegular; }
+.checkout_forms span {
+  display: inline-block; }
+.checkout_forms p {
+  font-family: OpenSansBold !important; }
+.checkout_forms .bottom_button {
+  padding: 0 42px;
+  text-align: left; }
+  .checkout_forms .bottom_button .black_button,
+  .checkout_forms .bottom_button .green_button {
+    text-align: center;
+    margin: 0; }
+.checkout_forms .sentence_block {
+  padding: 0 42px;
+  font-family: OpenSansBold; }
+  .checkout_forms .sentence_block .sentence {
+    font-size: 14px !important;
+    color: #80c770; }
+  .checkout_forms .sentence_block p {
+    margin: 0; }
+.checkout_forms ul {
+  margin: 0; }
+  .checkout_forms ul li {
+    color: #80c770;
+    margin: 0; }
+    .checkout_forms ul li span {
+      color: #000; }
+.checkout_forms .login .bottom_button {
+  padding: 15px 0; }
 
 /*# sourceMappingURL=main.css.map */
