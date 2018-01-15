@@ -133,4 +133,17 @@ $(function() {
 		$(".information .wrapper .tab_item").hide().eq($(this).index()).fadeIn();
 	}).eq(0).addClass("active");
 
+	$( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 7000,
+      values: [ 50, 5000 ],
+      slide: function( event, ui ) {
+        $( "#min_price" ).text( ui.values[ 0 ] + "€" );
+        $( "#max_price" ).text( ui.values[ 1 ] + "€" );
+      }
+    });
+    $( "#min_price" ).text( $( "#slider-range" ).slider( "values", 0 ) + "€");
+    $( "#max_price" ).text( $( "#slider-range" ).slider( "values", 1 ) + "€");
+
 });
