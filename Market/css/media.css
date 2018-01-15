@@ -56,6 +56,18 @@
   .recommendations .buttons_newpr {
     bottom: -85px; }
 
+  .cart_buttons .continue {
+    text-align: center;
+    margin-bottom: 20px; }
+  .cart_buttons .actualizar {
+    text-align: center; }
+
+  .order_header h3 {
+    text-align: center; }
+  .order_header .go_order_block {
+    text-align: center;
+    margin-top: 20px; }
+
   /* */ }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
