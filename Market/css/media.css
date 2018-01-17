@@ -149,7 +149,7 @@
     margin-bottom: 20px; }
 
   .topline_menu .main_menu {
-    width: 460px;
+    width: 420px;
     margin-left: 0; }
 
   .form_block h3 {
@@ -173,7 +173,7 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
   .topline_menu .main_menu {
-    width: 300px; }
+    width: 250px; }
     .topline_menu .main_menu li.submenu_container .submenu li {
       padding: 0; }
 
