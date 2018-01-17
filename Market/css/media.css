@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*==========  Desktop First  ========== */
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
@@ -12,13 +13,33 @@
     background: #d6d6d5 url(../img/water.png) no-repeat right 100%; } }
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
-  .topline_menu ul {
-    display: none; }
+  .topline_menu .main_menu {
+    display: none;
+    position: relative;
+    width: 700px;
+    margin-left: -300px; }
   .topline_menu li {
     width: 100%;
     transition: all 0.5s ease; }
     .topline_menu li:hover {
       background-color: #eceaea; }
+    .topline_menu li.submenu_container:before {
+      content: "";
+      font-size: 12px;
+      margin-right: 10px;
+      font-family: FontAwesome; }
+    .topline_menu li.submenu_container .submenu {
+      display: none;
+      position: relative; }
+      .topline_menu li.submenu_container .submenu li ul {
+        display: none; }
+      .topline_menu li.submenu_container .submenu li:before {
+        content: "";
+        font-size: 12px;
+        margin-right: 10px;
+        font-family: FontAwesome; }
+      .topline_menu li.submenu_container .submenu li:hover ul {
+        display: block; }
   .topline_menu #button_gumb {
     display: inline-block; }
 
@@ -40,8 +61,9 @@
   .logo_wrap {
     margin-bottom: 10px; }
 
-  .topline_menu ul {
-    width: 755px; }
+  .topline_menu .main_menu {
+    width: 755px;
+    margin-left: 0; }
 
   .slideshow .slide_content {
     top: 20px; }
@@ -126,7 +148,7 @@
   .logo_wrap {
     margin-bottom: 20px; }
 
-  .topline_menu ul {
+  .topline_menu .main_menu {
     width: 460px;
     margin-left: 0; }
 
@@ -150,8 +172,10 @@
   /* */ }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .topline_menu ul {
+  .topline_menu .main_menu {
     width: 300px; }
+    .topline_menu .main_menu li.submenu_container .submenu li {
+      padding: 0; }
 
   .main_sl_buttons {
     height: 35px;
@@ -187,9 +211,6 @@
   /* */ }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 993px) {
-  .topline_menu ul {
-    display: block !important; }
-
   /* */ }
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {

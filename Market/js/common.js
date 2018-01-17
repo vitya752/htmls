@@ -109,12 +109,12 @@ $(function() {
 **/
 
 	$('#button_gumb').click(function(){
-		if($(".topline_menu ul").is(":visible")) {
-			$(".topline_menu ul").fadeOut(600);
+		if($(".topline_menu .main_menu").is(":visible")) {
+			$(".topline_menu .main_menu").fadeOut(600);
 			$(this).removeClass('active');
 		}else{
 			$(this).addClass('active');
-			$(".topline_menu ul").fadeIn(600);
+			$(".topline_menu .main_menu").fadeIn(600);
 		}
 	});
 

@@ -19,13 +19,37 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	.topline_menu
-		ul
+		.main_menu
 			display: none
+			position: relative
+			width: 700px
+			margin-left: -300px
 		li
 			width: 100%
 			transition: all .5s ease
 			&:hover
 				background-color: #eceaea	
+			&.submenu_container
+				&:before
+					content: "\f107"
+					font-size: 12px
+					margin-right: 10px
+					font-family: FontAwesome
+				.submenu
+					display: none
+					position: relative
+					li
+						ul
+							display: none
+							li
+						&:before
+							content: "\f107"
+							font-size: 12px
+							margin-right: 10px
+							font-family: FontAwesome
+						&:hover
+							ul
+								display: block
 		#button_gumb
 			display: inline-block
 	.services_section
@@ -47,9 +71,9 @@
 	.logo_wrap
 		margin-bottom: 10px
 	.topline_menu
-		ul
+		.main_menu
 			width: 755px
-			// margin-left: -280px
+			margin-left: 0
 	.slideshow 
 		.slide_content
 			top: 20px
@@ -124,7 +148,7 @@
 	.logo_wrap
 		margin-bottom: 20px
 	.topline_menu
-		ul
+		.main_menu
 			width: 460px
 			margin-left: 0
 	.form_block
@@ -151,8 +175,13 @@
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	.topline_menu
-		ul
+		.main_menu
 			width: 300px
+			li
+				&.submenu_container
+					.submenu
+						li
+							padding: 0
 	.main_sl_buttons
 		height: 35px
 		width: 35px
@@ -193,9 +222,7 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 993px)
-	.topline_menu
-		ul
-			display: block !important
+
 	/**/
 
 
