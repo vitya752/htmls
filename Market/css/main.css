@@ -826,7 +826,9 @@ footer {
     font-size: 16px;
     border: 1px solid #e1e1e1;
     z-index: 1;
-    cursor: pointer; }
+    cursor: pointer;
+	position: relative;
+	top: -2px;}
     .information .tab:nth-child(2) {
       margin: 0 5px; }
   .information .tab.active {
@@ -835,7 +837,8 @@ footer {
     border: 0;
     border-top: 3px solid #80c770;
     background-color: #FFF;
-    cursor: default; }
+    cursor: default; 
+	top: 0px;}
   .information .tab_content {
     background-color: #FFF; }
     .information .tab_content .tab_item {
