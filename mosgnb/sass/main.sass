@@ -1,0 +1,271 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $accent
+	color: #fff
+
+h1
+	// font-size: (50 / 16) * 1em
+	font-size: 2.5em;
+	font-family: BebasNeueBold
+	text-transform: uppercase;
+
+h2
+	font-size: 1.89em
+	font-family: BebasNeueBold
+
+h4
+	font-size: 1.008em
+
+.header_line
+	padding: 15px 0
+	border-bottom: 1px solid $main_color_border
+	.logo
+		padding-top: 5px
+		img
+			left: -40px
+			height: 90px
+			position: relative
+	.info_block
+		padding: 0 30px
+		span,a
+			font-size: (12 / 16) * 1em
+			color: #898989
+		p
+			padding: 0
+			margin: 0
+			font-size: (14 / 16) * 1em
+			color: #000
+		a
+			vertical-align: bottom
+			img
+				bottom: 4px
+		img
+			position: absolute
+			left: 10px
+		.icon_text
+			top: 30px
+
+nav.header_menu
+	ul,li
+		padding: 0
+	ul
+		margin: 14px 0
+	li
+		display: inline-block
+		margin: 0 15px
+		position: relative
+		&.active
+			&:after
+				z-index: 10
+				content: '';
+				position: absolute;
+				left: 40%;
+				bottom: -33px;
+				border: 10px solid transparent;
+				border-top: 10px solid #fff;
+			a
+				color: #000
+				border-top: 3px solid $menu_border
+	a
+		color: #898989
+		padding: 15px 0px
+		// font-size: (21 / 16) * 1em
+		font-size: 0.925em
+		font-family: BebasNeueRegular
+		text-transform: uppercase
+		-webkit-transition: ease .25s
+		-moz-transition: ease .25s
+		-ms-transition: ease .25s
+		transition: ease .25s
+		&:hover
+			color: #898989
+			text-decoration: none
+			border-top: 3px solid $menu_border
+
+.slider
+	.slide
+		padding: 70px 0
+		height: 500px
+		background-size: 100% 100%
+	.content_slide
+		width: 50%
+	h1
+		// font-size: (50 / 16) * 1em
+		// font-size: 2.5em;
+		// font-family: BebasNeueBold
+		// text-transform: uppercase;
+		display: inline;
+		// line-height: 1.6;
+		line-height: 65px
+		color: #fff;
+		padding: 20px 20px;
+		background-color: #282828;
+	a
+		color: #fff
+		outline: none
+		margin: 35px 0
+		padding: 15px 35px
+		border-radius: 30px
+		transition: ease .5s
+		display: inline-block
+		font-family: BebasNeueRegular
+		border: 3px solid $orange_color
+		&:hover
+			text-decoration: none
+			background-color: $orange_color
+		&:active
+			text-decoration: none
+			border: 3px solid $orange_color_hover
+			background-color: $orange_color_hover
+		&:focus
+			text-decoration: none
+	.slides_wrapper 
+		position: relative
+
+.slider .slick-dots
+	position: absolute
+	bottom: 40px
+	left: -495px
+	li
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		background-color: #fff
+		&.slick-active
+			background-color: $orange_color
+
+.hr
+	width: 60px
+	height: 2px
+	margin: 20px 0;
+	background-color: $orange_color
+
+.vantage
+	padding: 35px 0
+	.item 
+		padding: 0 50px
+		text-align: center
+		.hr-center
+			margin-left: auto
+			margin-right: auto
+		h4
+			// font-size: 1.008em
+			padding: 0 20px
+		p
+			font-size: 0.882em
+
+.scope
+	.item
+		margin: 0
+		padding: 0
+		width: 50%
+		float: left
+		position: relative
+		display: inline-block
+		&:hover
+			.item_content
+				top: 25px
+				bottom: 25px
+				opacity: 1
+	img
+		width: 100%
+		height: 100%
+	.item_content
+		top: 0px
+		right: 25px
+		bottom: 100%
+		width: 50%
+		opacity: 0
+		margin: auto
+		position: absolute
+		transition: ease .25s
+		padding: 20px 50px 35px 20px
+		background-color: #ffffff
+		&:after
+			content: ''; 
+			position: absolute; 
+			left: -30px; 
+			top: 50%;
+			border: 15px solid transparent;
+			border-right: 15px solid #fff;
+	h2
+		margin: 0
+		line-height: 30px
+	p,
+	a
+		font-family: sf-ui-display-light
+	p
+		color: #898989
+		font-size: 0.882em
+	a
+		color: #000000
+		text-indent: 25px
+		position: relative
+		display: inline-block
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+		img
+			top: 5px
+			left: 0
+			width: 15px
+			height: 15px
+			position: absolute
+
+
+
+@import "media" // Всегда в конце
