@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	$(".header_line .info_block").css("height", "").equalHeights();
+	$(".header_line .info_wrapper .info_block").css("height", "").equalHeights();
 	// $(".vantage .item h4").equalHeights();
 
 	$('.slides_wrapper').slick({
