@@ -10,4 +10,11 @@ $(document).ready(function(){
 		speed: 1250
 	});
 
+	$('.head_buttons .open_menu').click(function() {
+		$('.mobile_menu').slideToggle();
+	});
+	$('.close').click(function() {
+		$('.mobile_menu').slideToggle();
+	});
+
 });
