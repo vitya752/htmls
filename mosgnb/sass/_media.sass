@@ -68,6 +68,8 @@
 	.head_buttons
 		.open_menu
 			top: 60px
+		.open_info
+			display: block
 	.header_line
 		.logo
 			img
@@ -98,9 +100,22 @@
 @media only screen and (max-width : 480px)
 	h1
 		font-size: (25 / 16) * 1em
+	.header_line
+		.logo
+			img
+				padding-top: 20px
+				height: auto
+				width: 100%
+	.head_buttons
+		.open_menu
+			top: 45px
+		.open_info
+			top: 42px
 	.mobile_menu
 		width: 320px
 		padding: 0
+	.mobile_info
+		top: 120px
 	.slider 
 		.content_slide
 			width: 85%

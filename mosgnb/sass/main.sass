@@ -83,15 +83,17 @@ p
 	// (14 / 16) * 1em
 
 .head_buttons
-	.open_menu
-		top: 30px
+	vertical-align: middle
+	button
 		border: 0
-		right: 25px
 		float: right
-		display: block
 		outline: none
+		display: block
 		position: relative
 		background-color: transparent
+	.open_menu
+		top: 30px
+		right: 25px
 		span
 			width: 25px
 			height: 2px
@@ -102,6 +104,10 @@ p
 				top: 10px
 			&:nth-child(3)
 				top: 20px
+	.open_info
+		top: 56px
+		right: 75px
+		display: none
 
 .close
 	position: absolute;
@@ -121,13 +127,32 @@ p
 .close:after
 	transform: rotate(-45deg);
 
-.info_wrapper
-	position: relative
+.mobile_info
+	top: 160px
+	right: 20px
+	z-index: 10
+	width: 280px
+	padding: 25px
+	position: absolute
+	background-color: #fff
+	&:after
+		top: -20px
+		right: 25%
+		z-index: 10
+		content: '';
+		position: absolute;
+		border: 10px solid transparent;
+		border-bottom: 10px solid #fff;
+	// .header_line
+	.info_block
+		position: relative
+		.icon_text
+			top: 8px
 
 .mobile_menu
 	top: 0px
 	right: 0
-	z-index: 10
+	z-index: 11
 	display: none
 	float: right
 	padding: 0 20px
@@ -252,24 +277,27 @@ a.with_icon-padd
 			left: -40px
 			height: 90px
 			position: relative
-	.info_block
-		padding: 0 15px
-		span,a
-			font-size: (12 / 16) * 1em
-			color: #898989
-		p
-			padding: 0
-			margin: 0
-			color: #000
-		a
-			vertical-align: bottom
-			img
-				bottom: 4px
+.info_block
+	padding: 0 15px
+	position: relative
+	span,a
+		font-size: (12 / 16) * 1em
+		color: #898989
+	p
+		padding: 0
+		margin: 0
+		color: #000
+	a
+		position: relative
+		vertical-align: bottom
 		img
-			position: absolute
-			left: -5px
-		.icon_text
-			top: 30px
+			bottom: 0
+			left: -18px
+	img
+		position: absolute
+		left: -5px
+	.icon_text
+		top: 30px
 
 nav.header_menu
 	ul,li
