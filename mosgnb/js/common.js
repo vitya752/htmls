@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
 	$(".header_line .info_wrapper .info_block").css("height", "").equalHeights();
-	// $(".vantage .item h4").equalHeights();
+	$('.vantage .item').css("height", "").equalHeights();
+	// $(".vantage .item h4").css("height", "").equalHeights();
 
 	$('.slides_wrapper').slick({
 		autoplay: true,
