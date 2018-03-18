@@ -58,14 +58,12 @@ body
 	color: #fff
 
 h1
-	// font-size: (50 / 16) * 1em
-	font-size: 2.5em;
+	font-size: (50 / 16) * 1em
 	font-family: BebasNeueBold
 	text-transform: uppercase;
 
 h2
-	// font-size: (30 / 16) * 1em
-	font-size: 1.89em
+	font-size: (30 / 16) * 1em
 	font-family: BebasNeueBold
 	text-transform: uppercase
 
@@ -74,8 +72,7 @@ h3
 	font-size: (21 / 16) * 1em
 
 h4
-	// font-size: (16 / 16) * 1em
-	font-size: 1em
+	font-size: (16 / 16) * 1em
 	font-family: sf-ui-display-medium
 
 p
@@ -158,6 +155,8 @@ p
 	padding: 0 20px
 	position: absolute
 	background-color: #fff
+	font-size: (21 / 16) * 1em
+	font-family: BebasNeueRegular
 	-webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
@@ -179,7 +178,10 @@ p
 		li
 			padding: 10px
 			transition: ease .5s
-			&:hover
+			&:hover,
+			&:focus,
+			&:active,
+			&.active
 				background-color: $orange_color
 				a
 					color: #000
@@ -211,7 +213,7 @@ p
 	transition: ease .5s
 	display: inline-block
 	text-decoration: none
-	font-family: BebasNeueRegular
+	font-family: sf-ui-display-regular
 	border: 3px solid $orange_color
 	&:hover
 		color: #fff
@@ -250,6 +252,7 @@ a.with_icon
 	display: inline-block;
 	line-height: 18px;
 	position: relative;
+	font-size: (14 / 16) * 1em
 	text-decoration: underline
 	font-family: sf-ui-display-medium
 	&:hover,
@@ -260,6 +263,10 @@ a.with_icon
 		position: absolute
 		top: 2px
 		left: 0
+a.with_icon-big
+	font-size: (16 / 16) * 1em
+a.with_icon-regular
+	font-family: sf-ui-display-regular
 a.with_icon-padd
 	padding: 0 40px 0 30px;
 
@@ -272,6 +279,7 @@ a.with_icon-padd
 	padding: 15px 0
 	border-bottom: 1px solid $main_color_border
 	.logo
+		// width: 245px
 		padding-top: 5px
 		img
 			left: -40px
@@ -280,6 +288,7 @@ a.with_icon-padd
 .info_block
 	padding: 0 15px
 	position: relative
+	font-family: sf-ui-display-regular
 	span,a
 		font-size: (12 / 16) * 1em
 		color: #898989
@@ -306,7 +315,7 @@ nav.header_menu
 		margin: 14px 0
 	li
 		display: inline-block
-		margin: 0 15px
+		margin: 0 20px
 		position: relative
 		&.active
 			&:after
@@ -324,7 +333,7 @@ nav.header_menu
 		color: #898989
 		padding: 15px 0px
 		// font-size: (21 / 16) * 1em
-		font-size: 0.925em
+		font-size: (21 / 16) * 1em
 		font-family: BebasNeueRegular
 		text-transform: uppercase
 		-webkit-transition: ease .25s
@@ -349,7 +358,7 @@ footer
 			font-size: 0.882em
 			position: relative
 			padding-bottom: 10px
-			font-family: BebasNeueRegular
+			font-family: sf-ui-display-regular
 			img
 				top: 4px
 				left: -27px
@@ -362,7 +371,6 @@ footer
 		color: #000000
 		font-size: 0.882em
 		text-decoration: underline
-		font-family: BebasNeueRegular
 		&:hover,
 		&:active,
 		&:focus
@@ -373,6 +381,8 @@ footer
 			width: 50%
 			float: left
 			display: inline-block
+	.contacts
+		font-family: sf-ui-display-light
 	.partner
 		padding: 15px 0
 	.fill_form
@@ -394,7 +404,7 @@ footer
 		padding: 15px 0
 		color: #898989
 		font-size: (12 / 16) * 1em
-		font-family: BebasNeueRegular
+		font-family: sf-ui-display-light
 		span.dev
 			text-decoration: underline
 
@@ -409,13 +419,9 @@ footer
 	.content_slide
 		width: 50%
 	h1
-		// font-size: (50 / 16) * 1em
-		// font-size: 2.5em;
-		// font-family: BebasNeueBold
-		// text-transform: uppercase;
 		display: inline;
 		// line-height: 1.6;
-		line-height: 65px
+		line-height: 100px
 		color: #fff;
 		padding: 20px 20px;
 		background-color: #282828;
@@ -427,7 +433,7 @@ footer
 		border-radius: 30px
 		transition: ease .5s
 		display: inline-block
-		font-family: BebasNeueRegular
+		font-family: sf-ui-display-regular
 		border: 3px solid $orange_color
 		&:hover
 			text-decoration: none
@@ -459,8 +465,9 @@ footer
 		padding: 0 50px
 		text-align: center
 		h4
-			// font-size: 1.008em
 			padding: 0 30px
+		p
+			font-family: sf-ui-display-light
 
 .scope
 	.scope_wrapper
