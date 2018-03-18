@@ -275,6 +275,23 @@ a.with_icon-padd
 	text-align: center
 	font-family: BebasNeueRegular
 
+ul.breadcrumbs
+	padding: 0
+	margin: 0
+	list-style-type: none
+	li
+		color: #898989
+		display: inline-block
+		font-size: (14 / 16) * 1em
+		&:after
+			content: '/'
+			padding-left: 5px
+		&:last-child
+			&:after
+				content: ''
+	a
+		color: #898989
+
 .header_line
 	padding: 15px 0
 	border-bottom: 1px solid $main_color_border
@@ -602,5 +619,12 @@ footer
 		color: #898989
 		padding: 0 200px
 
+.head_descr
+	padding: 35px 0
+	h1
+		margin: 0
+		color: #000
+	p
+		color: #898989
 
 @import "media" // Всегда в конце
