@@ -230,6 +230,10 @@ p
 	outline: none
 	margin: 40px 0
 	padding: 15px 35px
+.button-black
+	color: #000
+.button-unmarg
+	margin: 0
 .button-footer
 	margin-top: 8px
 	padding: 5px 35px
@@ -330,7 +334,7 @@ ul.pagination
 				color: #ffffff
 
 .background-gray
-	background: #f6f6f6 url(../img/bg_biggest.png) bottom
+	background: #f6f6f6 url(../img/bg_news.png) no-repeat right bottom
 
 .header_line
 	padding: 15px 0
@@ -638,7 +642,6 @@ footer
 
 .news
 	padding: 35px 0
-	background: #f6f6f6 url(../img/bg_news.png) no-repeat bottom right
 	.item
 		margin: 15px 0 30px 0
 		.post_thumbnail
@@ -688,10 +691,11 @@ footer
 .block_head
 	height: 490px
 	position: relative
+	padding: 35px 0
 	background-position: center
 	.breadcrumbs
 		display: block
-		padding: 15px 0 35px 0
+		margin: -30px 0 30px 0
 		a,li
 			color: #fff
 	.block_content
@@ -737,13 +741,94 @@ footer
 .effect_solution
 	padding: 35px 0
 	.item
-		img
-			width: 110px
-			height: 110px
+		padding: 20px 0
+	.thumb, .item_content
+		display: inline-block
+		vertical-align: middle
+	.thumb
+		width: 110px
+		height: 110px
+		border-radius: 50%
+		margin-right: 20px
+	.item_content
+		max-width: 330px
+	h4
+		margin: 0
+
+.presentation
+	padding: 35px 0
+	text-align: center
+	.video_wrap
+		position: relative
+		display: inline-block
+		margin: 0 auto
+	.main_img
+		width: 100%
+	a
+		top: 40%
+		left: 44%
+		position: absolute
+	.play,
+	.play_active
+		position: absolute
+	.play
+		z-index: 10
+		transition: ease .5s
+		&:hover
+			opacity: 0
+	p
+		color: #898989
+		padding: 0 170px
+
+.benefit
+	padding: 35px 0
+	text-align: center
+	.buttons_benefit
+		display: none
+		position: relative
+		span
+			top: 42px
+			z-index: 10
+			position: absolute
+			padding: 0px 8px
 			border-radius: 50%
-		.thumb_block .content
-			display: inline-block
-
-
+			background-color: #dddddd
+			transition: ease .5s
+			&:hover,
+			&:active,
+			&:focus
+				background-color: $orange_color
+		.prev
+			left: 35px
+		.next
+			right: 35px
+	.item
+		margin: 0 auto
+		margin-bottom: 15px
+		padding: 0 35px 35px 35px
+		max-width: 370px
+		text-align: center
+		background-color: #fff
+		outline: none
+		-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+		box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+	h4
+		padding: 20px 0
+		border-bottom: 1px solid #dddddd
+	h2
+		margin: 5px 0
+	ul
+		padding: 10px 20px
+		text-align: left
+		border-bottom: 1px solid #dddddd
+		li
+			color: $orange_color
+			// padding: 5px 0
+			padding-bottom: 10px
+		span
+			color: #898989
+	p
+		padding: 0 260px
 
 @import "media" // Всегда в конце
