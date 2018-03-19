@@ -225,6 +225,11 @@ p
 		text-decoration: none
 		border: 3px solid $orange_color_active
 		background-color: $orange_color_active
+.button-big
+	color: #fff
+	outline: none
+	margin: 40px 0
+	padding: 15px 35px
 .button-footer
 	margin-top: 8px
 	padding: 5px 35px
@@ -679,5 +684,66 @@ footer
 		color: #000
 	p
 		color: #898989
+
+.block_head
+	height: 490px
+	position: relative
+	background-position: center
+	.breadcrumbs
+		display: block
+		padding: 15px 0 35px 0
+		a,li
+			color: #fff
+	.block_content
+		width: 50%
+		margin: 35px 0
+	h1
+		display: inline;
+		color: #fff;
+		line-height: 1.2;
+		outline: #282828 solid 15px;
+		background-color: #282828;
+	// &:after
+	// 	top: 0
+	// 	content: ''
+	// 	z-index: 0
+	// 	width: 100%
+	// 	height: 100%;
+	// 	background: black;
+	// 	opacity: 0.5;
+	// 	position: absolute
+	// Затемненный фон
+.problems
+	padding: 15px 0 30px 0
+	.no_photo
+		width: 160px
+		height: 160px
+		display: inline-block
+	.no_photo-min
+		width: 60px
+		height: 60px
+		display: none
+	ul
+		padding: 0
+		margin: 0	
+		li
+			margin-bottom: 5px
+			color: $orange_color
+			// font-size: 40px
+		a
+			// font-size: (14 / 16) * 1em
+			color: #898989
+
+.effect_solution
+	padding: 35px 0
+	.item
+		img
+			width: 110px
+			height: 110px
+			border-radius: 50%
+		.thumb_block .content
+			display: inline-block
+
+
 
 @import "media" // Всегда в конце
