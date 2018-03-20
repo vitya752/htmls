@@ -81,23 +81,55 @@ $(document).ready(function(){
 	// }
 
 	var handleMatchMedia = function(mediaQuery) {
-	    if (mediaQuery.matches) {
-			$('.benefits_wrap').slick();
-			$('.buttons_benefit').css('display', 'block');
-	    } else {
-	    	$('.benefits_wrap').slick('unslick');
-	        $('.buttons_benefit').css('display', 'none');
-	    }
+		if (mediaQuery.matches) {
+			$('.landing-page .benefits_wrap').slick();
+			$('.landing-page .buttons_benefit').css('display', 'block');
+
+			$('.landing-page .projects_wrapper').slick();
+			$('.landing-page .buttons_projects').css('display', 'block');
+
+			$('.landing-page .reviews_wrap').slick();
+			$('.landing-page .buttons_projects').css('display', 'block');
+
+		} else {
+			$('.landing-page .benefits_wrap').slick('unslick');
+			$('.landing-page .buttons_benefit').css('display', 'none');
+
+			$('.landing-page .projects_wrapper').slick('unslick');
+			$('.landing-page .buttons_projects').css('display', 'none');
+
+			$('.landing-page .reviews_wrap').slick('unslick');
+			$('.landing-page .buttons_projects').css('display', 'none');
+
+		}
 	},
 	mql = window.matchMedia('all and (max-width: 480px)');
 	handleMatchMedia(mql);
 	mql.addListener(handleMatchMedia); 
 
-	$('.buttons_benefit .prev').on('click', function() {
-		$('.benefits_wrap').slick('slickPrev');
+	$('.landing-page .buttons_benefit .prev').on('click', function() {
+		$('.landing-page .benefits_wrap').slick('slickPrev');
 	});
-	$('.buttons_benefit .next').on('click', function() {
-		$('.benefits_wrap').slick('slickNext');
+	$('.landing-page .buttons_benefit .next').on('click', function() {
+		$('.landing-page .benefits_wrap').slick('slickNext');
+	});
+
+	$('.landing-page .buttons_projects .prev').on('click', function() {
+		$('.landing-page .projects_wrapper').slick('slickPrev');
+	});
+	$('.landing-page .buttons_projects .next').on('click', function() {
+		$('.landing-page .projects_wrapper').slick('slickNext');
+	});
+
+	$('.question_answer ul.question li').click(function() {
+		$(this).find('.answer').slideToggle();
+
+		if( $(this).hasClass('active') ){
+			$(this).removeClass('active');
+		}else{
+			$(this).addClass('active');
+		}
+
 	});
 
 });

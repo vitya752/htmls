@@ -783,6 +783,8 @@ footer
 .benefit
 	padding: 35px 0
 	text-align: center
+	.benefits_wrap
+		overflow-x: hidden
 	.buttons_benefit
 		display: none
 		position: relative
@@ -830,5 +832,110 @@ footer
 			color: #898989
 	p
 		padding: 0 260px
+
+.projects
+	padding: 35px 0
+	.projects_wrapper
+		overflow-x: hidden
+	.item
+		margin: 15px 0 30px 0
+		.post_thumbnail
+			img
+				width: 100%
+	span
+		color: #898989
+		font-size: 0.882em
+		font-family: sf-ui-display-regular
+		img
+			left: -2px;
+			top: -2px;
+			margin-right: 5px;
+			position: relative
+	a
+		text-decoration: underline
+		&:hover,
+		&:active,
+		&:focus
+			text-decoration: none
+	h4
+		margin: 0
+		color: #000
+		padding: 20px 0 10px 0
+	p
+		margin: 0
+		color: #898989
+	.buttons_projects
+		display: none
+		position: relative
+		span
+			cursor: pointer
+			position: absolute
+			text-decoration: underline
+		.prev
+			left: 0
+		.next
+			right: 40px
+
+.reviews
+	padding: 35px 0
+	.reviews_wrap
+		overflow-x: hidden
+	.item
+		margin-bottom: 20px
+		&:last-child
+			.post_content
+				border-bottom: 0
+			h4
+				margin: 15px 0 0 0
+	.post_thumbnail
+		width: 140px
+		height: 140px
+		border-radius: 50%
+	.post_content
+		border-bottom: 1px solid #dddddd
+	h4
+		text-indent: 25px
+		position: relative
+		padding: 0
+		margin: 15px 0 25px 0
+		img
+			position: absolute
+			top: 6px
+			left: 0
+			width: 14px 
+			height: 14px
+	img
+		width: 100%
+		vertical-align: top
+	p
+		margin: 0
+
+.question_answer
+	padding: 35px 0
+	ul.question
+		padding: 0
+		padding-left: 35px
+		li
+			margin: 5px 0
+			color: $orange_color
+			&.active,
+			&:hover
+				a
+					color: #898989
+					text-decoration: none
+
+		a
+			transition: ease .5s
+			text-decoration: underline
+			font-weight: bold
+			color: #000
+	.answer
+		color: #898989
+		display: none
+		margin: 30px 0
+		padding: 15px 30px
+		background-color: #fff
+		font-family: sf-ui-display-regular
+
 
 @import "media" // Всегда в конце
