@@ -92,13 +92,13 @@ $(document).ready(function(){
 			$('.landing-page .buttons_projects').css('display', 'block');
 
 		} else {
-			$('.landing-page .benefits_wrap').slick('unslick');
+			// $('.landing-page .benefits_wrap').slick('unslick');
 			$('.landing-page .buttons_benefit').css('display', 'none');
 
-			$('.landing-page .projects_wrapper').slick('unslick');
+			// $('.landing-page .projects_wrapper').slick('unslick');
 			$('.landing-page .buttons_projects').css('display', 'none');
 
-			$('.landing-page .reviews_wrap').slick('unslick');
+			// $('.landing-page .reviews_wrap').slick('unslick');
 			$('.landing-page .buttons_projects').css('display', 'none');
 
 		}
