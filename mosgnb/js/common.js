@@ -132,4 +132,11 @@ $(document).ready(function(){
 
 	});
 
+	$('.list_services li').click(function() {
+
+		$('.list_services li').removeClass('active').eq($(this).index()).addClass("active");
+		$(".service_tabs .tab_item").removeClass('active').eq($(this).index()).addClass('active');
+
+	});
+
 });

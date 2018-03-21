@@ -243,7 +243,7 @@ p
 	padding: 5px 35px
 
 .to_next
-	height: 1px
+	height: 1.5px
 	position: relative
 	background-color: $main_color_border
 	&:after,
@@ -256,7 +256,7 @@ p
 		border-top: 10px solid $main_color_border;
 	&:after
 		border-top: 10px solid #ffffff;
-		bottom: -19px;
+		bottom: -17px;
 .to_next_wrapper-bott
 	margin-bottom: 35px
 
@@ -278,6 +278,10 @@ a.with_icon
 		position: absolute
 		top: 2px
 		left: 0
+a.with_icon-line
+	color: #898989
+	span
+		color: #000
 a.with_icon-big
 	font-size: (16 / 16) * 1em
 a.with_icon-regular
@@ -305,6 +309,9 @@ ul.breadcrumbs
 			&:after
 				content: ''
 	a
+		color: #898989
+ul.breadcrumbs-gray
+	li
 		color: #898989
 
 ul.pagination
@@ -734,6 +741,9 @@ footer
 		margin: -30px 0 30px 0
 		a,li
 			color: #fff
+		&.breadcrumbs-gray
+			a,li
+				color: #898989
 	.header_block
 		margin-left: 10px
 	.block_content
@@ -978,5 +988,36 @@ footer
 		background-color: #fff
 		font-family: sf-ui-display-regular
 
+.list_services
+	padding: 35px
+	ul
+		padding: 0
+		margin: 0
+		list-style-type: none
+		font-family: sf-ui-display-regular
+		li
+			color: #898989
+			cursor: pointer
+			padding: 10px 0
+			margin-right: 50px
+			display: inline-block
+			text-decoration: underline
+			&.active
+				color: #000
+				cursor: default
+				text-decoration: none
+
+.service_tabs
+	text-align: center
+	.tab_item
+		display: none
+		&.active
+			display: block
+		.prices_table
+			width: 100%
+		a.with_icon
+			font-weight: bold
+			img
+				top: 0
 
 @import "media" // Всегда в конце
