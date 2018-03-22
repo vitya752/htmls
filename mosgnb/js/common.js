@@ -80,6 +80,7 @@ $(document).ready(function(){
 
 	// }
 
+
 	var handleMatchMedia = function(mediaQuery) {
 		if (mediaQuery.matches) {
 			$('.landing-page .benefits_wrap').slick();
@@ -89,6 +90,8 @@ $(document).ready(function(){
 			$('.landing-page .buttons_projects').css('display', 'block');
 
 			$('.landing-page .reviews_wrap').slick();
+			// $('.reviews .post_content').css('border-bottom', '0');
+			// $('.reviews h4').css('margin', '15px 0 0 0');
 			$('.landing-page .buttons_projects').css('display', 'block');
 
 		} else {

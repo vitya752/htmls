@@ -250,7 +250,7 @@ p
 	&:before
 		content: ''; 
 		position: absolute;
-		left: 49%; 
+		left: 48%; 
 		bottom: -20px;
 		border: 10px solid transparent;
 		border-top: 10px solid $main_color_border;
@@ -468,7 +468,7 @@ footer
 			float: left
 			display: inline-block
 	.contacts
-		padding: 0 0 0 40px
+		padding: 0 20px 0 40px
 		font-family: sf-ui-display-light
 	.partner
 		padding: 15px 0
@@ -726,7 +726,8 @@ footer
 .head_descr
 	padding: 35px 0
 	h1
-		margin: 0
+		margin: 5px 0
+		line-height: 50px
 		color: #000
 	p
 		color: #898989
@@ -1019,5 +1020,49 @@ footer
 			font-weight: bold
 			img
 				top: 0
+
+.reviews_video
+	.video_wrap
+		.item
+			.video
+				width: 100%
+				position: relative
+			.main_miniature
+				width: 100%
+			a
+				width: 100%; 
+				height: 100%;
+				// min-width: 400px;
+				// max-width: 500px;
+				// padding: 40px;
+				overflow: auto;
+				margin: auto;
+				position: absolute;
+				top: 0; left: 0; bottom: 0; right: 0;
+			.play,
+			.play_active
+				top: 30%
+				left: 35%
+				width: 75px
+				height: 75px
+				position: absolute
+			.play
+				z-index: 10
+				transition: ease .5s
+				&:hover
+					opacity: 0
+		p
+			font-family: sf-ui-display-regular
+		h4
+			text-indent: 25px
+			position: relative
+			padding: 0
+			margin: -10px 0 0 0
+			img
+				position: absolute
+				top: 6px
+				left: 0
+				width: 14px 
+				height: 14px
 
 @import "media" // Всегда в конце
