@@ -544,14 +544,18 @@ footer
 .slider .slick-dots
 	position: absolute
 	bottom: 40px
-	left: -495px
+	width: auto
+	left: 12%
 	li
-		width: 10px
-		height: 10px
+		width: 15px
+		height: 15px
 		border-radius: 50%
 		background-color: #fff
 		&.slick-active
 			background-color: $orange_color
+		button
+			&:before
+				content: ''
 
 .vantage
 	padding: 35px 0
