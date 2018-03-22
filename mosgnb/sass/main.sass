@@ -347,6 +347,9 @@ ul.pagination
 .background-gray
 	background: #f6f6f6 url(../img/bg_news.png) no-repeat right bottom
 
+header
+	.border
+		border-bottom: 1px solid #ddd
 .header_line
 	padding: 15px 0
 	border-bottom: 1px solid $main_color_border
@@ -422,6 +425,11 @@ nav.header_menu
 			color: #898989
 			text-decoration: none
 			border-top: 3px solid $menu_border
+nav.header_menu-unafter 
+	li
+		&.active
+			&:after
+				border: 0
 
 footer
 	.navigation
@@ -728,9 +736,10 @@ footer
 		padding: 0 200px
 
 .head_descr
-	padding: 35px 0
+	padding: 30px 0
 	h1
 		margin: 5px 0
+		padding-right: 65px
 		line-height: 50px
 		color: #000
 	p
@@ -1068,5 +1077,48 @@ footer
 				left: 0
 				width: 14px 
 				height: 14px
+
+.article_content
+	padding-bottom: 15px
+	border-bottom: 1px solid #ddd
+	.article_thumbnail
+		float: left
+		width: 470px
+		padding-right: 30px
+	h4
+		margin: 0
+	p
+		margin: 15px 0
+	ul
+		padding: 15px 0
+		margin: 0
+		padding-left: 20px
+		li
+			color: $orange_color
+			padding: 5px 0
+			span
+				color: #898989
+
+.podstands
+	padding: 15px 0
+	border-bottom: 1px solid #ddd
+	h2
+		margin: 0
+	p
+		margin: 15px 0
+		position: relative
+		img
+			top: 3px
+			left: -50px
+			position: absolute
+	.img_wrap
+		// margin-bottom: 15px
+		img
+			width: 100%
+
+.note
+	font-weight: bold
+	padding: 15px 140px 15px 85px
+	background-color: #f4f4f4
 
 @import "media" // Всегда в конце
