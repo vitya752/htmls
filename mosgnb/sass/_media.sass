@@ -104,6 +104,16 @@
 	.button-big
 		padding: 15px
 
+	form.partner
+		label
+			padding: 0 150px
+
+	.block_head
+		.extra_content
+			top: 10%
+			right: 4%
+			padding: 20px 20px 20px 50px
+
 	/**/
 
 
@@ -231,8 +241,8 @@
 	.block_head
 		height: 400px
 		.block_content
-			width: 80%
-			padding: 35px 15px
+			width: 50%
+			padding: 0 15px
 
 	.problems
 		text-align: center
@@ -259,16 +269,22 @@
 			.post_content
 				float: none
 				margin: 0 auto
-	.reviews_video
-		.video_wrap
-			.item
-				.play,
-				.play_active
-					top: 15%
-					left: 25%
 
 	.note
 		padding: 15px 15px 15px 85px
+	form.partner
+		input[type="text"],input[type="email"]
+			height: 60px
+		textarea
+			height: 220px
+	.about
+		.text_about
+			margin-bottom: 30px
+
+	.main_specialists
+		.item
+			h4
+				padding: 0 60px
 
 	/**/
 @media only screen and (max-width : 767px)
@@ -281,17 +297,24 @@
 			img
 				width: 185px
 				left: -10px
-	.reviews_video
-		.video_wrap
-			.item
-				.play,
-				.play_active
-					top: 25%
-					left: 32%
+
 	.podstands
 		.img_wrap
 			margin-bottom: 15px
 			img
+
+	.about
+		.thumb_block
+			text-align: center
+			img
+				width: 225px
+				margin-bottom: 20px
+
+	.block_head
+		.block_content
+			width: 85%
+		.extra_content
+			display: none
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -419,15 +442,30 @@
 				width: 100%	
 			.item
 				margin-bottom: 15px
-				.play,
-				.play_active
-					top: 35%
-					left: 30%
-				.main_miniature
+				.video
 					width: 75%
+				.main_miniature
+					width: 100%
 	.article_content
 		.article_thumbnail
 			width: 100%
+	form.partner
+		label
+			padding: 0 0 0 20px
+		input[type="text"],input[type="email"]
+			height: 50px
+		textarea
+			height: 175px
+
+	.main_specialists
+		.item
+			margin-bottom: 35px
+			img
+				width: 120px
+				height: 120px
+			h4
+				padding: 0 54px
+
 	/**/
 
 
@@ -449,23 +487,17 @@
 		.inner_link
 			padding: 20px 20px
 
-	.presentation
-		a
-			top: 30%
-			left: 37%
 	.benefit
 		.buttons_benefit
 				.prev
 					left: 35px
 				.next
 					right: 35px
-	.reviews_video
-		.video_wrap
-			.item
-				.play,
-				.play_active
-					top: 30%
-					left: 27%
+
+	.main_specialists
+		.item
+			h4
+				padding: 0 28px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -495,13 +527,10 @@
 			padding: 5px 0 0 0
 	// Решения
 
-	.reviews_video
-		.video_wrap
-			.item
-				.play,
-				.play_active
-					top: 25%
-					left: 25%
+	.main_specialists
+		.item
+			h4
+				padding: 0
 
 	/**/
 
