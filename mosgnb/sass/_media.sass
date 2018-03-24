@@ -291,6 +291,15 @@
 			width: 290px
 			height: 100px
 
+	.info_tables
+		.table
+			&:nth-child(1),
+			&:nth-child(2)
+				.col_name
+					width: 25%
+				.col_value
+					width: 74%
+
 	/**/
 @media only screen and (max-width : 767px)
 	.head_buttons
@@ -320,6 +329,17 @@
 			width: 85%
 		.extra_content
 			display: none
+
+	.info_tables
+		.table
+			&:nth-child(1),
+			&:nth-child(2)
+				.col_name
+					width: 100%
+					margin: 5px 0
+				.col_value
+					padding-right: 53px
+					width: 100%
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -471,6 +491,14 @@
 			h4
 				padding: 0 54px
 
+	.route
+		.item
+			padding: 0
+			img
+				margin: 25px 0
+				display: block
+				position: relative
+
 	/**/
 
 
@@ -506,7 +534,7 @@
 
 	.service_content
 		img.left_img
-			margin: 0 40px 0 0
+			margin: 0 40px 20px 0
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
@@ -540,6 +568,16 @@
 		.item
 			h4
 				padding: 0
+
+	.info_tables
+		.table
+			&:nth-child(1),
+			&:nth-child(2)
+				.col_name
+					width: 100%
+				.col_value
+					padding-right: 0
+					width: 100%
 
 	/**/
 

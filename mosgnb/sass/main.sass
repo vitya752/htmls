@@ -77,6 +77,7 @@ h4
 
 p
 	font-size: 0.882em 
+	color: #898989
 	// (14 / 16) * 1em
 
 .head_buttons
@@ -316,6 +317,10 @@ ul.breadcrumbs-gray
 	li
 		color: #898989
 
+ul.breadcrumbs-black
+	li
+		color: #000
+
 ul.pagination
 	padding: 0
 	margin: 35px 0
@@ -526,9 +531,20 @@ footer
 	.slide
 		padding: 70px 0
 		height: 500px
+		position: relative
 		background-size: 100% 100%
+		&:after
+			top: 0
+			left: 0
+			content: ''
+			width: 100%
+			height: 100%
+			background-color: rgba(0,0,0,.3)
+			position: absolute
 	.content_slide
+		z-index: 10
 		width: 50%
+		position: relative
 	.header_slide
 		margin-left: 10px
 	h1
@@ -763,6 +779,7 @@ footer
 	height: 490px
 	position: relative
 	padding: 35px 0
+	background-size: cover
 	background-position: center
 	+ .container
 		position: relative
@@ -774,10 +791,14 @@ footer
 		&.breadcrumbs-gray
 			a,li
 				color: #898989
+		&.breadcrumbs-black
+			a,li
+				color: #000
 	.header_block
 		margin-left: 10px
 	.block_content
 		width: 50%
+		z-index: 10
 		margin: 35px 0
 		position: relative
 	h1
@@ -803,15 +824,15 @@ footer
 			color: $orange_color
 			span
 				color: #898989
-	// &:after
-	// 	top: 0
-	// 	content: ''
-	// 	z-index: 0
-	// 	width: 100%
-	// 	height: 100%;
-	// 	background: black;
-	// 	opacity: 0.5;
-	// 	position: absolute
+	&:after
+		top: 0
+		content: ''
+		z-index: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(0,0,0,.15)
+		position: absolute
+		z-index: 2
 	// Затемненный фон
 .problems
 	padding: 15px 0 30px 0
@@ -1347,6 +1368,7 @@ form.partner
 		margin-bottom: 0
 		li
 			padding: 5px 0
+			font-size: .882em
 			color: $orange_color
 		span
 			color: #898989
@@ -1356,5 +1378,54 @@ form.partner
 		height: 167px
 		margin: 0 20px 0 0
 
+.route
+	padding: 40px 0
+	.item
+		position: relative
+		padding-left: 80px
+		padding-right: 40px
+	img
+		left: 0
+		position: absolute
+
+.info_tables
+	padding: 30px 0
+	.table
+		.table_row
+			font-size: (14 / 16) * 1em
+			margin: 15px 0
+			font-family: sf-ui-display-regular
+		a
+			color: #898989
+			margin: 0
+			font-size: (14 / 16) * 1em
+			text-decoration: underline
+			span
+				color: #000
+				font-weight: bold
+				font-size: (14 / 16) * 1em
+			&:hover
+				text-decoration: none
+		.col_name,
+		.col_value
+			display: inline-block
+			vertical-align: top
+		.col_name
+			// width: 30%
+			color: #898989
+		.col_value
+			// width: 69%
+			color: #000
+			font-weight: bold
+		&:nth-child(1)
+			.col_name
+				width: 135px
+			.col_value
+				width: 400px
+		&:nth-child(2)
+			.col_name
+				width: 185px
+			.col_value
+				width: 365px
 
 @import "media" // Всегда в конце
