@@ -55,15 +55,7 @@
 	// Преимущества
 
 	// Возможности
-	.scope
-		.item_content
-			width: 90%
-			padding: 20px 30px 30px 20px
-			&:after
-				display: none
-			p
-				display: none
-
+	.scope			
 		.item
 			height: 250px
 			&:hover
@@ -72,12 +64,33 @@
 					bottom: 25px
 					left: 25px 
 					right: 25px
+			&.left_info
+				.item_content
+					left: 25px
+					width: 50%
+					margin: 0
+					padding: 20px 30px 20px 20px
+					&:after
+						display: block
+						content: ''; 
+						position: absolute; 
+						left: 100% 
+						top: 45%;
+						border: 15px solid transparent;
+						border-left: 15px solid #fff;		
 			&.full_info
 				> .item_content
 					top: 0
 					left: 0
 					right: 0
 					bottom: 0
+		.item_content
+			width: 90%
+			padding: 20px 30px 20px 20px
+			&:after
+				display: none
+			p
+				display: none
 	// Возможности
 
 	// Решения
@@ -156,24 +169,6 @@
 			padding: 0 22px
 	// Преимущества
 
-	// .scope
-	// 	&.left_info
-	// 		> .item_content
-	// 			top: 0px
-	// 			left: 25px
-	// 			bottom: 100%
-	// 			width: 50%
-	// 			padding: 40px
-	// 			opacity: 1
-	// 			background: #f6f6f6 url(../img/bg_full.png) no-repeat
-	// 			&:after
-	// 				content: ''; 
-	// 				position: absolute; 
-	// 				left: -30px; 
-	// 				top: 50%;
-	// 				border: 15px solid transparent;
-	// 				border-right: 15px solid #fff;
-
 	// Решения
 	.solutions
 		.inner_link
@@ -194,7 +189,8 @@
 		.item
 			.post_thumbnail
 				img
-					width: 70%
+					width: 228px
+					height: 135px
 					margin-bottom: 10px
 	// Новости статьи
 
@@ -266,9 +262,11 @@
 	.reviews
 		.item
 			.post_thumbnail,
-			.post_content
-				float: none
-				margin: 0 auto
+			.text_wrap
+				width: 100%
+			.post_thumbnail
+				margin-bottom: 25px
+				text-align: center
 
 	.note
 		padding: 15px 15px 15px 85px
@@ -280,6 +278,12 @@
 	.about
 		.text_about
 			margin-bottom: 30px
+		.text_block
+			padding-left: 5px
+		.thumb_block
+			img
+				height: 267px
+				width: 228px
 
 	.main_specialists
 		.item
@@ -340,6 +344,7 @@
 				.col_value
 					padding-right: 53px
 					width: 100%
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -509,6 +514,8 @@
 			.inner_link
 				width: 115px
 				height: 175px
+				top: calc(50% - 87.5px)
+				left: calc(50% - 57.5px)
 
 	/**/
 
