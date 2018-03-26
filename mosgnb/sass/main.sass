@@ -327,7 +327,7 @@ ul.pagination
 	li
 		height: 28px
 		width: 28px
-		padding: 3px
+		padding: 1px 0 0 0
 		border-radius: 50%
 		text-align: center
 		display: inline-block
@@ -1566,16 +1566,21 @@ blockquote
 	.item
 		margin-bottom: 30px
 		.img_block
-			width: 160px
-			height: 235px
+			width: 174px
+			height: 246px
 			margin: 0 auto
 			position: relative
+			-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+			box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 			> img
 				width: 100%
+				height: 100%
 			+ a
+				margin-top: 25px
 				color: #898989
 				display: inline-block
-				padding-left: 15px
+				padding-left: 20px
 				text-decoration: underline
 				position: relative
 				img
@@ -1588,11 +1593,11 @@ blockquote
 					color: #000
 					font-weight: bold
 		.inner_link
-			top: calc(50% - 97.5px)
-			left: calc(50% - 62.5px)
+			top: 20px
+			left: 20px	
+			right: 20px
+			bottom: 20px		
 			opacity: 0
-			width: 125px
-			height: 195px
 			padding: 20px 10px
 			position: absolute
 			text-align: center
@@ -1620,9 +1625,10 @@ blockquote
 			width: 100%
 			border-bottom: 1px solid #dddddd
 			.name
-				width: 69%
+				width: 65%
 			.format,.size,.load
-				width: 10%
+				width: 11.1%
+				// text-align: right
 			.name,.format,.size,.load
 				padding: 15px 25px
 				position: relative
@@ -1641,22 +1647,28 @@ blockquote
 			color: #898989
 			font-weight: bold
 			width: 100%
+			.row_body
+				&:nth-child(even)
+					background-color: #f4f4f4
 			.name_value
-				width: 69%
+				width: 65%
 			.format_value,.size_value,.load_value
-				width: 10%
+				width: 11.1%
+				// text-align: right
 			.name_value,.format_value,.size_value,.load_value
-				padding: 0 25px
+				padding: 15px 25px
 				position: relative
 				display: inline-block
 				box-sizing: border-box
+				vertical-align: top
 			.format_value
+				position: relative
 				img
-					height: 20px
-					margin-top: -5px
-					margin-right: 10px
+					margin-top: -3px
+					margin-right: 6px
 			a.with_icon 
 				padding-left: 0
+				margin: 0
 				position: relative
 				font-weight: bold
 				img
@@ -1672,7 +1684,7 @@ blockquote
 // 		border-bottom: 1px solid #dddddd
 // 		.row_body,
 // 		.row_head
-// 			display: table_row
+// 			display: table-row
 // 		.thead
 // 			color: #000
 // 			font-weight: bold

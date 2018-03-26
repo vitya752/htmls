@@ -33,8 +33,29 @@
 			.hr
 				margin: 15px auto 5px auto
 
+	.documents
+		.item
+			.img_block
+				width: 173px
+				height: 241px
+
 	/**/
 
+	@media only screen and (max-width : 1199px)
+		.files
+			.table
+				.thead
+					.name
+						width: 48%
+						&:before
+							content: none
+					.format,.size,.load
+						width: 16%
+				.tbody
+					.name_value
+						width: 48%
+					.format_value,.size_value,.load_value
+						width: 16%
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
@@ -387,6 +408,25 @@
 		.inner_link
 			padding: 20% 0
 
+	.files
+		.table
+			border-top: 1px solid #dddddd
+			.thead
+				display: none
+			.tbody
+				.name_value
+					width: 100%
+				.format_value,.size_value,.load_value
+					width: 30%
+				.name_value,.format_value,.size_value,.load_value
+					padding: 15px 0
+					text-align: center
+	.documents
+		.item
+			.img_block
+				width: 163px
+				height: 227px
+
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
@@ -549,17 +589,6 @@
 				display: block
 				position: relative
 
-	.documents
-		.item
-			.img_block
-				width: 155px
-				height: 220px
-			.inner_link
-				width: 115px
-				height: 175px
-				top: calc(50% - 87.5px)
-				left: calc(50% - 57.5px)
-
 	.gallery
 		.inner_link
 			padding: 10% 0
@@ -644,6 +673,11 @@
 					padding-right: 0
 					width: 100%
 
+	.documents
+		.item
+			.img_block
+				width: 135px
+				height: 200px
 	/**/
 
 
