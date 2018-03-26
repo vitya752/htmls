@@ -16,11 +16,9 @@
 		display: none
 	// Шапка
 
-	// Слайдер
-	// .slider 
-	// 	.slick-dots
-	// 		left: -400px
-	// Слайдер
+	.block_head
+		.block_content
+			width: 55%
 
 	// Преимущества
 	.vantage 
@@ -28,6 +26,12 @@
 			h4
 				padding: 0
 	// Преимущества
+
+	.gallery
+		.inner_link
+			padding: 5px 0
+			.hr
+				margin: 15px auto 5px auto
 
 	/**/
 
@@ -119,8 +123,20 @@
 		.extra_content
 			top: 10%
 			right: 4%
-			padding: 20px 20px 20px 50px
+			padding: 25px 25px 25px 50px
+	
 
+	.project_description
+		.wrap_text
+			padding-left: 0
+		.col_name
+			padding: 13px 20px 20px 20px	
+		.col_value
+			padding: 13px 20px 20px 20px
+		
+	.gallery
+		.item
+			width: 33.3%
 	/**/
 
 
@@ -204,8 +220,11 @@
 	.block_head
 		height: 400px
 		.block_content
-			width: 50%
-			padding: 0 15px
+			width: 65%
+		&.block_head-50
+			.block_content
+				width: 56%
+				padding: 0 15px
 
 	.problems
 		text-align: center
@@ -271,6 +290,10 @@
 				.col_value
 					width: 74%
 
+	.gallery
+		.inner_link
+			.hr
+				margin: 10px auto 0px auto
 	/**/
 @media only screen and (max-width : 767px)
 	.head_buttons
@@ -296,7 +319,8 @@
 				margin-bottom: 20px
 
 	.block_head
-		.block_content
+		.block_content,
+		&.block_head-50 .block_content
 			width: 85%
 		.extra_content
 			display: none
@@ -352,6 +376,16 @@
 	.effect_solution
 		.item_content
 			max-width: 70%
+
+	.project_description
+		.table_block
+			margin-bottom: 0
+
+	.gallery
+		.item
+			width: 100%
+		.inner_link
+			padding: 20% 0
 
 
 /* Extra Small Devices, Phones */
@@ -439,7 +473,8 @@
 		padding: 0 8px 0 20px;
 
 	.block_head
-		.block_content
+		.block_content,
+		&.block_head-50 .block_content
 			width: 100%
 
 	.problems
@@ -524,6 +559,10 @@
 				height: 175px
 				top: calc(50% - 87.5px)
 				left: calc(50% - 57.5px)
+
+	.gallery
+		.inner_link
+			padding: 10% 0
 
 	/**/
 

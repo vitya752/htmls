@@ -150,4 +150,8 @@ $(document).ready(function(){
 		type: 'image'
 	});
 
+		$('.gallery .item .popup').magnificPopup({
+		type: 'image'
+	});
+
 });
