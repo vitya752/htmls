@@ -101,12 +101,6 @@
 			display: none
 	// Решения
 
-	.effect_solution
-		.thumb
-			vertical-align: top
-		.item_content
-			max-width: 200px
-
 	.presentation
 		p
 			padding: 0 30px
@@ -198,40 +192,13 @@
 	footer
 		.menu
 			padding: 25px 0
-			text-align: center
 		.ul_column
 			li
-				width: 100%
-		h3
-			position: relative
-			display: inline-block
-			&:after
-				z-index: 20;
-				content: '';
-				top: 10px
-				right: -25px
-				width: 20px;
-				position: absolute;
-				height: 20px;
-				background: url(../img/icons/chev-down.png) no-repeat;
-		.footer_column
-			ul,.hr
-				display: none
-			h3
-				margin: 0
-			.hr
-				margin-left: auto
-				margin-right: auto
-		.footer_column.active
-			h3
-				&:after
-					background: url(../img/icons/chev-up.png) no-repeat;
-		.button_foot_wrap
-			text-align: center
+				width: 49%
 		.contacts
 			padding: 0
 	.hr-footer
-		margin: 10px 0 25px 0
+		margin: -15px 0 20px 0
 	// Футер
 	
 	.block_head
@@ -250,7 +217,7 @@
 		.thumb
 			vertical-align: top
 		.item_content
-			max-width: 320px
+			max-width: 230px
 
 	.presentation
 		p
@@ -268,7 +235,7 @@
 				margin-bottom: 25px
 				text-align: center
 
-	.note
+	blockquote
 		padding: 15px 15px 15px 85px
 	form.partner
 		input[type="text"],input[type="email"]
@@ -344,6 +311,47 @@
 				.col_value
 					padding-right: 53px
 					width: 100%
+
+	footer
+		.menu
+			text-align: center
+		.ul_column
+			li
+				width: 100%
+		h3
+			position: relative
+			display: inline-block
+			&:after
+				z-index: 20;
+				content: '';
+				top: 10px
+				right: -25px
+				width: 20px;
+				position: absolute;
+				height: 20px;
+				background: url(../img/icons/chev-down.png) no-repeat;
+		.footer_column
+			ul,.hr
+				display: none
+			h3
+				margin: 0
+			.hr
+				margin-left: auto
+				margin-right: auto
+		.footer_column.active
+			h3
+				&:after
+					background: url(../img/icons/chev-up.png) no-repeat;
+		.button_foot_wrap
+			text-align: center
+		.contacts
+			padding: 0
+		.hr-footer
+			margin: 0 0 20px 0
+
+	.effect_solution
+		.item_content
+			max-width: 70%
 
 
 /* Extra Small Devices, Phones */
