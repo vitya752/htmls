@@ -85,7 +85,28 @@ $(document).ready(function(){
 	// }
 
 
-	var handleMatchMedia = function(mediaQuery) {
+	var media768 = function(mediaQuery) {
+		if (mediaQuery.matches) {
+
+			$("ul.breadcrumbs li").last().text(function(i, text) {
+
+				if (text.length >= 20) {
+					text = text.substr(0, 20);
+				    var lastIndex = text.lastIndexOf(" ");       // позиция последнего пробела
+				    text = text.substring(0, lastIndex) + '...'; // обрезаем до последнего слова
+				}
+				$(this).text(text);
+			});
+
+		} else {
+
+		}
+	},
+	mql = window.matchMedia('all and (max-width: 768px)');
+	media768(mql);
+	mql.addListener(media768); 
+
+	var media480 = function(mediaQuery) {
 		if (mediaQuery.matches) {
 			$('.landing-page .benefits_wrap').slick();
 			$('.landing-page .buttons_benefit').css('display', 'block');
@@ -111,8 +132,8 @@ $(document).ready(function(){
 		}
 	},
 	mql = window.matchMedia('all and (max-width: 480px)');
-	handleMatchMedia(mql);
-	mql.addListener(handleMatchMedia); 
+	media480(mql);
+	mql.addListener(media480); 
 
 	$('.landing-page .buttons_benefit .prev').on('click', function() {
 		$('.landing-page .benefits_wrap').slick('slickPrev');
@@ -146,12 +167,9 @@ $(document).ready(function(){
 
 	});
 
-	$('.documents .item .popup').magnificPopup({
+	$('.documents .item .popup, .gallery .item .popup').magnificPopup({
 		type: 'image'
 	});
 
-		$('.gallery .item .popup').magnificPopup({
-		type: 'image'
-	});
 
 });
