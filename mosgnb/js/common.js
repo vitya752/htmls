@@ -171,5 +171,7 @@ $(document).ready(function(){
 		type: 'image'
 	});
 
+	$('.popup_window').magnificPopup();
+
 
 });

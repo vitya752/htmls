@@ -45,6 +45,38 @@ body
 	font-family: $default-font
 	overflow-x: hidden
 
+#map
+	width: 100%;
+	height: 400px;
+
+#map button,
+#map .gm-style-mtc,
+#map .gm-svpc,
+#map .gmnorint button,
+#map .gm-bundled-control,
+#map .gm-style-cc,
+#map iframe + div 
+	display: none !important;
+
+#map
+	h5
+		color: #bfbfbf
+		font-size: (12 / 16) * 1em
+		font-family: sf-ui-display-medium
+		position: relative
+		text-decoration: underline
+		&:after
+			content: ''
+			width: 30px
+			height: 2px
+			margin: 10px 0 0 0
+			display: block
+			position: absolute
+			background-color: $orange_color
+		span
+			color: #000
+
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -1056,6 +1088,14 @@ footer
 	p
 		padding: 0 260px
 
+.projects-page
+	.projects
+		padding: 0
+		
+	.projects_wrapper
+		padding: 0
+		border-bottom: 1px solid #dddddd
+
 .projects
 	padding: 15px 0 25px 0
 	.projects_wrapper
@@ -1063,6 +1103,9 @@ footer
 		overflow-x: hidden
 	.item
 		margin: 15px 0 35px 0
+		// &.item-bgi
+		// 	&:hover
+		// 		background: #f6f6f6
 		.post_thumbnail
 			img
 				width: 270px
@@ -1833,4 +1876,123 @@ blockquote
 		h2
 			margin: 0
 
+.popup_form_appl,
+.sent
+	width: 500px
+	height: 402px
+
+.popup_form_appl,
+.sent,
+.popup_partner
+	background: #f6f6f6 url(../img/bg_full.png) no-repeat right bottom
+	background-size: 100% 100%
+	padding: 0 40px
+	margin: 0 auto
+	h2
+		margin: 0
+		line-height: 1.067
+		padding: 35px 0 25px 0
+	.hr
+		margin: 0 auto
+		margin-bottom: 35px
+	.button_wrap
+		padding: 25px 0 30px 0
+
+.popup_form_appl,
+.popup_partner
+	input[type="text"],
+	input[type="email"]
+			font-size: (14 / 16) * 1em
+			color: #898989
+			display: block
+			width: 100%
+			border: 0
+			outline: none
+			height: 60px
+			padding: 20px 30px
+			margin-bottom: 15px
+			font-family: sf-ui-display-regular
+			&:last-child
+				margin-bottom: 0
+
+.sent
+	text-align: center
+	h2
+		padding: 35px 100px 25px 100px
+	p
+		padding: 10px 115px 
+	a
+		width: 200px
+
+.popup_partner
+	width: 700px
+	height: 700px
+	padding: 0 20px
+	textarea
+		width: 300px
+		height: 210px
+		color: #898989
+		border: 0
+		padding: 20px 30px
+		font-size: (14 / 16) * 1em
+		outline: none
+		font-family: sf-ui-display-regular
+	.left,
+	.right
+		width: 50%
+		float: left
+	.left
+		padding: 0 10px 0 20px
+	.right
+		padding: 0 20px 0 10px
+	.hr
+		margin-bottom: 25px
+	p
+		text-align: center
+		padding: 0 130px
+		margin: 0
+		margin-bottom: 25px
+	.agreement
+		text-align: center
+		padding-top: 15px
+	input[type="checkbox"]
+		left: -9999px
+		position: absolute
+	.checkbox
+		position: relative
+		width: 20px
+		height: 20px
+		background-color: #fff
+		background-image: url(../img/sprite-check.png)
+		background-repeat: no-repeat
+		background-size: cover
+		background-position: 20px 0
+		display: inline-block
+		margin-left: -15px
+		margin-bottom: -4px
+	input[type="checkbox"]:checked + .checkbox
+		background-position: -21px 0px
+	input[type="checkbox"],label
+		vertical-align: middle
+		display: inline-block
+	label
+		padding: 0 100px
+		font-size: 0.882em
+		position: relative
+		padding-top: 30px
+		a
+			color: #cdcdcd
+			text-decoration: underline
+			span
+				color: #898989
+			&:hover
+				text-decoration: none
+	.button_wrap
+		padding: 35px 0 35px 0
+form + .mfp-close,
+.sent .mfp-close
+	top: 25px
+	right: 35px
+	font-size: 40px
+	
 @import "media" // Всегда в конце
