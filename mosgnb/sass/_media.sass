@@ -97,10 +97,13 @@
 					right: 25px
 			&.left_info
 				.item_content
-					left: 25px
+					left: 20px
+					top: 20px 
+					bottom: 20px
+					right: 20px
 					width: 50%
 					margin: 0
-					padding: 20px 30px 20px 20px
+					padding: 15px 30px 20px 20px
 					&:after
 						display: block
 						content: ''; 
@@ -183,22 +186,36 @@
 
 	.head_buttons
 		.open_menu
-			top: 50px
+			top: 35px
 
 	.header_line
 		.logo
 			img
 				width: 100%
+				left: -10px
+	.info_block
+		// padding-left: 30px
 	// Шапка
 
 	// Слайдер
 	.slider 
 		.slide
+			height: 400px
 			padding: 70px 20px
 			background-position: center center;
 		.content_slide
-			width: 70%
+			width: 65%
+		 .slick-dots
+			bottom: 30px
 	// Слайдер
+
+	.scope 
+		.item
+			height: 190px
+		.item_content
+		    padding: 20px 55px 20px 20px;
+		.hr
+			margin: 15px 0 15px 0
 
 	// Преимущества
 	.vantage 
@@ -214,6 +231,8 @@
 			right: 15px
 			bottom: 15px
 			padding: 20px 20px
+		a.with_icon-padd
+			padding: 0 0 0 30px
 	// Решения
 
 	.about_us
@@ -229,7 +248,17 @@
 					width: 228px
 					height: 135px
 					margin-bottom: 10px
+	.news
+		h4
+			padding: 10px 0 5px 0
+	.projects 
+		.item 
+			.post_content
+				padding-left: 25px
 	// Новости статьи
+
+	.button_more_wrap
+		padding: 0
 
 	// Футер
 	footer
@@ -322,11 +351,14 @@
 		.inner_link
 			.hr
 				margin: 10px auto 0px auto
+
+	// .button_wrap
+	// 	padding: 25px 0
 	/**/
 @media only screen and (max-width : 767px)
 	.head_buttons
 		.open_info
-			top: 46px
+			top: 32px
 			display: block
 	.header_line
 		.logo
@@ -476,11 +508,18 @@
 			right: 60px;
 
 	.mobile_menu
-		width: 320px
+		width: 100%
 		padding: 0
-
+		.head
+			padding-left: 10px
+		ul
+			width: 100%
+			li
+				padding: 10px 0
+			a
+				padding-left: 10px
 	.mobile_info
-		top: 120px
+		top: 170px
 	// Шапка
 
 	// Слайдер
@@ -500,7 +539,6 @@
 		.item_content
 			h2
 				font-size: (20 / 16) * 1em
-				line-height: 16px
 	// Возможности
 
 	// Решения
@@ -610,6 +648,14 @@
 		.inner_link
 			padding: 10% 0
 
+	.projects 
+		.section_header
+			margin-bottom: 0
+		.item
+			margin: 15px 0;
+		.buttons_projects
+			margin-bottom: 40px
+
 	/**/
 
 
@@ -627,6 +673,9 @@
 		.open_info
 			top: 60px;
 			right: 60px;
+	.mobile_info
+		top: 140px
+
 	.solutions
 		.inner_link
 			padding: 20px 20px
@@ -646,6 +695,8 @@
 	.service_content
 		img.left_img
 			margin: 0 40px 20px 0
+
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)

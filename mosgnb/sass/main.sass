@@ -93,7 +93,7 @@ p
 		top: 30px
 		right: 25px
 		span
-			width: 25px
+			width: 20px
 			height: 2px
 			display: block
 			position: absolute
@@ -131,22 +131,30 @@ p
 	right: 20px
 	z-index: 999
 	width: 280px
-	padding: 25px
+	padding: 0 25px
 	display: none
 	position: absolute
 	background-color: #fff
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	&:after
 		top: -20px
-		right: 25%
+		right: 21%
 		z-index: 10
 		content: '';
 		position: absolute;
 		border: 10px solid transparent;
 		border-bottom: 10px solid #fff;
 	.info_block
+		padding: 20px 0 20px 20px
 		position: relative
+		border-bottom: 1px solid #dddddd
+		&:last-child
+			border-bottom: 0
 		.icon_text
-			top: 8px
+			top: 27px
+			left: 0
 
 .mobile_menu
 	top: 0px
@@ -159,12 +167,12 @@ p
 	background-color: #fff
 	font-size: (21 / 16) * 1em
 	font-family: BebasNeueRegular
-	-webkit-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: -1px 1px 5px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	.head
 		padding: 30px 0
-		border-bottom: 1px solid #898989
+		border-bottom: 1px solid #dddddd
 		span
 			text-transform: uppercase
 			font-size: (21 / 16) * 1em
@@ -204,7 +212,7 @@ p
 .hr-small
 	width: 30px
 .hr-footer
-	margin: -20px 0 25px 0
+	margin: -10px 0 25px 0
 
 .button_wrap
 	padding: 35px 0
@@ -586,7 +594,7 @@ footer
 	a
 		color: #fff
 		outline: none
-		margin: 35px 0
+		margin: 50px 0
 		padding: 15px 35px
 		border-radius: 30px
 		transition: ease .5s
@@ -686,7 +694,7 @@ footer
 			border-right: 15px solid #fff;
 		h2
 			margin: 0
-			line-height: 30px
+			line-height: 1.083
 		p,
 		a
 			font-family: sf-ui-display-light
@@ -696,7 +704,9 @@ footer
 		a
 			color: #8f8f8f
 			text-indent: 25px
-			position: relative
+			// position: relative
+			bottom: 10px
+			position: absolute
 			display: inline-block
 			text-decoration: underline
 			span
@@ -711,7 +721,10 @@ footer
 				position: absolute
 
 .solutions
-	padding: 35px 0
+	padding: 30px 0
+	.section_header
+		margin: 0
+		margin-bottom: 30px
 	.item
 		text-align: left
 		&:hover
@@ -739,6 +752,7 @@ footer
 		text-align: center
 		display: inline-block
 		background: url(../img/bg_link.png) no-repeat bottom right
+		background-size: 100% 100%
 		transition: ease .7s
 		position: absolute
 		&:hover,
@@ -910,6 +924,9 @@ footer
 
 .effect_solution
 	padding: 35px 0
+	.section_header
+		margin: 0
+		margin-bottom: 30px
 	.item
 		padding: 20px 0
 	.thumb, .item_content
@@ -940,8 +957,11 @@ footer
 		margin: 0
 
 .presentation
-	padding: 35px 0
+	padding: 30px 0
 	text-align: center
+	.section_header
+		margin: 0
+		margin-bottom: 30px
 	.video_wrap
 		position: relative
 		display: inline-block
@@ -1085,7 +1105,10 @@ footer
 			right: 40px
 
 .reviews
-	padding: 35px 0
+	padding: 30px 0
+	.section_header
+		margin: 0
+		margin-bottom: 30px
 	.reviews_wrap
 		overflow-x: hidden
 	.item
@@ -1134,7 +1157,10 @@ footer
 		margin: 0
 
 .question_answer
-	padding: 35px 0
+	padding: 30px 0
+	.section_header
+		margin: 0
+		margin-bottom: 30px
 	ul.question
 		padding: 0
 		list-style-type: none
@@ -1149,7 +1175,7 @@ footer
 			&:before
 				content: ''
 				left: 0
-				top: 10px
+				top: 9px
 				width: 10px
 				height: 10px
 				position: absolute
@@ -1158,6 +1184,7 @@ footer
 
 		a
 			padding-left: 25px
+			display: block
 			text-decoration: underline
 			font-weight: bold
 			color: #8f8f8f
