@@ -34,6 +34,22 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
+@font-face
+	font-family: 'sf_ui_display';
+	src: url('../fonts/sf-ui-display/sf-ui-display-regular-webfont.woff2') format('woff2'),	url('../fonts/sf-ui-display/sf-ui-display-regular-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+@font-face
+	font-family: 'sf_ui_display';
+	src: url('../fonts/sf-ui-display/sf-ui-display-light-58646b33e0551-webfont.woff2') format('woff2'), url('../fonts/sf-ui-display/sf-ui-display-light-58646b33e0551-webfont.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+@font-face
+	font-family: 'sf_ui_display';
+	src: url('../fonts/sf-ui-display/sf-ui-display-medium-58646be638f96-webfont.woff2') format('woff2'), url('../fonts/sf-ui-display/sf-ui-display-medium-58646be638f96-webfont.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+
 html, body
 	height: 100%
 
@@ -42,12 +58,16 @@ body
 	min-width: 320px
 	position: relative
 	line-height: 1.65
-	font-family: $default-font
+	font-family: 'sf_ui_display';
 	overflow-x: hidden
+
+.block_map_content
+	position: relative
 
 #map
 	width: 100%;
-	height: 400px;
+	height: 500px;
+	z-index: 19
 
 #map button,
 #map .gm-style-mtc,
@@ -77,6 +97,41 @@ body
 			color: #000
 
 
+.gm-style-iw
+	background: #fff
+	position: relative
+	top: 20px
+
+.gm-style-iw
+	overflow: visible !important;
+	div
+		overflow: visible !important;
+
+.gm-style-iw
+	&::before
+		content: '';
+		width: calc(100% + 29px);
+		height: calc(100% + 17px);
+		background: #fff;
+	&::after
+		content: '';
+		width: 0;
+		height: 0;
+		border: 20px solid transparent;
+		border-top-color: #fff;
+		z-index: 4;
+		position: absolute
+		bottom: -47px;
+		left: 45%
+		margin: auto;
+
+a:focus
+	outline: none;
+a:active,
+a:hover,
+a:focus
+	text-decoration: none;
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -104,8 +159,8 @@ h3
 	font-size: (21 / 16) * 1em
 
 h4
-	font-size: (16 / 16) * 1em
-	font-family: sf-ui-display-medium
+	font-family: 'sf_ui_display';
+	font-weight: 600;
 
 p
 	font-size: 0.882em
@@ -161,7 +216,7 @@ p
 .mobile_info
 	top: 160px
 	right: 20px
-	z-index: 999
+	z-index: 101
 	width: 280px
 	padding: 0 25px
 	display: none
@@ -191,7 +246,7 @@ p
 .mobile_menu
 	top: 0px
 	right: 0
-	z-index: 11
+	z-index: 102
 	display: none
 	float: right
 	padding: 0 20px
@@ -267,7 +322,7 @@ p
 	&:focus
 		color: #fff
 		text-decoration: none
-		border: 3px solid $orange_color_active
+		border: 2px solid $orange_color_active
 		background-color: $orange_color_active
 .button-big
 	color: #fff
@@ -281,6 +336,10 @@ p
 .button-footer
 	margin-top: 8px
 	padding: 5px 25px
+.project-page
+	.button_wrap
+		padding: 35px 0 65px 0
+
 
 .to_next
 	height: 1px
@@ -307,6 +366,7 @@ a.with_icon
 	display: inline-block;
 	line-height: 18px;
 	position: relative;
+	font-size: 14px
 	text-decoration: underline
 	font-family: sf-ui-display-medium
 	&:hover,
@@ -319,7 +379,6 @@ a.with_icon
 		left: 0
 	span
 		color: #000000
-		font-size: (16 / 16) * 1em
 a.with_icon-line
 	color: #898989
 	span
@@ -357,7 +416,7 @@ ul.breadcrumbs-gray
 		color: #898989
 
 ul.breadcrumbs-black
-	li
+	li,a
 		color: #000
 
 ul.pagination
@@ -372,6 +431,7 @@ ul.pagination
 		text-align: center
 		display: inline-block
 		transition: ease .5s
+		margin-right: 3px
 		font-size: (14 / 16) * 1em
 		background-color: #f6f6f6
 		&.dots
@@ -396,45 +456,51 @@ ul.pagination
 .background-gray
 	background: #f6f6f6 url(../img/bg_news.png) no-repeat right bottom
 
-.shadow-top
-	position: relative
-	// -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	// -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	// box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	&:after
-		top: 9px;
-		left: 140px;
-		right: 140px;
-		-webkit-box-shadow: 0 7px 15px rgba(0,0,0,.8);
-		-moz-box-shadow: 0 7px 15px rgba(0,0,0,.8);
-		box-shadow: 0 7px 15px rgba(0,0,0,.8);
-		-moz-border-radius: 50%
-		border-radius: 50%
-
+.shadow-top,
 .shadow-bottom
-	position: relative
-	// -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	// -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	// box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-	&:before,
-	&:after
-		height: 1px
-		bottom: -3px
-		content: "";
-		left: 140px;
-		right: 140px;
-		position: absolute;
-		z-index: 1;
-		-webkit-box-shadow: 0 -7px 5px rgba(0,0,0,.3);
-		-moz-box-shadow: 0 -7px 5px rgba(0,0,0,.3);
-		box-shadow: 0 -7px 5px rgba(0,0,0,.3);
-		-moz-border-radius: 50%
-		border-radius: 50%
+	position: relative;
+	overflow: hidden;
 
+.shadow-bottom:after, 
+.shadow-bottom:before
+	height: 15px;
+	bottom: -15px;
+	content: "";
+	left: 180px;
+	right: 180px;
+	position: absolute;
+	z-index: 1;
+	-webkit-box-shadow: 0 0 18px rgba(0,0,0,.21);
+	box-shadow: 0 0 18px rgba(0,0,0,0.21);
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+
+.shadow-top:after
+	top: -15px;
 
 header
+	// transition: all ease .5s 
 	.border
 		border-bottom: 1px solid #ddd
+header.default
+	position: fixed
+	top: 0
+	z-index: 100
+	width: 100%
+	background: #fff
+	.header_line
+		padding: 0 0 5px 0
+		.logo
+			img
+				left: -15px
+				width: 104px
+				height: 36px
+	.info_block
+		a,span
+			display: none
+		.icon_text
+			top: 4px
+
 .header_line
 	padding: 15px 0
 	border-bottom: 1px solid $main_color_border
@@ -444,9 +510,10 @@ header
 		// width: 250px
 		padding-top: 5px
 		img
-			left: -40px
+			left: -34px;
 			height: 80px
 			position: relative
+			// transition: all ease .5s 
 .info_block
 	padding: 0 15px
 	position: relative
@@ -454,6 +521,7 @@ header
 	span,a
 		font-size: (12 / 16) * 1em
 		color: #898989
+		// transition: all ease .5s 
 	p
 		padding: 0
 		margin: 0
@@ -478,7 +546,11 @@ nav.header_menu
 	ul,li
 		padding: 0
 	ul
-		margin: 14px 0
+		margin: 0
+		padding: 12px 0
+		text-align: center;
+		&.border
+			border-bottom: 1px solid #dddddd
 	li
 		display: inline-block
 		margin: 0 20px
@@ -489,12 +561,21 @@ nav.header_menu
 				content: '';
 				position: absolute;
 				left: 40%;
-				bottom: -33px;
+				bottom: -31px;
 				border: 10px solid transparent;
 				border-top: 10px solid #fff;
 			a
 				color: #000
 				border-top: 3px solid $menu_border
+		&:hover
+			&:after
+				z-index: 10;
+				content: '';
+				position: absolute;
+				left: 40%;
+				bottom: -31px;
+				border: 10px solid transparent;
+				border-top: 10px solid #fff;
 	a
 		color: #898989
 		padding: 15px 0px
@@ -506,10 +587,29 @@ nav.header_menu
 		-moz-transition: ease .25s
 		-ms-transition: ease .25s
 		transition: ease .25s
+		position: relative;
+		border: none;
+		&:before
+			content: '';
+			position: absolute;
+			z-index: -1;
+			left: 50%;
+			right: 50%;
+			top: -3px;
+			background: #f2b94d;
+			height: 3px;
+			-webkit-transition-property: left, right;
+			transition-property: left, right;
+			-webkit-transition-duration: 0.2s;
+			transition-duration: 0.2s;
+			-webkit-transition-timing-function: ease-out;
+			transition-timing-function: ease-out;
 		&:hover
-			color: #898989
-			text-decoration: none
-			border-top: 3px solid $menu_border
+			border: none;
+			color: #000;
+			&:before
+				right: 0;
+				left: 0;
 nav.header_menu-unafter 
 	li
 		&.active
@@ -521,6 +621,9 @@ footer
 		background: #898989 url(../img/footer_bg.png) 100% 100%
 	.menu
 		border-bottom: 1px solid #aaa9a9
+		-webkit-box-shadow: 0px 0.5px 0px 0px rgba(255,255,255,1);
+		-moz-box-shadow: 0px 0.5px 0px 0px rgba(255,255,255,1);
+		box-shadow: 0px 0.5px 0px 0px rgba(255,255,255,1);
 		// -webkit-box-shadow: 0px 2px 1px -1px rgba(255,255,255,1);
 		// -moz-box-shadow: 0px 2px 1px -1px rgba(255,255,255,1);
 		// box-shadow: 0px 2px 1px -1px rgba(255,255,255,1);
@@ -532,7 +635,8 @@ footer
 			font-size: 0.882em
 			position: relative
 			padding-bottom: 10px
-			font-family: sf-ui-display-regular
+			font-family: 'sf_ui_display';
+			font-weight: 500;
 			img
 				top: 4px
 				left: -27px
@@ -545,6 +649,7 @@ footer
 		color: #8f8f8f
 		font-size: 0.882em
 		text-decoration: underline
+		font-size: 1em;
 		&:hover,
 		&:active,
 		&:focus
@@ -561,12 +666,13 @@ footer
 		font-family: sf-ui-display-light
 	.partner
 		padding: 15px 0
-		-webkit-box-shadow: inset 0 -10px 20px -13px rgba(0,0,0,.5)
-		-moz-box-shadow: inset 0 -10px 20px -13px rgba(0,0,0,.5)
-		box-shadow: inset 0 -10px 20px -13px rgba(0,0,0,.5)
+		// -webkit-box-shadow: inset 0 -10px 20px -13px rgba(0,0,0,.5)
+		// -moz-box-shadow: inset 0 -10px 20px -13px rgba(0,0,0,.5)
+		// box-shadow: inset 0 -10px 20px -13px rgba(0,0,0,.5)
 	.fill_form
-		span
+		> span
 			font-size: (12 / 16) * 1em
+			font-weight: 600
 		a
 			color: #8f8f8f
 			position: relative
@@ -581,16 +687,18 @@ footer
 		position: relative
 		img
 			left: -8px
-			width: 150px
+			top: 10px
+			width: 135px
+			height: 40px
 			position: relative
 	.copyright
 		padding: 15px 0
 		color: #898989
 		font-size: (12 / 16) * 1em
 		font-family: sf-ui-display-light
-		-webkit-box-shadow: 0 -10px 20px -20px rgba(0,0,0,.5)
-		-moz-box-shadow: 0 -10px 20px -20px rgba(0,0,0,.5)
-		box-shadow: 0 -10px 20px -20px rgba(0,0,0,.5)
+		// -webkit-box-shadow: 0 -10px 20px -20px rgba(0,0,0,.5)
+		// -moz-box-shadow: 0 -10px 20px -20px rgba(0,0,0,.5)
+		// box-shadow: 0 -10px 20px -20px rgba(0,0,0,.5)
 		span.dev
 			text-decoration: underline
 
@@ -627,18 +735,19 @@ footer
 		color: #fff
 		outline: none
 		margin: 50px 0
-		padding: 15px 35px
+		padding: 15px 35px 15px 35px
 		border-radius: 30px
-		transition: ease .5s
+		transition: background ease .5s, color ease .5s
 		display: inline-block
-		font-family: sf-ui-display-regular
-		border: 3px solid $orange_color
+		font-family: 'sf_ui_display';
+		border: 2px solid $orange_color
 		&:hover
 			text-decoration: none
 			background-color: $orange_color
 		&:active
 			text-decoration: none
-			border: 3px solid $orange_color_active
+			padding: 14px 34px 16px 36px
+			border: 2px solid $orange_color_active
 			background-color: $orange_color_active
 		&:focus
 			text-decoration: none
@@ -663,6 +772,14 @@ footer
 		img
 			display: inline
 
+.services-page
+	.vantage
+		padding: 60px 0 25px 0
+		.item
+			margin-bottom: 20px
+		.button_wrap
+			padding: 45px 0
+
 .vantage_wrapper
 	margin-bottom: 20px
 .vantage
@@ -673,7 +790,9 @@ footer
 		h4
 			padding: 0 25px
 		p
-			font-family: sf-ui-display-light
+			font-family: 'sf_ui_display';
+			font-weight: 300;
+			color: #898989;
 
 .scope
 	.scope_wrapper
@@ -709,12 +828,12 @@ footer
 	.item_content
 		top: 30px
 		right: 25px
-		// bottom: 100%
+		bottom: 30px
 		width: 50%
 		opacity: 0
 		margin: auto
 		position: absolute
-		transition: ease .25s
+		transition: ease .75s
 		padding: 30px 45px 35px 30px
 		background: #fff url(../img/bg.png) no-repeat right bottom
 		&:after
@@ -732,12 +851,14 @@ footer
 			font-family: sf-ui-display-light
 		p
 			color: #898989
+			margin-bottom: 35px
 			// font-size: (14 / 16) * 1em
 		a
+			font-size: .875em
 			color: #8f8f8f
 			text-indent: 25px
 			// position: relative
-			bottom: 10px
+			bottom: 20px
 			position: absolute
 			display: inline-block
 			text-decoration: underline
@@ -746,17 +867,25 @@ footer
 			&:hover
 				text-decoration: none
 			img
-				top: 5px
+				top: 4px
 				left: 0
 				width: 15px
 				height: 15px
 				position: absolute
 
+.solutions-page
+	p
+		margin: 30px 0 20px 0
+	.solutions
+		padding: 30px 0 25px 0
+
+
 .solutions
 	padding: 30px 0
 	.section_header
-		margin: 0
-		margin-bottom: 30px
+		margin: 25px 0 35px 0
+	.button_wrap
+		padding: 0 0 30px 0
 	.item
 		text-align: left
 		&:hover
@@ -802,7 +931,7 @@ footer
 			border-bottom: 1px solid #dddddd
 
 .news
-	padding: 35px 0
+	padding: 15px 0 15px 0
 	.item
 		margin: 15px 0 30px 0
 		.post_thumbnail
@@ -813,7 +942,7 @@ footer
 			padding-left: 25px
 	span
 		color: #898989
-		font-size: 0.882em
+		// font-size: 0.882em
 		font-family: sf-ui-display-regular
 		img
 			left: -2px;
@@ -832,6 +961,11 @@ footer
 	p
 		margin: 0
 		color: #898989
+	.button_more_wrap
+		padding: 0
+		a.with_icon
+			margin: 10px 0 15px 0
+
 
 .about_us
 	padding: 35px 0
@@ -852,6 +986,19 @@ footer
 		color: #000
 	p
 		color: #898989
+.head_descr-map
+	z-index: 20
+	top: 0
+	position: absolute
+	h1
+		display: inline-block;
+		margin-left: 15px;
+		padding: 0;
+		margin-top: 20px;
+		color: #fff;
+		line-height: 1.2;
+		outline: #282828 solid 15px;
+		background-color: #282828;
 
 .block_head
 	height: 490px
@@ -872,10 +1019,11 @@ footer
 		&.breadcrumbs-black
 			a,li
 				color: #000
+				font-weight: bold
 	.header_block
 		margin-left: 10px
 	.block_content
-		width: 70%
+		width: 59%
 		z-index: 10
 		margin: 35px 0
 		position: relative
@@ -951,7 +1099,7 @@ footer
 				background-color: $orange_color
 
 		a
-			// font-size: (14 / 16) * 1em
+			font-size: (14 / 16) * 1em
 			color: #898989
 
 .effect_solution
@@ -989,11 +1137,11 @@ footer
 		margin: 0
 
 .presentation
-	padding: 30px 0
+	padding: 30px 0 30px 0
 	text-align: center
+	background: #fff url(../img/icons/background_presentation.png) no-repeat center
 	.section_header
-		margin: 0
-		margin-bottom: 30px
+		margin: 30px 0
 	.video_wrap
 		position: relative
 		display: inline-block
@@ -1024,7 +1172,7 @@ footer
 			opacity: 0
 	p
 		color: #898989
-		padding: 0 170px
+		padding: 0 180px
 
 .benefit
 	padding: 35px 0
@@ -1079,7 +1227,7 @@ footer
 			&:before
 				content: ''
 				left: -20px
-				top: 9px
+				top: 7px
 				width: 10px
 				height: 10px
 				position: absolute
@@ -1148,14 +1296,13 @@ footer
 			right: 40px
 
 .reviews
-	padding: 30px 0
+	padding: 35px 0 35px 0
 	.section_header
-		margin: 0
-		margin-bottom: 30px
+		margin: 15px 0 15px 0
 	.reviews_wrap
 		overflow-x: hidden
 	.item
-		margin-bottom: 20px
+		margin: 30px 0
 		&:last-child
 			.post_content
 				border-bottom: 0
@@ -1184,6 +1331,7 @@ footer
 		vertical-align: top
 		border-radius: 50%
 	.post_content
+		padding-left: 10px
 		border-bottom: 1px solid #dddddd
 	h4
 		text-indent: 25px
@@ -1247,7 +1395,7 @@ footer
 		box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 
 .list_services
-	padding: 35px
+	padding: 35px 0 30px 0
 	ul
 		padding: 0
 		margin: 0
@@ -1267,6 +1415,8 @@ footer
 
 .service_tabs
 	text-align: center
+	.section_header
+		margin: 45px 0
 	.tab_item
 		display: none
 		&.active
@@ -1274,13 +1424,20 @@ footer
 		.prices_table
 			width: 100%
 		a.with_icon
+			margin: 25px 0 35px 0
 			font-weight: bold
 			img
 				top: 0
+	+ .to_next_wrapper
+		+ .button_wrap
+				padding: 45px 0 70px 0
 
 .reviews_video
+	.button_wrap
+		padding: 15px 0 50px 0
 	.video_wrap
 		.item
+			margin-bottom: 35px
 			.video
 				width: 100%
 				position: relative
@@ -1323,7 +1480,7 @@ footer
 				height: 14px
 
 .article_content
-	padding-bottom: 15px
+	padding-bottom: 40px
 	border-bottom: 1px solid #ddd
 	.article_thumbnail
 		float: left
@@ -1360,34 +1517,21 @@ footer
 		margin-bottom: 15px
 		img
 			width: 100%
-
-// .podstands
-// 	padding: 15px 0
-// 	border-bottom: 1px solid #ddd
-// 	h2
-// 		margin: 0
-// 	p
-// 		margin: 15px 0
-// 		position: relative
-// 		img
-// 			top: 3px
-// 			left: -50px
-// 			position: absolute
-// 	.img_wrap
-// 		// margin-bottom: 15px
-// 		img
-// 			width: 100%
+.partners
+	.button-big
+		margin: 25px 0 50px 0
 
 .partners_wrap
 	.item
 		text-align: center
+		margin-bottom: 20px
 		.partner_logo
 			max-width: 170px
 			max-height: 170px
 			margin: 0 auto
 			text-align: center
 			background-color: #fff
-			transition: all ease .5s
+			transition: outline-size ease .5s
 			-webkit-box-shadow: 0 0 5px 0.1px rgba(0,0,0,.3);
 			-moz-box-shadow: 0 0 5px 0.1px rgba(0,0,0,.3);
 			box-shadow: 0 0 5px 0.1px rgba(0,0,0,.3);
@@ -1407,7 +1551,6 @@ footer
 		&:hover
 			.partner_logo
 				outline: 2px solid #faaf00
-				outline-offset: -2px
 			img
 				-webkit-filter: none
 				-moz-filter: none
@@ -1419,7 +1562,9 @@ footer
 				color: #000
 
 .programm
-	padding: 0 0 35px 0
+	padding: 20px 0 45px 0
+	.section_header
+		margin: 25px 0 30px 0
 	img
 		height: 260px
 		width: 100%
@@ -1428,10 +1573,12 @@ footer
 		margin: 0
 
 .form
-	padding: 30px 0 30px 0
+	padding: 15px 0 30px 0
+	.section_header
+		margin-bottom: 30px
 form.partner
 	color: #898989
-	padding: 0 0 30px 0
+	padding: 0 0 0 0
 	font-family: sf-ui-display-regular
 	input[type="text"],input[type="email"],textarea
 		display: block
@@ -1493,8 +1640,10 @@ form.partner
 		padding-left: 40px
 	h4
 		margin: 0
+		padding-top: 10px
 	.text_about
-		margin-bottom: 60px
+		p
+			margin-bottom: 40px
 	.post
 		img
 			margin-top: -4px
@@ -1544,7 +1693,7 @@ blockquote
 			-moz-box-shadow: inset 0 0 15px 5px rgba(0,0,0,.1);
 			box-shadow: inset 0 0 15px 5px rgba(0,0,0,.1);
 		h4
-			margin: 20px 0
+			margin: 20px 0 14px 0
 			padding: 0 81px
 		p
 			margin: 0
@@ -1647,6 +1796,8 @@ blockquote
 	img
 		left: 0
 		position: absolute
+	p
+		color: #898989
 
 .info_tables
 	padding: 30px 0
@@ -1689,6 +1840,8 @@ blockquote
 				width: 365px
 
 .documents
+	.button_wrap
+		padding: 0 0 45px 0
 	.item
 		margin-bottom: 30px
 		.img_block
@@ -1709,6 +1862,7 @@ blockquote
 				padding-left: 20px
 				text-decoration: underline
 				position: relative
+				line-height: 1.271;
 				img
 					top: 6px
 					left: 0
@@ -1745,6 +1899,8 @@ blockquote
 				line-height: 25px
 
 .files
+	.section_header
+		margin: 40px 0 30px 0
 	.table
 		width: 100%
 		padding-bottom: 55px
@@ -1803,6 +1959,7 @@ blockquote
 				margin: 0
 				position: relative
 				font-weight: bold
+				font-size: 14px
 				img
 					position: absolute
 					top: -2px
@@ -1994,5 +2151,23 @@ form + .mfp-close,
 	top: 25px
 	right: 35px
 	font-size: 40px
-	
+form + .mfp-close,
+.sent .mfp-close
+	&:active,
+	&:focus
+		top: 25px
+
+.item
+	.hr
+		-webkit-transition: width .2s ease-out;
+		-moz-transition: width .2s ease-out;
+		-ms-transition: width .2s ease-out;
+		-o-transition: width .2s ease-out;
+		transition: width .2s ease-out;
+	&:hover
+		.hr
+			width: 100px;
+
+
+
 @import "media" // Всегда в конце

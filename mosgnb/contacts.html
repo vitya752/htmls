@@ -142,24 +142,244 @@
 
 	<div class="content contacts-page">
 		
-		<div class="block_head" style="background-image: url(img/contacts.png);">
+		<!-- Google Map -->
+		<div class="block_map_content">
+			<div id="map"></div>
 			<div class="container">
-				<div class="block_content">
+				<div class="head_descr head_descr-map">
 
-					<ul class="breadcrumbs breadcrumbs-black">
-						<li><a href="#">Главная</a></li>
-						<li>Контакты</li>
-					</ul>
-					
-					<div class="header_block">
+						<ul class="breadcrumbs breadcrumbs-black">
+							<li><a href="#">Главная</a></li>
+							<li>Контакты</li>
+						</ul>
 						<h1>Контакты</h1>
-					</div>
 
 				</div>
 			</div>
 		</div>
 
-		<div class="route background-gray shadow-top shadow-bottom>
+		<script>
+			function initMap() {
+
+				var iconDefault = 'img/markers/marker_active.png';
+
+				var el = document.getElementById('map');
+				var options = {
+					zoom: 12,
+					center: {lat: 55.7580147, lng: 37.8563042},
+					styles: [
+					{
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#e3e3e3"
+						}
+						]
+					},
+					{
+						"elementType": "labels.icon",
+						"stylers": [
+						{
+							"visibility": "on"
+						}
+						]
+					},
+					{
+						"featureType": "administrative.land_parcel",
+						"elementType": "labels.icon",
+						"stylers": [
+						{
+							"visibility": "off"
+						}
+						]
+					},
+					{
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#616161"
+						}
+						]
+					},
+					{
+						"elementType": "labels.text.stroke",
+						"stylers": [
+						{
+							"color": "#f5f5f5"
+						}
+						]
+					},
+					{
+						"featureType": "administrative.land_parcel",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#bdbdbd"
+						}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#eeeeee"
+						}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#757575"
+						}
+						]
+					},
+					{
+						"featureType": "poi.park",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#e5e5e5"
+						}
+						]
+					},
+					{
+						"featureType": "poi.park",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#9e9e9e"
+						}
+						]
+					},
+					{
+						"featureType": "road",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#ffffff"
+						}
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#757575"
+						}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#dadada"
+						}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#616161"
+						}
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#9e9e9e"
+						}
+						]
+					},
+					{
+						"featureType": "transit.line",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#e5e5e5"
+						}
+						]
+					},
+					{
+						"featureType": "transit.station",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#eeeeee"
+						}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "geometry",
+						"stylers": [
+						{
+							"color": "#c9c9c9"
+						}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "labels.text.fill",
+						"stylers": [
+						{
+							"color": "#9e9e9e"
+						}
+						]
+					}
+					]
+				};
+
+				var myMap = new google.maps.Map(el, options);
+
+				var markers = [
+				{
+					coordinates : {lat: 55.7580147, lng: 37.8563042}
+				}];
+
+
+				for(var i = 0; i<markers.length; i++){
+					addMarkers(markers[i]);
+				}
+
+
+				function addMarkers(properties){
+
+					var marker = new google.maps.Marker({
+						position : properties.coordinates,
+						map : myMap,
+						icon : iconDefault
+					});
+
+					if(properties.info){
+
+						marker.addListener('click', (function(){
+							infoWindow.open(myMap, marker);
+							marker.setIcon(iconActive);
+						}));
+
+						var infoWindow = new google.maps.InfoWindow({
+							content : properties.info
+						});
+
+					}
+
+				}
+
+			}
+		</script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABot_2q4SJSRj64_4WrezmbGLnX_qkgBU&callback=initMap"></script>
+		<!-- Google Map END-->
+
+		<div class="route background-gray shadow-top shadow-bottom">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -286,16 +506,16 @@
 								</span>
 							</label>
 						</div>
-							
-							<div class="text-center">
-								<a href="#" class="button button-big button-black">Отправить заявку</a>
-							</div>
-						</form>
-					</div>
+
+						<div class="text-center">
+							<a href="#" class="button button-big button-black">Отправить заявку</a>
+						</div>
+					</form>
 				</div>
 			</div>
-
 		</div>
+
+	</div>
 
 
 	<footer>

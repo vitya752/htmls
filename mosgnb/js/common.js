@@ -1,5 +1,19 @@
 $(document).ready(function(){
 
+	// Фиксированная шапка при скролле
+	$("header").removeClass("default");
+	$(window).scroll(function(){
+		if ($(this).scrollTop() > 20) {
+			$("header").addClass("default").fadeIn('fast');
+			$("header nav").addClass("header_menu-unafter");
+			$(".header_line .info_wrapper .info_block").css("height", "").equalHeights();
+		} else {
+			$("header").removeClass("default").fadeIn('fast');
+			$("header nav").removeClass("header_menu-unafter");
+			$(".header_line .info_wrapper .info_block").css("height", "").equalHeights();
+		};
+	});
+
 	$(".header_line .info_wrapper .info_block").css("height", "").equalHeights();
 	$('.vantage .item').css("height", "").equalHeights();
 	$('.benefit .item ul').css("height", "").equalHeights();
@@ -168,7 +182,8 @@ $(document).ready(function(){
 	});
 
 	$('.documents .item .popup, .gallery .item .popup').magnificPopup({
-		type: 'image'
+		type: 'image',
+		gallery: { enabled: true }
 	});
 
 	$('.popup_window').magnificPopup();

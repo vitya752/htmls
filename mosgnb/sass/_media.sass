@@ -11,6 +11,15 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 
+	header.default
+		.header_line
+			.logo
+				img
+					left: 0
+					width: 116px
+					height: 40px;
+					padding-top: 0;
+
 	// Шапка
 	.header_line
 		.logo
@@ -65,6 +74,12 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+
+	header.default
+		.head_buttons 
+			.open_menu
+				top: 12px
+
 	.info_block
 		padding: 0
 		img
@@ -167,11 +182,16 @@
 	.gallery
 		.item
 			width: 33.3%
+
 	/**/
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
+
+	#map
+		width: 100%;
+		height: 400px;
 
 	h1,
 	.slider h1
@@ -269,6 +289,8 @@
 			height: 190px
 		.item_content
 		    padding: 20px 55px 20px 20px;
+		    a
+		    	bottom: 10px
 		.hr
 			margin: 15px 0 15px 0
 
@@ -411,6 +433,18 @@
 	// 	padding: 25px 0
 	/**/
 @media only screen and (max-width : 767px)
+	header.default
+		.head_buttons
+			.open_info
+				top: 9px
+		.mobile_info
+		    top: 100px;
+    		right: 35px;
+    		.info_block 
+    			.icon_text
+    				top: 25px
+
+
 	.head_buttons
 		.open_info
 			top: 32px
@@ -534,6 +568,14 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
+	header.default
+		.header_line
+			.logo
+				padding: 5px 0 0 0
+		.mobile_info
+		    top: 80px;
+    		right: 25px;
+
 	h1,
 	.slider h1
 		font-size: (30 / 16) * 1em
@@ -666,7 +708,7 @@
 			.item_wrap
 				width: 100%	
 			.item
-				margin-bottom: 15px
+				margin-bottom: 20px
 				.video
 					width: 75%
 				.main_miniature
@@ -685,6 +727,7 @@
 	.main_specialists
 		.item
 			margin-bottom: 35px
+			.photo_wrap,
 			img
 				width: 120px
 				height: 120px
