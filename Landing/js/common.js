@@ -1,5 +1,5 @@
 $(function() {
 
-	console.log('qs');
+	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
 
 });
