@@ -42,6 +42,10 @@ $(document).ready(function(){
 
 /*________________________________________________________________________*/
 
+	if(window.matchMedia('(max-width: 768px)').matches){
+		$(".tab .img_wrap").removeClass("col-2").css("display","none");
+		$(".tab .text_wrap").removeClass("col-10").addClass("col-12");
+	}
 	var media768 = function(mediaQuery) {
 		if (mediaQuery.matches) {
 			$(".tab .img_wrap").removeClass("col-2").css("display","none");
