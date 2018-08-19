@@ -1,0 +1,461 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: Ubuntu-Regular
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.hidden
+	display: none
+
+a,img
+	user-select: none;
+
+.mfp-bg
+	background: none
+
+h2
+	color: #e34644
+	font-size: 1.875em
+	margin-bottom: 45px
+	text-transform: uppercase
+	
+
+h3
+	font-weight: normal
+	font-size: 1.500em
+	
+
+h4
+	font-size: 1.125em
+	
+
+.block-text-center
+	display: block
+	text-align: center
+
+header 
+	z-index: 10
+	position: relative
+	box-shadow: 0 0 10px 0 rgba(0,0,0,.45)
+	.logo
+		padding: 10px 0 7px 7px
+.contact
+	text-align: right
+.email
+	font-size: 0.938em
+	padding: 2px 20px 7px 0
+	font-family: Ubuntu-Bold
+.btn
+	top: -3px
+	color: #fff
+	font-size: 1.063em
+	line-height: 17px
+	margin-right: 10px
+	position: relative
+	border-radius: 50px
+	transition: all 1.5s ease
+	padding: 5px 15px 7px 15px
+	box-shadow: 0px 3px 10px -2px rgba(251,17,13,1);
+	background: linear-gradient(45deg, #fb120d, #ac0c08)
+	&:hover
+		color: #fff
+		text-decoration: none
+		background: linear-gradient(90deg, #fb120d, #ac0c08)
+
+section
+	z-index: 1
+	padding-top: 60px
+
+.main
+	padding-top: 0
+	min-height: 715px
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	background-position: center top
+	background-image: url(../img/main_bg.png)
+	.items
+		height: 705px
+	.content_wrap
+		width: 50%
+	.content_item
+		height: 50%
+		&:nth-child(1)
+			text-align: left
+			.content_wrap
+				padding-top: 135px;
+				padding-left: 10px;
+				padding-right: 195px;
+		&:nth-child(2)
+			text-align: right
+			.content_wrap
+				float: right
+				padding-top: 35px;
+				padding-left: 165px;
+				padding-right: 45px;
+		h2
+			color: #e34644
+			font-size: 1.875em
+			font-weight: 300
+			line-height: 30px
+			display: inline-block
+			
+			text-transform: uppercase
+			margin-bottom: 0
+		p
+			top: 10px;
+			font-size: 1.063em
+			line-height: 20px;
+			position: relative;
+			
+
+.numbers
+	.wrap,img
+		position: relative
+	.wrap
+		display: inline-block
+	img
+		left: 20px
+	.number
+		top: 40px
+		left: 50px
+		color: #d60606
+		font-size: 3.750em
+		position: absolute
+		font-family: BebasNeueBold
+	.descr_wrap
+		top: 0
+		left: 19px
+		height: 50%
+		position: absolute
+		padding: 0 0px 0 170px
+	.description
+		bottom: 0
+		color: #d60606
+		font-size: 1.125em
+		line-height: 22px
+		font-weight: bold
+		position: absolute
+		vertical-align: bottom
+		text-transform: uppercase
+		
+	.number_item
+		padding-bottom: 60px
+		&:nth-child(2)
+			.descr_wrap
+				top: 90px
+				.description
+					bottom: auto
+
+.tabs_section
+	h3
+		display: block
+		font-weight: bold
+		padding-right: 20px
+		border-bottom: 1px solid #fb120d
+	.tab
+		padding-top: 70px
+		position: relative
+		transition: all 1s ease
+		&.disactive
+			cursor: pointer
+			.text_wrap
+				display: none
+			.img_wrap
+				padding-bottom: 35px
+			h2
+				position: absolute
+				white-space: nowrap
+		&:nth-child(1)
+			text-align: right
+			.img_wrap
+				img
+					top: -10px
+					left: -60px
+					position: relative
+			&.disactive
+				padding-top: 170px	
+				h2
+					top: 300px
+					right: 0
+					transform: rotate(-90deg)
+				.img_wrap
+					img
+						left: 60px
+		&:nth-child(2)
+			background-color: #d50c08	
+			h2,h3,.description
+				color: #fff
+			h3
+				margin-top: 10px
+				border-color: #fff
+			.item
+				margin-bottom: 30px
+			.img_wrap
+				img
+					left: 30px
+					float: right
+					position: relative	
+			&.disactive
+				padding-top: 155px	
+				.img_wrap
+					img
+						left: 0
+				.item
+					margin-bottom: 0
+				h2
+					top: 200px
+					right: -80px
+					transform: rotate(90deg)
+			// &:after
+			// 	top: 0
+			// 	right: -150%
+			// 	content: ''
+			// 	width: 500px
+			// 	height: 100%
+			// 	z-index: -1
+			// 	display: block
+			// 	position: absolute
+			// 	background-color: #d50c08
+
+.slider_section
+	.review
+		margin-top: 35px
+		font-weight: bold
+		.img_wrap
+			margin-bottom: 15px
+			position: relative
+			overflow: visible
+			img
+				width: 100px
+				height: 100px
+				border-radius: 50%
+			&:before
+				top: -13px
+				left: 11px
+				content: ''
+				width: 100%
+				height: 100%
+				display: block
+				position: absolute
+				background-repeat: no-repeat
+				background-image: url(../img/instruments/ramka.png)
+	.autor
+		text-align: center	
+	.role
+		font-size: 0.875em
+		
+	h4
+		margin-bottom: 0
+	h3,ul
+		margin-left: 25px
+	ul
+		padding: 0
+		list-style-type: none
+		li
+			font-size: 1.125em
+			position: relative
+			padding-left: 20px
+			&:before
+				left: 0
+				top: 11px
+				width: 10px
+				height: 10px
+				content: ''
+				display: block
+				position: absolute
+				border-radius: 50%
+				background-color: #c3100d
+	blockquote
+		font-size: 1.125em
+		line-height: 24px
+		position: relative
+		font-family: Ubuntu-Italic
+		&:before,&:after
+			color: #c3100d
+			font-size: 3em
+			position: absolute
+		&:before
+			top: -35px
+			left: -30px
+			content: '«'
+		&:after
+			bottom: -10px
+			right: -5px
+			content: '»'
+	.prev,.next
+		z-index: 999
+		cursor: pointer
+		position: absolute
+	.prev
+		top: 60px
+	.next
+		top: 150px
+	.slide
+		outline: none
+		.row
+			padding: 0 10px
+	.slick-slide img
+		display: inline-block
+
+.blog
+	padding-bottom: 35px
+	.item
+		text-align: center
+		margin-bottom: 30px
+	.img_wrap
+		width: 100%
+		position: relative
+		margin-bottom: 30px
+		img
+			width: 100%
+		&:before
+			top: -15px
+			left: 25px
+			right: 25px
+			bottom: -15px
+			content: ''
+			display: block
+			position: absolute
+			border: 4px solid #d11410
+	.text_wrap
+		.description
+			font-size: 1.125em
+			line-height: 20px
+			
+	.count_wrap
+		color: #919191
+		font-size: 1.125em
+		text-align: right
+		margin-top: -5px
+		
+		.date
+			float: left
+	h3
+		line-height: 24px
+	a
+		color: #000
+		transition: all .5s ease
+		&:hover
+			text-decoration: none
+	span
+		margin-right: 10px
+		img
+			top: -2px
+			margin-right: 5px
+			position: relative
+
+footer
+	padding: 30px 0
+	box-shadow: 0 0 20px 0 rgba(0,0,0,.45)
+	.soc_links
+		text-align: center
+		ul
+			margin: 0
+			padding: 0
+			list-style-type: none
+			vertical-align: middle
+		li
+			margin: 0 10px
+			display: inline-block
+			&:first-child
+				margin-left: 0
+			&:last-child
+				margin-right: 0
+
+.form_block
+	width: 510px
+	height: 515px
+	margin: 0 auto
+	padding: 0 35px
+	padding: 65px 35px 30px 35px
+	position: relative
+	background-color: #fff
+	box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.6);
+	h2
+		margin-bottom: 0
+	input:not([type="checkbox"])
+		border: 0
+		width: 100%
+		height: 35px
+		font-size: 1.125em
+		padding-left: 13px
+		margin-bottom: 30px
+		background-color: #e7e7e7
+	label
+		font-size: 1.125em
+		padding-left: 30px
+		position: relative	
+		margin-bottom: 40px
+	.checked
+		left: 0
+		top: 3px
+		width: 20px
+		content: ''
+		height: 20px
+		display: block
+		border-radius: 50%
+		position: absolute
+		background: #e7e7e7
+	input[type="checkbox"]
+		display: none
+	input:checked
+		+ .checked
+			&:before
+				top: -10px
+				left: -3px
+				content: ''
+				width: 40px
+				height: 25px
+				position: absolute
+				background: url(../img/instruments/checked.png) no-repeat
+	.button-submit
+		width: 100%
+		text-align: center
+		.btn
+			padding: 15px 35px
+
+
+
+.mfp-close-btn-in .mfp-close
+	top: 20px
+	right: 20px
+	outline: none
+	color: #d11410
+	font-size: 3.125em
+	position: absolute
+
+@import "media" // Always at the end
