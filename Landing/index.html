@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 4</title>
+	<title>YouRoomy</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,12 +23,14 @@
 	<!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="libs/popup/magnific-popup.css">
 	<link rel="stylesheet" href="css/main.min.css">
+
 
 </head>
 
 <body>
-
+	<h1 class="hidden">YouRoomy</h1>
 	<header>
 		<div class="container">
 			<div class="row">
@@ -43,7 +45,7 @@
 							info@youroomy.com
 						</div>
 						<div class="button">
-							<a href="#" class="btn">оставить заявку</a>
+							<a href="#form_block" class="btn contacts">оставить заявку</a>
 						</div>
 					</div>
 				</div>
@@ -85,21 +87,27 @@
 					<div class="wrap">
 						<img src="img/instruments/outline.png" alt="Outline">
 						<span class="number">1005</span>
-						<p class="description">Рекламных компаний</p>
+						<div class="descr_wrap">
+							<p class="description">Рекламных компаний</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-12 col-xl-4 number_item">
 					<div class="wrap">
 						<img src="img/instruments/outline.png" alt="Outline">
 						<span class="number">1005</span>
-						<p class="description">Генерируем показов на youtube ежемесячно</p>
+						<div class="descr_wrap">
+							<p class="description">Генерируем показов на youtube ежемесячно</p>
+						</div>
 					</div>
 				</div>
 				<div class="col-12 col-xl-4 number_item">
 					<div class="wrap">
 						<img src="img/instruments/outline.png" alt="Outline">
 						<span class="number">1005</span>
-						<p class="description">эксклюзивных контрактов с блогерами</p>
+						<div class="descr_wrap">
+							<p class="description">эксклюзивных контрактов с блогерами</p>
+						</div>
 					</div>
 				</div>
 
@@ -218,6 +226,7 @@
 								</div>
 								<div class="col-4 text_wrap">
 									<h3>Запись Рекламных Компаний на Youtube</h3>
+									<div class="hr"></div>
 								</div>
 
 
@@ -232,6 +241,7 @@
 								</div>
 								<div class="col-4 text_wrap">
 									<h3>Наисание сценариев для Интераций</h3>
+									<div class="hr"></div>
 								</div>
 
 							</div>
@@ -245,6 +255,7 @@
 								</div>
 								<div class="col-4 text_wrap">
 									<h3>Подбор Целевой Аудитории</h3>
+									<div class="hr"></div>
 								</div>
 
 							</div>
@@ -258,6 +269,7 @@
 								</div>
 								<div class="col-4 text_wrap">
 									<h3>Система Трекинга</h3>
+									<div class="hr"></div>
 								</div>
 							</div>
 
@@ -271,6 +283,7 @@
 								</div>
 								<div class="col-4 text_wrap">
 									<h3>Аналитика и Статистика</h3>
+									<div class="hr"></div>
 								</div>
 							</div>
 
@@ -535,12 +548,12 @@
 				</div>
 				<div class="col-4">
 					<div class="contact">
-	
+
 						<div class="email">
 							info@youroomy.com
 						</div>
 						<div class="button">
-							<a href="#" class="btn">оставить заявку</a>
+							<a href="#form_block" class="btn contacts">оставить заявку</a>
 						</div>
 
 					</div>
@@ -552,10 +565,55 @@
 
 	</footer>
 
+	<div class="hidden">
+		<div class="form_block" id="form_block">
+			
+			<h2>Оставьте заявку</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga omnis, quasi fugit laboriosam in consectetur.</p>
+			
+			<div class="row">
+				
+				<div class="col-12">
+					<input type="text" name="name" class="" placeholder="Имя и Фамилия">
+				</div>
+				<div class="col-6">
+					<input type="text" name="phone" class="" placeholder="Номер Телефона">
+				</div>
+				<div class="col-6">
+					<input type="email" name="email" class="" placeholder="E-Mail">
+				</div>
+				<div class="col-12">
+					<input type="text" name="url" class="" placeholder="http://">
+				</div>
+				<div class="col-6">
+					<label for="chanel">
+						<input type="checkbox" name="chanel" id="chanel">
+						<div class="checked"></div>
+						Владелец Канала
+					</label>
+				</div>
+				<div class="col-6">
+					<label for="advertiser">
+						<input type="checkbox" name="advertiser" id="advertiser">
+						<div class="checked"></div>
+						Рекламодатель
+					</label>	
+				</div>
+				<div class="button-submit">
+					<a href="#" class="btn btn-submit">оставить заявку</a>
+				</div>
+				
+
+			</div>
+
+		</div>
+	</div>
+
 </div>
 
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/slick/slick.min.js"></script>
+<script src="libs/popup/jquery.magnific-popup.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>

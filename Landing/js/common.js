@@ -38,4 +38,6 @@ $(document).ready(function(){
 		nextArrow: '<img src="img/instruments/next.png" class = "next">'
 	});
 
+	$('.contacts').magnificPopup();
+
 });
