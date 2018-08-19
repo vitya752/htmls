@@ -33,4 +33,9 @@ $(document).ready(function(){
 
 	});
 
+	$(".slider").slick({
+		prevArrow: '<img src="img/instruments/prev.png" class= "prev">',
+		nextArrow: '<img src="img/instruments/next.png" class = "next">'
+	});
+
 });
