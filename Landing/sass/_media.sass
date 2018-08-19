@@ -63,8 +63,24 @@
 +media-breakpoint-down(sm)
 	.main
 		background-size: cover
-	.main .content_wrap
-		width: 70%;
+		.content_wrap
+			width: 70%;
+			border-radius: 5px;
+			padding-bottom: 10px
+			background: rgba(255,255,255,.75);
+		.content_item
+			h2
+				margin-left: 0 !important
+				font-size: 1.5em
+			&:nth-child(1) 
+				.content_wrap
+					top: 100px
+					padding-top: 35px
+					position: relative
+					padding-left: 10px
+			&:nth-child(2) 
+				.content_wrap
+					padding-right: 10px
 	.numbers 
 		.number_item
 			&:nth-child(2)
