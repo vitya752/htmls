@@ -1,0 +1,5 @@
+$(function() {
+
+	$("input, select").styler();
+
+});
