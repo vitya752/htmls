@@ -6,7 +6,10 @@ $(function() {
         $('html, body').animate({ scrollTop: destination }, 1100);
     });
 
-	$("input, select").styler();
+	$("input, select").styler({
+		selectSearch: true,
+		selectVisibleOptions: 3
+	});
 
 	$(".popup").magnificPopup();
 
@@ -20,5 +23,6 @@ $(function() {
 		}
 
 	});
+
 
 });
