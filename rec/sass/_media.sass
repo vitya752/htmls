@@ -53,6 +53,9 @@
 		.present_item
 			img
 				width: 100%
+	.contacts_form_block 
+		input
+			width: 280px
 			
 // ≥992px
 +media-breakpoint-down(md)
@@ -174,6 +177,11 @@
 		p
 			font-size: 16px	
 			column-count: 1
+	.contacts_form_block 
+		input
+			width: 100%
+		.right
+			float: none
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -183,6 +191,8 @@
 		font-size: 30px
 	h3
 		font-size: 25px
+	section,.section
+		padding: 42px 0 50px
 	.main
 		.contact
 			text-align: center
@@ -259,6 +269,9 @@
 			&:nth-child(odd),&:nth-child(even)
 				&:before
 					left: 22px
+	.contacts_form_block
+		.form_block
+			padding: 30px 30px 0 30px
 
 /*==========  Mobile First  ==========*/
 

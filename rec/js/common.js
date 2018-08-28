@@ -19,6 +19,9 @@ $(function() {
 	});
 
 	$(".popup").magnificPopup();
+	$(".play").magnificPopup({
+		type: "iframe"
+	});
 
 	$('.faq_section ul.question li').click(function() {
 		$(this).find('.answer').slideToggle();
@@ -31,18 +34,26 @@ $(function() {
 
 	});
 
+	// $('input[name=phone], input[name=phone_quest]').mask('+9 (999) 999-99-99', {placeholder: "+_ (___) ___-___-__ "});	
+	$('input[name=phone], input[name=phone_quest]').mask('+9 (999) 999-99-99');
 
-	// $('input[name=phone]').mask('+7 (999) 999-99-99');
+	$('#attachment,#replenishment').priceFormat({
+		prefix: '',
+		suffix: ' USD',
+		thousandsSeparator: ' ',
+		centsSeparator: ',',
+		clearOnEmpty: true
+	});
+
+	$('.calculator .result .money').priceFormat({
+		prefix: '',
+		suffix: '',
+		thousandsSeparator: ' ',
+		centsSeparator: ',',
+		clearOnEmpty: true
+	});
 
 });
-
-function number_format(){
-	// var input = $("input[type='text']");
-	// var str = input.val();
-	// var replaceNumber = str.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
-	// return input.val(replaceNumber);
-
-}
 
 function cislo(){
     if (event.keyCode < 48 || event.keyCode > 57)
