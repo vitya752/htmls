@@ -56,6 +56,23 @@
 	.contacts_form_block 
 		input
 			width: 280px
+	.lc
+		header
+			nav
+				.menu_block
+					display: none
+				.login-link
+					padding-right: 15px
+				.logo,.buttons
+					width: 32%
+				.acc_block
+					width: 34%
+					white-space: nowrap
+				.buttons
+					text-align: right
+		#menu_button
+			display: inline-block
+
 			
 // ≥992px
 +media-breakpoint-down(md)
@@ -182,6 +199,13 @@
 			width: 100%
 		.right
 			float: none
+	.lc
+		header
+			nav
+				.acc_block
+					display: none
+				.logo,.buttons
+					width: 49%
 
 // ≥576px
 +media-breakpoint-down(xs)
@@ -256,6 +280,24 @@
 		svg
 			top: -2px
 			position: relative
+	.my_money 
+		.button_wrap
+			display: block
+			padding-top: 40px
+		.lc_block_head_wrap
+			padding-right: 0;
+	.white_block_wrap
+		padding-left: 20px
+		.lc_block_head
+			+ .money
+				margin-left: 0
+				padding-left: 25px
+				text-align: center
+	.lc_block_head
+		padding-left: 0
+		padding-top: 45px
+		h2
+			font-size: 25px
 
 @media screen and (max-width: 375px)
 	.request_block 

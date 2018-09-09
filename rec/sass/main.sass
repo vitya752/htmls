@@ -455,6 +455,8 @@ footer
 	.jq-selectbox__select-text
 		top: 6px
 		position: relative
+	.jq-selectbox__trigger-arrow
+		top: 20px
 	.plan
 		font-size: 14px
 		span
@@ -1194,5 +1196,148 @@ footer
 			&:hover, &:focus, &:active
 				color: #fff
 				background: #999999
+
+.lc
+	header
+		margin-bottom: 10px
+		box-shadow: 0 0px 25px 0 rgba(0,0,0,.25)
+		.button_link
+			color: #fff
+			font-size: 12px
+			padding: 11px 12px
+			border-radius: 5px
+			font-family: RobotoMedium
+			background-color: #515da9
+		nav 
+			ul
+				padding-right: 0
+				padding-left: 5px
+			li 
+				margin: 0 10px 0 18px
+				&:before
+					display: none
+				a
+					font-size: 14px
+	.login-link
+		color: #d08dd6
+		font-size: 14px
+		text-transform: none
+		&:hover,&:active,&:focus
+			color: #d08dd6
+			svg
+				fill: #d08dd6
+		svg
+			top: 5px
+			fill: #d08dd6
+	#menu_button
+		span
+			background-color: #d08dd6
+	.acc_block
+		img
+			width: 65px
+			height: 65px
+			border-radius: 50%
+			margin-right: 17px
+		> *
+			display: inline-block
+		.name_ser
+			font-weight: bold
+			margin-right: 15px
+			font-family: RobotoMedium
+
+.my_money
+	padding-bottom: 35px
+	background-color: #fafbfc
+	.balance
+		margin: 0 auto
+		display: table
+	.button_wrap
+		a
+			font-size: 18px
+			padding: 13px 50px
+	.lc_block_head_wrap
+		padding-right: 45px;
+	.lc_block_head_wrap,.button_wrap
+		display: inline-block
+		vertical-align: middle
+
+.lc_block_head
+	padding-left: 60px
+	position: relative
+	> svg
+		top: 0
+		left: 0
+		width: 40px
+		fill: #d08dd6
+		position: absolute
+	span
+		font-size: 14px
+		font-weight: bold
+	h1
+		font-size: 35px
+		line-height: 35px
+		font-family: RobotoMedium
+	h2
+		font-size: 30px
+		line-height: 30px
+		font-family: RobotoMedium
+	+ .money
+		padding-left: 60px
+		position: relative
+		.valuta
+			top: 0
+			left: 30px
+			font-size: 20px
+			position: absolute
+		.money_format
+			font-size: 50px
+			line-height: 50px
+		.valuta, .money_format
+			font-family: RobotoBold
+
+.statistics
+	padding: 100px 0
+	.button_wrap
+		display: block
+		padding-top: 65px
+		text-align: center
+
+.white_block_wrap
+	border-radius: 5px
+	margin-bottom: 30px
+	background-color: #fff
+	transition: all .5s ease
+	padding: 20px 10px 20px 45px
+	box-shadow: 0 0 15px -2px rgba(0,0,0,.25)
+	&:hover
+		box-shadow: 0 0 25px -2px rgba(0,0,0,.65)
+	.lc_block_head
+		+ .money
+			margin-top: 26px
+			margin-left: 25px
+			margin-bottom: 25px
+			.valuta
+				top: 5px
+				left: 35px
+	.plan_name
+		padding-left: 15px
+		font-family: RobotoMedium
+	.circle
+		margin: 25px 0
+		text-align: center
+		svg
+			width: 248px
+			height: 248px
+		.valuta
+			position: absolute;
+			top: -10px;
+			left: 20px;
+			font-size: 20px;
+	.circles-text
+		font-size: 0 !important
+	.money_circle
+		font-size: 50px
+		font-family RobotoBold
+
 
 @import "media" // Always at the end

@@ -45,12 +45,31 @@ $(function() {
 		clearOnEmpty: true
 	});
 
+//.money_format
+
 	$('.calculator .result .money').priceFormat({
 		prefix: '',
 		suffix: '',
 		thousandsSeparator: ' ',
 		centsSeparator: ',',
 		clearOnEmpty: true
+	});
+
+	var myCircle = Circles.create({
+	  id:                  'circles-1',
+	  radius:              124,
+	  value:               123751,
+	  maxValue:            200000,
+	  width :                6 ,
+	  text:                function(value){return '<span class="valuta">&#36;</span>' + '<span class="money_circle">' + value + '</span>';},
+	  colors:              ['#f5edf4', '#e40060'],
+	  duration:            1000,
+	  wrpClass:            'circles-wrp',
+	  textClass:           'circles-text',
+	  valueStrokeClass:    'circles-valueStroke',
+	  maxValueStrokeClass: 'circles-maxValueStroke',
+	  styleWrapper:        true,
+	  styleText:           true
 	});
 
 });
