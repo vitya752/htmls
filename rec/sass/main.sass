@@ -100,8 +100,9 @@ section,.section
 	background-color: #eb9e69
 
 #mmmenu
-	z-index: 15
 	transition: all ease
+.mm-menu_opened
+	z-index: 15
 #menu_button
 	display: none
 	width: 20px;
@@ -120,6 +121,9 @@ section,.section
 			top: 10px
 		&:nth-child(3)
 			top: 20px
+
+.gray_bg
+	background-color: #fafbfc
 
 header
 	background-color: #fff
@@ -417,46 +421,6 @@ footer
 		font-weight: 600
 	input[type="text"]
 		width: 200px
-	.jq-number__field
-		border: 0
-		outline: 0
-		width: 147px
-		box-shadow: none
-		border-radius: 0
-		border-bottom-color: none
-	.jq-number
-		padding: 0
-	.jq-number__spin
-		border: 0
-		right: 18px
-		box-shadow: none
-		text-shadow: none
-		border-radius: 0
-		background: none
-		&.plus
-			&:after
-				top: 15px
-				border-bottom: 5px solid #000
-		&.minus
-			&:after
-				top: -5px
-				border-top: 5px solid #000
-	.jq-selectbox.focused .jq-selectbox__select
-		border: 1px solid #979ecb
-	.jq-selectbox__select
-		box-shadow: none
-		background: none
-		border-radius: 10px
-		border: 1px solid #d6d6d6
-		&:hover
-			background: none
-	.jq-selectbox__trigger
-		border-left: 0
-	.jq-selectbox__select-text
-		top: 6px
-		position: relative
-	.jq-selectbox__trigger-arrow
-		top: 20px
 	.plan
 		font-size: 14px
 		span
@@ -510,8 +474,10 @@ footer
 
 .button_wrap
 	text-align: center
-	a
+	a,button
+		border: 0
 		color: #fff
+		outline: none
 		padding: 13px 20px
 		border-radius: 5px
 		font-family: RobotoMedium
@@ -571,16 +537,6 @@ footer
 			font-size: 18px
 			font-weight: bold
 			font-family: RobotoMedium
-		.jq-radio
-			width: 20px
-			height: 20px
-			margin-right: 10px
-		.jq-radio.checked 
-			.jq-radio__div
-				width: 10px
-				height: 9px
-				margin: 4px 0 0 4px
-				background-color: #5d64aa
 	.request
 		padding-left: 40px
 		.form_block
@@ -616,21 +572,84 @@ footer
 				padding: 10px 50px
 				border-radius: 5px
 				background: linear-gradient(90deg, #f94c1a, #ea9761)
+
+.jq-radio
+	width: 20px
+	height: 20px
+	margin-right: 10px
+.jq-radio.checked 
+	.jq-radio__div
+		top: 4px
+		right: -4.5px
+		width: 10px
+		height: 9px
+		margin: 0
+		position: relative
+		background-color: #5d64aa
 	
 .jq-checkbox.focused,
 .jq-radio.focused
 	border: 1px solid #C3C3C3
+
+.jq-number__field
+	border: 0
+	outline: 0
+	width: 147px
+	box-shadow: none
+	border-radius: 0
+	border-bottom-color: none
+.jq-number
+	padding: 0
+	&.disabled 
+		.jq-number__spin 
+			background: none
+		.jq-number__field
+			background: #ebebe4;
+.jq-number__spin
+	border: 0
+	right: 18px
+	box-shadow: none
+	text-shadow: none
+	border-radius: 0
+	background: none
+	&:hover,&:active,&:focus
+		background: none
+		box-shadow: none
+	&.plus
+		&:after
+			top: 15px
+			border-bottom: 5px solid #000
+	&.minus
+		&:after
+			top: -5px
+			border-top: 5px solid #000
+.jq-selectbox.focused .jq-selectbox__select
+	border: 1px solid #979ecb
+.jq-selectbox__select
+	box-shadow: none
+	background: none
+	border-radius: 10px
+	border: 1px solid #d6d6d6
+	&:hover
+		background: none
+.jq-selectbox__trigger
+	border-left: 0
+.jq-selectbox__select-text
+	top: 6px
+	position: relative
+.jq-selectbox__trigger-arrow
+	top: 20px
+.mfp-close
+	top: 20px;
+	right: 17px;
+	outline: none
+	font-size: 50px;
 
 .form_block-popup
 	margin: 0 auto
 	text-align: center
 	position: relative
 	background-color: #fff
-	.mfp-close
-		top: 20px;
-		right: 17px;
-		outline: none
-		font-size: 50px;
 	h2
 		font-size: 30px
 	p
@@ -1142,6 +1161,10 @@ footer
 		margin-right: 30px
 		&:nth-child(2)
 			width: auto
+	.jq-selectbox__select-text
+		top: 0
+	.jq-selectbox__trigger-arrow
+		top: 14px
 	.news_wrap
 		padding-top: 90px
 	.item
@@ -1185,6 +1208,9 @@ footer
 			fill: #515da9
 			margin-left: 10px
 			position: relative
+
+.news_section,
+.reply
 	.button_wrap
 		padding-top: 20px
 		a
@@ -1247,7 +1273,6 @@ footer
 
 .my_money
 	padding-bottom: 35px
-	background-color: #fafbfc
 	.balance
 		margin: 0 auto
 		display: table
@@ -1265,7 +1290,7 @@ footer
 	padding-left: 60px
 	position: relative
 	> svg
-		top: 0
+		top: 4px
 		left: 0
 		width: 40px
 		fill: #d08dd6
@@ -1339,5 +1364,119 @@ footer
 		font-size: 50px
 		font-family RobotoBold
 
+#reinv
+	position: relative
+.reinv
+	padding: 50px 50px
+	h2
+		padding-bottom: 30px
+	.plan
+		font-size: 18px
+		font-weight: bold
+		font-family: RobotoMedium
+	.name_input
+		font-size: 14px
+	.jq-radio
+		top: -1px
+		position: relative
+	.radio_label
+			margin-bottom: 10px
+	input
+		height: 50px
+		font-size: 18px
+		font-weight: bold
+		padding: 15px 20px
+		border-radius: 5px
+		border: 1px solid #d6d6d6
+		&:hover,&:focus,&:active
+			border: 1px solid #979ecb
+	// .disabled
+	// 	input
+	// 		&:hover,&:active,&:focus
+	// 			border: 1px solid #d6d6d6
+	.button_wrap
+		text-align: left
+		padding-left: 80px
+		button
+			width: auto
+			color: #fff
+			font-size: 18px
+			padding: 11px 53px
+.reply
+	.white_block_wrap
+		padding-left: 30px
+	.table_wrap
+		overflow-x: auto
+	table
+		width: 100%
+		max-width: 100%
+	td,th
+		padding: 15px 0
+		white-space: nowrap;
+	td:first-child
+		white-space: unset
+	tbody
+		tr
+			border-bottom: 1px solid #e5e5e5
+			&:hover
+				background-color: #fafbfc
+	th
+		color: #9a9fa4
+		font-weight: normal
+	td
+		color: #000000
+	th,td
+		width: 25%
+		&:first-child
+			width: 33%
+		&:last-child
+			width: 15%
+	.valute
+		font-size: 12px
+		vertical-align: text-bottom
+	.button_wrap
+		padding: 0
+		display: block
+		text-align: center 
+		margin: 40px auto 20px auto
+
+.ref_blocks_wrap
+	padding-top: 60px
+.ref
+	.content
+		padding: 25px 0 10px 0
+	.input_block
+		input
+			width: 100%
+			height: 40px
+			padding: 0 15px
+			border: 1px solid #cccccc
+	.button_wrap
+		button
+			padding: 8px 25px
+	.white_block_wrap
+		padding-right: 30px
+		margin-bottom: 30px
+		&.white_block_small
+			min-height: 136px
+			padding-bottom: 0
+			padding-right: 85px
+			svg
+				width: 22px
+				height: 22px
+			.lc_block_head
+				padding-left: 35px
+			.name_block
+				font-size: 18px
+				line-height: 22px
+			.money
+				.number,.money_format
+					font-size: 40px
+					font-weight: normal
+					font-family: RobotoMedium
+				.valuta
+					top: -12px
+					font-size: 18px
+					position: relative
 
 @import "media" // Always at the end
