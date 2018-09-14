@@ -67,11 +67,11 @@ $(function() {
 
 //.money_format
 
-	$('.calculator .result .money').priceFormat({
+	$('.calculator .result .money, .ref .money_format').priceFormat({
 		prefix: '',
 		suffix: '',
-		thousandsSeparator: ' ',
-		centsSeparator: ',',
+		thousandsSeparator: ',',
+		centsSeparator: '',
 		clearOnEmpty: true
 	});
 

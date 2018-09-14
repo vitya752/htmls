@@ -52,8 +52,16 @@ b, strong
 	to
 		bottom: 40px
 
+.mm-listitem>a, .mm-listitem>span
+	padding: 15px 20px
+
 .mfp-wrap ~ * 
 	filter: blur(5px)
+
+.settings
+	.load_avatar
+		.jq-file
+			display: none
 
 h1
 	font-size: 50px
@@ -221,12 +229,15 @@ footer
 				text-decoration: underline
 				&:hover
 					text-decoration: none
-	.links
-		li
-			margin: 0 10px
-			svg
-				height: 17px
-				fill: #9d9d9d
+.links
+	ul
+		list-style-type: none
+	li
+		margin: 0 10px
+		display: inline-block
+		svg
+			height: 17px
+			fill: #9d9d9d
 
 .main
 	text-align: center
@@ -478,6 +489,7 @@ footer
 		border: 0
 		color: #fff
 		outline: none
+		cursor: pointer
 		padding: 13px 20px
 		border-radius: 5px
 		font-family: RobotoMedium
@@ -1210,9 +1222,11 @@ footer
 			position: relative
 
 .news_section,
-.reply
+.reply,
+.quest,
+.button_wrap-gray
+	&.button_wrap,
 	.button_wrap
-		padding-top: 20px
 		a
 			color: #5d64aa
 			padding: 13px 65px
@@ -1222,6 +1236,11 @@ footer
 			&:hover, &:focus, &:active
 				color: #fff
 				background: #999999
+.news_section,
+.reply,
+.quest
+	.button_wrap
+		padding-top: 20px
 
 .lc
 	header
@@ -1328,6 +1347,7 @@ footer
 		text-align: center
 
 .white_block_wrap
+	width: 100%
 	border-radius: 5px
 	margin-bottom: 30px
 	background-color: #fff
@@ -1342,7 +1362,6 @@ footer
 			margin-left: 25px
 			margin-bottom: 25px
 			.valuta
-				top: 5px
 				left: 35px
 	.plan_name
 		padding-left: 15px
@@ -1363,6 +1382,34 @@ footer
 	.money_circle
 		font-size: 50px
 		font-family RobotoBold
+	&.white_block_wrap_nop
+		padding: 0
+	&.white_block_small
+		min-height: 136px
+		padding-bottom: 0
+		padding-right: 85px
+		svg
+			width: 22px
+			height: 22px
+		.lc_block_head
+			padding-left: 35px
+		.name_block
+			font-size: 18px
+			line-height: 22px
+		.money
+			.number,.money_format,.percent
+				font-size: 40px
+				font-weight: normal
+				font-family: RobotoMedium
+			.valuta
+				top: -12px
+				font-size: 18px
+				position: relative
+	.row_block
+		padding: 20px 30px
+		border-bottom: 1px solid #e5e5e5
+		&:last-child
+			border-bottom: 0
 
 #reinv
 	position: relative
@@ -1440,12 +1487,13 @@ footer
 		text-align: center 
 		margin: 40px auto 20px auto
 
-.ref_blocks_wrap
+.blocks_wrap
 	padding-top: 60px
 .ref
 	.content
 		padding: 25px 0 10px 0
 	.input_block
+		margin-bottom: 20px
 		input
 			width: 100%
 			height: 40px
@@ -1457,26 +1505,117 @@ footer
 	.white_block_wrap
 		padding-right: 30px
 		margin-bottom: 30px
-		&.white_block_small
-			min-height: 136px
+
+.settings
+	h5,
+	.avatar,
+	.quest
+		text-align: center
+	h5
+		margin: 0
+		margin-top: 20px
+	.wrap_img_btn
+		position: relative
+		display: inline-block
+	.img_wrap
+		display: inline-block
+		img
+			width: 194px
+			height: 194px
+			border-radius: 50%
+	.load_avatar
+		bottom: 0
+		right: 35px
+		position: absolute
+		.load_btn
+			width: 40px
+			height: 40px
+			cursor: pointer
+			border-radius: 50%
+			background-color: #515da9
+		label
+			margin-bottom: 0
+		svg
+			width: 20px
+			height: 20px
+			fill: #ffffff
+			position: absolute
+			top: calc(20%)
+			left: calc(50% - 10px)
+	.links
+		ul
+			margin: 0
+			padding: 0
+			text-align: center
+		svg
+			fill: #9981bb
+	.quest
+		h5
+			margin: 0
+			padding: 0
+			font-family: $default-font
+		span
+			color: #a1a5aa
+			font-size: 14px
+			line-height: 16px
+		svg
+			top: -5px
+			width: 36px
+			height: 36px
+			fill: #cc7cd0
+			position: relative
+		.button_wrap
+			padding-top: 5px
+			a
+				width: 100%
+				padding: 7px 0
+				display: block
+	.form_wrap
+		.row_block:not(:last-child)
 			padding-bottom: 0
-			padding-right: 85px
-			svg
-				width: 22px
-				height: 22px
-			.lc_block_head
-				padding-left: 35px
-			.name_block
-				font-size: 18px
-				line-height: 22px
-			.money
-				.number,.money_format
-					font-size: 40px
-					font-weight: normal
-					font-family: RobotoMedium
-				.valuta
-					top: -12px
-					font-size: 18px
-					position: relative
+		label,
+		input
+			width: 100%
+		label
+			margin-bottom: 30px
+			span
+				display: block
+				font-size: 14px
+				margin-bottom: 2px
+		input
+			height: 40px
+			display: block
+			color: #7f7f7f
+			padding: 0 10px
+			border: 1px solid #cccccc
+			&:hover,&:focus,&:active
+				color: #000000
+				border: 1px solid #7f7f7f
+		.jq-selectbox
+			width: 100%
+		.jq-selectbox__select
+			height: 40px
+			font-size: 16px
+			border-radius: 0
+			line-height: 30px;
+			font-family: $default-font
+		.jq-selectbox__select-text
+			top: 4px
+			width: 80%
+		.button_wrap
+			display: inline-block
+			button, a
+				width: 129px
+				padding: 5px 0
+				display: block
+				padding-top: 6px
+				vertical-align: middle
+			button
+				margin-right: 15px
+			a
+				color: #84878d
+				margin-left: 15px
+				border-color: #d3d6dc
+				background-color: #d3d6dc
 
 @import "media" // Always at the end
