@@ -1422,6 +1422,7 @@ footer
 		font-weight: bold
 		font-family: RobotoMedium
 	.name_input
+		display: block
 		font-size: 14px
 	.jq-radio
 		top: -1px
@@ -1437,6 +1438,8 @@ footer
 		border: 1px solid #d6d6d6
 		&:hover,&:focus,&:active
 			border: 1px solid #979ecb
+		&[disabled]
+			color: #505050
 	// .disabled
 	// 	input
 	// 		&:hover,&:active,&:focus
@@ -1448,7 +1451,12 @@ footer
 			width: auto
 			color: #fff
 			font-size: 18px
+			text-shadow: none;
 			padding: 11px 53px
+			&:hover, &:active, &:focus
+				background: linear-gradient(90deg, #f94c1a, #ea9761)
+			&[disabled]
+				background: linear-gradient(90deg, #fca68d, #f4cbb0)
 .reply
 	.white_block_wrap
 		padding-left: 30px

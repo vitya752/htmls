@@ -53,14 +53,14 @@ $(function() {
 		clearOnEmpty: true
 	});
 
-	$('.radio_label + .row label input').prop('disabled',true);
+	$('.radio_label + .row label input, .radio_label + .row + .button_wrap > button').prop('disabled',true);
 	$('.radio_label + .row label .jq-number').addClass('disabled');
 
 	$('.radio_label input[type="radio"]').change(function(){
 		if ($(this).prop('checked')==true) {
-			$('.radio_label + .row label input').prop('disabled',true);
+			$('.radio_label + .row label input, .radio_label + .row + .button_wrap > button').prop('disabled',true);
 			$('.radio_label + .row label .jq-number').addClass('disabled');
-			$(this).parent().parent().find('+ .row label input').prop('disabled',false);
+			$(this).parent().parent().find('+ .row label input, + .row + .button_wrap > button').prop('disabled',false);
 			$(this).parent().parent().find('+ .row label .jq-number').removeClass('disabled');
 		}
 	});
