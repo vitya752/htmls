@@ -43,7 +43,7 @@ $(function() {
 		thousandsSeparator: ' ',
 		centsSeparator: ',',
 		clearOnEmpty: true
-	});
+	});	
 
 	$('#percent').priceFormat({
 		prefix: '',
@@ -52,6 +52,36 @@ $(function() {
 		centsSeparator: '',
 		clearOnEmpty: true
 	});
+
+	$('.calculator .result .money').priceFormat({
+		prefix: '',
+		suffix: '',
+		thousandsSeparator: ' ',
+		centsSeparator: ',',
+		clearOnEmpty: true
+	});
+
+	$('.money .money_format').priceFormat({
+		prefix: '',
+		suffix: '',
+		thousandsSeparator: ',',
+		clearOnEmpty: true,
+	    // limit: 2,
+	    centsLimit: 0
+	});
+
+	$('td .money').priceFormat({
+		prefix: '',
+		suffix: '',
+		thousandsSeparator: ' ',
+		clearOnEmpty: true,
+	    // limit: 2,
+	    centsLimit: 0
+	});
+
+	// $("#attachment,#replenishment").click(function() {
+	// 	alert($('#element').unmask());
+	// });
 
 	$('.radio_label + .row label input, .radio_label + .row + .button_wrap > button').prop('disabled',true);
 	$('.radio_label + .row label .jq-number').addClass('disabled');
@@ -67,13 +97,6 @@ $(function() {
 
 //.money_format
 
-	$('.calculator .result .money, .ref .money_format').priceFormat({
-		prefix: '',
-		suffix: '',
-		thousandsSeparator: ',',
-		centsSeparator: '',
-		clearOnEmpty: true
-	});
 
 	var myCircle = Circles.create({
 	  id:                  'circles-1',
