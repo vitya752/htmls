@@ -1,0 +1,172 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: AdelleCyrillic
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h1,h2,h3,h4,h5,h6,p,span,ul,a,label
+	margin: 0
+	padding: 0
+
+.content
+	margin: 0 auto
+	max-width: 2000px
+
+header
+	padding-top: 23px
+	padding-bottom: 21px
+	.menu
+		ul
+			list-style-type: none
+		li
+			display: inline-block
+			padding: 0 32px 6px 25px
+			&:hover,&.active
+				a
+					&:before
+						right: 0;
+						left: 0;
+			&.active
+				a
+					font-weight: bold
+					font-family: AdelleCyrillic-SemiBold
+			&:last-child
+				padding-right: 0
+		a
+			color: #000
+			position: relative
+			&:hover,&:visited,&:focus,&:active
+				outline: none
+				text-decoration: none
+			&:before
+				left: 50%
+				right: 50%;
+				height: 2px
+				content: ''
+				bottom: -5px
+				display: block
+				position: absolute
+				background-color: #ffeb3b
+				transition: all .5s ease
+
+.wrap_content
+	padding-top: 55px
+	background-size: cover
+	background-position: 50% top
+	background-repeat: no-repeat
+.main_block-form-wrap
+	height: 300px
+	padding-top: 50px
+	overflow-x: hidden
+	border-radius: 130px 0 0 130px 
+	background-color: rgba(255, 235, 59, 0.8)
+	.head_wrap
+		padding-left: 185px
+	.header
+		font-size: 40px
+		line-height: 53px
+		font-family: AdelleCyrillic-Extrabold
+	p
+		font-size: 27px
+		line-height: 35px
+		font-family: AdelleCyrillic-SemiBold
+	.form_block
+		margin-top: 20px
+		background-color: rgba(104, 104, 104, 0.8)
+	form
+		padding-left: 185px
+	& + .comment
+		font-size: 18px
+		margin-top: 60px
+		padding-left: 230px
+		font-family: AdelleCyrillic-Light
+
+.phone_block
+	margin-top: -375px
+	padding-right: 130px
+	.phone
+		text-align: right
+		padding-right: 160px
+	.phone_number
+		color: #6b6b6b
+		font-size: 30px
+		font-family: AdelleCyrillic-Extrabold
+	svg
+		width: 17px
+		height: 17px
+		fill: #6b6b6b
+	.icons
+		top: -2px
+		position: relative
+	.phone_number,.icons
+		display: inline-block
+
+.phone_block-bg
+	height: 360px
+	position: relative
+	background-repeat: no-repeat
+	background-position: top right
+	img
+		top: 53px
+		right: -42px
+		position: absolute
+
+
+form
+	height: 90px
+	label
+		height: 100%
+		padding: 30px 0
+	input
+		height: 30px
+		width: 170px
+		margin-right: 28px
+		padding-left: 20px
+		border-radius: 10px
+	button
+		border: 0
+		color: #fff
+		font-size: 14px
+		font-weight: bold
+		padding: 10px 30px
+		border-radius: 20px
+		text-transform: uppercase
+		background-color: #d61d6f
+
+
+
+@import "media" // Always at the end
