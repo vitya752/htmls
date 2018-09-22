@@ -42,13 +42,31 @@ h1,h2,h3,h4,h5,h6,p,span,ul,a,label
 	margin: 0
 	padding: 0
 
+button
+	cursor: pointer
+
+h2
+	font-size: 35px
+	text-align: center
+	margin-bottom: 32px
+	text-transform: uppercase
+	font-family: AdelleCyrillic-Extrabold
+
+h5
+	font-size: 16px
+	font-weight: normal
+	font-family: AdelleCyrillic
+
 .content
 	margin: 0 auto
-	max-width: 2000px
+	max-width: 1800px
 
 header
 	padding-top: 23px
 	padding-bottom: 21px
+	.logo
+		img
+			width: 200px
 	.menu
 		ul
 			list-style-type: none
@@ -85,21 +103,20 @@ header
 
 .wrap_content
 	padding-top: 55px
-	background-size: cover
+	background-size: 100% auto
 	background-position: 50% top
 	background-repeat: no-repeat
 .main_block-form-wrap
-	// opacity: 0.4
 	height: 300px
 	padding-top: 50px
 	overflow-x: hidden
+	mix-blend-mode: multiply
 	background-color: #ffeb3b
 	border-radius: 130px 0 0 130px 
-	mix-blend-mode: multiply;
 	background-blend-mode: multiply
-	// background-color: rgba(255, 235, 59, 0.7)
 	.head_wrap
 		padding-left: 185px
+	// h1
 	.header
 		font-size: 40px
 		line-height: 53px
@@ -119,23 +136,26 @@ header
 		padding-left: 230px
 		font-family: AdelleCyrillic-Light
 
+.phone_number
+	color: #6b6b6b
+	font-size: 30px
+	font-family: AdelleCyrillic-Extrabold
 .phone_block
 	margin-top: -375px
 	padding-right: 130px
 	.phone
 		text-align: right
-		padding-right: 160px
-	.phone_number
-		color: #6b6b6b
-		font-size: 30px
-		font-family: AdelleCyrillic-Extrabold
+		padding-right: 90px
 	svg
-		width: 17px
-		height: 17px
+		bottom: -4px
+		width: 20px
+		height: 20px
 		fill: #6b6b6b
-	.icons
-		top: -2px
 		position: relative
+	.icons
+		top: -3px
+		position: relative
+		padding-left: 10px
 	.phone_number,.icons
 		display: inline-block
 
@@ -147,8 +167,8 @@ header
 	img
 		top: 53px
 		right: -42px
+		width: 510px
 		position: absolute
-
 
 form
 	height: 90px
@@ -161,6 +181,10 @@ form
 		margin-right: 28px
 		padding-left: 20px
 		border-radius: 10px
+		transition: all .5s ease
+		&:active,&:focus
+			border: 0
+			box-shadow: 0px 0px 10px 0px rgba(147,73,106,1);
 	button
 		border: 0
 		color: #fff
@@ -170,6 +194,131 @@ form
 		border-radius: 20px
 		text-transform: uppercase
 		background-color: #d61d6f
+
+.services
+	margin-top: 205px
+
+.tabs_wrap
+	ul
+		list-style-type: none
+	.tabs
+		ul
+			padding-left: 15px
+		li
+			width: 100%
+			text-align: right
+			margin-bottom: 5px
+			span
+				width: 155px
+				color: #6b6b6b
+				padding: 15px 0
+				font-size: 14px
+				cursor: pointer
+				text-align: left
+				margin-right: 5px
+				padding-left: 10px
+				display: inline-block
+				transition: all .5s ease
+				background-color: #ffd800
+				border-radius: 5px 0 0 5px
+				font-family: AdelleCyrillic-Extrabold
+			&.active
+				span
+					margin: 0
+					color: #fff
+					width: 100%
+					cursor: default
+					background-color: #666666
+	.tabs_content_wrap
+		padding: 35px 50px
+		background-color: #666666
+		background-repeat: no-repeat
+		background-position: bottom center
+		background-blend-mode: multiply
+		.tab_content
+			display: none
+			&.active
+				display: block
+		.list_wrap
+			margin-bottom: 7px
+			li
+				color: #b7b7b7
+				&:before
+					top: 0
+					content: '°'
+					font-size: 23px
+		.attention
+			color: #8b8b8b
+			&:before
+				top: -2px
+				content: '*'
+				font-size: 16px
+		.list_wrap li,
+		.attention
+			font-size: 12px
+			padding-left: 12px
+			position: relative
+			font-family: AdelleCyrillic-Light
+			&:before
+				left: 0
+				position: absolute
+		table
+			width: 100%
+			caption
+				color: #b5b5b5
+				font-size: 20px
+				caption-side: top
+			tr
+				width: 100%
+			td
+				color: #b4b4b4
+				line-height: 16px
+				padding-bottom: 14px
+				&:first-child
+					width: 70%
+					padding-left: 12px
+					font-family: AdelleCyrillic-Light
+				&:last-child
+					width: 29%
+					text-align: right
+					font-family: AdelleCyrillic
+	.price
+		.money,.valuta
+			color: #ffe033
+		.money
+			font-size: 31px
+			line-height: 47px
+			font-family: AdelleCyrillic-Extrabold
+		.valuta
+			font-size: 20px
+			font-family: AdelleCyrillic-SemiBold
+	h5
+		color: #fff
+		font-weight: normal
+		margin-bottom: 2px
+	form, .phone_form
+		display: inline-block
+	.form_block
+		padding-left: 50px
+		background-color: #ffd800
+		border-radius: 0 0 10px 10px
+		box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	.phone_form
+		vertical-align: middle;
+		span
+			display: block
+		.text
+			color: #6b6b6b
+			font-size: 14px
+		.phone_number
+			line-height: 30px
+	form
+		input
+	    	margin-right: 15px;
+	    	&:active,&:focus
+	    		border: 0
+	    		box-shadow-color: #ef8d2c
+	
 
 
 
