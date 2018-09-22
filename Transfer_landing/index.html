@@ -24,6 +24,37 @@
 
 	<link rel="stylesheet" href="css/main.min.css">
 
+	<!-- Pixel Glass -->
+	<style>
+	HTML {
+		background-repeat: no-repeat;
+		background-position:  50% 0;
+		/* По умолчанию мобильный макет */
+		background-image: url( "img/preview.jpg" );
+	}
+	/* Планшет */
+	@media ( min-width: 760px ) {
+		HTML {
+			/* Планшетный макет */
+			background-image: url( "img/preview.jpg" );
+		}
+	}
+	/* Десктоп */
+	@media ( min-width: 960px ) {
+		HTML {
+			/* Десктопный макет */
+			background-image: url( "img/preview.png" );
+		}
+	}
+
+	BODY {
+		opacity: .5;
+	}
+</style>
+<link rel="stylesheet" href="libs/pixel-glass/styles.css">
+<script src="libs/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
+
 </head>
 
 <body>
