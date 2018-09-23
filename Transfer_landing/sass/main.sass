@@ -52,14 +52,22 @@ h2
 	text-transform: uppercase
 	font-family: AdelleCyrillic-Extrabold
 
+h3
+	font-size: 28px
+	font-size: AdelleCyrillic-SemiBold
+
+h4
+	font-size: 20px
+	line-height: 25px
+	font-family: AdelleCyrillic-SemiBold
+
 h5
 	font-size: 16px
 	font-weight: normal
-	font-family: AdelleCyrillic
 
 .content
 	margin: 0 auto
-	max-width: 1800px
+	max-width: 1720px
 
 header
 	padding-top: 23px
@@ -103,13 +111,13 @@ header
 
 .wrap_content
 	padding-top: 55px
-	background-size: 100% auto
+	background-size: inherit
 	background-position: 50% top
 	background-repeat: no-repeat
 .main_block-form-wrap
 	height: 300px
 	padding-top: 50px
-	overflow-x: hidden
+	overflow: hidden
 	mix-blend-mode: multiply
 	background-color: #ffeb3b
 	border-radius: 130px 0 0 130px 
@@ -127,7 +135,7 @@ header
 		font-family: AdelleCyrillic-SemiBold
 	.form_block
 		margin-top: 20px
-		background-color: rgba(104, 104, 104, 0.9)
+		background-color: #666666
 	form
 		padding-left: 185px
 	& + .comment
@@ -141,6 +149,7 @@ header
 	font-size: 30px
 	font-family: AdelleCyrillic-Extrabold
 .phone_block
+	z-index: 1
 	margin-top: -375px
 	padding-right: 130px
 	.phone
@@ -176,6 +185,7 @@ form
 		height: 100%
 		padding: 30px 0
 	input
+		z-index: 2
 		height: 30px
 		width: 170px
 		margin-right: 28px
@@ -218,7 +228,7 @@ form
 				margin-right: 5px
 				padding-left: 10px
 				display: inline-block
-				transition: all .5s ease
+				transition: color .25s ease
 				background-color: #ffd800
 				border-radius: 5px 0 0 5px
 				font-family: AdelleCyrillic-Extrabold
@@ -281,7 +291,6 @@ form
 				&:last-child
 					width: 29%
 					text-align: right
-					font-family: AdelleCyrillic
 	.price
 		.money,.valuta
 			color: #ffe033
@@ -304,7 +313,7 @@ form
 		border-radius: 0 0 10px 10px
 		box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
 	.phone_form
-		vertical-align: middle;
+		vertical-align: middle
 		span
 			display: block
 		.text
@@ -314,12 +323,137 @@ form
 			line-height: 30px
 	form
 		input
-	    	margin-right: 15px;
+	    	margin-right: 15px
 	    	&:active,&:focus
 	    		border: 0
 	    		box-shadow-color: #ef8d2c
 	
+.scope
+	margin-top: -20px
+	padding-top: 320px
+	padding-bottom: 55px
+	background-repeat: no-repeat
+	background-position: top left
+	.scope_top
+		margin-top: -150px
+	.scope_wrap
+		.item
+			text-align: center
+			display: inline-block
+			img
+				height: 75px
+				margin-bottom: 15px
+		.item_wrap
+			&:nth-child(1)
+				text-align: right
+			&:nth-child(2)
+				text-align: center
+			&:nth-child
+				text-align: left
+
+.reviews
+	background-color: #ffd800
+	background-blend-mode: multiply
+	.content_slide
+		width: 500px
+		padding: 30px
+		border-radius: 10px
+		background-color: #fff
+		vertical-align: top
+		.text_wrap,.img_wrap
+			vertical-align: top
+			display: inline-block
+		.text_wrap
+			width: 310px
+			h4,.date
+				display: inline-block
+			.date
+				float: right
+				color: #d4d4d4
+				font-size: 14px
+			h4
+				margin-bottom: 12px
+			p
+				color: #787878
+				line-height: 22px
+			.date,p
+				font-family: AdelleCyrillic-Light
+		.img_wrap
+			width: 92px
+			margin-right: 32px
+			img
+				width: 92px
+				height: 92px
+				border-radius: 10px
+	.slick-active
+		.content_slide
+			margin: 0 30px
+			transform: scale(0.6)
+			transition: all .5s ease
+			// width: auto !important
+		&.slick-center
+			.content_slide
+				transform: scale(1)
+				transition: all .5s ease
 
 
+.vantages
+	padding-top: 65px
+	padding-bottom: 115px
+	background-repeat: no-repeat
+	background-position: top right
+	h2
+		margin-bottom: 65px
+	.vantages_wrap
+		padding: 0 40px
+	.vantage
+		// width: 20%
+		// float: left
+		margin: 0 20px
+		text-align: center
+		display: inline-block
+		&:first-child
+			margin-left: 0
+		&:last-child
+			margin-right: 0
+	.img_wrap
+		margin-bottom: 25px
+	h5
+		color: #6b6b6b
+
+.contacts
+	padding-top: 35px
+	.content_contacts
+		height: 360px
+		position: relative
+	#map
+		z-index: 1
+		height: 100%
+	.adr_and_form
+		.container
+			top: 0
+			left: 0
+			right: 0
+			height: 100%
+			position: absolute
+		.subhead
+			font-size: 20px
+		.block_abs
+			top: -10px
+			z-index: 10
+			width: 351px
+			padding: 25px 30px
+			position: absolute
+			background-color: red
+			height: calc(100% + 10px)
+			border-radius: 10px 10px 0 0
+		.left
+			left: 0
+		.right
+			right: 0
+		.yellow
+			background-color: rgba(255, 235, 59, 0.9)
+		.gray
+			background-color: rgba(107, 107, 107, 0.9)
 
 @import "media" // Always at the end

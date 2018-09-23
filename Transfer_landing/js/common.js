@@ -8,4 +8,36 @@ $(function() {
 		$(".tabs_content_wrap .tab_content").hide().eq($(this).index()).fadeIn();
 	}).eq(0).addClass("active");
 
+	// $('.slider').slick({
+	//   centerPadding: '60px',
+	//   slidesToShow: 1,
+	//   prevArrow: '<button type="button" class="slick-prev">prev</button>',
+	//   nextArrow: '<button type="button" class="slick-next">next</button>',
+	//   responsive: [
+	//     {
+	//       breakpoint: 768,
+	//       settings: {
+	//         arrows: false,
+	//         centerPadding: '40px',
+	//         slidesToShow: 1
+	//       }
+	//     },
+	//     {
+	//       breakpoint: 480,
+	//       settings: {
+	//         arrows: false,
+	//         centerPadding: '40px',
+	//         slidesToShow: 1
+	//       }
+	//     }
+	//   ]
+	// });
+	$('.slider').slick({
+	  slidesToShow: 3,
+	  centerMode: true,
+	  centerPadding: "60px",
+	  speed: 500
+	});
+
+
 }); 
