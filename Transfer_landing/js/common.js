@@ -39,5 +39,12 @@ $(function() {
 	  speed: 500
 	});
 
+	$(".scrollUp").click(function(){
+		$("html, body").animate(
+			{
+				scrollTop:$("header").height() - 100
+			},"slow");
+		return false;
+	});
 
 }); 
