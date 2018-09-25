@@ -32,12 +32,29 @@ $(function() {
 	//     }
 	//   ]
 	// });
-	
+
+	$("#mmenu").mmenu({
+	   "extensions": [
+	      "pagedim-black",
+	      "position-right"
+	   ]
+	});
+
+	$(".menu a").mPageScroll2id();
+
 	$('.slider').slick({
 	  slidesToShow: 3,
 	  centerMode: true,
 	  centerPadding: "60px",
-	  speed: 500
+	  speed: 500,
+	  arrows: false
+	});
+
+	$('.reviews .arrows_wrap .prev').on('click', function() {
+		$('.slider').slick('slickPrev');
+	});
+	$('.reviews .arrows_wrap .next').on('click', function() {
+		$('.slider').slick('slickNext');
 	});
 
 	$(".scrollUp").click(function(){

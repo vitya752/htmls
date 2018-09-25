@@ -67,7 +67,27 @@ h5
 
 .content
 	margin: 0 auto
-	max-width: 1720px
+	max-width: 2000px
+
+#menu_button
+	top: -8px
+	width: 20px
+	height: 18px
+	display: none
+	position: relative
+	span
+		left: 0
+		width: 20px
+		height: 2px
+		display: block
+		position: absolute
+		background-color: #525ea9
+		&:first-child
+			top: 0;
+		&:nth-child(2)
+			top: 10px
+		&:nth-child(3)
+			top: 20px
 
 header
 	padding-top: 23px
@@ -141,7 +161,7 @@ header
 	& + .comment
 		font-size: 18px
 		margin-top: 60px
-		padding-left: 230px
+		padding-left: 210px
 		font-family: AdelleCyrillic-Light
 
 .phone_number
@@ -149,9 +169,10 @@ header
 	font-size: 30px
 	font-family: AdelleCyrillic-Extrabold
 .phone_block
-	z-index: 1
+	z-index: 0
 	margin-top: -375px
-	padding-right: 130px
+	position: relative
+	margin-left: -130px
 	.phone
 		text-align: right
 		padding-right: 90px
@@ -170,8 +191,8 @@ header
 	background-repeat: no-repeat
 	background-position: top right
 	img
-		top: 53px
-		right: -42px
+		top: 46px
+		right: -32px
 		width: 510px
 		position: absolute
 
@@ -186,11 +207,12 @@ form
 		width: 170px
 		margin-right: 28px
 		padding-left: 20px
+		position: relative
 		border-radius: 10px
 		transition: all .5s ease
 		&:active,&:focus
 			border: 0
-			box-shadow: 0px 0px 10px 0px rgba(147,73,106,1);
+			box-shadow: 0px 0px 10px 2px rgba(147,73,106,1);
 	button
 		border: 0
 		color: #fff
@@ -200,6 +222,10 @@ form
 		border-radius: 20px
 		text-transform: uppercase
 		background-color: #d61d6f
+		box-shadow: 0px 0px 10px 2px rgba(147,73,106,1);
+		&:active,&:focus
+			box-shadow: 0
+			outline: none
 
 .services
 	margin-top: 205px
@@ -281,11 +307,11 @@ form
 				line-height: 16px
 				padding-bottom: 14px
 				&:first-child
-					width: 70%
+					width: 60%
 					padding-left: 12px
 					font-family: AdelleCyrillic-Light
 				&:last-child
-					width: 29%
+					width: 40%
 					text-align: right
 	.price
 		.money,.valuta
@@ -319,10 +345,12 @@ form
 			line-height: 30px
 	form
 		input
-	    	margin-right: 15px
-	    	&:active,&:focus
-	    		border: 0
-	    		box-shadow-color: #ef8d2c
+			margin-right: 15px
+			&:active,&:focus
+				border: 0
+				box-shadow-color: #ef8d2c
+		button
+			box-shadow-color: #ef8d2c
 	
 .scope
 	margin-top: -20px
@@ -348,14 +376,15 @@ form
 				text-align: left
 
 .reviews
+	padding-top: 70px
 	background-color: #ffd800
 	background-blend-mode: multiply
 	.content_slide
 		width: 500px
 		padding: 30px
 		border-radius: 10px
-		background-color: #fff
 		vertical-align: top
+		background-color: #fff
 		.text_wrap,.img_wrap
 			vertical-align: top
 			display: inline-block
@@ -381,20 +410,47 @@ form
 				width: 92px
 				height: 92px
 				border-radius: 10px
+	.container
+		position: relative
+	.arrows_wrap
+		position: relative
+		a
+			top: 72px
+			z-index: 10
+			width: 22px
+			height: 22px
+			position: absolute
+			&.prev
+				left: calc(50% - 280px)
+			&.next
+				right: calc(50% - 280px)
+			&:hover,&:active,&:focus,&:visited
+				svg
+					fill: #e2534f
+		svg
+			width: 22px
+			transition: fill .5s ease
+	.slick-slide
+		opacity: 0
 	.slick-active
+		opacity: 1
+		left: -142px
+		position: relative
+		transform: scale(0.5)
+		transition: transform .5s ease
 		.content_slide
-			margin: 0 30px
-			transform: scale(0.6)
-			transition: all .5s ease
-			// width: auto !important
+			transition: transform .5s ease
 		&.slick-center
-			.content_slide
-				transform: scale(1)
-				transition: all .5s ease
+			left: -85px
+			z-index: 999
+			transform: scale(1)
+		+ .slick-center
+			+ .slick-active
+				left: 58px
 
 
 .vantages
-	padding-top: 65px
+	padding-top: 70px
 	padding-bottom: 115px
 	background-repeat: no-repeat
 	background-position: top right
@@ -403,8 +459,6 @@ form
 	.vantages_wrap
 		padding: 0 40px
 	.vantage
-		// width: 20%
-		// float: left
 		margin: 0 20px
 		text-align: center
 		display: inline-block
@@ -420,11 +474,10 @@ form
 .contacts
 	padding-top: 35px
 	.content_contacts
-		height: 360px
 		position: relative
 	#map
 		z-index: 1
-		height: 100%
+		height: 360px
 	.adr_and_form
 		.container
 			top: 0
@@ -442,7 +495,6 @@ form
 			width: 351px
 			padding: 25px 30px
 			position: absolute
-			background-color: red
 			height: calc(100% + 10px)
 			border-radius: 10px 10px 0 0
 		.left
@@ -516,6 +568,7 @@ footer
 					font-family: AdelleCyrillic-SemiBold
 					&:active,&:visited,&:focus
 						color: #000000
+
 
 
 @import "media" // Always at the end

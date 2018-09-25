@@ -23,6 +23,7 @@
 	<!-- Custom Browsers Color End -->
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/font-awesome/css/fontawesome-all.min.css" />
+	<link rel="stylesheet" href="libs/mmenu/jquery.mmenu.all.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
 	<!-- Pixel Glass -->
@@ -65,21 +66,26 @@
 		<header>
 			<div class="container">
 				<div class="row align-items-end">
-					<div class="col-3">
+					<div class="col-6 col-lg-3">
 						<div class="logo">
 							<a href="#"><img src="img/logo.png" alt="Transfer"></a>
 						</div>
 					</div>
-					<div class="col-9">
+					<div class="col-6 col-lg-9">
 						<div class="menu">
 							<ul>
-								<li class="active"><a href="#">Кто мы</a></li>
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Способы оплаты</a></li>
-								<li><a href="#">Отзывы</a></li>
-								<li><a href="#">Преимущества</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li class="active"><a href="#main_block">Кто мы</a></li>
+								<li><a href="#services">Услуги</a></li>
+								<li><a href="#services">Способы оплаты</a></li>
+								<li><a href="#reviews">Отзывы</a></li>
+								<li><a href="#vantages">Преимущества</a></li>
+								<li><a href="#contacts">Контакты</a></li>
 							</ul>
+							<a id="menu_button" href="#mmenu">
+								<span></span>
+								<span></span>
+								<span></span>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -89,11 +95,11 @@
 
 		<div class="wrap_content" style="background-image: url(img/bg.png)">
 
-			<div class="main_block">
+			<div class="main_block" id="main_block">
 				
-				<div class="row">
+				<div class="row no-gutters">
 					
-					<div class="col-8 offset-md-4">
+					<div class="col-12 col-xl-8 offset-xl-4">
 						
 						<div class="main_block-form-wrap">
 							
@@ -122,7 +128,7 @@
 
 					</div>
 
-					<div class="col-6 phone_block">
+					<div class="col-11 col-lg-8 col-xl-6 phone_block">
 						
 						<div class="container">							
 							<div class="phone">
@@ -147,7 +153,7 @@
 
 			</div>
 
-			<div class="services">
+			<div class="services" id="services">
 				
 				<div class="container">
 					
@@ -155,23 +161,23 @@
 
 					<div class="tabs_wrap">
 						<div class="row no-gutters">
-							<div class="col-2 tabs">
+							<div class="col-12 col-md-3 col-lg-2 tabs">
 
-								<ul>
-									<li class="active"><span>Аэропорт "Платов"</span></li>
-									<li><span>Ж/д вокзал</span></li>
-									<li><span>Ростов на Дону</span></li>
-									<li><span>Таганрог</span></li>
+								<ul class="row">
+									<li class="col-12 col-sm-6 col-md-12" class="active"><span>Аэропорт "Платов"</span></li>
+									<li class="col-12 col-sm-6 col-md-12"><span>Ж/д вокзал</span></li>
+									<li class="col-12 col-sm-6 col-md-12"><span>Ростов на Дону</span></li>
+									<li class="col-12 col-sm-6 col-md-12"><span>Таганрог</span></li>
 								</ul>
 
 							</div>
-							<div class="col-10">							
+							<div class="col-12 col-md-9 col-lg-10">							
 								<div class="tabs_content_wrap" style="background-image: url('img/bg_serv.png');">
 
 									<div class="tab_content active">
 
 										<div class="row">
-											<div class="col-5">
+											<div class="col-12 col-lg-5">
 												<div class="price">
 													<span class="money">1400</span> <span class="valuta">&nbsp;рублей</span>
 												</div>
@@ -200,7 +206,7 @@
 													Цены действительны до 31.12.2018
 												</div>
 											</div>
-											<div class="col-7">
+											<div class="col-12 col-lg-7">
 												<div class="more_serv">
 													<table>
 														<caption>Дополнительные услуги</caption>
@@ -245,9 +251,9 @@
 									<div class="tab_content">
 
 										<div class="row">
-											<div class="col-5">
+											<div class="col-12 col-lg-5">
 												<div class="price">
-													<span class="money">1500</span> <span class="valuta">&nbsp;рублей</span>
+													<span class="money">1400</span> <span class="valuta">&nbsp;рублей</span>
 												</div>
 												<div class="list_wrap">
 													<h5>Фиксированная цена</h5>
@@ -270,9 +276,11 @@
 														<li>и подлиннее надпись сделать тут</li>
 													</ul>
 												</div>
-												<div class="attention">Цены действительны до 31.12.2018</div>
+												<div class="attention">
+													Цены действительны до 31.12.2018
+												</div>
 											</div>
-											<div class="col-7">
+											<div class="col-12 col-lg-7">
 												<div class="more_serv">
 													<table>
 														<caption>Дополнительные услуги</caption>
@@ -317,9 +325,9 @@
 									<div class="tab_content">
 
 										<div class="row">
-											<div class="col-5">
+											<div class="col-12 col-lg-5">
 												<div class="price">
-													<span class="money">1200</span> <span class="valuta">&nbsp;рублей</span>
+													<span class="money">1400</span> <span class="valuta">&nbsp;рублей</span>
 												</div>
 												<div class="list_wrap">
 													<h5>Фиксированная цена</h5>
@@ -342,9 +350,11 @@
 														<li>и подлиннее надпись сделать тут</li>
 													</ul>
 												</div>
-												<div class="attention">Цены действительны до 31.12.2018</div>
+												<div class="attention">
+													Цены действительны до 31.12.2018
+												</div>
 											</div>
-											<div class="col-7">
+											<div class="col-12 col-lg-7">
 												<div class="more_serv">
 													<table>
 														<caption>Дополнительные услуги</caption>
@@ -389,9 +399,9 @@
 									<div class="tab_content">
 
 										<div class="row">
-											<div class="col-5">
+											<div class="col-12 col-lg-5">
 												<div class="price">
-													<span class="money">1600</span> <span class="valuta">&nbsp;рублей</span>
+													<span class="money">1400</span> <span class="valuta">&nbsp;рублей</span>
 												</div>
 												<div class="list_wrap">
 													<h5>Фиксированная цена</h5>
@@ -414,9 +424,11 @@
 														<li>и подлиннее надпись сделать тут</li>
 													</ul>
 												</div>
-												<div class="attention">Цены действительны до 31.12.2018</div>
+												<div class="attention">
+													Цены действительны до 31.12.2018
+												</div>
 											</div>
-											<div class="col-7">
+											<div class="col-12 col-lg-7">
 												<div class="more_serv">
 													<table>
 														<caption>Дополнительные услуги</caption>
@@ -458,6 +470,8 @@
 										</div>
 
 									</div>
+
+
 								</div>
 								<div class="form_block">
 									<form>
@@ -482,7 +496,7 @@
 
 			</div>
 
-			<div class="scope" style="background-image: url(img/ele.png)">
+			<div class="scope" id="scope" style="background-image: url(img/ele.png)">
 				
 				<div class="scope_top">
 					<div class="container">
@@ -490,20 +504,20 @@
 						<h2>Что нам под силу</h2>
 						
 						<div class="scope_wrap">
-							<div class="row">
-								<div class="col-4 item_wrap">
+							<div class="row no-gutters">
+								<div class="col-12 col-sm-4 item_wrap">
 									<div class="item">								
 										<img src="img/icons/icon1.png" alt="Icon">
 										<h4>Пасажирские<br>перевозки</h4>
 									</div>
 								</div>
-								<div class="col-4 item_wrap">
+								<div class="col-12 col-sm-4 item_wrap">
 									<div class="item">	
 										<img src="img/icons/icon2.png" alt="Icon">
 										<h4>Курьерские<br>перевозки</h4>
 									</div>
 								</div>
-								<div class="col-4 item_wrap">
+								<div class="col-12 col-sm-4 item_wrap">
 									<div class="item">	
 										<img src="img/icons/icon3.png" alt="Icon">
 										<h4>Перевозка грузов<br>(малогабаритных)</h4>
@@ -519,11 +533,20 @@
 
 		</div>
 
-		<div class="reviews" style="background-image: url(img/pattern.png);">
+		<div class="reviews" id="reviews" style="background-image: url(img/pattern.png);">
 			
 			<div class="container">
 				
 				<h2>Вот, что говорят о нас</h2>
+
+				<div class="arrows_wrap">
+					<a href="javascript:;" class="prev">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/></g></svg>
+					</a>
+					<a href="javascript:;" class="next">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/></g></svg>
+					</a>
+				</div>
 
 				<div class="slider">
 
@@ -606,7 +629,7 @@
 
 		</div>
 
-		<div class="vantages" style="background-image: url(img/el.png);">
+		<div class="vantages" id="vantages" style="background-image: url(img/el.png);">
 			
 			<div class="container">
 				
@@ -649,13 +672,12 @@
 
 		</div>
 
-		<div class="contacts">
+		<div class="contacts" id="contacts">
 			
 			<h2>Где мы находимся</h2>
 
 			<div class="content_contacts">
 				
-				<div id="map"></div>
 				<div class="adr_and_form">
 					<div class="container">
 						<div class="block_abs left yellow">
@@ -708,6 +730,7 @@
 						</div>
 					</div>
 				</div>
+				<div id="map"></div>
 
 			</div>
 
@@ -724,12 +747,12 @@
 					<div class="col-9">
 						<div class="menu">
 							<ul>
-								<li class="active"><a href="#">Кто мы</a></li>
-								<li><a href="#">Услуги</a></li>
-								<li><a href="#">Способы оплаты</a></li>
-								<li><a href="#">Отзывы</a></li>
-								<li><a href="#">Преимущества</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li class="active"><a href="#main_block">Кто мы</a></li>
+								<li><a href="#services">Услуги</a></li>
+								<li><a href="#services">Способы оплаты</a></li>
+								<li><a href="#reviews">Отзывы</a></li>
+								<li><a href="#vantages">Преимущества</a></li>
+								<li><a href="#contacts">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
@@ -741,6 +764,18 @@
 		</footer>
 
 	</div>
+
+	<nav id="mmenu" class="menu">
+		<ul>
+			<li class="active"><a href="#main_block">Кто мы</a></li>
+			<li><a href="#services">Услуги</a></li>
+			<li><a href="#services">Способы оплаты</a></li>
+			<li><a href="#reviews">Отзывы</a></li>
+			<li><a href="#vantages">Преимущества</a></li>
+			<li><a href="#contacts">Контакты</a></li>			
+		</ul>
+	</nav>
+
 	<script>
 		function initMap() {
 
@@ -795,6 +830,8 @@
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/mask/jquery.mask.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
+	<script src="libs/mmenu/jquery.mmenu.all.js"></script>
+	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="js/common.js"></script>
 
 </body>

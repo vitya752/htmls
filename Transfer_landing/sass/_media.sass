@@ -5,17 +5,230 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	.wrap_content
+		padding-top: 30px
+	header
+		.menu
+			li
+				padding: 0 32px 6px 0px
+	.main_block-form-wrap
+		border-radius: 0
+		+ .comment
+			margin-top: 20px
+			padding-left: 15px
+	.phone_block
+		margin: 0
+		.phone
+			text-align: left
+			padding-right: 0
+	.vantages
+		.vantage
+			margin: 0 20px 30px 20px
+	footer
+		.menu
+			display: none
+
+	.reviews
+		.slick-slide
+			opacity: 0
+		.slick-active
+			opacity: 0
+			transform: scale(1)
+			&.slick-center
+				opacity: 1
+				left: -115px
+
 
 // ≥992px
 +media-breakpoint-down(md)
-
+	header
+		.menu
+			text-align: right
+			ul
+				display: none
+	#menu_button
+		display: inline-block
+	.main_block-form-wrap
+		height: auto
+		padding-bottom: 55px
+		form
+			height: auto
+			min-height: 90px
+		.head_wrap,form
+			padding-left: 30px
+	.vantages
+		padding-bottom: 35px
+		.vantage
+			width: 100%
+			margin: 0
+			margin-bottom: 30px
+	.contacts
+		.adr_and_form
+			.yellow
+				background-color: rgba(255, 235, 59, 1)
+			.gray
+				background-color: rgba(107, 107, 107, 1)
+			.container,.block_abs
+				height: auto
+				position: relative
+			.block_abs
+				top: 0
+				left: 0
+				right: 0
+				width: 340px
+				padding: 25px 20px
+				vertical-align: top
+				display: inline-block
+	.reviews
+		.slick-active
+			&.slick-center
+				left: -155px
 // ≥768px
 +media-breakpoint-down(sm)
+	.main_block-form-wrap
+		padding-top: 25px
+		.header
+			font-size: 30px
+			line-height: 35px
+		p
+			font-size: 20px
+			line-height: 25px
+		.head_wrap
+			padding-left: 0
+			padding: 0 15px
+			text-align: center
+	.phone_block-bg
+		border-radius: 0
+	form
+		text-align: center
+		label
+			width: 50%
+			float: left
+			input
+				display: block
+				margin: 0 auto
+		button
+			margin-bottom: 30px
+	.contacts
+		.adr_and_form
+			.block_abs
+				display: block
+				margin: 0 auto
+			.wrap_form
+				label
+					width: 100%
+					padding-bottom: 0
+				input
+					display: block
+					margin-left: auto
+					margin-right: auto
+				button
+					margin: 0
+	.tabs_wrap 
+		.tabs 
+			ul
+				padding: 0
+			li
+				// width: 45%
+				// float: left
+				// margin: 0 10px
+				// &:nth-child(1n)
+				// 	margin-left: 0
+				// &:nth-child(2n)
+				// 	margin-right: 0
+				span
+					width: 100%
+					border-radius: 5px
+		.tabs_content_wrap
+			padding: 30px
+			table
+				td
+					font-size: 14px
+					vertical-align: top
+					&:first-child
+						padding-left: 0
+		.form_block
+			padding-left: 0
+			form
+				height: auto
+				input
+					margin: 0 auto
+		.phone_form
+			display: block
+			text-align: center
+			padding-bottom: 20px
+	.reviews
+		.slick-active
+			&.slick-center
+				left: -185px
 
 // ≥576px
 +media-breakpoint-down(xs)
+	h2
+		font-size: 25px
+	.phone_block-bg 
+		img
+			top: 34px
+			right: -26px
+	.main_block-form-wrap
+		form
+			padding-left: 0
+		+ .comment
+			font-size: 16px
+	.phone_number
+		font-size: 22px
+	.phone_block
+		i
+			font-size: 14px
+	form
+		label
+			width: 100%
+			padding-bottom: 0
+		button
+			margin-top: 30px
+	.scope
+		.scope_wrap
+			.item_wrap
+				margin-bottom: 30px
+				&:nth-child(1),&:nth-child(2),&:nth-child(3)
+					text-align: center
+	.contacts
+		.adr_and_form
+			.block_abs
+				width: 290px
+	.reviews
+		.slick-active
+			&.slick-center
+				left: -115px
+				transform: scale(0.65)
+		.arrows_wrap
+			a
+				&.prev
+					left: calc(50% - 200px)
+				&.next
+					right: calc(50% - 200px)
 
+@media only screen and (max-width:480px)
+	.reviews 
+		.content_slide
+			padding: 15px
+			border-radius: 0
+		.slick-active
+			&.slick-center
+				left: -125px
 
+@media only screen and (max-width:376px)
+	.reviews
+		.arrows_wrap
+			a
+				top: 60px
+				&.prev
+					left: calc(50% - 160px)
+				&.next
+					right: calc(50% - 160px)
+		.slick-active
+			&.slick-center
+				transform: scale(.56)
 /*==========  Mobile First  ==========*/
 
 // ≤576px
