@@ -26,37 +26,6 @@
 	<link rel="stylesheet" href="libs/mmenu/jquery.mmenu.all.css">
 	<link rel="stylesheet" href="css/main.min.css">
 
-	<!-- Pixel Glass -->
-<!-- 	<style>
-	HTML {
-		background-repeat: no-repeat;
-		background-position:  50% 0;
-		/* По умолчанию мобильный макет */
-		background-image: url( "img/preview.jpg" );
-	}
-	/* Планшет */
-	@media ( min-width: 760px ) {
-		HTML {
-			/* Планшетный макет */
-			background-image: url( "img/preview.jpg" );
-		}
-	}
-	/* Десктоп */
-	@media ( min-width: 960px ) {
-		HTML {
-			/* Десктопный макет */
-			background-image: url( "img/preview.png" );
-		}
-	}
-
-	BODY {
-		opacity: .5;
-	}
-</style>
-<link rel="stylesheet" href="libs/pixel-glass/styles.css">
-<script src="libs/pixel-glass/script.js"></script> -->
-<!-- // Pixel Glass -->
-
 </head>
 
 <body>
@@ -74,8 +43,8 @@
 					<div class="col-6 col-lg-9">
 						<div class="menu">
 							<ul>
-								<li class="active"><a href="#main_block">Кто мы</a></li>
-								<li><a href="#services">Услуги</a></li>
+								<li><a href="#main_block" class="active">Кто мы</a></li>
+								<li><a href="#scope">Услуги</a></li>
 								<li><a href="#services">Способы оплаты</a></li>
 								<li><a href="#reviews">Отзывы</a></li>
 								<li><a href="#vantages">Преимущества</a></li>
@@ -132,11 +101,11 @@
 						
 						<div class="container">							
 							<div class="phone">
-								<span class="phone_number">+7 (989) 709-02-20</span>
+								<a href="tel:+79897090220"><span class="phone_number">79897090220</span></a>
 								<div class="icons">
-									<i class="fab fa-viber"></i>							
+									<a href="viber://chat?number=+79897090220""><i class="fab fa-viber"></i></a>					
 									/
-									<i class="fab fa-whatsapp"></i>
+									<a href="whatsapp://send?phone=+79897090220"><i class="fab fa-whatsapp"></i></a>
 								</div>
 							</div>
 						</div>
@@ -485,7 +454,7 @@
 									</form>
 									<div class="phone_form">
 										<span class="text">или позвоните по номеру:</span>
-										<span class="phone_number">+7 (989) 709-02-20</span>
+										<a href="tel:+79897090220"><span class="phone_number">79897090220</span></a>
 									</div>
 								</div>
 							</div>
@@ -751,12 +720,12 @@
 					<div class="col-9">
 						<div class="menu">
 							<ul>
-								<li class="active"><a href="#main_block">Кто мы</a></li>
+								<li><a href="#main_block">Кто мы</a></li>
 								<li><a href="#services">Услуги</a></li>
 								<li><a href="#services">Способы оплаты</a></li>
 								<li><a href="#reviews">Отзывы</a></li>
 								<li><a href="#vantages">Преимущества</a></li>
-								<li><a href="#contacts">Контакты</a></li>
+								<li><a href="#contacts" class="active">Контакты</a></li>
 							</ul>
 						</div>
 					</div>
@@ -771,8 +740,8 @@
 
 	<nav id="mmenu" class="menu">
 		<ul>
-			<li class="active"><a href="#main_block">Кто мы</a></li>
-			<li><a href="#services">Услуги</a></li>
+			<li><a href="#main_block">Кто мы</a></li>
+			<li><a href="#scope">Услуги</a></li>
 			<li><a href="#services">Способы оплаты</a></li>
 			<li><a href="#reviews">Отзывы</a></li>
 			<li><a href="#vantages">Преимущества</a></li>
@@ -835,7 +804,6 @@
 	<script src="libs/mask/jquery.mask.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/mmenu/jquery.mmenu.all.js"></script>
-	<script src="libs/scroll2id/PageScroll2id.min.js"></script>
 	<script src="js/common.js"></script>
 
 </body>

@@ -90,34 +90,44 @@ h5
 			top: 20px
 
 header
+	width: 100%
+	transition: .5s
 	padding-top: 23px
 	padding-bottom: 21px
+	background-color: #fff
+	&.default
+		top: 0
+		z-index: 100
+		padding: 5px 0
+		position: fixed
+		background: #fff
+		.logo
+			img
+				width: 150px
 	.logo
 		img
 			width: 200px
+			transition: .5s
 	.menu
 		ul
 			list-style-type: none
 		li
 			display: inline-block
 			padding: 0 32px 6px 25px
-			&:hover,&.active
-				a
-					&:before
-						right: 0;
-						left: 0;
-			&.active
-				a
-					font-weight: bold
-					font-family: AdelleCyrillic-SemiBold
 			&:last-child
 				padding-right: 0
 		a
 			color: #000
 			position: relative
-			&:hover,&:visited,&:focus,&:active
+			&.active
+				font-weight: bold
+				font-family: AdelleCyrillic-SemiBold
+			&:hover,&:visited,&.active
 				outline: none
 				text-decoration: none
+				&:before
+						right: 0;
+						left: 0;
 			&:before
 				left: 50%
 				right: 50%;
@@ -164,6 +174,11 @@ header
 		padding-left: 210px
 		font-family: AdelleCyrillic-Light
 
+a
+	text-decoration: none
+	&:hover
+		text-decoration: none
+
 .phone_number
 	color: #6b6b6b
 	font-size: 30px
@@ -177,6 +192,7 @@ header
 		text-align: right
 		padding-right: 90px
 	i
+		color: #000
 		font-size: 19px
 	.icons
 		top: -3px
@@ -573,8 +589,7 @@ footer
 				text-decoration: none
 				&:active,&:visited,&:focus
 					color: #6b6b6b
-			&.active
-				a
+				&.active
 					color: #000000
 					font-family: AdelleCyrillic-SemiBold
 					&:active,&:visited,&:focus
