@@ -1,7 +1,7 @@
 $(function() {
 
 	// Главный слайдер, с ромбиками
-	$('.slider').slick({
+	$('.stages_section .slider').slick({
 		dots: true,
 		slideToShow: 1,
 		slideToScroll: 1,
@@ -34,20 +34,24 @@ $(function() {
 	// Главный слайдер, с ромбиками
 
 	// Пользовательская настройка цвета текста под определенный слайд
-	var colorHeader= $('.slick-active').data('color-header');
-	var colorDots= $('.slick-active').data('color-dots');
-	var colorContent= $('.slick-active').data('color-content');
-	$('.stages .section_header').css('color', colorHeader);
-	$('.stages .wrap_dot .number').css('color', colorDots);
-	$('.stages .content').css('color', colorContent);
+	var colorHeader= $('.stages_section .slick-active').data('color-header');
+	var colorDots= $('.stages_section .slick-active').data('color-dots');
+	var colorContent= $('.stages_section .slick-active').data('color-content');
+
+	$('.stages_section .section_header').css('color', colorHeader);
+	$('.stages_section .wrap_dot .number').css('color', colorDots);
+	$('.stages_section .content').css('color', colorContent);
 
 	$('.slider').on('afterChange', function(event, slick, currentSlide, nextSlide){
-		var colorHeader= $('.slick-active').data('color-header');
-		var colorDots= $('.slick-active').data('color-dots');
-		var colorContent= $('.slick-active').data('color-content');
-		$('.stages .section_header').css('color', colorHeader);
-		$('.stages .wrap_dot .number').css('color', colorDots);
-		$('.stages .content').css('color', colorContent);
+
+		var colorHeader= $('.stages_section .slick-active').data('color-header');
+		var colorDots= $('.stages_section .slick-active').data('color-dots');
+		var colorContent= $('.stages_section .slick-active').data('color-content');
+
+		$('.stages_section .section_header').css('color', colorHeader);
+		$('.stages_section .wrap_dot .number').css('color', colorDots);
+		$('.stages_section .content').css('color', colorContent);
+
 	});
 	// Пользовательская настройка цвета текста под определенный слайд
 
@@ -107,5 +111,24 @@ $(function() {
 		
 	});
 
+	$('.team_section .tabs_content').slick({
+		dots: true,
+		appendDots: '.tabs',
+		dotsClass: 'tabs_list',
+		prevArrow: '<button type="button" class="prev"><img src="img/prev_gray.png" alt="Предыдущий" /></button>',
+		nextArrow: '<button type="button" class="next"><img src="img/next_gray.png" alt="Следующий" /></button>',
+	});
+
+	$('.team_section .tabs_content .slide').each(function(i){ // Перебираем все слайды
+
+		var slide = $(this); // Текущий слайд
+		var name = slide.find('h3').data('name'); // Имя указанное в слайде
+		var role = slide.find('span').data('role'); // Должность указанное в слайде
+		var avatar = slide.find('.img_wrap img').attr('src'); // Изображение из слайда
+		$('.team_section .tabs_list li').eq($(this).index() - 1).html('<div class="img_wrap"><img src="' + avatar + '" alt="' + name + '"></div><div class="name_role"><h4>' + name + '</h4><span>' + role + '</span></div>');
+
+		// В .team_section .tabs_list li с индексом текущего слайда добавляем разметку, всё, как в верстке
+
+	});
 
 });

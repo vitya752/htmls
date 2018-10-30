@@ -54,6 +54,9 @@ h2
 h3
 	font-size: 30px
 	font-family: Ubuntu-Bold
+h4
+	font-size: 20px
+	font-family: Ubuntu-Bold
 
 .section_header
 	text-align: center
@@ -492,5 +495,97 @@ header
 					transform: rotate(45deg)
 					background-color: #ffc452
 
+.team_section
+	padding-top: 105px
+	padding-bottom: 80px
+	hr
+		height: 2px
+		color: #a9a9a9
+		margin-top: 40px
+		margin-bottom: 50px
+	.tabs 
+		font-size: 0
+		padding-right: 0
+		li
+			border: 1px solid #e6e3e3
+			border-top: 0
+			border-right: 0
+			padding: 30px 0
+			cursor: pointer
+			&:first-child
+				border-top: 1px solid #e6e3e3
+		.img_wrap
+			padding: 0 10px
+			img
+				width: 50px
+				height: 50px
+				border-radius: 50%
+		.name_role
+			padding-left: 5px
+			text-align: center
+		span
+			font-size: 18px
+		.img_wrap,.name_role
+			display: inline-block
+			vertical-align: middle
+	.slide
+		.img_wrap
+			img
+				width: 285px
+				height: 285px
+				margin: 85px auto
+				border-radius: 50%
+		.content_name_role
+			padding-bottom: 45px
+			border-bottom: 1px solid #ededed
+		span
+			font-size: 24px
+		.rating
+			padding: 45px 0
+			border-bottom: 1px solid #ededed
+			ul
+				font-size: 0
+			li
+				width: 33.33%
+				font-size: 20px
+				display: inline-block
+				font-family: Ubuntu-Bold
+				&:nth-child(1)
+					padding-left: 50px
+				&:nth-child(2)
+					text-align: center
+				&:nth-child(3)
+					text-align: right
+					padding-right: 50px
+				span
+					text-align: center
+					display: inline-block
+		.description
+			margin: 35px 0
+			font-size: 18px
+		.button_wrap
+			text-align: center
+			margin-bottom: 45px
+			.button
+				padding: 40px 71px
+				display: inline-block
+	.slick-arrow
+		top: calc(20% - 25px)
+		border: 0
+		outline: 0
+		z-index: 10
+		cursor: url(../img/cursor2.png), auto
+		transition: .5s
+		position: absolute
+		background-color: transparent
+		&:hover, &:active
+			opacity: .28
+		img
+			width: 51px
+			height: 51px
+	.prev
+		left: 40px
+	.next
+		right: 40px
 
 @import "media" // Always at the end
