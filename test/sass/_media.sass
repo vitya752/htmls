@@ -20,16 +20,179 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+	.stages_section
+		.slider
+			.slick-dots
+				li
+					margin: 0 30px
+					margin-bottom: 20px
+					&:nth-child(1),&:nth-child(8),
+					&:nth-child(2),&:nth-child(7),
+					&:nth-child(3),&:nth-child(6),
+					&:nth-child(4),&:nth-child(5)
+						top: -30px
+						&.slick-active
+							top: -60px
+	.categories_tabs
+		li
+			width: 50%
+	.categories_content 
+		.object_content 
+			.content 
+				td
+					&:last-child
+						padding-right: 0
+	.vantages_section 
+		.item_wrap
+			.item
+				padding-right: 10px
+				.window_button 
+					a
+						padding: 30px 40px
+			&:nth-child(3) 
+				.item
+					&:after
+						width: 73%
 
 // ≥992px
 +media-breakpoint-down(md)
+	.journal_section 
+		.button_block
+			text-align: center
+	.stages_section
+		.slider
+			.slide
+				background-size: cover
+				background-position: center center
+	.categories_content
+		padding-right: 15px
+		.objects_tabs
+			li
+				&:after
+					display: none
+		.object_content
+			padding: 0
+	.vantages_section 
+		.item_wrap
+			.item
+				&:after
+					display: none
+			&:nth-child(3)
+				.item
+					&:after,
+					&:before
+						display: none
+			&:nth-child(4)
+				.help
+					display: none
+				.item
+					&:before
+						display: none
+	.team_section 
+		.tabs 
+			li
+				text-align: center
+				border: 1px solid #e6e3e3;
+	.form_wrap
+		margin-bottom: 30px
+	footer 
+		.projects 
+			text-align: center
+			a:nth-child(4n)
+				margin-right: 10px
+
 
 // ≥768px
 +media-breakpoint-down(sm)
+	h1
+		font-size: 50px
+		line-height: 60px
+	header
+		.logo, .phone_block
+			text-align: center
+	.banners
+		.item_banner
+			left: 0
+			display: block
+			margin: 0 auto
+			min-height: auto
+			text-align: center
+			margin-bottom: 15px
+			&:nth-child(1), &:nth-child(2), &:nth-child(3)
+				top: 0
+				.rombs
+					top: 0px
+	.stages_section
+		.slider
+			.slick-dots
+				li
+					margin: 0 20px
+	footer
+		.text_block
+			padding-top: 25px
+			padding-left: 15px
+		.contacts
+			margin-bottom: 30px
+		.copyright_block 
+			text-align: center
+			ul
+				padding-top: 20px
+				text-align: center
 
 // ≥576px
 +media-breakpoint-down(xs)
-
+	h1
+		font-size: 45px
+		line-height: 55px
+	h2
+		font-size: 30px
+		line-height: 35px
+	h3
+		font-size: 25px
+		line-height: 30px
+	.section_header
+		p
+			font-size: 18px
+			line-height: 20px
+	.site_header
+		p
+			font-size: 18px
+	.button_wrap 
+		.button
+			padding: 30px
+	.stages_section
+		.slider
+			.slide
+				.content
+					top: 600px
+					display: block
+					padding: 0 20px
+					p
+						text-align: center
+	.categories_tabs
+		li
+			width: 100%
+	.categories_content 
+		.object_content 
+			.content 
+				td
+					&:first-child
+						padding-right: 10px
+	.team_section 
+		.slide 
+			span,.description
+				font-size: 16px
+			.rating 
+				li 
+					display: block
+					margin: 0 auto
+					&:nth-child(1),
+					&:nth-child(2),
+					&:nth-child(3)
+						padding: 15px 0
+						text-align: center
+					span
+						font-size: 16px
 
 /*==========  Mobile First  ==========*/
 

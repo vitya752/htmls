@@ -16,6 +16,7 @@ $(function() {
 		lazyLoad: 'ondemand',
 		autoplay: true,
 		autoplaySpeed: 4000,
+		arrows: false,
 		cssEase: 'linear',
 		speed: 1000,
 		fade: true,
