@@ -1,5 +1,13 @@
 $(function() {
 
+	$("header .request a, .button_wrap .button, .window_button a").click(function(){
+		$("html, body").animate(
+		{
+			scrollTop: $("footer").offset().top
+		},"slow");
+		return false;
+	});
+
 	// Главный слайдер, с ромбиками
 	$('.stages_section .slider').slick({
 		dots: true,
@@ -100,23 +108,29 @@ $(function() {
 		$(this).attr('id', 'slider_project-' + index); // Каждому слайдера присваиваем индивидуальный id
 		$('#slider_project-' + index).slick({ // Инициализация по id
 			dots: true,
-			infinite: true,
 			speed: 500,
+			infinite: true,
 			slidesToShow: 1,
+			cssEase: 'linear',
+			lazyLoad: 'ondemand',
 			adaptiveHeight: true,
+			autoplaySpeed: 4000,
 			lazyLoad: 'progressive',
-			prevArrow: '<button type="button" class="prev"><img src="img/prev.png" alt="Предыдущий" /></button>',
-			nextArrow: '<button type="button" class="next"><img src="img/next.png" alt="Следующий" /></button>',
+			prevArrow: '<button type="button" class="prev"><img src="img/icons/prev.png" alt="Предыдущий" /></button>',
+			nextArrow: '<button type="button" class="next"><img src="img/icons/next.png" alt="Следующий" /></button>',
 		});
 		
 	});
 
 	$('.team_section .tabs_content').slick({
 		dots: true,
+		fade: true,
+		cssEase: 'linear',
 		appendDots: '.tabs',
+		lazyLoad: 'ondemand',
 		dotsClass: 'tabs_list',
-		prevArrow: '<button type="button" class="prev"><img src="img/prev_gray.png" alt="Предыдущий" /></button>',
-		nextArrow: '<button type="button" class="next"><img src="img/next_gray.png" alt="Следующий" /></button>',
+		prevArrow: '<button type="button" class="prev"><img src="img/icons/prev_gray.png" alt="Предыдущий" /></button>',
+		nextArrow: '<button type="button" class="next"><img src="img/icons/next_gray.png" alt="Следующий" /></button>',
 	});
 
 	$('.team_section .tabs_content .slide').each(function(i){ // Перебираем все слайды
@@ -125,10 +139,18 @@ $(function() {
 		var name = slide.find('h3').data('name'); // Имя указанное в слайде
 		var role = slide.find('span').data('role'); // Должность указанное в слайде
 		var avatar = slide.find('.img_wrap img').attr('src'); // Изображение из слайда
-		$('.team_section .tabs_list li').eq($(this).index() - 1).html('<div class="img_wrap"><img src="' + avatar + '" alt="' + name + '"></div><div class="name_role"><h4>' + name + '</h4><span>' + role + '</span></div>');
+		$('.team_section .tabs_list li').eq($(this).index()).html('<div class="img_wrap"><img src="' + avatar + '" alt="' + name + '"></div><div class="name_role"><h4>' + name + '</h4><span>' + role + '</span></div>');
 
 		// В .team_section .tabs_list li с индексом текущего слайда добавляем разметку, всё, как в верстке
 
+	});
+
+	// $('input[name=phone], input[name=phone_quest]').mask('+9 (999) 999-99-99', {placeholder: "+_ (___) ___-___-__ "});	
+	$('.phone, .phone_number a').mask('+9 (999) 999-99-99');
+
+	$('footer .projects .popup').magnificPopup({
+		type: 'image',
+		gallery: { enabled: true }
 	});
 
 });
