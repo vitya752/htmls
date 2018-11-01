@@ -8,6 +8,12 @@ $(function() {
 		return false;
 	});
 
+	$('.banners .rombs').hover(function(){
+		$(this).parent().find('.number, .text').css('opacity', '1');
+	}, function(){
+		$(this).parent().find('.number, .text').css('opacity', '0');
+	});
+
 	// Главный слайдер, с ромбиками
 	$('.stages_section .slider').slick({
 		dots: true,
