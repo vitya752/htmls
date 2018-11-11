@@ -1,0 +1,699 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: Ubuntu-Regular
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h1,h2,h3,h4,h5,h6,p,span,ul,li
+	margin: 0
+	padding: 0
+
+ul
+	list-style-type: none
+
+h1
+	font-size: 65px
+	font-family: Ubuntu-Bold
+h2
+	font-size: 48px
+	font-family: Ubuntu-Bold
+h3
+	font-size: 30px
+	font-family: Ubuntu-Bold
+h4
+	font-size: 20px
+	font-family: Ubuntu-Bold
+
+.section_header
+	text-align: center
+	p
+		font-size: 24px
+
+.rombs
+	left: -10px
+	transition: .5s
+	position: relative
+	display: inline-block
+	padding: 20px 0 10px 0
+	.shadow
+		top: 20px
+		left: 5px
+		width: 15px
+		height: 50px
+		position: absolute
+		border-radius: 100%
+		box-shadow: 0px 0px 50px 10px rgba(79,82,87,.7), inset 0px 0px 50px 10px rgba(79,82,87,.4)
+	.romb
+		width: 24px
+		height: 50px
+		background-color: #4f5257
+		clip-path: polygon(50% 0, 0 50%, 10% 50%, 50% 10%, 90% 50%, 50% 90%, 10% 50%, 0 50%, 50% 100%, 100% 50%);
+	.in_romb
+		top: 38px
+		left: 7px
+		z-index: 10
+		width: 10px
+		height: 15px
+		position: absolute
+		background-color: #ffb527
+		clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+.button_wrap
+	.button
+		color: #fff
+		display: block
+		font-size: 18px
+		transition: .5s
+		max-width: 410px
+		padding: 40px 60px
+		text-align: center
+		background-color: #ffb527
+		text-transform: uppercase
+		font-family: Ubuntu-Medium
+		&:hover, &:active
+			border-radius: 40px
+			text-decoration: none
+			
+.main
+	height: 1250px
+	position: relative
+	background-repeat: no-repeat
+	background-position: center top
+
+.request
+	padding-top: 10px
+	a
+		color: #fff
+		padding: 0 5px
+		text-align: center
+		position: relative
+		padding-bottom: 10px
+		display: inline-block
+		font-family: Ubuntu-Light
+		&:before
+			left: 0
+			right: 0
+			bottom: 5px
+			content: ''
+			height: 2px
+			transition: .5s
+			position: absolute
+			background-color: #ffb527
+		&:hover
+			&:before
+				left: 50%
+				right: 50%
+		&:hover, &:active
+			color: #fff
+			text-decoration: none
+
+header
+	.logo
+		padding-top: 20px
+		img
+			width: 214px
+	a
+		color: #fff
+		&:hover, &:active
+			color: #fff
+			text-decoration: none
+	.phone_block
+		text-align: right
+	.phone_number
+		font-size: 24px
+		padding-top: 40px
+
+.site_header
+	padding-top: 115px
+	padding-bottom: 40px
+	h1,p
+		color: #fff
+	p
+		font-size: 24px
+
+.banners
+	width: 100%
+	height: 200px
+	text-align: right
+	background-size: 100% 100%
+	background-repeat: no-repeat
+	background-image: url(../img/bg_stars.png)
+	.item_banner
+		left: 20px
+		color: #fff
+		top: -165px
+		width: 220px
+		text-align: left
+		min-height: 330px
+		position: relative
+		margin-right: 30px
+		display: inline-block
+		vertical-align: text-bottom
+		&:nth-child(1)
+			top: calc(-100% + 25px)
+		&:nth-child(2)
+			top: -34px
+			vertical-align: text-bottom
+		&:nth-child(3)
+			top: calc(-100% + 53px)
+	.number
+		font-size: 65px
+		line-height: 80px
+		font-family: Ubuntu-Bold
+	.number,.text
+		opacity: 0
+		transition: 1s
+	.rombs
+		.shadow
+			transition: .5s
+			box-shadow: 0px 0px 50px 10px rgba(79,82,87,.7), inset 0px 0px 50px 10px rgba(79,82,87,.4)
+
+
+.journal_section
+	padding: 60px 0
+	img
+		width: 100%
+		left: -80px
+		position: relative
+	.button_block
+		text-align: right
+	.button_wrap
+		top: -70px
+		position: relative
+		display: inline-block
+
+.stages_section
+	height: 995px
+	padding-top: 50px
+	position: relative
+	.section_header
+		z-index: 10
+		transition: .5s
+		position: relative
+	.slider
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		position: absolute
+		.slide, .slick-list, .slick-list *
+			width: 100%
+			height: 100%
+			outline: none
+			background-size: 100% 100%
+			background-repeat: no-repeat
+			background-position: right bottom
+		.slick-dots
+			top: 330px
+			bottom: auto
+			height: 200px
+			background-size: cover
+			background-repeat: no-repeat
+			background-image: url(../img/bg_slider_dots.png)
+			.number
+				font-size: 24px
+				font-family: Ubuntu-Bold
+			.slick-active
+				top: -15px
+				transform: scale(1.4)	
+				.rombs
+					.shadow
+						box-shadow: 0px 0px 50px 15px rgba(79,82,87,1), inset 0px 0px 50px 15px rgba(79,82,87,.7);
+			li
+				margin: 0 55px
+				transition: .5s
+				margin-top: -65px
+				&:nth-child(1),&:nth-child(8)
+					top: 25px
+					&.slick-active
+						top: 0
+				&:nth-child(2),&:nth-child(7)
+					top: 12px
+					&.slick-active
+						top: -5px
+				&:nth-child(3),&:nth-child(6)
+					top: 5px
+					&.slick-active
+						top: -15px
+				&:nth-child(4),&:nth-child(5)
+					&.slick-active
+						top: -25px
+			.wrap_dot
+				cursor: pointer
+	.rombs
+		left: 0
+		padding-top: 0
+		.shadow
+			top: 0
+	.in_romb
+		top: 18px
+
+.projects_section
+	padding-top: 60px
+	padding-bottom: 80px
+.projects_block
+	padding-top: 30px
+.categories_tabs
+	border-top: 1px solid #a9a9a9
+	ul
+		font-size: 0
+	li
+		color: #000
+		width: 25%
+		cursor: pointer
+		font-size: 20px
+		padding: 30px 0
+		transition: .5s
+		text-align: center
+		display: inline-block
+		&.active
+			color: #fff
+			cursor: default
+			background-color: #ffb527
+		.toggle_list
+			top: 20px
+			display: none
+			position: relative
+			background-color: #f1f1f1
+			li.active
+				background-color: #585858
+.categories_content
+	padding-top: 50px
+	padding-left: 15px
+	.objects_tabs
+		color:#000
+		padding: 0
+		ul
+			padding: 0 15px
+		li
+			cursor: pointer
+			font-size: 18px
+			transition: .5s
+			padding: 45px 20px
+			border: 1px solid #f0eeee
+			border-bottom: 0
+			&:last-child
+				border-bottom: 1px solid #f0eeee
+			&:after
+				top: 0
+				width: 0
+				height: 0
+				right: 0px
+				opacity: 0
+				content: ''
+				transition: .5s
+				position: absolute
+				border-color: #fff
+				border-style: solid
+				border-width: 60px 0 60px 15px
+			&.active
+				cursor: default
+				background-color: #efefef
+				&:after
+					opacity: 1
+					right: -15px
+					border-color: transparent transparent transparent #efefef
+		strong
+			font-size: 20px
+			font-weight: bold
+	.object_content
+		padding-left: 30px
+		.slider_project
+			img
+				width: 100%
+			.slick-arrow
+				top: calc(50% - 25px)
+				border: 0
+				outline: 0
+				z-index: 10
+				cursor: pointer
+				transition: .5s
+				position: absolute
+				background-color: transparent
+				&:hover, &:active
+					opacity: .28
+				img
+					width: 51px
+					height: 51px
+			.prev
+				left: 40px
+			.next
+				right: 40px
+			.slick-dots
+				bottom: -40px
+				li
+					button
+						&:before
+							font-size: 14px
+					&:hover, &:active, &:focus
+						button
+							&:before
+								color: #c0c0c0
+					&.slick-active
+						button
+							&:before
+								color: #ffb527
+		.content
+			h3
+				margin: 70px 0
+				text-align: center
+			td
+				vertical-align: top
+				padding-bottom: 45px
+				&:first-child
+					font-size: 20px
+					padding-right: 60px
+					font-family: Ubuntu-Bold
+				&:last-child
+					font-size: 18px
+					padding-right: 160px
+
+.vantages_section
+	padding-top: 80px
+	padding-bottom: 65px
+	.section_header
+		color: #fff
+		hr
+			margin-top: 35px
+			margin-bottom: 75px
+	.item
+		width: 100%
+		// overflow: hidden
+		min-height: 263px
+		position: relative
+		padding: 30px 35px
+		margin-bottom: 30px
+		padding-bottom: 35px
+		border: 2px solid rgba(255,255,255,0.15);
+		box-shadow: 0 0 5px 2px rgba(64, 0, 255,.2), inset 0 0 25px 0 rgba(64, 0, 255,.2)
+		&:after
+			top: 55px
+			left: 95px
+			height: 1px
+			width: 90%
+			content: ''
+			opacity: .61
+			display: block
+			position: absolute
+			background-color: #ffc452
+		.number
+			top: 30px
+			right: 30px
+			color: #fff
+			opacity: .05
+			font-size: 150px
+			line-height: 105px
+			position: absolute
+			font-family: Ubuntu-Bold
+		img
+			left: -10px
+			width: 64px
+			position: relative
+			margin-bottom: 30px
+		p
+			color: #fff
+			font-size: 18px
+		&.no-padd
+			padding: 0
+			position: relative
+		.window_button
+			text-align: center
+			img
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				opacity: 0.2
+				position: absolute
+			a
+				top: 115px
+				color: #000
+				font-size: 18px
+				transition: .5s
+				padding: 30px 55px
+				position: relative
+				text-transform: uppercase
+				font-family: Ubuntu-Medium
+				background-color: rgba(255,255,255, 0.61)
+				&:hover
+					text-decoration: none
+					background-color: rgba(255,255,255, 1)
+	.item_wrap
+		&:last-child
+			.item
+				&:after
+					width: 0
+		&:nth-child(3)
+			.item
+				&:after
+					width: 79%
+				&:before
+					top: 63px
+					width: 25px
+					height: 1px
+					content: ''
+					right: -23px
+					opacity: .61
+					display: block
+					position: absolute
+					transform: rotate(-45deg)
+					background-color: #ffc452
+		&:nth-child(4)
+			.help
+				top: 54px
+				width: 45px
+				height: 1px
+				left: -20px
+				opacity: .61
+				display: block
+				position: absolute
+				background-color: #ffc452
+			.item
+				&:before
+					top: 63px
+					width: 25px
+					height: 1px
+					content: ''
+					left: -23px
+					opacity: .61
+					display: block
+					position: absolute
+					transform: rotate(45deg)
+					background-color: #ffc452
+
+.team_section
+	padding-top: 105px
+	padding-bottom: 35px
+	hr
+		height: 2px
+		color: #a9a9a9
+		margin-top: 40px
+		margin-bottom: 50px
+	.tabs 
+		font-size: 0
+		padding-right: 0
+		li
+			border: 1px solid #e6e3e3
+			border-top: 0
+			border-right: 0
+			padding: 25px 0
+			cursor: pointer
+			&:first-child
+				border-top: 1px solid #e6e3e3
+		.img_wrap
+			padding: 0 10px
+			img
+				width: 50px
+				height: 50px
+				border-radius: 50%
+		.name_role
+			padding-left: 5px
+			text-align: center
+		span
+			font-size: 18px
+		.img_wrap,.name_role
+			display: inline-block
+			vertical-align: middle
+	.slide
+		.img_wrap
+			img
+				width: 285px
+				height: 285px
+				margin: 85px auto
+				border-radius: 50%
+		.content_name_role
+			padding-bottom: 45px
+			border-bottom: 1px solid #ededed
+		span
+			font-size: 24px
+		.rating
+			padding: 20px 0
+			border-bottom: 1px solid #ededed
+			ul
+				font-size: 0
+			li
+				width: 33.33%
+				display: inline-block
+				vertical-align: middle
+				font-family: Ubuntu-Bold
+				&:nth-child(1)
+					padding-left: 50px
+				&:nth-child(2)
+					text-align: center
+				&:nth-child(3)
+					text-align: right
+					padding-right: 50px
+				span
+					font-size: 20px
+					text-align: center
+					display: inline-block
+		p
+			margin: 35px 0
+			font-size: 18px
+			line-height: 37px
+		.button_wrap
+			text-align: center
+			margin-bottom: 45px
+			.button
+				padding: 40px 71px
+				display: inline-block
+	.slick-arrow
+		top: calc(20% - 25px)
+		border: 0
+		outline: 0
+		z-index: 10
+		cursor: pointer
+		transition: .5s
+		position: absolute
+		background-color: transparent
+		&:hover, &:active
+			opacity: .28
+		img
+			width: 51px
+			height: 51px
+	.prev
+		left: 40px
+	.next
+		right: 40px
+
+footer
+	color: #fff
+	padding-top: 45px
+	.contacts_row
+		border-bottom: 1px solid rgba(255,255,255,.17)
+	h4
+		text-align: center
+		margin-bottom: 36px
+		font-family: Ubuntu-Regular
+	input
+		height: 54px
+		padding-left: 17px
+		margin-bottom: 25px
+		&:last-child
+			margin-bottom: 0
+	.text_block
+		padding-left: 0
+	textarea
+		padding-top: 14px
+		max-height: 214px
+		padding-left: 17px
+	input, textarea
+		width: 100%
+		color: #000
+	.contacts
+		padding-left: 18px
+		h4
+			text-align: left
+		li
+			font-size: 14px
+			padding-left: 45px
+			padding-bottom: 24px
+			position: relative
+			img
+				top: 0
+				left: 0
+				position: absolute
+			&:first-child
+				img
+					top: -4px
+	.request
+		padding-top: 5px
+	.show_mob
+		display: none
+		padding: 0 0 30px 0
+	.projects
+		a
+			font-size: 0
+			margin-right: 10px
+			margin-bottom: 10px
+			display: inline-block
+			&:nth-child(4n)
+				margin-right: 0
+			img
+				width: 55px
+				height: 55px
+	.smart_brain_wrap
+		text-align: right
+	.smart_brain
+		padding-top: 35px
+		text-align: center
+		padding-bottom: 30px
+		display: inline-block
+		span
+			display: block
+			padding-bottom: 10px
+		a
+			display: inline-block
+		svg
+			width: 160px
+			opacity: .4
+	.content_copyright
+		padding: 15px 0 30px 0
+		font-size: 14px
+		margin-top: 10px
+		border-top: 1px solid rgba(255,255,255,.08)
+	ul.copy_links
+		display: block
+		padding: 30px 0
+		text-align: center
+		li
+			margin-right: 35px
+			display: inline-block
+			&:last-child
+				margin-right: 0
+
+@import "media" // Always at the end
