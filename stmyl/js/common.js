@@ -5,7 +5,10 @@ $(function() {
 		$(this).find('+ ul').slideToggle();
 	});
 
-	var home;
+	// $('input[name=phone], input[name=phone_quest]').mask('+9 (999) 999-99-99', {placeholder: "+_ (___) ___-___-__ "});	
+	$('.phone_number a, input[name=phone], .footer-phone_number span').mask('+9 (999) 999-99-99');
+
+	// var home = true;
 	if(home){		
 		$('.slider').slick({
 			'fade' : true,
@@ -28,7 +31,7 @@ $(function() {
 
 		$('.head_slide .content_slide .black').html(blackContent);
 		$('.head_slide .content_slide .white').html(whiteContent);
-		$('.head_slide .content_slide .white').html(fullContent);
+		$('.head_slide .content_slide .full_content').html(fullContent);
 
 		$('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 
