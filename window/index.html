@@ -25,38 +25,8 @@
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/popup/magnific-popup.css">
+	<link rel="stylesheet" href="libs/mmenu/jquery.mmenu.all.css">
 	<link rel="stylesheet" href="css/main.min.css">
-
-	<!-- Pixel Glass -->
-	<style>
-	HTML {
-		background-repeat: no-repeat;
-		background-position:  50% 0;
-		/* По умолчанию мобильный макет */
-		background-image: url( "img/Window_final.jpg" );
-	}
-	/* Планшет */
-	@media ( min-width: 760px ) {
-		HTML {
-			/* Планшетный макет */
-			background-image: url( "img/Window_final.jpg" );
-		}
-	}
-	/* Десктоп */
-	@media ( min-width: 960px ) {
-		HTML {
-			/* Десктопный макет */
-			background-image: url( "img/Window_final.jpg" );
-		}
-	}
-
-	BODY {
-		opacity: .5;
-	}
-</style>
-<link rel="stylesheet" href="libs/pixel-glass/styles.css">
-<script src="libs/pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
 
 </head>
 
@@ -70,22 +40,28 @@
 				
 				<div class="row align-items-center">
 					
-					<div class="col-12 col-sm-4 logo">
+					<div class="col-10 col-sm-8 col-md-4 col-xl-4 logo">
 
 						<img src="img/logo.png" alt="Title Site">
 
 					</div>
 
-					<div class="col-12 offset-sm-1 col-sm-7 menu">
+					<div class="col-2 col-sm-4 col-md-8 offset-xl-1 col-xl-7 menu">
 						
 						<ul>
-							<li class="active"><a href="#">Главная</a></li>
-							<li><a href="#">Каталог</a></li>
-							<li><a href="#">Акции</a></li>
-							<li><a href="#">Преимущества</a></li>
-							<li><a href="#">Галерея</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a href="#main_banner">Главная</a></li>
+							<li><a href="#catalog-section">Каталог</a></li>
+							<li><a href="#actions-section">Акции</a></li>
+							<li><a href="#vantages-section">Преимущества</a></li>
+							<li><a href="#gallery-section">Галерея</a></li>
+							<li><a href="footer">Контакты</a></li>
 						</ul>
+
+						<a id="menu_button" href="#mmenu">
+							<span></span>
+							<span></span>
+							<span></span>
+						</a>
 
 					</div>
 
@@ -95,7 +71,7 @@
 
 		</header>
 
-		<div class="main_banner">
+		<div id="main_banner" class="main_banner">
 			
 			<div class="container">
 				
@@ -133,7 +109,7 @@
 
 		</div>
 
-		<div class="catalog-section big_container">
+		<div id="catalog-section" class="catalog-section big_container">
 			
 			<div class="container">
 				
@@ -143,7 +119,7 @@
 
 					<div class="row">
 						
-						<div class="col-md-3 partners">
+						<div class="col-md-6 col-xl-3 partners">
 							<div class="partner-item">
 								<img src="img/partners/partner1.png" alt="Partner">
 							</div>
@@ -157,7 +133,7 @@
 								<img src="img/partners/partner4.png" alt="Partner">
 							</div>
 						</div>
-						<div class="col-md-4 products">
+						<div class="col-md-6 col-xl-4 products">
 							<div class="product-item">
 								<div class="img_wrap">
 									<img src="img/products/1.png" alt="Product">
@@ -201,7 +177,7 @@
 								<span>Фурнитура</span>
 							</div>
 						</div>
-						<div class="col-md-5 consultation">
+						<div class="col-md-12 col-xl-5 consultation">
 							<img src="img/rulet.png" alt="Rulet">
 							<div class="consultation_text">	
 								<p>Консультация специалиста полностью <span>БЕСПЛАТНО!</span></p>
@@ -223,7 +199,7 @@
 			</div>
 		</div>
 
-		<div class="actions-section big_container">
+		<div id="actions-section" class="actions-section big_container">
 			
 			<div class="container">
 				
@@ -334,7 +310,7 @@
 			</div>
 		</div>
 
-		<div class="vantages-section big_container">
+		<div id="vantages-section" class="vantages-section big_container">
 			
 			<div class="container">
 				
@@ -389,7 +365,7 @@
 			</div>
 		</div>
 
-		<div class="gallery-section big_container">
+		<div id="gallery-section" class="gallery-section big_container">
 			
 			<div class="container">
 				
@@ -508,7 +484,7 @@
 					
 					<div class="row">
 						
-						<div class="col-12 col-md-3">
+						<div class="col-12 col-md-2 col-xl-3">
 							
 							<div class="logo">
 								<img src="img/logo.png" alt="Logo">
@@ -521,22 +497,22 @@
 
 						</div>
 
-						<div class="col-6 col-md-2 menu">
+						<div class="col-12 col-sm-6 col-md-5 col-xl-2 menu">
 							
 							<ul>
-								<li><a href="#">Главная</a></li>
-								<li><a href="#">Каталог</a></li>
-								<li><a href="#">Акции</a></li>
-								<li><a href="#">Преимущества</a></li>
-								<li><a href="#">Галерея</a></li>
-								<li><a href="#">Контакты</a></li>
+								<li><a href="#main_banner">Главная</a></li>
+								<li><a href="#catalog-section">Каталог</a></li>
+								<li><a href="#actions-section">Акции</a></li>
+								<li><a href="#vantages-section">Преимущества</a></li>
+								<li><a href="#gallery-section">Галерея</a></li>
+								<li><a href="footer">Контакты</a></li>
 							</ul>
 
 						</div>
 
-						<div class="col-6 col-md-2">
+						<div class="col-12 col-sm-6 col-md-5 col-xl-2">
 							<div class="line"></div>
-							<div class="contacts-data contacts-data_normal">
+							<div class="contacts-data contacts-data_italic">
 								<span class="head">Дилерам:</span>
 								<span class="margin-bottom">г. Таганрог<br>ул Москатова 6</span>
 								<span>+7 (950) 844-90-03</span>
@@ -544,7 +520,7 @@
 							</div>
 						</div>
 
-						<div class="col-12 col-md-5 map_wrap">
+						<div class="col-12 col-xl-5 map_wrap">
 							
 							<div id="map"></div>
 
@@ -560,57 +536,72 @@
 
 	</div>
 
-		<script>
-			function initMap() {
+	<div class="hidden">
 
-				var iconDefault = 'img/metka.png';
+		<div id="mmenu">
+			<ul>
+				<li><a href="#main_banner">Главная</a></li>
+				<li><a href="#catalog-section">Каталог</a></li>
+				<li><a href="#actions-section">Акции</a></li>
+				<li><a href="#vantages-section">Преимущества</a></li>
+				<li><a href="#gallery-section">Галерея</a></li>
+				<li><a href="footer">Контакты</a></li>
+			</ul>
+		</div>		
 
-				var el = document.getElementById('map');
-				var options = {
-					zoom: 18,
-					center: {lat: 47.260811, lng: 38.913760}
-				};
+	</div>
 
-				var myMap = new google.maps.Map(el, options);
+	<script>
+		function initMap() {
 
-				var markers = [
-				{
-					coordinates : {lat: 47.260811, lng: 38.913760}
-				}];
+			var iconDefault = 'img/metka.png';
+
+			var el = document.getElementById('map');
+			var options = {
+				zoom: 18,
+				center: {lat: 47.260811, lng: 38.913760}
+			};
+
+			var myMap = new google.maps.Map(el, options);
+
+			var markers = [
+			{
+				coordinates : {lat: 47.260811, lng: 38.913760}
+			}];
 
 
-				for(var i = 0; i<markers.length; i++){
-					addMarkers(markers[i]);
-				}
+			for(var i = 0; i<markers.length; i++){
+				addMarkers(markers[i]);
+			}
 
 
-				function addMarkers(properties){
+			function addMarkers(properties){
 
-					var marker = new google.maps.Marker({
-						position : properties.coordinates,
-						map : myMap,
-						icon : iconDefault
+				var marker = new google.maps.Marker({
+					position : properties.coordinates,
+					map : myMap,
+					icon : iconDefault
+				});
+
+				if(properties.info){
+
+					marker.addListener('click', (function(){
+						infoWindow.open(myMap, marker);
+						marker.setIcon(iconActive);
+					}));
+
+					var infoWindow = new google.maps.InfoWindow({
+						content : properties.info
 					});
-
-					if(properties.info){
-
-						marker.addListener('click', (function(){
-							infoWindow.open(myMap, marker);
-							marker.setIcon(iconActive);
-						}));
-
-						var infoWindow = new google.maps.InfoWindow({
-							content : properties.info
-						});
-
-					}
 
 				}
 
 			}
-		</script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABot_2q4SJSRj64_4WrezmbGLnX_qkgBU&callback=initMap"></script>
-		<!-- Google Map END-->
+
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABot_2q4SJSRj64_4WrezmbGLnX_qkgBU&callback=initMap"></script>
+	<!-- Google Map END-->
 	
 <!--     <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
     <script type="text/javascript">
@@ -656,6 +647,7 @@
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/popup/jquery.magnific-popup.min.js"></script>
 	<script src="libs/mask/jquery.mask.min.js"></script>
+	<script src="libs/mmenu/jquery.mmenu.all.js"></script>
 	<script src="js/common.js"></script>
 
 </body>
