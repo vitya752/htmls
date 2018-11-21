@@ -559,7 +559,99 @@
 		</footer>
 
 	</div>
+
+		<script>
+			function initMap() {
+
+				var iconDefault = 'img/metka.png';
+
+				var el = document.getElementById('map');
+				var options = {
+					zoom: 18,
+					center: {lat: 47.260811, lng: 38.913760}
+				};
+
+				var myMap = new google.maps.Map(el, options);
+
+				var markers = [
+				{
+					coordinates : {lat: 47.260811, lng: 38.913760}
+				}];
+
+
+				for(var i = 0; i<markers.length; i++){
+					addMarkers(markers[i]);
+				}
+
+
+				function addMarkers(properties){
+
+					var marker = new google.maps.Marker({
+						position : properties.coordinates,
+						map : myMap,
+						icon : iconDefault
+					});
+
+					if(properties.info){
+
+						marker.addListener('click', (function(){
+							infoWindow.open(myMap, marker);
+							marker.setIcon(iconActive);
+						}));
+
+						var infoWindow = new google.maps.InfoWindow({
+							content : properties.info
+						});
+
+					}
+
+				}
+
+			}
+		</script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABot_2q4SJSRj64_4WrezmbGLnX_qkgBU&callback=initMap"></script>
+		<!-- Google Map END-->
 	
+<!--     <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){ 
+        // Создание карты.    
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [47.260811, 38.913760],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 13
+        });
+
+  //       // Создание геообъекта с типом точка (метка).
+  		myMap.behaviors.disable(
+  			[ 
+  			'scrollZoom',
+  			'multiTouch'
+  			]
+  		);
+		var myPlacemark = new ymaps.Placemark([47.260811, 38.913760], {
+		    // balloonContentHeader: 'Однажды',
+		    // balloonContentBody: 'В студеную зимнюю пору',
+		    // balloonContentFooter: 'Мы пошли в гору',
+		    // hintContent: 'Зимние происшествия'
+		}, {
+		    iconLayout: 'default#image',
+		    iconImageHref: 'img/metka.png',
+		    iconImageSize: [93, 121],
+		    iconImageOffset: [-45, -42],
+		});
+
+		myMap.geoObjects.add(myPlacemark);
+	    }
+	</script> -->
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/popup/jquery.magnific-popup.min.js"></script>
