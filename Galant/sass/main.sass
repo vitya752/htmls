@@ -1,0 +1,611 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: ProximaNova-Regular
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+a,ul,li,span,p,h1,h2,h3,h4,h5,h6,label
+	margin: 0
+	padding: 0
+
+.default
+	font-size: 28px
+	text-indent: 14px
+	position: relative
+	font-family: ProximaNova-Bold
+	&:before
+		top: 0
+		left: 0
+		width: 3px
+		content: ''
+		position: absolute
+		height: calc(95%)
+		background-color: #49ad60
+
+h3
+	font-size: 22px
+	font-family: ProximaNova-Bold
+
+h4
+	font-size: 18px
+	font-family: ProximaNova-Bold
+
+h5
+	font-size: 16px
+
+a
+	&:hover,&:active,&:visited
+		text-decoration: none
+
+.button_wrap
+	text-align: center
+
+.button
+	color: #fff
+	transition: .5s
+	border-radius: 5px
+	padding: 10px 42px
+	display: inline-block
+	background-color: #49ad60
+	&:hover
+		color: #fff
+		background-color: #55d172
+
+.container--nopadd
+	padding: 0
+
+header
+	z-index: 3
+	transition: .5s
+	padding-top: 7px
+	padding-bottom: 12px
+	background-color: #fff
+	&.default
+		left: 0
+		width: 100%
+		padding: 5px 0
+		position: fixed
+		.logo
+			img
+				width: 100%
+		ul.sub-menu
+			top: 63px
+	.phone_link
+		color: #676767
+		font-family: ProximaNova-Bold
+		&:hover
+			color: #000
+	.logo
+		padding: 0
+		img
+			width: auto
+			transition: .5s
+		&:hover
+			img
+				transform: scale(1.1)
+	.form_link
+		margin-left: 25px
+	.phone_link,
+	.form_link
+		top: 3px
+		position: relative
+
+
+nav
+	> ul 
+		padding-top: 5px
+		padding-left: 65px
+		> li //Относимся только к меню первого уровня
+			padding: 15px 0
+			position: relative
+			margin-right: 25px
+			display: inline-block
+			a
+				color: #8a8a8a
+				&:hover
+					color: #676767
+		ul.sub-menu
+			top: 69px
+			z-index: 3
+			left: -25px
+			display: none
+			font-size: 14px
+			width: max-content
+			position: absolute
+			list-style-type: none
+			background-color: #fff
+			border-radius: 0 0 5px 5px
+			padding: 20px 22px 6px 18px
+			box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.24)
+			li
+				margin-bottom: 10px
+			&:before
+				left: 0
+				top: -30px
+				width: 100%
+				content: ''
+				height: 50px
+				display: block
+				position: absolute
+		li.menu-item-has-children:hover
+			ul
+				display: block
+
+
+.banner
+	height: 660px
+	position: relative
+	.banner_content
+		z-index: 2
+		padding-top: 178px
+		position: relative
+	h1
+		color: #fff
+		font-size: 34px
+		line-height: 42px
+		margin-bottom: 87px
+		font-family: ProximaNova-Bold
+	.item
+		color: #fff
+		font-size: 22px
+		line-height: 33px
+		&:hover
+			.item_img_wrap
+				transform: scale(1.1)
+	h1,.item
+		text-align: center
+	.item_img_wrap
+		width: 95px
+		height: 95px
+		margin: 0 auto
+		transition: .5s
+		margin-bottom: 17px
+		svg
+			width: 100%
+			height: 100%
+	.banner_slider
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		position: absolute
+	.slide
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		background-position: top center
+	.slick-list,.slick-track
+		height: 100%
+		z-index: 1
+	.slick-dots
+		bottom: 45px
+		z-index: 1
+		li 
+			margin: 0 15px
+			button:before
+				color: #4d4e51
+				font-size: 20px
+			&.slick-active
+				button:before
+					color: #4e9f65
+
+.categories
+	padding-top: 65px
+	padding-bottom: 18px
+	.categories_wrap
+		a,img
+			width: 100%
+		a
+			height: 170px
+			margin-top: 15px
+			overflow: hidden
+			border-radius: 5px
+			position: relative
+			margin-bottom: 15px
+			display: inline-block
+			&:hover
+				img
+					transform: scale(1.5)
+				h5
+					top: 90px
+	h2
+		margin-bottom: 20px
+	img
+		transition: 10s
+	h5
+		top: 127px
+		z-index: 2
+		color: #fff
+		width: 100%
+		padding: 0 15px
+		transition: .5s
+		line-height: 20px
+		text-align: center
+		position: absolute
+		transform: translateY(-50%)
+	.button_wrap
+		a
+			padding: 10px 60px
+
+.vantages
+	padding-top: 55px
+	padding-bottom: 30px
+	h2
+		margin-bottom: 58px
+	.vantages_block
+		border-radius: 5px
+		margin-bottom: 15px
+		background-color: #f7f7f7
+		padding: 28px 8px 12px 57px
+	ul
+		list-style-type: none
+	li
+		width: 100%
+		transition: .5s
+		position: relative
+		padding-left: 60px
+		margin-bottom: 46px
+		display: inline-block
+		&:hover
+			color: #49ad60
+			svg
+				fill: #000
+	h4
+		color: #6cbc7e
+		margin-bottom: 40px
+	svg
+		width: 80%
+		fill: #7d9096
+		transition: .5s
+	.vantage_icon
+		left: 0
+		width: 50px
+		height: 42px
+		top: calc(50%)
+		text-align: center
+		position: absolute
+		transform: translateY(-50%)
+	.vantage_text
+		line-height: 20px
+	.vantages_wrap_1
+		.vantages_block
+			margin-right: 15px
+	.vantages_wrap_2
+		margin-top: -147px
+		position: relative
+		.vantages_block
+			padding-left: 35px
+		li
+			padding-left: 95px
+			margin-bottom: 50px
+		.vantage_icon
+			left: 30px
+		&:before
+			top: 80px
+			z-index: -1
+			content: ''
+			left: -125px
+			width: 590px
+			height: 382px
+			display: block
+			position: absolute
+			background-size: cover
+			background-repeat: no-repeat
+			background-image: url(../img/vantagepg.jpg)
+
+.request_block
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	width: 100%
+	padding: 43px 30px
+	border-radius: 5px
+	align-items: center
+	padding-bottom: 35px
+	background-size: cover
+	justify-content: center
+	background-repeat: no-repeat
+	span
+		color: #fff
+		font-size: 18px
+		line-height: 22px
+		margin-right: 15px
+		font-family: ProximaNova-Bold
+	.button
+		color: #000
+		padding: 10px 40px
+		white-space: nowrap
+		background-color: #fff
+		&:hover
+			color: #fff
+			background-color: transparent
+
+.projects
+	padding-top: 30px
+	padding-bottom: 35px
+	h2
+		margin-bottom: 43px
+	svg
+		top: 2px
+		width: 17px
+		fill: #7f7f7f
+		margin-right: 5px
+		position: relative
+	a
+		color: #000
+	h4
+		margin-right: 13px
+	span
+		color: #7f7f7f
+	h4,span
+		vertical-align: middle
+	.item
+		margin-bottom: 50px
+	.item_images
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		a
+			max-width: 82px
+			max-height: 82px
+			overflow: hidden
+			margin-bottom: 15px
+			&:first-child
+				max-width: 370px
+				max-height: 171px
+			&:before
+				content: ''
+				height: 100%
+			&:before,img
+				display: inline-block
+				vertical-align: middle
+		img
+			width: 100%
+	.item_head
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		margin-bottom: 6px
+	.item_desc
+		line-height: 21px
+		display: inline-block
+
+.brands
+	padding-top: 95px
+	padding-bottom: 40px
+	background-color: #f7f7f7
+	h2
+		margin-bottom: 38px
+	span
+		width: 38px
+		height: 38px
+		background-size: cover
+		background-repeat: no-repeat
+	h3,span
+		display: inline-block
+	.direction
+		&:last-child
+			span
+				margin-right: 10px
+			h3
+				color: #49ad60
+	.brands_wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		padding-top: 45px
+		align-items: center
+	.item
+		width: 190px
+		margin-right: 90px
+		text-align: center
+		margin-bottom: 50px
+		&:before
+			content: ''
+			height: 100%
+		&:before,img
+			display: inline-block
+			vertical-align: middle
+	.button_wrap
+		margin-top: -35px
+	.button
+		z-index: 1
+		padding: 10px 55px
+		position: relative
+
+.reviews
+	padding-top: 50px
+	padding-bottom: 44px
+	background-color: #49ad60
+	background-repeat: no-repeat
+	background-position: right top
+	h2
+		color: #fff
+		margin-bottom: 70px
+		&:before
+			background-color: #92d9a2
+	.img_wrap
+		max-width: 333px
+		max-height: 478px
+		overflow: hidden
+		margin-bottom: 15px
+		display: inline-block
+		img
+			width: 100%
+	.autor
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		img
+			width: 63px
+			height: 63px
+			border-radius: 50%
+			margin-right: 20px
+	span
+		color: #fff
+		display: block
+		font-size: 16px
+		line-height: 20px
+	.name
+		font-family: ProximaNova-Bold
+	.slick-prev, .slick-next
+		top: 50%
+		width: 58px
+		height: 58px
+		transform: translateY(50%)
+		&:before
+			content: ''
+	.slick-prev
+		left: -122px
+		background: url(../img/icons/prev.png) no-repeat 100% 100% !important
+	.slick-next
+		right: -122px
+		background-image: url(../img/icons/next.png) !important
+
+.news
+	padding-top: 50px
+	padding-bottom: 65px
+	background-color: #f7f7f7
+	h2
+		margin-right: 25px
+		margin-bottom: 55px
+		display: inline-block
+		+ a
+			text-decoration: underline
+			font-family: ProximaNova-Bold
+	.news_wrap
+		padding-bottom: 23px
+	.item
+		padding-left: 30px
+		margin-bottom: 30px
+		h4
+			line-height: 21px
+			margin-bottom: 21px
+		time
+			display: block
+			margin-bottom: 7px
+			font-family: ProximaNova-Bold
+		span
+			line-height: 20px
+			display: inline-block
+		span,time
+			opacity: .5
+			color: #333333
+	.request_block
+		padding: 35px 10px
+		span
+			margin-right: 20px
+.contacts
+	position: relative
+	text-align: right
+	.container
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		position: absolute
+	.contacts_block
+		height: 100%
+		width: 315px
+		text-align: left
+		margin-left: auto
+		padding: 40px 45px
+		display: inline-block
+		background-color: #e8e8e8
+	.default
+		margin-left: 8px
+		margin-bottom: 11px
+		display: inline-block
+	svg
+		width: 16px
+		height: 16px
+		fill: #49ad60
+	ul
+		list-style-type: none
+	li
+		padding-left: 26px
+		position: relative
+		margin-bottom: 6px
+	.icon
+		left: 0
+		top: 2px
+		position: absolute
+	.phone_link
+		color: #000
+		&:hover
+			text-decoration: underline
+	.mode
+		font-family: ProximaNova-Bold
+
+#map
+	z-index: -1
+	height: 300px
+
+
+.totop
+	bottom: 0
+	right: 5px
+	width: 58px
+	height: 58px
+	display: none
+	cursor: pointer
+	position: fixed
+	transition: .5s
+	border-radius: 5px
+	background-color: #49ad60
+	background-repeat: no-repeat
+	background-image: url(../img/icons/totop.png)
+	&:hover
+		opacity: .5
+
+
+
+@import "media" // Always at the end
