@@ -9,6 +9,30 @@ $(function() {
 	// 	};
 	// });
 
+	$("#menu").mmenu({
+	   "extensions": [
+	      "pagedim-black",
+	      "position-right",
+	      'theme-dark', 
+	      'fx-menu-slide', 
+	      'pagedim-black'
+	   ]
+	});
+
+	var API = $("#menu").data( "mmenu" );
+
+	$(".hamburger").click(function() {    //открываем меню по клику на гамбургер
+		API.open();
+	});
+	API.bind( "close:finish", function( $panel ) {      //в момент завершения анимации закрытия меню
+		$(".hamburger").removeClass('is-active');   //добавляем класс гамбургеру, чтобы он видоизменился
+	});
+	API.bind( "open:finish", function( $panel ) {    //в момент завершения анимации открытия меню
+		$(".hamburger").addClass('is-active');   //добавляем класс гамбургеру, чтобы он видоизменился
+	});
+
+	$('.phone_link, input[name=phone]').mask('9 999 999-99-99');
+
 	if($('.banner_slider').length){
 		$('.banner_slider').slick({
 			lazyLoad: 'ondemand',
@@ -20,7 +44,8 @@ $(function() {
 			fade: true,
 			cssEase: 'linear',
 			speed: 500,
-			dots: true
+			dots: true,
+			arrows: false
 		});
 	}
 
@@ -29,6 +54,20 @@ $(function() {
 			ite: true,
 			slidesToShow: 3,
 			slidesToScroll: 1,
+			responsive: [
+			{
+			  breakpoint: 1200,
+			  settings: {
+			    slidesToShow: 2
+			  }
+			},
+			{
+			  breakpoint: 992,
+			  settings: {
+			    slidesToShow: 1
+			  }
+			}
+			]
 		});
 	}
 
@@ -38,6 +77,7 @@ $(function() {
 			gallery: { enabled: true }
 		});
 	}	
+
 	if($('.reviews .popup').length){		
 		$('.reviews .popup').magnificPopup({
 			type: 'image',
@@ -58,6 +98,5 @@ $(function() {
 		}
 	});
 
-	$('.phone_link, input[name=phone]').mask('9 999 999-99-99');
 
 });

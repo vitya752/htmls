@@ -3,18 +3,219 @@
 
 /*==========  Desktop First  ==========*/
 
+@media only screen and (max-width: 1249.98px)
+	.container--nopadd
+		padding: 0 15px
+	header
+		.logo
+			padding: 0 15px
+		.form_link
+			margin-left: 10px
+
 // ≥1200px
 +media-breakpoint-down(lg)
+	.menu
+		display: none
+	header
+		.logo
+			img
+				width: 100%
+		.contacts
+			a
+				vertical-align: middle
+	.hamburger
+		padding: 0 15px
+		padding-top: 10px
+		display: inline-block
+	.projects .item_images a
+		max-width: 52px
+		max-height: 52px
+	.brands .item
+		width: 120px
+		margin-right: 50px
+		img
+			max-width: 100%
+	.reviews
+		.slick-next
+			right: -30px
+		.slick-prev
+			left: -30px
+		.slide
+			text-align: center
+		.autor
+			justify-content: center
+	.gallery
+		a
+			height: 140px
+	.price
+		.item
+			&:nth-child(1n),
+			&:nth-child(2n),
+			&:nth-child(3n)
+				text-align: center
+		.button
+			padding: 15px 50px
 
 // ≥992px
 +media-breakpoint-down(md)
+	.vantages 
+		.vantages_wrap_2
+			margin-top: 0
+			&:before
+				display: none
+		.vantages_wrap_1,
+		.vantages_wrap_2
+			.vantages_block
+				margin-left: 0
+				margin-right: 0
+				padding-left: 15px
+			li
+				margin-bottom: 30px
+		.vantages_wrap_2
+			li
+				padding-left: 60px
+			.vantage_icon
+				left: 0
+	.brands 
+		.item
+			width: 100px
+			margin-right: 50px
+			margin-bottom: 10px
+		.button_wrap
+			margin-top: 0
+			padding-top: 20px
+	.reviews
+		.slick-next
+			right: -30px
+		.slick-prev
+			left: -30px
+	.gallery
+		a
+			height: 100px
+	.with_after:after
+		display: none
 
 // ≥768px
 +media-breakpoint-down(sm)
+	header 
+		.form_link
+			display: none
+	.banner 
+		.item
+			font-size: 16px
+			line-height: 20px
+			&:hover
+				svg
+					transform: scale(1.2)
+		.item_img_wrap
+			width: 65px
+			height: 65px
+	.vantages 
+		padding-top: 30px
+		h2
+			margin-bottom: 30px
+		.vantage_text
+			font-size: 14px
+			line-height: 14px
+			display: inline-block
+	.request_block
+		flex-wrap: wrap
+		text-align: center
+		flex-direction: column
+		span
+			margin-right: 0
+			margin-bottom: 15px
+	.brands
+		.brands_wrap
+			padding-top: 0
+			margin-bottom: 30px
 
 // ≥576px
 +media-breakpoint-down(xs)
-
+	h3
+		font-size: 18px
+	h4
+		font-size: 16px
+	h5
+		font-size: 14px
+	.contacts 
+		.phone_link
+			font-size: 14px
+	.hamburger
+		padding: 0 10px
+		padding-top: 10px
+	.banner 
+		h1
+			font-size: 24px
+			line-height: 30px
+			margin-bottom: 40px
+		.banner_content
+			padding-top: 80px
+		.item
+			margin-bottom: 30px
+	.categories
+		.categories_wrap
+			text-align: center
+			a
+				width: 80%
+				margin: 5px 0
+				&:hover
+					h5
+						top: 50%
+	.projects
+		padding-bottom: 0
+		.item_desc
+			font-size: 14px
+			line-height: 18px
+		.item_images 
+			a 
+				display: none
+				&:first-child
+					display: block
+	.brands
+		.item
+			width: 40%
+			margin: 0 auto
+			margin-bottom: 30px
+	.reviews
+		.slick-next,.slick-prev
+			top: -90px
+		.slick-next
+			right: 0
+		.slick-prev
+			left: 0
+	.news 
+		h2
+			margin: 0
+			display: block
+			+ a
+				margin-bottom: 30px
+				display: inline-block
+		.item
+			h4
+				margin-bottom: 5px
+	.contacts 
+		.contacts_block
+			z-index: 0
+			width: 100%
+			display: block
+			margin: 0 auto
+		.container
+			padding: 0
+			position: unset
+	.copyright_line
+		.copyright
+			display: block
+			a,span
+				display: block
+	.gallery
+		.item
+			text-align: center
+		a
+			width: 115px
+			height: 76px
+			text-align: left
+	
 
 /*==========  Mobile First  ==========*/
 
@@ -29,5 +230,7 @@
 
 // ≤1200px
 +media-breakpoint-up(xl)
+	.menu
+		display: block
 	.container--1200
 		max-width: 1200px

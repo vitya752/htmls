@@ -26,38 +26,9 @@
 	<link rel="stylesheet" href="libs/popup/magnific-popup.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/mmenu/jquery.mmenu.all.css">
+	<link href="libs/hamburgers/hamburgers.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
-
-	<!-- Pixel Glass -->
-	<style>
-	HTML {
-		background-repeat: no-repeat;
-		background-position:  50% 0;
-		/* По умолчанию мобильный макет */
-		background-image: url( "img/main.jpg" );
-	}
-	/* Планшет */
-	@media ( min-width: 760px ) {
-		HTML {
-			/* Планшетный макет */
-			background-image: url( "img/main.jpg" );
-		}
-	}
-	/* Десктоп */
-	@media ( min-width: 960px ) {
-		HTML {
-			/* Десктопный макет */
-			background-image: url( "img/main.jpg" );
-		}
-	}
-
-	BODY {
-		opacity: .5;
-	}
-</style>
-<link rel="stylesheet" href="libs/pixel-glass/styles.css">
-<script src="libs/pixel-glass/script.js"></script>
-<!-- // Pixel Glass -->
 
 </head>
 
@@ -71,16 +42,16 @@
 				
 				<div class="row align-items-center">
 					
-					<div class="col-lg-1 logo">
+					<div class="col-4 col-sm-3 col-lg-2 col-xl-1 logo">
 						
 						<a href="#"><img src="img/logo.png" alt="Site name"></a>
 
 					</div>
 
-					<div class="col-lg-7">
+					<div class="col-xl-7 menu">
 						
 						<nav>
-								
+
 							<ul>
 								<li class="menu-item-has-children">
 									<a href="#">О компании</a>
@@ -115,11 +86,17 @@
 
 					</div>
 
-					<div class="col-lg-4 contacts">
+					<div class="col-8 col-sm-9 col-lg-10 col-xl-4 contacts">
 						
 						<a class="phone_link" href="tel:+88008880044">88008880044</a>
 
 						<a href="#" class="popup_form form_link button">Отправить заявку</a>
+
+						<a href="#menu" class="hamburger hamburger--spin">
+							<div class="hamburger-box">
+								<div class="hamburger-inner"></div>
+							</div>
+						</a>
 
 					</div>
 
@@ -134,24 +111,24 @@
 			<div class="banner_content">
 				
 				<div class="container">
-						
+
 					<h1>Проектирование, монтаж и техническое обслуживание<br>систем безопасности </h1>
 
 					<div class="row">
 						
-						<div class="col-lg-4 item">
+						<div class="col-12 col-sm-4 item">
 							<div class="item_img_wrap">
 								<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="89px" height="89px" viewBox="0 0 890 890" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="#fff" stroke="none"><path d="M556 780 l-112 -110 -86 86 -86 87 -93 8 c-52 5 -103 11 -114 13 -38 10 -45 -5 -35 -69 5 -33 10 -79 10 -103 0 -58 16 -85 104 -172 l76 -74 -110 -112 c-63 -64 -110 -119 -110 -130 0 -25 179 -204 204 -204 11 0 69 49 133 112 62 62 113 110 114 107 0 -2 2 -14 3 -27 4 -31 94 -122 122 -122 11 0 29 -9 40 -21 29 -33 72 -51 103 -44 34 7 158 131 166 166 7 30 -11 73 -44 103 -12 11 -21 29 -21 41 0 26 -104 130 -120 120 -6 -3 -15 -3 -21 1 -6 3 35 52 100 119 64 64 111 120 111 131 0 25 -179 204 -204 204 -11 0 -68 -48 -130 -110z m211 -12 c66 -66 87 -98 65 -98 -5 0 -19 11 -32 25 -13 14 -29 25 -36 25 -27 0 -25 -23 5 -54 27 -28 30 -35 18 -45 -11 -9 -17 -8 -27 4 -15 18 -50 20 -50 3 0 -6 8 -20 17 -30 27 -30 1 -43 -27 -13 -24 26 -60 34 -60 13 0 -7 12 -25 27 -40 20 -21 24 -31 15 -40 -9 -9 -16 -8 -30 5 -23 21 -40 22 -44 2 -2 -11 -24 5 -68 50 l-65 65 100 100 c55 55 104 100 110 100 5 0 42 -33 82 -72z m-537 28 c0 -33 -20 -65 -42 -68 -15 -2 -24 -11 -26 -26 -2 -14 -14 -27 -28 -33 -48 -18 -54 -13 -54 43 0 73 25 98 97 98 39 0 53 -4 53 -14z m340 -471 l-80 -80 -185 185 c-102 102 -185 188 -185 192 0 5 10 8 23 8 15 0 56 -33 127 -105 58 -58 108 -105 113 -105 4 0 10 7 14 16 4 11 -26 48 -101 123 -102 102 -107 109 -90 125 16 17 24 11 149 -114 121 -121 155 -144 155 -107 0 6 -57 69 -126 138 -116 117 -126 129 -120 155 7 27 13 22 197 -162 l189 -189 -80 -80z m-235 5 c43 -44 77 -82 74 -85 -3 -3 -16 6 -29 20 -24 26 -60 34 -60 13 0 -7 12 -25 27 -40 20 -21 24 -31 15 -40 -9 -9 -16 -8 -30 5 -10 9 -24 17 -30 17 -17 0 -15 -35 3 -50 11 -9 13 -16 5 -24 -7 -7 -19 -2 -38 17 -52 50 -82 24 -33 -27 27 -28 30 -35 18 -45 -11 -9 -17 -8 -27 4 -16 19 -50 20 -50 1 0 -7 7 -19 15 -26 9 -7 13 -15 10 -18 -7 -7 -155 139 -155 153 0 10 190 205 200 205 3 0 41 -36 85 -80z m419 1 l28 -13 -103 -104 c-57 -57 -105 -101 -107 -99 -3 3 -10 15 -16 27 -6 13 -21 27 -34 33 -21 9 -16 15 80 112 97 97 102 101 113 80 6 -12 23 -28 39 -36z m70 -102 c14 -17 26 -35 26 -41 0 -15 -133 -148 -148 -148 -6 0 -26 13 -44 29 l-33 30 80 80 c44 45 83 81 86 81 4 0 19 -14 33 -31z"/><path d="M410 402 c0 -20 39 -62 58 -62 24 0 23 23 -4 51 -32 33 -54 38 -54 11z"/><path d="M664 325 c-7 -18 1 -32 27 -45 27 -15 37 14 14 40 -21 24 -34 25 -41 5z"/><path d="M610 260 c0 -23 37 -47 52 -32 15 15 -9 52 -32 52 -13 0 -20 -7 -20 -20z"/><path d="M555 220 c-11 -17 30 -54 50 -46 16 6 16 9 2 29 -17 25 -42 33 -52 17z"/></g></svg>
 							</div>
 							<span>Проектирование</span>
 						</div>
-						<div class="col-lg-4 item">
+						<div class="col-6 col-sm-4 item">
 							<div class="item_img_wrap">
 								<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="88px" height="86px" viewBox="0 0 880 860" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="#ffffff" stroke="none"><path d="M675 850 c-11 -4 -72 -60 -135 -124 l-114 -116 -28 27 c-18 17 -28 37 -28 55 0 43 -35 103 -74 128 -76 46 -161 35 -219 -29 -56 -62 -60 -144 -12 -218 19 -29 85 -63 122 -63 21 0 42 -13 76 -48 l47 -48 -85 -84 c-46 -46 -98 -89 -116 -94 -23 -8 -42 -28 -70 -75 -34 -57 -37 -67 -26 -85 32 -48 47 -48 120 -5 49 29 69 47 73 67 4 15 44 66 92 114 l86 88 36 -35 c35 -34 36 -38 32 -90 -6 -69 9 -106 61 -151 66 -56 198 -84 227 -48 11 13 6 23 -38 67 -29 29 -52 61 -52 71 0 23 53 76 76 76 10 0 42 -23 71 -52 44 -44 54 -49 67 -38 25 20 20 96 -10 160 -47 101 -94 134 -184 128 -39 -2 -63 2 -74 11 -16 13 -6 25 105 137 111 112 123 127 123 159 0 28 -8 44 -39 75 -43 42 -78 55 -110 40z m89 -80 c19 -23 24 -36 17 -48 -5 -9 -59 -66 -120 -126 l-112 -110 -44 44 c-33 32 -42 47 -35 59 4 9 58 65 118 124 122 120 123 120 176 57z m-506 21 c44 -23 72 -66 72 -113 0 -29 15 -48 133 -165 l132 -133 65 6 c57 5 68 3 93 -16 33 -26 73 -93 82 -140 l8 -35 -47 43 c-38 35 -51 41 -73 36 -60 -13 -114 -71 -115 -123 -1 -24 8 -42 38 -73 l39 -40 -35 7 c-47 9 -113 49 -140 82 -19 25 -21 36 -16 93 l6 65 -133 133 c-117 118 -135 132 -166 132 -73 0 -140 76 -127 145 8 42 41 84 80 101 42 18 61 17 104 -5z m92 -419 c0 -14 -156 -163 -163 -155 -4 4 27 42 70 85 73 73 93 89 93 70z m-192 -184 c22 -22 12 -43 -39 -76 -68 -45 -82 -31 -37 37 33 51 54 61 76 39z"/><path d="M586 690 c-71 -72 -85 -100 -53 -100 16 0 167 152 167 168 0 31 -43 5 -114 -68z"/><path d="M636 651 c-55 -56 -77 -84 -73 -96 10 -23 30 -9 115 79 67 69 81 96 49 96 -7 0 -48 -36 -91 -79z"/><path d="M150 743 c-32 -26 -38 -60 -20 -107 6 -18 21 -28 51 -36 41 -11 43 -11 77 23 l35 35 -14 43 c-12 38 -19 45 -56 56 -40 11 -45 10 -73 -14z m78 -32 c18 -11 11 -51 -10 -65 -35 -22 -74 27 -48 59 14 17 38 19 58 6z"/><path d="M292 588 c-16 -16 -15 -48 1 -48 16 0 47 32 47 48 0 16 -33 15 -48 0z"/><path d="M347 532 c-10 -10 -17 -24 -17 -30 0 -16 33 -15 48 0 16 16 15 48 -1 48 -8 0 -21 -8 -30 -18z"/><path d="M397 482 c-10 -10 -17 -24 -17 -30 0 -16 33 -15 48 0 16 16 15 48 -1 48 -8 0 -21 -8 -30 -18z"/><path d="M452 428 c-16 -16 -15 -48 1 -48 16 0 47 32 47 48 0 16 -33 15 -48 0z"/><path d="M502 378 c-16 -16 -15 -48 1 -48 16 0 47 32 47 48 0 16 -33 15 -48 0z"/><path d="M586 291 c-40 -40 -57 -65 -53 -75 4 -9 10 -16 14 -16 17 0 135 128 129 139 -13 21 -32 11 -90 -48z"/></g></svg>
 							</div>
 							<span>Монтаж</span>
 						</div>
-						<div class="col-lg-4 item">
+						<div class="col-6 col-sm-4 item">
 							<div class="item_img_wrap">
 								<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="96px" height="95px" viewBox="0 0 960 950" preserveAspectRatio="xMidYMid meet"><g id="layer101" fill="#ffffff" stroke="none"><path d="M295 938 c-2 -7 -8 -29 -13 -48 -11 -48 -53 -60 -107 -31 -43 23 -64 17 -92 -25 -11 -17 -10 -26 8 -59 16 -30 19 -45 12 -69 -7 -25 -16 -32 -53 -41 l-45 -11 0 -49 0 -49 45 -11 c37 -9 46 -16 53 -41 7 -24 4 -39 -12 -69 -18 -33 -19 -42 -8 -59 28 -42 49 -48 92 -25 30 16 45 19 69 12 25 -7 32 -16 41 -53 l11 -45 49 0 49 0 11 45 c9 37 16 46 41 53 24 7 39 4 70 -12 21 -12 34 -21 28 -21 -6 0 -16 -12 -23 -27 -12 -25 -10 -29 18 -53 38 -30 39 -52 6 -70 -46 -25 -28 -87 23 -77 40 8 67 -20 58 -59 -12 -48 50 -63 78 -19 21 32 49 32 66 0 25 -46 87 -28 77 23 -8 40 20 66 61 58 24 -6 30 -3 40 19 11 24 9 29 -18 53 -37 32 -38 54 -5 72 46 25 28 87 -23 77 -40 -8 -67 20 -58 59 12 48 -50 63 -78 19 -21 -32 -49 -32 -66 0 -15 28 -50 33 -72 11 -12 -11 -17 -7 -32 24 -27 57 -13 91 45 105 l44 11 0 49 0 49 -45 11 c-37 9 -46 16 -53 41 -7 24 -4 39 12 69 23 43 17 64 -25 92 -17 11 -26 10 -59 -8 -30 -16 -45 -19 -69 -12 -25 7 -32 16 -41 53 -11 45 -11 45 -58 48 -32 2 -49 -1 -52 -10z m74 -63 c10 -40 17 -48 57 -68 l45 -22 41 24 c54 31 68 17 37 -37 l-24 -41 22 -45 c20 -40 28 -47 68 -57 57 -15 57 -33 0 -48 -40 -10 -48 -17 -68 -57 l-22 -45 24 -41 c31 -54 17 -68 -37 -37 l-41 24 -45 -22 c-40 -20 -47 -28 -57 -68 -6 -25 -17 -45 -24 -45 -7 0 -18 20 -24 45 -10 40 -17 48 -57 68 l-45 22 -41 -24 c-54 -31 -68 -17 -37 37 l24 41 -22 45 c-20 40 -28 47 -68 57 -25 6 -45 17 -45 24 0 7 20 18 45 24 40 10 48 17 68 57 l22 45 -24 41 c-15 26 -19 44 -13 50 6 6 24 2 50 -13 l41 -24 45 22 c40 20 47 28 57 68 15 57 33 57 48 0z m245 -536 c-15 -16 -54 -27 -54 -15 0 3 12 17 28 33 21 21 29 25 35 15 6 -9 2 -21 -9 -33z m213 -36 c13 -13 31 -23 41 -23 12 0 13 -3 4 -12 -19 -19 -15 -95 6 -107 15 -9 14 -10 -8 -11 -29 0 -70 -39 -70 -66 0 -14 -3 -15 -12 -6 -19 19 -95 15 -107 -6 -9 -15 -10 -14 -11 7 0 29 -38 71 -64 71 -16 0 -17 3 -8 12 19 19 15 95 -5 107 -16 9 -15 10 7 11 29 0 70 39 70 66 0 14 3 15 12 6 19 -19 97 -15 106 6 6 14 7 13 10 -8 2 -13 15 -35 29 -47z"/><path d="M202 729 c4 -29 33 -48 49 -32 10 10 8 17 -6 33 -24 27 -47 26 -43 -1z"/><path d="M269 681 c-24 -24 -29 -38 -29 -76 0 -38 5 -52 29 -76 24 -24 38 -29 76 -29 38 0 52 5 76 29 24 24 29 38 29 76 0 38 -5 52 -29 76 -24 24 -38 29 -76 29 -38 0 -52 -5 -76 -29z m123 -28 c22 -20 23 -70 1 -95 -20 -22 -70 -23 -95 -1 -22 20 -23 70 -1 95 20 22 70 23 95 1z"/><path d="M320 626 c-27 -33 18 -72 48 -42 13 13 14 20 6 34 -15 23 -38 26 -54 8z"/><path d="M160 675 c0 -14 29 -35 49 -35 17 0 13 37 -5 44 -26 10 -44 7 -44 -9z"/><path d="M157 624 c-17 -17 -5 -34 23 -34 20 0 30 5 30 15 0 8 -4 15 -9 15 -5 0 -16 2 -23 5 -8 3 -17 2 -21 -1z"/><path d="M178 563 c-21 -5 -24 -43 -4 -43 28 0 46 12 46 31 0 19 -8 21 -42 12z"/><path d="M446 501 c-19 -20 -14 -41 8 -41 18 0 49 37 41 49 -10 17 -30 13 -49 -8z"/><path d="M270 449 c0 -30 100 -41 136 -15 29 21 11 30 -66 31 -60 1 -70 -1 -70 -16z"/><path d="M669 281 c-21 -22 -29 -39 -29 -66 0 -51 44 -95 95 -95 51 0 95 44 95 95 0 51 -44 95 -95 95 -27 0 -44 -8 -66 -29z m105 -27 c20 -20 20 -58 0 -78 -20 -20 -58 -20 -78 0 -34 34 -9 94 39 94 13 0 31 -7 39 -16z"/><path d="M710 236 c-27 -33 18 -72 48 -42 13 13 14 20 6 34 -15 23 -38 26 -54 8z"/></g></svg>
 							</div>
@@ -184,75 +161,115 @@
 					
 					<div class="row">
 						
-						<div class="col-lg-3 item">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 item item--ishome">
 							
-							<a href="#">
+							<div>
 								<img src="img/categories/1.jpg" alt="Видеонаблюдение">
 								<h5>Видеонаблюдение</h5>
-							</a>
+								<div class="category_links">
+									<a href="#">Монтаж</a>
+									<a href="#">Проектирование</a>
+									<a href="#">Сервисное обслуживание</a>
+								</div>
+							</div>
 
 						</div>
 
-						<div class="col-lg-3 item">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 item item--ishome">
 							
-							<a href="#">
+							<div>
 								<img src="img/categories/2.jpg" alt="Контроль доступа">
 								<h5>Контроль доступа</h5>
-							</a>
+								<div class="category_links">
+									<a href="#">Монтаж</a>
+									<a href="#">Проектирование</a>
+									<a href="#">Сервисное обслуживание</a>
+								</div>
+							</div>
 
 						</div>
 
-						<div class="col-lg-3 item">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 item item--ishome">
 							
-							<a href="#">
+							<div>
 								<img src="img/categories/3.jpg" alt="Домофоны">
 								<h5>Домофоны</h5>
-							</a>
+								<div class="category_links">
+									<a href="#">Монтаж</a>
+									<a href="#">Проектирование</a>
+									<a href="#">Сервисное обслуживание</a>
+								</div>
+							</div>
 
 						</div>
 
-						<div class="col-lg-3 item">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 item item--ishome">
 							
-							<a href="#">
+							<div>
 								<img src="img/categories/4.jpg" alt="Диспетчеризация">
 								<h5>Диспетчеризация</h5>
-							</a>
+								<div class="category_links">
+									<a href="#">Монтаж</a>
+									<a href="#">Проектирование</a>
+									<a href="#">Сервисное обслуживание</a>
+								</div>
+							</div>
 
 						</div>
 
-						<div class="col-lg-3 item">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 item item--ishome">
 							
-							<a href="#">
+							<div>
 								<img src="img/categories/5.jpg" alt="Системы пожарной безопасности">
 								<h5>Системы пожарной безопасности</h5>
-							</a>
+								<div class="category_links">
+									<a href="#">Монтаж</a>
+									<a href="#">Проектирование</a>
+									<a href="#">Сервисное обслуживание</a>
+								</div>
+							</div>
 
 						</div>
 
-						<div class="col-lg-3 item">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 item item--ishome">
 							
-							<a href="#">
+							<div>
 								<img src="img/categories/6.jpg" alt="Системы трансляции и оповещения">
 								<h5>Системы трансляции и оповещения</h5>
-							</a>
+								<div class="category_links">
+									<a href="#">Монтаж</a>
+									<a href="#">Проектирование</a>
+									<a href="#">Сервисное обслуживание</a>
+								</div>
+							</div>
 
 						</div>
 
-						<div class="col-lg-3 item">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 item item--ishome">
 							
-							<a href="#">
+							<div>
 								<img src="img/categories/7.jpg" alt="Турникеты">
 								<h5>Турникеты</h5>
-							</a>
+								<div class="category_links">
+									<a href="#">Монтаж</a>
+									<a href="#">Проектирование</a>
+									<a href="#">Сервисное обслуживание</a>
+								</div>
+							</div>
 
 						</div>
 
-						<div class="col-lg-3 item">
+						<div class="col-12 col-sm-6 col-md-4 col-lg-3 item item--ishome">
 							
-							<a href="#">
+							<div>
 								<img src="img/categories/8.jpg" alt="Автоматика">
 								<h5>Автоматика</h5>
-							</a>
+								<div class="category_links">
+									<a href="#">Монтаж</a>
+									<a href="#">Проектирование</a>
+									<a href="#">Сервисное обслуживание</a>
+								</div>
+							</div>
 
 						</div>
 
@@ -389,15 +406,15 @@
 					
 					<div class="row">
 						
-						<div class="col-lg-4 item">
+						<div class="col-12 col-sm-6 col-lg-4 item">
 							
 							<div class="item_images">
 								
-									<a href="img/project_1.jpg" class="popup"><img src="img/project_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1.jpg" class="popup"><img src="img/project_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
 
 							</div>
 
@@ -420,15 +437,15 @@
 
 						</div>
 
-						<div class="col-lg-4 item">
+						<div class="col-12 col-sm-6 col-lg-4 item">
 							
 							<div class="item_images">
 								
-									<a href="img/project_1.jpg" class="popup"><img src="img/project_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1.jpg" class="popup"><img src="img/project_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
 
 							</div>
 
@@ -451,15 +468,15 @@
 
 						</div>
 
-						<div class="col-lg-4 item">
+						<div class="col-12 col-sm-6 col-lg-4 item">
 							
 							<div class="item_images">
 								
-									<a href="img/project_1.jpg" class="popup"><img src="img/project_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
-									<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1.jpg" class="popup"><img src="img/project_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
+								<a href="img/project_1_1.jpg" class="popup"><img src="img/project_1_1.jpg" alt="Project 1"></a>
 
 							</div>
 
@@ -498,7 +515,7 @@
 
 				<div class="row">
 					
-					<div class="col-lg-6 direction">
+					<div class="col-md-6 direction">
 						
 						<div class="direction_head">
 							<span class="icon" style="background-image: url(img/icons/icon.png);"></span>
@@ -530,7 +547,7 @@
 
 					</div>
 
-					<div class="col-lg-6 direction">
+					<div class="col-md-6 direction">
 						
 						<div class="direction_head">
 							<span class="icon" style="background-image: url(img/icons/icon2.png);"></span>
@@ -671,7 +688,7 @@
 					
 					<div class="row">
 						
-						<article class="col-lg-3 item">
+						<article class="col-sm-6 col-lg-3 item">
 							
 							<time datetime="16.01.2019">16.01.2019</time>
 
@@ -681,7 +698,7 @@
 
 						</article>
 
-						<article class="col-lg-3 item">
+						<article class="col-sm-6 col-lg-3 item">
 							
 							<time datetime="16.01.2019">16.01.2019</time>
 
@@ -691,7 +708,7 @@
 
 						</article>
 
-						<article class="col-lg-3 item">
+						<article class="col-sm-6 col-lg-3 item">
 							
 							<time datetime="16.01.2019">16.01.2019</time>
 
@@ -701,7 +718,7 @@
 
 						</article>
 
-						<article class="col-lg-3 item">
+						<article class="col-sm-6 col-lg-3 item">
 							
 							<time datetime="16.01.2019">16.01.2019</time>
 
@@ -716,7 +733,7 @@
 				</div>
 
 
-				<div class="request_block" style="background-image: url(img/vantage_form_bg.jpg);">
+				<div class="request_block" style="background-image: url(img/vantage_form_bg2.jpg);">
 					
 					<span>Запросить стоимость подобного проекта со скидкой до 20%</span>
 					<a href="#" class="button">Отправить заявку</a>
@@ -767,6 +784,18 @@
 				<div id="map"></div>
 
 			</div>
+			<div class="copyright_line">
+				
+				<div class="container container--1200 container--nopadd">
+					
+					<div class="copyright">	
+						<a href="#">Политика конфиденциальности</a>
+						<span>2019 &copy; ООО “Галант”</span>
+					</div>
+
+				</div>
+
+			</div>
 
 		</footer>
 
@@ -774,18 +803,55 @@
 
 	</div>
 
+	<div class="hidden">
+		<nav id="menu">
+
+			<ul>
+				<li class="menu-item-has-children">
+					<a href="#">О компании</a>
+					<ul class="sub-menu">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Наши проекты</a></li>
+						<li><a href="#">Клиентам</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Услуги</a>
+				</li>
+				<li class="menu-item-has-children">
+					<a href="#">Наши проекты</a>
+					<ul class="sub-menu">
+						<li><a href="#">О компании</a></li>
+						<li><a href="#">Услуги</a></li>
+						<li><a href="#">Наши проекты</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">Клиентам</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+
+		</nav>	
+	</div>
+
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/popup/jquery.magnific-popup.min.js"></script>
 	<script src="libs/mask/jquery.mask.min.js"></script>
+	<script src="libs/mmenu/jquery.mmenu.all.js"></script>
 	<script src="js/common.js"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш ключ>&lang=ru_RU" type="text/javascript"></script>
-    <script type="text/javascript">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш ключ>&lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-	if(jQuery('#map').length > 0){    	
-	    ymaps.ready(init);
-	    function init(){ 
+    if(jQuery('#map').length > 0){    	
+    	ymaps.ready(init);
+    	function init(){ 
 	        // Создание карты.    
 	        var myMap = new ymaps.Map("map", {
 	            // Координаты центра карты.
@@ -799,25 +865,25 @@
 	        });
 
 	  //       // Создание геообъекта с типом точка (метка).
-	  		myMap.behaviors.disable(
-	  			[ 
-	  			'scrollZoom',
-	  			'multiTouch'
-	  			]
-	  		);
-			var myPlacemark = new ymaps.Placemark([55.735191 , 37.592986], {
+	  myMap.behaviors.disable(
+	  	[ 
+	  	'scrollZoom',
+	  	'multiTouch'
+	  	]
+	  	);
+	  var myPlacemark = new ymaps.Placemark([55.735191 , 37.592986], {
 			    // balloonContentHeader: 'Однажды',
 			    // balloonContentBody: 'В студеную зимнюю пору',
 			    // balloonContentFooter: 'Мы пошли в гору',
 			    // hintContent: 'Зимние происшествия'
 			}, {
-			    iconLayout: 'default#image'
+				iconLayout: 'default#image'
 			});
 
-			myMap.geoObjects.add(myPlacemark);
-		}
-    }
-	</script>
+	  myMap.geoObjects.add(myPlacemark);
+	}
+}
+</script>
 
 </body>
 </html>
