@@ -71,19 +71,12 @@ $(function() {
 		});
 	}
 
-	if($('.projects .popup').length){		
-		$('.projects .popup').magnificPopup({
+	if($('.popup').length){		
+		$('.popup').magnificPopup({
 			type: 'image',
 			gallery: { enabled: true }
 		});
 	}	
-
-	if($('.reviews .popup').length){		
-		$('.reviews .popup').magnificPopup({
-			type: 'image',
-			gallery: { enabled: true }
-		});
-	}
 
 	$(".totop").click(function(){
 		$("html, body").animate({scrollTop:0},"slow");
@@ -97,6 +90,17 @@ $(function() {
 			$('.totop').hide();
 		}
 	});
+
+	$('.projects .tabs li').on('click',function(){
+
+		if( $(this).hasClass('active') ) return false;
+		var name = $(this).data('name');
+		$('.projects .tabs li').removeClass('active').eq($(this).index()).addClass('active');
+		// $('.projects .projects_wrap').hide().eq($(this).index()).addClass('active');
+		$('.projects .projects_wrap').removeClass('active');
+		$('.projects .projects_wrap.' + name + '').addClass('active');
+
+	})
 
 
 });

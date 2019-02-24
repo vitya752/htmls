@@ -38,12 +38,21 @@ body
 .hidden
 	display: none
 
+.clearfix::after  
+	content: ""
+	clear: both
+	display: table
+
+
 b, strong
 	font-weight: bold
 
 a,ul,li,span,p,h1,h2,h3,h4,h5,h6,label
 	margin: 0
 	padding: 0
+
+p
+	line-height: 22px
 
 h1,
 h2,
@@ -433,40 +442,19 @@ header
 		fill: #7f7f7f
 		margin-right: 5px
 		position: relative
-	a
-		color: #000
+	.item_head
+		a
+			color: #000
 	h4
-		margin-right: 13px
+		flex: 0 0 60%
+		margin-right: 15px
 	span
+		flex: 0 0 40%
 		color: #7f7f7f
 	h4,span
 		vertical-align: middle
 	.item
 		margin-bottom: 50px
-	.item_images
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		flex-wrap: wrap
-		justify-content: space-between
-		a
-			max-width: 82px
-			max-height: 82px
-			overflow: hidden
-			margin-bottom: 15px
-			&:first-child
-				max-width: 370px
-				max-height: 171px
-			&:before
-				content: ''
-				height: 100%
-			&:before,img
-				display: inline-block
-				vertical-align: middle
-		img
-			width: 100%
 	.item_head
 		display: -webkit-flex
 		display: -moz-flex
@@ -477,6 +465,63 @@ header
 	.item_desc
 		line-height: 21px
 		display: inline-block
+
+.project_gallery
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+	a
+		max-width: 82px
+		max-height: 82px
+		overflow: hidden
+		margin-bottom: 15px
+		&:first-child
+			max-width: 370px
+			max-height: 171px
+		&:before
+			content: ''
+			height: 100%
+		&:before,img
+			display: inline-block
+			vertical-align: middle
+	img
+		width: 100%
+
+.projects--isnt_home
+	padding-top: 55px
+	.tabs
+		padding: 20px 0
+		margin-bottom: 20px
+		list-style-type: none
+		li
+			color: #d2d2d2
+			cursor: pointer
+			transition: .5s
+			min-width: 215px
+			padding: 10px 15px
+			text-align: center
+			margin-right: 10px
+			border-radius: 10px
+			display: inline-block
+			border: 1px solid #d2d2d2
+			&.active
+				color: #49ad60
+				cursor: default
+				border: 1px solid #49ad60
+	.projects_wrap
+		display: none
+		&.active
+			display: block
+	span
+		color: #000
+	.item
+		.button_wrap
+			text-align: left
+			padding-top: 20px
 
 .brands
 	padding-top: 95px
@@ -695,7 +740,7 @@ header
 		position: relative
 		display: inline-block
 		img
-			width: 100%
+			max-width: 100%
 			position: absolute
 	.button_wrap
 		padding-top: 5px
@@ -752,17 +797,17 @@ header
 		display: flex
 		flex-direction: row
 		margin-bottom: 40px
-		.img_wrap
-			flex: 0 0 50%
-			width: 50%
-			overflow: hidden
-			max-height: 180px
-			margin-right: 15px
-			border-radius: 10px
-		.content
-			width: 50%
-			flex: 0 0 50%
-			margin-left: 15px
+	.img_wrap
+		flex: 0 0 50%
+		width: 50%
+		overflow: hidden
+		max-height: 180px
+		margin-right: 15px
+		border-radius: 10px
+	.content
+		width: 50%
+		flex: 0 0 50%
+		margin-left: 15px
 	img
 		width: 100%
 	h4
@@ -782,6 +827,88 @@ header
 		font-family: ProximaNova-Bold
 		&:hover
 			text-decoration: none
+
+.page_service
+	padding-top: 55px
+	.page_head
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		margin-bottom: 20px
+		align-items: center
+		> *
+			flex-basis: 33%
+	h1
+		font-size: 18px
+	h2
+		font-size: 16px
+	h3,h4,h5,h6
+		font-size: 14px
+	h1,h2,h3,h4,h5,h6
+		font-family: ProximaNova-Bold
+	svg
+		top: 3px
+		fill: #000
+		opacity: .7
+		width: 17px
+		height: 17px
+		position: relative
+	.address
+		color: #000
+		opacity: .7
+	.name_company
+		text-align: right
+		padding-right: 15px
+	a
+		color: #000
+		display: block
+		line-height: 22px
+		text-decoration: underline
+		font-family: ProximaNova-Bold
+		&:hover
+			text-decoration: none
+	.project_gallery
+		a:first-child
+			width: 566px
+			height: 231px
+			max-width: none
+			max-height: none
+	.request_block
+		margin-top: 45px
+		a
+			text-decoration: none
+	.recommended
+		padding-top: 55px
+	.item
+		margin-bottom: 40px
+	.img_wrap
+		margin-bottom: 15px
+		img
+			width: 100%
+	.head
+		font-size: 22px
+	ul
+		padding-left: 20px
+	li
+		margin-bottom: 2px
+	.sub_info
+		font-size: 18px
+	.head,strong
+		font-family: ProximaNova-Bold
+
+.info_page
+	padding: 50px 0
+	img
+		margin: 15px auto
+		border-radius: 10px
+		&.alignleft
+			float: left
+			margin-right: 15px
+		&.alignright
+			float: right
+			margin-left: 15px
 
 .totop
 	bottom: 0

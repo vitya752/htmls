@@ -27,7 +27,7 @@
 		padding: 0 15px
 		padding-top: 10px
 		display: inline-block
-	.projects .item_images a
+	.projects .project_gallery a:not(:first-child)
 		max-width: 52px
 		max-height: 52px
 	.brands .item
@@ -94,6 +94,16 @@
 			height: 100px
 	.with_after:after
 		display: none
+	.projects--isnt_home
+		.tabs
+			li
+				margin-bottom: 15px
+	.page_service 
+		.project_gallery
+			padding-top: 15px
+			a:first-child
+				width: 100%
+				height: fit-content
 
 // ≥768px
 +media-breakpoint-down(sm)
@@ -129,9 +139,23 @@
 		.brands_wrap
 			padding-top: 0
 			margin-bottom: 30px
+	.page_service
+		.head
+			font-size: 14px
+		li,.sub_info
+			font-size: 12px
+	.page_service 
+		.page_head
+			display: block
+		.address
+			margin-right: 15px
+		.name_company
+			padding-right: 0
 
 // ≥576px
 +media-breakpoint-down(xs)
+	p
+		font-size: 14px
 	h3
 		font-size: 18px
 	h4
@@ -167,7 +191,7 @@
 		.item_desc
 			font-size: 14px
 			line-height: 18px
-		.item_images 
+		.project_gallery 
 			a 
 				display: none
 				&:first-child
@@ -215,7 +239,20 @@
 			width: 115px
 			height: 76px
 			text-align: left
-	
+	.articles
+		.img_wrap,
+		.content
+			width: 100%
+		.item
+			flex-direction: column
+		.img_wrap
+			margin: 0
+			margin-bottom: 15px
+	.page_service
+		.project_gallery 
+			a
+				width: 40px
+				height: 40px
 
 /*==========  Mobile First  ==========*/
 
