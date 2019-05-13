@@ -22,7 +22,7 @@ $(function() {
 		$(".hamburger").addClass('is-active');   //добавляем класс гамбургеру, чтобы он видоизменился
 	});
 
-	$('.phone span, .contacts-phones a').mask('9 (999) 999-99-99');
+	$('.phone span, .contacts-phones a').mask('+9 (999) 999-99-99');
 	$('input[name=phone]').mask('+9 (999) 999-99-99');
 
 	if($('.slider').length){
