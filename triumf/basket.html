@@ -359,6 +359,46 @@
 	<script src="libs/mask/jquery.mask.min.js"></script>
 	<script src="libs/mmenu/jquery.mmenu.all.js"></script>
 	<script src="js/common.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш ключ>&lang=ru_RU" type="text/javascript"></script>
+	<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    if(jQuery('#map').length > 0){    	
+    	ymaps.ready(init);
+    	function init(){ 
+	        // Создание карты.    
+	        var myMap = new ymaps.Map("map", {
+	            // Координаты центра карты.
+	            // Порядок по умолчанию: «широта, долгота».
+	            // Чтобы не определять координаты центра карты вручную,
+	            // воспользуйтесь инструментом Определение координат.
+	            center: [55.744239, 37.591648],
+	            // Уровень масштабирования. Допустимые значения:
+	            // от 0 (весь мир) до 19.
+	            zoom: 16
+	        });
+
+	  //       // Создание геообъекта с типом точка (метка).
+	  myMap.behaviors.disable(
+	  	[ 
+	  	'scrollZoom',
+	  	'multiTouch'
+	  	]
+	  	);
+	  var myPlacemark = new ymaps.Placemark([55.744239, 37.591648], {
+			    // balloonContentHeader: 'Однажды',
+			    // balloonContentBody: 'В студеную зимнюю пору',
+			    // balloonContentFooter: 'Мы пошли в гору',
+			    // hintContent: 'Зимние происшествия'
+			}, {
+				iconLayout: 'default#image',
+				iconImageHref: (img/location.png)
+			});
+
+	  myMap.geoObjects.add(myPlacemark);
+	}
+}
+</script>
 
 </body>
 </html>
