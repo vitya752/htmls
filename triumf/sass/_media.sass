@@ -1,0 +1,208 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+	.line_contacts
+		height: auto
+	.email
+		text-align: right
+	.header-basket
+		line-height: 18px
+		text-align: center
+	.banner
+		padding-top: 50px
+		.banner-text
+			font-size: 40px
+			line-height: 40px
+		.banner-text_sub
+			font-size: 30px
+	.vantages
+		.item
+			margin-bottom: 30px
+	.form-box_full input[type=submit]
+		margin-left: 0
+
+// ≥992px
++media-breakpoint-down(md)
+	.white,
+	.blue,
+	.light_blue
+		font-size: 36px
+	.line_navigation
+		.logo
+			img
+				width: 100%
+				height: auto
+	.menu
+		display: none
+	.header-basket
+		text-align: right
+	.hamburger
+		margin-left: 10px
+		display: inline-block
+	.sliders
+		padding: 35px 0
+		.sertificates, .messages
+			&:before,
+			&:after
+				display: none
+		.sertificates
+			margin-bottom: 100px
+		.slide
+			opacity: 1
+	.product 
+		h1
+			font-size: 26px
+			line-height: 30px
+		.product-head
+			flex-wrap: wrap
+		.to-card
+			margin-top: 0
+	.product .product-gallery
+		padding-left: 0
+	.catalog 
+		.product-more
+			margin-top: 15px
+			text-align: center
+	.results_wrap
+		column-count: 1
+	.reviews h2
+		margin-bottom: 35px
+	.reviews .add-item
+		height: 130px
+
+// ≥768px
++media-breakpoint-down(sm)
+	.white,
+	.blue,
+	.light_blue
+		font-size: 28px
+		line-height: 30px
+		padding-left: 50px
+		&:before
+			left: -50px
+	.banner
+		.form-box
+			margin: 0 auto
+	.systems
+		padding-top: 35px
+		padding-bottom: 0
+	.form-box_full .input-box
+		display: block
+		margin-right: 0
+	.product .product-desc p
+		column-count: 1
+	.catalog 
+		.catalog-product,
+		.product-img
+			text-align: center
+	.catalog
+		h3
+			font-size: 26px
+			line-height: 30px
+
+// ≥576px
++media-breakpoint-down(xs)
+	.white,
+	.blue,
+	.light_blue
+		font-size: 22px
+	.line_contacts,
+	.line_contacts .email,
+	.line_contacts ul
+		text-align: center
+	.line_contacts
+		font-size: 12px
+		padding-bottom: 10px
+		svg
+			width: 14px
+			height: auto
+	.search
+		display: none
+	.systems
+		.item
+			height: auto
+			padding: 20px 0
+			margin-bottom: 15px
+		img
+			width: 100px
+			height: auto
+		span
+			font-size: 22px
+	.vantages
+		padding-top: 35px
+		padding-bottom: 20px
+		h2
+			margin-bottom: 35px
+		span
+			font-size: 14px
+			line-height: 18px
+			display: inline-block
+	footer
+		.footer-nav,
+		.contacts,
+		.copyright
+			padding-left: 0
+		.contacts,
+		.copyright
+			flex-wrap: wrap
+			> *, ul
+				width: 100%
+				text-align: left
+	.form-box_full
+		padding-left: 0
+		padding-right: 0
+	.product 
+		li 
+			.text-wrap
+				flex-direction: column
+			span:last-child
+				text-align: left
+				font-weight: bold
+	.catalog 
+		padding-top: 25px
+		.product-desc
+			padding-left: 15px
+		.catalog-tabs li
+			margin-right: 26px
+		.catalog-product
+			margin-bottom: 25px
+	.about
+		p
+			font-size: 14px
+	.results
+		padding: 35px 0
+		h2
+			margin-bottom: 30px 
+		h3
+			font-size: 16px
+		p
+			font-size: 12px
+			line-height: 20px
+	.reviews
+		.item-head
+			align-items: center
+		.head
+			font-size: 16px
+		.date
+			font-size: 10px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
+	.container
+		max-width: 1200px

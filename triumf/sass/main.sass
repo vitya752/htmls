@@ -1,0 +1,777 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.white,
+.blue,
+.light_blue
+	font-size: 56px
+	position: relative
+	padding-left: 10px
+	font-family: OpenSansBold
+	&:before
+		content: ''
+		width: 89px
+		left: -90px
+		height: 22px
+		display: block
+		position: absolute
+		top: calc(50% + 6px)
+		transform: translateY(-50%)
+		background-repeat: no-repeat
+.white
+	color: #fff
+	&:before
+		background-image: url(../img/head_wave_white.png)
+.blue
+	color: #113f63
+	&:before
+		background-image: url(../img/head_wave.png)
+.light_blue
+	color: #000
+	line-height: 70px
+	&:before
+		top: calc(50% - 30px)
+		background-image: url(../img/head_wave_lightblue.png)
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: OpenSansRegular
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.hidden
+	display: none
+
+.hamburger
+	padding: 0
+	display: none
+
+.hamburger-inner,
+.hamburger-inner:before,
+.hamburger-inner:after,
+	width: 100%
+
+.hamburger-box
+	width: 30px
+
+.menu_button
+	text-align: right
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+#map
+	height: 240px
+
+ul,ol
+	margin: 0
+	padding: 0
+
+header,.soc_links
+	svg
+		width: 16px
+		max-height: 16px
+
+.line_contacts
+	height: 38px
+	padding-top: 5px
+	background-size: auto 116%
+	background-repeat: repeat-x
+	background-image: url(../img/header_orange.jpg)
+	a, span
+		color: #000
+		text-decoration: none
+	svg
+		margin-right: 2px
+	span
+		top: -3px
+		position: relative
+	.address
+		white-space: nowrap
+.soc_links
+	ul
+		text-align: right
+		list-style-type: none
+	li
+		margin-left: 4px
+		display: inline-block
+	a
+		opacity: .3
+		transition: .5s
+		&:hover
+			opacity: 1
+.line_navigation
+	padding-top: 10px
+	padding-bottom: 18px
+	.logo
+		img
+			max-width: 200px
+	button
+		padding: 0
+		opacity: .4
+		width: 16px
+		height: 16px
+		border: none
+		outline: none
+		cursor: pointer
+		transition: .5s
+		background-color: transparent
+		&:hover
+			opacity: 1
+		svg
+			top: 3px
+			position: relative
+.input-box
+	position: relative
+	display: inline-block
+	input[type=text]
+		border: 0
+		height: 20px
+		width: 178px
+		background-color: transparent
+		border-bottom: 1px solid rgba(0,0,0,.25)
+	input[type=text],textarea
+		color: rgba(0,0,0,.5)
+	label
+		top: 0
+		left: 5px
+		opacity: .4
+		font-size: 14px
+		transition: .5s
+		position: absolute
+		font-style: italic
+		pointer-events: none
+	input:valid
+		border-bottom: 1px solid green
+	input[type=text]:focus ~ label,
+	input[type=text]:valid ~ label,
+	textarea:focus ~ label,
+	textarea:valid ~ label
+		left: 0
+		top: -10px
+		font-size: 10px
+	textarea:focus ~ label,
+	textarea:valid ~ label
+		top: -5px
+
+nav 
+	li
+		margin-right: 35px
+		display: inline-block
+		&.active
+			a
+				color: #edae18
+				&:before
+					opacity: 1
+	a
+		color: #000
+		transition: .5s
+		font-weight: bold
+		position: relative
+		font-family: OpenSansBold
+		&:before
+			opacity: 0
+			content: ''
+			width: 100%
+			height: 4px
+			bottom: -8px
+			transition: .25s
+			position: absolute
+			background-repeat: repeat-x
+			background-image: url(../img/hover_link.png)
+		&:hover
+			color: #edae18
+			text-decoration: none
+			&:before
+				opacity: 1
+.header-basket
+	a
+		color: #000
+		text-decoration: none
+		&:hover,&:focus
+			color: unset
+	svg
+		width: 24px
+		height: 22px
+	span
+		top: -3px
+		font-size: 12px
+		position: relative
+	.basket-empty
+		font-style: italic
+	.basket-count
+		top: -5px
+		padding: 0 7px
+		border-radius: 50%
+		display: inline-block
+		border: 1px solid #edae18
+
+.banner
+	height: 570px
+	padding-top: 25px
+	background-repeat: no-repeat
+	background-position: center top
+	p
+		color: #fff
+		font-weight: bold
+		margin-bottom: 25px
+		font-family: OpenSansExtraBold
+	.banner-text
+		font-size: 80px
+		line-height: 80px
+		letter-spacing: 1px
+	.banner-text_sub
+		font-size: 48px
+		letter-spacing: 0px
+
+.form-box
+	width: 230px
+	height: 265px
+	margin-right: 0
+	margin-left: auto
+	text-align: center
+	padding: 25px 30px
+	border-radius: 5px
+	background-color: rgba(255,255,255,.9)
+	box-shadow: 6.428px 7.66px 20px 0px rgba(18, 51, 77, 0.5)
+	.input-box
+		margin-bottom: 6px
+		&:last-child
+			margin-top: 5px
+	label
+		color: #000
+		opacity: .25
+	input[type=text],textarea
+		width: 100%
+	input[type=submit]
+		border: 0
+		cursor: pointer
+		margin-top: 10px
+		padding: 10px 15px
+		border-radius: 50px
+		font-family: OpenSansBold
+		background-color: rgb(237, 174, 24)
+		box-shadow: 0px 10px 15px 0px rgba(205, 151, 21, 0.3)
+	textarea
+		border: 0
+		resize: none
+		height: 100px
+		font-size: 14px
+		padding: 6px 8px
+		font-style: italic
+		border-radius: 5px
+		background-color: rgba(0, 0, 0, 0.031)
+
+.form-box_full
+	width: 100%
+	height: auto
+	box-shadow: none
+	padding-top: 32px
+	padding-bottom: 45px
+	.input-box
+		margin-right: 40px
+	label
+		opacity: .7
+	input[type=submit]
+		margin-left: 40px
+		padding: 15px 20px
+
+.systems
+	padding-top: 65px
+	padding-bottom: 63px
+	h2
+		margin-bottom: 38px
+	.item
+		width: 100%
+		color: #000
+		height: 190px
+		display: block
+		transition: .5s
+		padding-top: 30px
+		position: relative
+		perspective: 600px
+		text-align: center
+		margin-bottom: 30px
+		text-decoration: none
+		&:before
+			left: 0
+			bottom: 0
+			z-index: 0
+			content: ''
+			width: 100%
+			height: 100%
+			display: block
+			transition: .5s
+			position: absolute
+			transform: rotateX(0)
+			background-color: #f2f4f6
+		&:hover
+			color: #113f63
+			&:before
+				top: auto
+				bottom: -50px
+				transform: rotateX(70deg)
+			img
+				top: -30px
+		>*
+			z-index: 1
+			position: relative
+	img
+		top: 0
+		width: 210px
+		height: 80px
+		transition: .5s
+		position: relative
+	span
+		font-size: 40px
+		display: block
+		font-family: OpenSansSemiBold
+
+.vantages
+	padding-top: 65px
+	padding-bottom: 100px
+	background-size: cover
+	background-repeat: no-repeat
+	.item
+		padding: 0 10px
+		text-align: center
+	h2
+		margin-bottom: 75px
+	.img_wrap
+		height: 70px
+		margin-bottom: 10px
+		&:before
+			content: ''
+			height: 100%
+		img,&:before
+			display: inline-block
+			vertical-align: middle
+	img
+		margin: 0 auto
+		max-width: 75px
+	span
+		color: #fff
+		font-size: 18px
+		font-family: OpenSansSemiBold
+
+.sliders
+	padding-top: 75px
+	padding-bottom: 120px
+	.slider
+		width: 100%
+	.slick-list
+		overflow: hidden
+	.slick-track
+		padding: 15px 0
+	h2
+		margin-bottom: 40px
+	.slide
+		opacity: .5
+		outline: none
+		padding: 0 15px
+		transition: .5s
+		&:hover
+			opacity: 1
+			img
+				transform: scale(1.1)
+	img
+		width: 100%
+		transition: .5s
+		transform: scale(1)
+	.slick-dots
+		bottom: -55px 
+		li 
+			button
+				&:before
+					opacity: 1
+					font-size: 45px
+			&.slick-active
+				button
+					color: #edae18
+					border-radius: 50%
+					border: 1px solid #edae18
+					&:before
+						color: #edae18
+						font-size: 40px
+	.sertificates
+		margin-bottom: 125px
+	.sertificates, .messages
+		position: relative
+		&:before,&:after
+			z-index: 2
+			content: ''
+			width: 100%
+			height: 100%
+			position: absolute
+			pointer-events: none
+		&:before
+			top: 0
+			left: 0
+			box-shadow: inset 40px 0px 20px 15px rgba(255,255,255,.7)
+		&:after
+			top: 0
+			right: 0
+			box-shadow: inset -40px 0px 20px 15px rgba(255,255,255,.7)
+footer
+	font-size: 14px
+	padding-top: 25px
+	padding-bottom: 25px
+	.logo
+		img
+			max-width: 188px
+	.map-wrapper
+		height: 100%
+		position: relative
+		border-radius: 20px
+		&:before
+			top: 50%
+			right: 0
+			content: ''
+			width: 81px
+			height: 36px
+			position: absolute
+			pointer-events: none
+			display: inline-block
+			// transform: translateY(-50%)
+			background-image: url(../img/map_wave.png)
+	.footer-nav,
+	.contacts,
+	.copyright	
+		padding-left: 40px
+	.footer-nav,
+	.contacts
+		ul
+			list-style-type: none
+	.footer-nav
+		padding-top: 20px
+		margin-bottom: 20px
+		ul
+			width: 100%
+			text-align: right
+			li
+				line-height: 23px
+			a
+				color: #fff
+				text-decoration: none
+				font-family: OpenSansBold
+	.contacts
+		margin-bottom: 30px
+	.contacts, .contacts a, .copyright
+		color: rgba(255,255,255,.5)
+	.contacts-phones
+		width: 40%
+		text-align: right
+	.contacts-address
+		width: 60%
+	.soc_links
+		width: 30%
+		margin-right: 0
+		margin-left: auto
+	svg
+		fill: rgba(255,255,255,.5)
+
+.catalog
+	padding-top: 65px
+	h1
+		margin-bottom: 33px
+	.catalog-tabs
+		font-size: 20px
+		// font-weight: bold
+		margin-bottom: 42px
+		font-family: OpenSansBold
+		li
+			cursor: pointer
+			margin-right: 46px
+			display: inline-block
+			color: rgba(0,0,0,.5)
+			&.active
+				color: #edae18
+				cursor: default
+	.catalog-content-wrap
+		padding-bottom: 20px
+	.catalog-content-tab:not(:first-child)
+		display: none
+	.catalog-product
+		margin-bottom: 65px
+	.product-img
+		text-align: right
+		padding-top: 23px
+		img
+			width: 240px
+	.product-desc
+		padding-left: 45px
+	h3
+		font-size: 40px
+		font-family: OpenSansSemiBold
+	span
+		font-size: 14px
+		line-height: 24px
+	span,a
+		display: inline-block
+	.product-more
+		padding-bottom: 6px
+		align-self: flex-end
+	a
+		color: #0d3251
+		transition: .5s
+		box-shadow: none
+		padding: 10px 22px
+		border-radius: 30px
+		text-decoration: none
+		border: 2px solid #0d3251
+		font-family: OpenSansSemiBold
+		&:hover
+			color: #fff
+			background-color: #0d3251
+			box-shadow: 0px 10px 15px 0px rgba(13, 50, 81, 0.15)
+
+.product
+	padding-top: 50px
+	.product-head
+		margin-bottom: 10px
+		justify-content: space-between
+	h1
+		font-size: 40px
+		letter-spacing: 1px
+	.to-card
+		width: 172px
+		height: 50px
+		outline: none
+		color: #edae18
+		cursor: pointer
+		transition: .5s
+		margin-top: 10px
+		border-radius: 30px
+		display: inline-block
+		border: 1px solid #edae18
+		font-family: OpenSansSemiBold
+		background-color: transparent
+		&:hover
+			color: #fff
+			background-color: #edae18
+	.product-gallery
+		padding-top: 10px
+		padding-left: 30px
+		margin-bottom: 30px
+		.main-image
+			overflow: hidden
+			text-align: center
+			margin-bottom: 40px
+			img
+				max-width: 100%
+				max-height: 100%
+		.other-images
+			justify-content: space-around
+			img
+				height: 51px
+				max-width: 71px
+	.haract-head
+		margin-bottom: 5px
+		display: inline-block
+		font-family: OpenSansSemiBold
+	ol
+		padding-left: 15px
+		margin-bottom: 30px
+	li
+		padding-left: 20px
+		.text-wrap
+			justify-content: space-between
+		span
+			display: inline-block
+			&:first-child
+				margin-right: auto
+			&:last-child
+				text-align: right
+	.product-desc
+		padding-top: 50px
+		padding-bottom: 35px
+		background-color: #efefef
+		p
+			font-size: 14px
+			column-count: 2
+			line-height: 25px
+			column-gap: 40px
+
+.basket
+	.basket-rows
+		overflow-x: auto
+		padding-top: 25px
+		padding-bottom: 35px
+	.item
+		opacity: .3
+		width: 1160px
+		margin: 0 5px
+		transition: .5s
+		box-shadow: none
+		padding: 20px 30px
+		border-radius: 20px
+		justify-content: space-between
+		&:hover
+			opacity: 1
+			padding: 35px 30px
+			margin-bottom: 17px
+			box-shadow: 0px 0px 8px 0px rgba(138, 102, 17, 0.1)
+		>*
+			display: inline-block
+			vertical-align: middle
+	.item-number
+		font-size: 24px
+		text-align: right
+	.item-name
+		width: 13%
+	strong
+		font-size: 18px
+		margin-left: 5px
+		font-family: OpenSansSemiBold
+	input[type=number]
+		border: none
+		outline: none
+		font-size: 18px
+		font-family: OpenSansSemiBold
+		background-color: transparent
+	.item-count
+		span
+			top: -3px
+			position: relative
+		button
+			top: -2px
+			padding: 0
+			font-size: 26px
+			font-weight: normal
+			position: relative
+			&:last-child
+				top: -1px
+	.order
+		padding: 15px 22px
+		border-radius: 30px
+		font-family: OpenSansBold
+		background-color: #edae18
+	a.order
+		color: #000
+		text-decoration: none
+	button
+		border: none
+		outline: none
+		cursor: pointer
+		display: inline-block
+		background-color: transparent
+	img
+		width: 70px
+	svg
+		width: 18px
+		fill: red
+
+.about
+	padding-top: 47px
+	padding-bottom: 70px
+	background-color: #f2f2f2
+	h1
+		margin-bottom: 28px
+	p
+		padding: 0
+		line-height: 24px
+	img
+		width: 100%
+		margin-top: 20px
+
+.results
+	padding-top: 85px
+	padding-bottom: 50px
+	h2
+		margin-left: -10px
+		margin-bottom: 60px
+	h3
+		color: #113f63
+		font-size: 20px
+		margin-bottom: 15px
+		font-family: OpenSansSemiBold
+	p
+		line-height: 24px
+.results_wrap
+	column-count: 2
+	column-gap: 30px
+	column-span: none
+	column-fill: balance
+	.item
+		float: left
+		margin-bottom: 16px
+		display: inline-block
+
+.reviews
+	padding-top: 28px
+	padding-bottom: 75px
+	background-color: #f2f2f2
+	h2
+		margin-bottom: 5px
+	.item
+		min-height: 138px
+		padding: 25px 15px
+		background-color: #fff
+		box-shadow: 0px 0px 8px 0px rgba(197, 197, 197, 0.15)
+	.add-item
+		color: #edae18
+		transition: .5s
+		align-items: center
+		display: inline-block
+		text-decoration: none
+		justify-content: center
+		background-color: #fafafa
+		height: calc(100% - 16px)
+		font-family: OpenSansBold
+		&:hover
+			background-color: #f1f1f1
+	.item,.add-item
+		width: 100%
+		border-radius: 4px
+		margin-bottom: 15px
+	img
+		max-width: 84px
+	.item-img_wrap
+		width: 84px
+		margin-right: 15px
+		text-align: center
+	.head
+		font-size: 20px
+		font-weight: bold
+		font-family: OpenSansSemiBold
+	.date
+		font-size: 12px
+		font-family: OpenSansLight
+	.item-review
+		font-size: 14px
+		line-height: 23px
+		font-style: italic
+		display: inline-block
+		font-family: OpenSansLightItalic
+	.item-head
+		justify-content: space-between
+
+@import "media" // Always at the end
